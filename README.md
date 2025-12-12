@@ -220,6 +220,16 @@ This script combines evaluation results across models and probing categories and
 
 > 💡 **Tip:** The pipeline is fully modular — you can independently run dataset creation, question generation, answer generation, and evaluation, depending on your specific experimental needs.
 
+## 📄 License
+
+This repository contains **both code and data**, each released under a different license:
+
+- **Code**  
+  Licensed under the **MIT License**.
+  You can find the full text of the license in the [LICENSE](LICENSE) file.
+  
+- **BEAM Benchmark**  
+  Licensed under the **Creative Commons Attribution–ShareAlike 4.0 International License (CC BY-SA 4.0)**. 
 
 # 📝 References
 
