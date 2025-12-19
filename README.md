@@ -37,14 +37,14 @@ BEAM consists of 100 conversations distributed as follows:
 
 | **Benchmark** | **Domain** | **Chat Length** | **IE** | **MR** | **KU** | **TR** | **ABS** | **CR** | **EO** | **IF** | **PF** | **SUM** |
 |:--------------|:-----------|:----------------|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|:------:|
-| MSC (Xu et al., 2021) | Casual | ~1K | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| DuLeMon (Xu et al., 2022) | Casual | ~1K | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| MemoryBank (Zhong et al., 2024) | Personal | ~5K | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| PerLTQA (Du et al., 2024) | Personal | N/A | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| LoCoMo (Maharana et al., 2024) | Personal | ~10K | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
-| DialSim (Kim et al., 2024) | TV/Film | ~350K | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| LongMemEval (Wu et al., 2024) | Personal | 115K, 1M | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
-| MemBench (Tan et al., 2025) | Personal | ~100K | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| MSC | Casual | ~1K | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| DuLeMon | Casual | ~1K | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| MemoryBank | Personal | ~5K | ✅ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| PerLTQA | Personal | N/A | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| LoCoMo | Personal | ~10K | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ |
+| DialSim | TV/Film | ~350K | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| LongMemEval | Personal | 115K, 1M | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ✅ | ❌ |
+| MemBench | Personal | ~100K | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ | ✅ | ❌ |
 | **BEAM (This work)** | **Multi-domain (Coding, Math, Health, Finance, Personal, ...)** | **128K, 500K, 1M, 10M** | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
 
 *Comparison of BEAM with existing long-term memory benchmarks.  
