@@ -5,7 +5,7 @@
     <img src="https://img.shields.io/badge/🌐-Project%20Website-blue">
   </a>
   <a href="https://arxiv.org/pdf/2510.27246">
-    <img src="https://img.shields.io/badge/📝-Paper%20(ICLR%202026)-red">
+    <img src="https://img.shields.io/badge/📝-Paper%20-red">
   </a>
   <a href="https://huggingface.co/datasets/Mohammadta/BEAM">
     <img src="https://img.shields.io/badge/🤗-BEAM%20Dataset-yellow">
