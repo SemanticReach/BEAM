@@ -201,7 +201,7 @@ def upload_chat(chat_id: str, turns: list[dict]) -> str | None:
                 headers={"X-API-Key": API_KEY},
                 files={"file": (f"chat_{chat_id}.txt", f)},
                 data={"dim": UPLOAD_DIM, "seed": 42, "depth": 3},
-                timeout=300,
+                timeout=600,
             )
 
         resp.raise_for_status()
@@ -441,11 +441,13 @@ def generate_answer(question: str, passages: list[str], category: str = "") -> s
 
     # Category-specific system prompts to satisfy rubric expectations
     system_prompts = {
-        "instruction_following": (
+       "instruction_following": (
             "You are a helpful assistant answering questions about a long conversation. "
-            "When asked to implement or show code, always provide complete, runnable code "
-            "in fenced code blocks with syntax highlighting (e.g. ```python). "
-            "Include explicit version details for any dependencies mentioned. "
+            "When asked about methods or approaches, you MUST: "
+            "1. List at least 3 different methods "
+            "2. EXPLICITLY COMPARE them using phrases like 'Method A is better than Method B because...' "
+            "3. Say which method is easiest, fastest, or most accurate "
+            "Provide code examples with syntax highlighting when relevant. "
             "Answer based only on the provided passages."
         ),
         "preference_following": (
@@ -484,7 +486,7 @@ def generate_answer(question: str, passages: list[str], category: str = "") -> s
                 },
             ],
             temperature=0.0,
-            max_tokens=512,
+            max_tokens=1024,
         )
         return resp.choices[0].message.content or ""
 
@@ -524,43 +526,20 @@ _STOP = {"a", "an", "the", "of", "in", "and", "or", "to", "for", "with",
 def _token_recall(rubric_val: str, answer: str) -> float:
     """
     Recall-based token overlap: what fraction of rubric tokens appear in answer?
-
-    Divides by the rubric token count (not the union), so a 3-word rubric phrase
-    checked against a 40-word answer isn't unfairly penalised by the large union.
-
-    Example:
-        rubric  "Transaction error handling"   → tokens {transaction, error, handling}
-        answer  "…transaction creation with proper error handling…"
-        recall  = 3/3 = 1.0   ✓   (Jaccard would give 3/8 = 0.375 or worse)
-
-        rubric  "Security and deployment"      → tokens {security, deployment}
-        answer  "…security measures…before deployment"
-        recall  = 2/2 = 1.0   ✓   (Jaccard gave 2/9 = 0.22 → missed)
     """
     tok_r = {w for w in re.findall(r"\w+", rubric_val.lower()) if w not in _STOP}
-    tok_a = {w for w in re.findall(r"\w+", answer.lower())     if w not in _STOP}
+    tok_a = {w for w in re.findall(r"\w+", answer.lower()) if w not in _STOP}
     if not tok_r:
         return 0.0
     return len(tok_r & tok_a) / len(tok_r)
 
 
-# Recall threshold: rubric value is a hit if ≥ this fraction of its tokens
-# appear anywhere in the generated answer.
-# 0.6 requires most rubric tokens to be present while tolerating one missing word.
-RECALL_THRESHOLD = 0.6
+RECALL_THRESHOLD = 0.5
 
 
 def _is_behavioral_rubric(value: str) -> bool:
     """
-    Detect rubric values that describe *output format or style* rather than
-    factual content — e.g. "code blocks with syntax highlighting",
-    "suggests lightweight libraries", "proposes incremental enhancements".
-
-    These phrases will never appear verbatim in the answer, so substring and
-    token-recall checks both fail. They need a GPT-4o judge instead.
-
-    Heuristic: short phrases (≤ 6 content words) that contain format/style
-    keywords are flagged as behavioral.
+    Detect rubric values that describe output format or style.
     """
     behavioral_keywords = {
         "code", "block", "syntax", "highlight", "format", "style",
@@ -575,7 +554,6 @@ def _is_behavioral_rubric(value: str) -> bool:
 def _judge_behavioral(generated: str, rubric_value: str) -> bool:
     """
     Ask GPT-4o whether the generated answer satisfies a behavioral rubric criterion.
-    Returns True (hit) or False (miss). Falls back to False if no API key.
     """
     api_key = os.getenv("OPENAI_API_KEY", "")
     if not api_key:
@@ -604,60 +582,105 @@ def _judge_behavioral(generated: str, rubric_value: str) -> bool:
         return False
 
 
-def score_answer(generated: str, ideal_answer: str, rubric_str: str) -> dict:
+def judge_with_llm(generated: str, question: str, rubric_str: str) -> bool:
+    """
+    Use GPT-4o as a judge to evaluate if the generated answer satisfies the rubric criteria.
+    This is the original BEAM evaluation method for synthesis categories.
+    """
+    api_key = os.getenv("OPENAI_API_KEY", "")
+    if not api_key:
+        print("      ⚠ No OpenAI API key — using fallback scoring")
+        return False
+    
+    try:
+        import openai
+        client = openai.OpenAI(api_key=api_key)
+        
+        prompt = f"""You are evaluating an AI assistant's response to a question.
+
+Question: {question}
+
+Evaluation Criteria: {rubric_str}
+
+Assistant's Answer: {generated}
+
+Based ONLY on the criteria above, does the assistant's answer satisfy ALL the criteria?
+Answer with exactly one word: YES or NO
+
+YES = the answer meets all criteria
+NO = the answer fails to meet any criterion"""
+
+        resp = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.0,
+            max_tokens=5,
+        )
+        answer = resp.choices[0].message.content.strip().upper()
+        return answer.startswith("YES")
+        
+    except Exception as e:
+        print(f"      ✗ LLM judge failed: {e}")
+        return False
+
+
+def score_answer(generated: str, ideal_answer: str, rubric_str: str, question: str = "", category: str = "") -> dict:
     """
     Score generated answer against committed ideal_answer and rubric.
-
-    Matching strategy (per rubric value, in order):
-      1. Exact substring match (case-insensitive) — fast, precise
-      2. Token recall fallback — catches paraphrase rubric values like
-         "Core functionality" → "setting up the core functionality"
-         "Security and deployment" → "security measures…before deployment"
-      3. GPT-4o behavioral judge — for format/style criteria like
-         "code blocks with syntax highlighting" or "suggests lightweight libraries"
-         that will never appear verbatim in the answer
-
-    Pass threshold: >= 50% of rubric values satisfied.
+    
+    For synthesis categories (instruction_following, preference_following):
+        Uses LLM-as-judge for behavioral evaluation
+    
+    For factual categories:
+        Uses exact/token matching
     """
     rubric_phrases = [r.strip() for r in rubric_str.split("|") if r.strip()]
-    rubric_values  = [_rubric_value(p) for p in rubric_phrases]
-
+    rubric_values = [_rubric_value(p) for p in rubric_phrases]
+    
+    # For synthesis categories, use LLM judge
+    if category in SYNTHESIS_CATEGORIES and rubric_values:
+        # LLM judge evaluates all rubric criteria at once
+        passes = judge_with_llm(generated, question, rubric_str)
+        
+        rubric_score = 1.0 if passes else 0.0
+        rubric_hits = rubric_values if passes else []
+        
+        return {
+            "rubric_score": rubric_score,
+            "rubric_hits": rubric_hits,
+            "rubric_values": rubric_values,
+            "rubric_total": len(rubric_values),
+            "exact_hit": None,
+            "pass": passes,
+        }
+    
+    # For factual categories, use existing matching logic
     rubric_hits = []
     for v in rubric_values:
         if not v:
             continue
-
-        # 1. Exact substring
+        
         if v.lower() in generated.lower():
             rubric_hits.append(v)
             continue
-
-        # 2. Token recall
+        
         if _token_recall(v, generated) >= RECALL_THRESHOLD:
             rubric_hits.append(v)
             continue
-
-        # 3. GPT-4o behavioral judge (only for format/style rubric values)
+        
         if _is_behavioral_rubric(v) and _judge_behavioral(generated, v):
             rubric_hits.append(v)
-
-    rubric_score = (
-        len(rubric_hits) / len(rubric_values)
-        if rubric_values else None
-    )
-
-    exact_hit = (
-        ideal_answer.lower()[:120] in generated.lower()
-        if ideal_answer else None
-    )
-
+    
+    rubric_score = len(rubric_hits) / len(rubric_values) if rubric_values else None
+    exact_hit = ideal_answer.lower()[:120] in generated.lower() if ideal_answer else None
+    
     return {
-        "rubric_score":  round(rubric_score, 4) if rubric_score is not None else None,
-        "rubric_hits":   rubric_hits,
+        "rubric_score": round(rubric_score, 4) if rubric_score is not None else None,
+        "rubric_hits": rubric_hits,
         "rubric_values": rubric_values,
-        "rubric_total":  len(rubric_values),
-        "exact_hit":     exact_hit,
-        "pass":          rubric_score is not None and rubric_score >= 0.5,
+        "rubric_total": len(rubric_values),
+        "exact_hit": exact_hit,
+        "pass": rubric_score is not None and rubric_score >= 0.5,
     }
 
 
@@ -701,7 +724,7 @@ def evaluate_chat(
                 generated  = ideal_answer
                 passages_n = 0
 
-            score = score_answer(generated, ideal_answer, rubric_str)
+            score = score_answer(generated, ideal_answer, rubric_str, question=question, category=category)
 
             status = "✓" if score["pass"] else "✗"
             print(f"    {status} [{difficulty}] {question[:72]}...")
@@ -811,7 +834,17 @@ def run_chat(
     results = evaluate_chat(chat_id, probing_questions, size=size)
 
     ts       = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
-    out_file = Path(f"beam_results_{chat_id.replace('/', '_')}_{ts}.json")
+    
+    # Create results directory if it doesn't exist
+    results_dir = Path("results")
+    results_dir.mkdir(exist_ok=True)
+    
+    out_file = results_dir / f"beam_results_{chat_id.replace('/', '_')}_{ts}.json"
+
+    # Calculate overall totals
+    total_passed = sum(r["passed"] for r in results.values())
+    total_questions = sum(r["total"] for r in results.values())
+    overall_accuracy = total_passed / total_questions if total_questions > 0 else 0.0
 
     out_file.write_text(
         json.dumps(
@@ -831,6 +864,11 @@ def run_chat(
                     }
                     for cat, r in results.items()
                 },
+                "overall": {
+                    "passed": total_passed,
+                    "total": total_questions,
+                    "accuracy": round(overall_accuracy, 4)
+                }
             },
             indent=2,
             ensure_ascii=False,

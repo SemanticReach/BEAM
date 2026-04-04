@@ -1,6 +1,10 @@
 from langchain_openai import ChatOpenAI
 import json
 import os
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 
 class BuildLLm:
@@ -51,6 +55,8 @@ CONFIG_PATH = os.path.join(os.path.dirname(__file__), "llms_config.json")
 with open(CONFIG_PATH) as f:
     cfg = json.load(f)
 
+openai_api_key = os.getenv("OPENAI_API_KEY", cfg["gpt"]["api_key"])
+
 llama_llm_obj = BuildLLm(**cfg["llama"],
                          temperature=0)
 
@@ -59,8 +65,8 @@ qwen_awq_32_llm_obj = BuildLLm(**cfg["qwen"],
                                extra_body={"guided_regex": english_only_regex})
 
 gpt_llm_obj = BuildLLm(model_url=None,
-                       model_name="gpt-4.1-mini",
-                       api_key=cfg["gpt"]["api_key"],
+                       model_name="gpt-4o",  
+                       api_key=openai_api_key, 
                        temperature=0)
 
 llama_llm = llama_llm_obj.build_llm()

@@ -16,3 +16,120 @@ beam_embeddings_cache.pkl
 
 # results
 beam_results_*.json
+
+
+
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Environment & Secrets
+.env
+.env.local
+.env.*.local
+src/llms_config.json
+*_config.json
+*.pkl
+*.pickle
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Evaluation Results (large files)
+results/
+eval_structured/
+eval_input/
+results_for_beam_eval/
+beam_aggregated_results_*.json
+beam_results_*.json
+evaluation-*.json
+
+# Cache files
+*.cache
+beam_embeddings_cache.pkl
+*.pyc
+
+# NLTK Data
+nltk_data/
+punkt_tab/
+
+# Logs
+*.log
+*.out
+*.err
+
+# Model files (if any)
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb
+
+# Data files (optional - uncomment if you want to ignore datasets)
+# chats/
+# test_chats/
+# beam_dataset/
+# beam_10M_dataset/
+# topics/
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Python tools
+.coverage
+.coverage.*
+.coveragerc
+htmlcov/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+
+# Custom scripts output
+aggregate.py
+convert_*.py
+!convert_to_beam_format.py  # Keep this one
+
+# Large directories (optional)
+# eval_structured/
+# results/
