@@ -41,6 +41,7 @@ import tempfile
 import time
 from datetime import datetime
 from pathlib import Path
+from typing import Callable, Any
 
 import pandas as pd
 import requests
@@ -53,7 +54,7 @@ os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 # ── Config ────────────────────────────────────────────────────────────────────
 
-SERVER_URL = os.getenv("HB_SERVER_URL", os.getenv("SERVER_URL", "http://18.220.128.24:8000"))
+SERVER_URL = os.getenv("HB_SERVER_URL", os.getenv("SERVER_URL", "http://localhost:8000"))
 API_KEY    = os.getenv("HB_API_KEY",    os.getenv("API_KEY", ""))
 DB_NAME    = "fractal_db"
 
@@ -63,6 +64,11 @@ REQUEST_DELAY = 0.5
 UPLOAD_DIM = 512
 # build_ingest_data uses 384-dim (MiniLM)
 INGEST_DIM = 384
+
+# Retry configuration
+MAX_RETRIES = 5
+RETRY_DELAY_SECONDS = 30  # Wait 30 seconds between retries
+REQUEST_TIMEOUT_SECONDS = 7200  # 2 hours timeout
 
 # Server-assigned namespaces stored here after upload
 CHAT_NAMESPACES: dict[str, str] = {}
@@ -74,6 +80,33 @@ MULTIHOP_CONFIG = {
     "1M":   {"num_hops": 5, "top_k_per_hop": 20, "final_top_k": 8,  "hop_decay": 0.90},
     "10M":  {"num_hops": 7, "top_k_per_hop": 25, "final_top_k": 10, "hop_decay": 0.92},
 }
+
+# ── Retry Decorator ───────────────────────────────────────────────────────────
+
+def retry_request(func: Callable) -> Callable:
+    """Decorator to retry HTTP requests with exponential backoff."""
+    def wrapper(*args, **kwargs):
+        last_exception = None
+        for attempt in range(MAX_RETRIES):
+            try:
+                return func(*args, **kwargs)
+            except requests.exceptions.Timeout as e:
+                last_exception = e
+                print(f"      ⚠ Timeout (attempt {attempt + 1}/{MAX_RETRIES})")
+            except requests.exceptions.ConnectionError as e:
+                last_exception = e
+                print(f"      ⚠ Connection error (attempt {attempt + 1}/{MAX_RETRIES}): {e}")
+            except Exception as e:
+                last_exception = e
+                print(f"      ⚠ Request failed (attempt {attempt + 1}/{MAX_RETRIES}): {e}")
+            
+            if attempt < MAX_RETRIES - 1:
+                wait_time = RETRY_DELAY_SECONDS * (2 ** attempt)  # Exponential backoff
+                print(f"      Retrying in {wait_time} seconds...")
+                time.sleep(wait_time)
+        
+        raise last_exception
+    return wrapper
 
 # ── QA Schema ─────────────────────────────────────────────────────────────────
 
@@ -122,33 +155,29 @@ def qa_namespace(chat_id: str) -> str:
 
 def load_turns(chat_file: Path) -> list[dict]:
     """
-    Flatten the nested batch structure of BEAM chat.json files.
-
-    BEAM format:
-        [
-          { "batch_number": 1, "turns": [ [user_turn, assistant_turn], ... ] },
-          ...
-        ]
-    Returns a flat list of turn dicts.
+    Recursively extract all turns with 'role' and 'content' from chat.json.
     """
     with open(chat_file, encoding="utf-8") as f:
         data = json.load(f)
-
+    
     turns = []
-
-    if isinstance(data, list):
-        for item in data:
-            if isinstance(item, dict) and "turns" in item:
-                # batch structure
-                for pair in item["turns"]:
-                    if isinstance(pair, list):
-                        turns.extend(pair)
-                    elif isinstance(pair, dict):
-                        turns.append(pair)
-            elif isinstance(item, dict):
-                # already flat
-                turns.append(item)
-
+    
+    def extract_turns(obj):
+        if isinstance(obj, dict):
+            # Check if this is a turn
+            if "role" in obj and "content" in obj:
+                turns.append(obj)
+            else:
+                # Recurse into dict values
+                for value in obj.values():
+                    extract_turns(value)
+        elif isinstance(obj, list):
+            # Recurse into list items
+            for item in obj:
+                extract_turns(item)
+    
+    extract_turns(data)
+    print(f"  Loaded {len(turns)} turns from chat.json")
     return turns
 
 
@@ -179,42 +208,81 @@ def format_turns_as_text(turns: list[dict]) -> str:
 
 # ── Step 1: Upload chat as unstructured document ──────────────────────────────
 
+@retry_request
+def _do_upload_chat(chat_id: str, tmp_path: str) -> requests.Response:
+    """Internal function to perform the actual upload with retry."""
+    with open(tmp_path, "rb") as f:
+        return requests.post(
+            f"{SERVER_URL}/upload_document/",
+            headers={"X-API-Key": API_KEY},
+            files={"file": (f"chat_{chat_id}.json", f, "application/json")},
+            data={
+                "dim": UPLOAD_DIM,
+                "seed": 42,
+                "depth": 3,
+                "use_phases": "true",
+                "matrix_size": 4
+            },
+            timeout=REQUEST_TIMEOUT_SECONDS,
+        )
+
+
 def upload_chat(chat_id: str, turns: list[dict]) -> str | None:
     """
-    Upload conversation turns as plain text to HyperBinder.
-    Server assigns its own namespace — stored in CHAT_NAMESPACES[chat_id].
-    Returns server-assigned namespace on success, None on failure.
+    Upload conversation turns as JSON where each object is a complete SymbolicCell.
+    This bypasses the TextLabeler and directly creates cells with value field.
+    Includes retry logic and 2-hour timeout.
     """
     tmp_path = None
     try:
-        doc_text = format_turns_as_text(turns)
-
+        # Create proper SymbolicCell-compatible JSON objects
+        cells = []
+        for turn in turns:
+            role = turn.get("role", "unknown").upper()
+            content = turn.get("content", "").strip()
+            tid = turn.get("id", "?")
+            time_anchor = turn.get("time_anchor")
+            
+            if not content:
+                continue
+            
+            # Create a cell that matches what JSONProcessor expects
+            cell = {
+                "role": role,
+                "value": content,  # This is critical!
+                "chunk_id": f"turn_{tid}",
+                "parent": f"chat_{chat_id}"
+            }
+            if time_anchor:
+                cell["time_anchor"] = time_anchor
+            
+            cells.append(cell)
+        
+        # Write as JSON array
         with tempfile.NamedTemporaryFile(
-            mode="w", suffix=".txt", delete=False, encoding="utf-8"
+            mode="w", suffix=".json", delete=False, encoding="utf-8"
         ) as tmp:
-            tmp.write(doc_text)
+            json.dump(cells, tmp, indent=2)
             tmp_path = tmp.name
-
-        with open(tmp_path, "rb") as f:
-            resp = requests.post(
-                f"{SERVER_URL}/upload_document/",
-                headers={"X-API-Key": API_KEY},
-                files={"file": (f"chat_{chat_id}.txt", f)},
-                data={"dim": UPLOAD_DIM, "seed": 42, "depth": 3},
-                timeout=600,
-            )
-
+        
+        print(f"  Uploading chat with {len(cells)} cells (timeout: {REQUEST_TIMEOUT_SECONDS//3600} hours)...")
+        
+        # Upload with retry
+        resp = _do_upload_chat(chat_id, tmp_path)
         resp.raise_for_status()
-        result    = resp.json()
+        
+        result = resp.json()
         namespace = result.get("namespace")
-
+        
         CHAT_NAMESPACES[chat_id] = namespace
-
+        
         print(f"  ✓ Chat uploaded → {namespace}  cells={result.get('total_cells')}")
         return namespace
-
+        
     except Exception as e:
-        print(f"  ✗ Chat upload failed: {e}")
+        print(f"  ✗ Chat upload failed after {MAX_RETRIES} attempts: {e}")
+        if hasattr(e, 'response') and e.response:
+            print(f"     Response: {e.response.text[:500]}")
         return None
     finally:
         if tmp_path:
@@ -233,6 +301,26 @@ _IDEAL_ANSWER_KEYS = (
     "expected_response",
     "expected_answer",
 )
+
+
+@retry_request
+def _do_ingest_probing_questions(tmp_path: str, namespace: str) -> requests.Response:
+    """Internal function to perform the actual ingest with retry."""
+    with open(tmp_path, "rb") as f:
+        return requests.post(
+            f"{SERVER_URL}/build_ingest_data/",
+            headers={"X-API-Key": API_KEY},
+            files={"file": ("beam_qa.csv", f, "text/csv")},
+            data={
+                "dim":             INGEST_DIM,
+                "seed":            42,
+                "depth":           3,
+                "db_name":         DB_NAME,
+                "namespace":       namespace,
+                "template_schema": QA_TEMPLATE_SCHEMA,
+            },
+            timeout=REQUEST_TIMEOUT_SECONDS,
+        )
 
 
 def ingest_probing_questions(chat_id: str, probing_questions: dict) -> int:
@@ -300,25 +388,12 @@ def ingest_probing_questions(chat_id: str, probing_questions: dict) -> int:
             df.to_csv(tmp, index=False)
             tmp_path = tmp.name
 
-        print(f"  Uploading {len(df)} QA rows → '{namespace}'...")
+        print(f"  Uploading {len(df)} QA rows → '{namespace}' (timeout: {REQUEST_TIMEOUT_SECONDS//3600} hours)...")
 
-        with open(tmp_path, "rb") as f:
-            resp = requests.post(
-                f"{SERVER_URL}/build_ingest_data/",
-                headers={"X-API-Key": API_KEY},
-                files={"file": ("beam_qa.csv", f, "text/csv")},
-                data={
-                    "dim":             INGEST_DIM,
-                    "seed":            42,
-                    "depth":           3,
-                    "db_name":         DB_NAME,
-                    "namespace":       namespace,
-                    "template_schema": QA_TEMPLATE_SCHEMA,
-                },
-                timeout=120,
-            )
-
+        # Upload with retry
+        resp = _do_ingest_probing_questions(tmp_path, namespace)
         resp.raise_for_status()
+        
         result     = resp.json()
         rows_added = result.get("rows_added", 0)
         print(
@@ -328,7 +403,7 @@ def ingest_probing_questions(chat_id: str, probing_questions: dict) -> int:
         return rows_added
 
     except Exception as e:
-        print(f"  ✗ QA ingest failed: {e}")
+        print(f"  ✗ QA ingest failed after {MAX_RETRIES} attempts: {e}")
         return 0
     finally:
         if tmp_path:
@@ -337,10 +412,33 @@ def ingest_probing_questions(chat_id: str, probing_questions: dict) -> int:
 
 # ── Step 3: Multihop retrieval from chat document ─────────────────────────────
 
+@retry_request
+def _do_multihop_query(question: str, namespace: str, cfg: dict) -> requests.Response:
+    """Internal function to perform multihop query with retry."""
+    return requests.post(
+        f"{SERVER_URL}/unstructured/multihop_query/",
+        headers={"X-API-Key": API_KEY},
+        json={
+            "query":                   question,
+            "db_name":                 DB_NAME,
+            "namespace":               namespace,
+            "role":                    "paragraph",
+            "use_symbolic":            True,
+            "num_hops":                cfg["num_hops"],
+            "top_k_per_hop":           cfg["top_k_per_hop"],
+            "final_top_k":             cfg["final_top_k"],
+            "hop_decay":               cfg["hop_decay"],
+            "context_expansion_ratio": 0.5,
+        },
+        timeout=REQUEST_TIMEOUT_SECONDS,
+    )
+
+
 def multihop_query(question: str, chat_id: str, size: str = "100K") -> list[str]:
     """
     Run multihop_query against the server-assigned chat namespace.
     Returns list of retrieved passage texts.
+    Includes retry logic and 2-hour timeout.
     """
     cfg = MULTIHOP_CONFIG.get(size, MULTIHOP_CONFIG["100K"])
 
@@ -350,23 +448,7 @@ def multihop_query(question: str, chat_id: str, size: str = "100K") -> list[str]
         return []
 
     try:
-        resp = requests.post(
-            f"{SERVER_URL}/unstructured/multihop_query/",
-            headers={"X-API-Key": API_KEY},
-            json={
-                "query":                   question,
-                "db_name":                 DB_NAME,
-                "namespace":               namespace,
-                "role":                    "paragraph",
-                "use_symbolic":            True,
-                "num_hops":                cfg["num_hops"],
-                "top_k_per_hop":           cfg["top_k_per_hop"],
-                "final_top_k":             cfg["final_top_k"],
-                "hop_decay":               cfg["hop_decay"],
-                "context_expansion_ratio": 0.5,
-            },
-            timeout=90,
-        )
+        resp = _do_multihop_query(question, namespace, cfg)
         resp.raise_for_status()
         results = resp.json().get("final_results", [])
         return [
@@ -375,44 +457,51 @@ def multihop_query(question: str, chat_id: str, size: str = "100K") -> list[str]
             if r.get("text") or r.get("value")
         ]
     except Exception as e:
-        print(f"      ✗ multihop failed: {e}")
+        print(f"      ✗ multihop failed after {MAX_RETRIES} attempts: {e}")
         return []
 
 
 # ── Step 4: Retrieve committed ground truth ───────────────────────────────────
 
+@retry_request
+def _do_get_ground_truth(question: str, namespace: str, chat_id: str) -> requests.Response:
+    """Internal function to get ground truth with retry."""
+    return requests.post(
+        f"{SERVER_URL}/compose/search_slots/{DB_NAME}/{namespace}",
+        headers={"X-API-Key": API_KEY},
+        json={
+            "slot_queries": {
+                "question": {"query": question, "weight": 1.0},
+                "chat_id":  {
+                    "query":     chat_id,
+                    "mode":      "filter",
+                    "encoding":  "exact",
+                    "threshold": 0.95,
+                },
+            },
+            "top_k": 1,
+        },
+        timeout=REQUEST_TIMEOUT_SECONDS,
+    )
+
+
 def get_ground_truth(question: str, chat_id: str) -> dict | None:
     """
     Query beam_qa_{chat_id} by question similarity.
     Returns the committed ideal_answer + rubric for this question.
+    Includes retry logic and 2-hour timeout.
     """
     namespace = qa_namespace(chat_id)
 
     try:
-        resp = requests.post(
-            f"{SERVER_URL}/compose/search_slots/{DB_NAME}/{namespace}",
-            headers={"X-API-Key": API_KEY},
-            json={
-                "slot_queries": {
-                    "question": {"query": question, "weight": 1.0},
-                    "chat_id":  {
-                        "query":     chat_id,
-                        "mode":      "filter",
-                        "encoding":  "exact",
-                        "threshold": 0.95,
-                    },
-                },
-                "top_k": 1,
-            },
-            timeout=30,
-        )
+        resp = _do_get_ground_truth(question, namespace, chat_id)
         resp.raise_for_status()
         results = resp.json().get("results", [])
         if results:
             return results[0].get("data", {})
         return None
     except Exception as e:
-        print(f"      ✗ ground truth retrieval failed: {e}")
+        print(f"      ✗ ground truth retrieval failed after {MAX_RETRIES} attempts: {e}")
         return None
 
 
@@ -470,7 +559,7 @@ def generate_answer(question: str, passages: list[str], category: str = "") -> s
 
     try:
         import openai
-        client = openai.OpenAI(api_key=api_key)
+        client = openai.OpenAI(api_key=api_key, timeout=REQUEST_TIMEOUT_SECONDS)
 
         resp = client.chat.completions.create(
             model="gpt-4o",
@@ -487,6 +576,7 @@ def generate_answer(question: str, passages: list[str], category: str = "") -> s
             ],
             temperature=0.0,
             max_tokens=1024,
+            timeout=REQUEST_TIMEOUT_SECONDS,
         )
         return resp.choices[0].message.content or ""
 
@@ -560,7 +650,7 @@ def _judge_behavioral(generated: str, rubric_value: str) -> bool:
         return False
     try:
         import openai
-        client = openai.OpenAI(api_key=api_key)
+        client = openai.OpenAI(api_key=api_key, timeout=REQUEST_TIMEOUT_SECONDS)
         resp = client.chat.completions.create(
             model="gpt-4o",
             messages=[{
@@ -594,7 +684,7 @@ def judge_with_llm(generated: str, question: str, rubric_str: str) -> bool:
     
     try:
         import openai
-        client = openai.OpenAI(api_key=api_key)
+        client = openai.OpenAI(api_key=api_key, timeout=REQUEST_TIMEOUT_SECONDS)
         
         prompt = f"""You are evaluating an AI assistant's response to a question.
 
@@ -756,13 +846,19 @@ def evaluate_chat(
 
 # ── Namespace wipe ────────────────────────────────────────────────────────────
 
+@retry_request
+def _do_delete_namespace(namespace: str) -> requests.Response:
+    """Internal function to delete namespace with retry."""
+    return requests.delete(
+        f"{SERVER_URL}/db/{DB_NAME}/namespace/{namespace}",
+        headers={"X-API-Key": API_KEY},
+        timeout=REQUEST_TIMEOUT_SECONDS,
+    )
+
+
 def delete_namespace(namespace: str):
     try:
-        resp = requests.delete(
-            f"{SERVER_URL}/db/{DB_NAME}/namespace/{namespace}",
-            headers={"X-API-Key": API_KEY},
-            timeout=30,
-        )
+        resp = _do_delete_namespace(namespace)
         if resp.ok:
             print(f"  ✓ Deleted: {namespace}")
     except Exception as e:
@@ -781,6 +877,7 @@ def run_chat(
 ):
     print(f"\n{'═' * 64}")
     print(f"  Chat: {chat_id}  |  Size: {size}  |  Dir: {chat_dir}")
+    print(f"  Timeout: {REQUEST_TIMEOUT_SECONDS//3600} hours, Max retries: {MAX_RETRIES}")
     print(f"{'═' * 64}")
 
     chat_file = chat_dir / "chat.json"
@@ -907,6 +1004,8 @@ if __name__ == "__main__":
 
     print(f"\nServer : {SERVER_URL}")
     print(f"DB     : {DB_NAME}")
+    print(f"Timeout: {REQUEST_TIMEOUT_SECONDS//3600} hours")
+    print(f"Retries: {MAX_RETRIES} (exponential backoff)")
 
     if args.all_chats:
         base      = Path(args.all_chats)
