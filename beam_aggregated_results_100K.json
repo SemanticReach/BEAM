@@ -1,0 +1,1635 @@
+{
+  "chat_size": "100K",
+  "num_chats": 20,
+  "category_averages": {
+    "abstention": 1.0,
+    "contradiction_resolution": 0.9605263157894737,
+    "event_ordering": 0.763345864661654,
+    "information_extraction": 0.9780701754385964,
+    "instruction_following": 0.5,
+    "knowledge_update": 1.0,
+    "multi_session_reasoning": 0.9629629629629631,
+    "preference_following": 0.7777777777777778,
+    "summarization": 1.0,
+    "temporal_reasoning": 0.6527777777777778
+  },
+  "overall_average": 0.8605360325948559,
+  "per_chat_results": [
+    {
+      "chat_id": 1,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.5833333333333333,
+          "scores": [
+            0.6666666666666666,
+            0.5
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.5,
+          "scores": [
+            1.0,
+            0.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.5,
+          "scores": [
+            0.5,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.8583333333333332
+      }
+    },
+    {
+      "chat_id": 2,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 0.75,
+          "scores": [
+            0.75,
+            0.75
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.25,
+          "scores": [
+            0.4,
+            0.1
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 0.8333333333333333,
+          "scores": [
+            1.0,
+            0.6666666666666666
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.0,
+          "scores": [
+            0.0,
+            0.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.75,
+          "scores": [
+            1.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.7583333333333333
+      }
+    },
+    {
+      "chat_id": 3,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 0.75,
+          "scores": [
+            0.75,
+            0.75
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.31666666666666665,
+          "scores": [
+            0.3333333333333333,
+            0.3
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "overall": 0.8444444444444444
+      }
+    },
+    {
+      "chat_id": 4,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 0.875,
+          "scores": [
+            1.0,
+            0.75
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.6666666666666667,
+          "scores": [
+            0.7777777777777778,
+            0.5555555555555556
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "overall": 0.9541666666666668
+      }
+    },
+    {
+      "chat_id": 5,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "overall": 1.0
+      }
+    },
+    {
+      "chat_id": 6,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.8583333333333334,
+          "scores": [
+            0.9166666666666666,
+            0.8
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.5,
+          "scores": [
+            0.5,
+            0.5
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 0.75,
+          "scores": [
+            1.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.75,
+          "scores": [
+            1.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.8858333333333335
+      }
+    },
+    {
+      "chat_id": 7,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.8,
+          "scores": [
+            0.8,
+            0.8
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.25,
+          "scores": [
+            0.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.75,
+          "scores": [
+            1.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.8800000000000001
+      }
+    },
+    {
+      "chat_id": 8,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.6,
+          "scores": [
+            1.0,
+            0.2
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.75,
+          "scores": [
+            0.5,
+            1.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.75,
+          "scores": [
+            1.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.9099999999999999
+      }
+    },
+    {
+      "chat_id": 9,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.9,
+          "scores": [
+            1.0,
+            0.8
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.5,
+          "scores": [
+            1.0,
+            0.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 0.0,
+          "scores": [
+            0.0,
+            0.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.5,
+          "scores": [
+            0.5,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.79
+      }
+    },
+    {
+      "chat_id": 10,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.85,
+          "scores": [
+            1.0,
+            0.7
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.0,
+          "scores": [
+            0.0,
+            0.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 0.75,
+          "scores": [
+            1.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.5,
+          "scores": [
+            0.5,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.8099999999999999
+      }
+    },
+    {
+      "chat_id": 11,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 0.5,
+          "scores": [
+            0.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.5,
+          "scores": [
+            0.5,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.9
+      }
+    },
+    {
+      "chat_id": 12,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.5,
+          "scores": [
+            0.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 0.75,
+          "scores": [
+            1.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.5,
+          "scores": [
+            0.5,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.875
+      }
+    },
+    {
+      "chat_id": 13,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.9166666666666667,
+          "scores": [
+            1.0,
+            0.8333333333333334
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 0.75,
+          "scores": [
+            1.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.25,
+          "scores": [
+            0.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 0.8333333333333333,
+          "scores": [
+            0.6666666666666666,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "overall": 0.875
+      }
+    },
+    {
+      "chat_id": 14,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.8166666666666667,
+          "scores": [
+            0.8,
+            0.8333333333333334
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.0,
+          "scores": [
+            0.0,
+            0.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 0.5,
+          "scores": [
+            0.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 0.5,
+          "scores": [
+            1.0,
+            0.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.25,
+          "scores": [
+            0.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.7066666666666667
+      }
+    },
+    {
+      "chat_id": 15,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.75,
+          "scores": [
+            1.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 0.75,
+          "scores": [
+            0.5,
+            1.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "overall": 0.95
+      }
+    },
+    {
+      "chat_id": 16,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.9375,
+          "scores": [
+            0.875,
+            1.0
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.5,
+          "scores": [
+            1.0,
+            0.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 0.5,
+          "scores": [
+            0.5,
+            0.5
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.5,
+          "scores": [
+            0.5,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.84375
+      }
+    },
+    {
+      "chat_id": 17,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.5,
+          "scores": [
+            1.0,
+            0.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.5,
+          "scores": [
+            0.5,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.9
+      }
+    },
+    {
+      "chat_id": 18,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.7291666666666667,
+          "scores": [
+            0.5833333333333334,
+            0.875
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.5,
+          "scores": [
+            1.0,
+            0.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.5,
+          "scores": [
+            0.5,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.8729166666666668
+      }
+    },
+    {
+      "chat_id": 19,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 0.875,
+          "scores": [
+            1.0,
+            0.75
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.9285714285714286,
+          "scores": [
+            1.0,
+            0.8571428571428571
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.5,
+          "scores": [
+            1.0,
+            0.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.75,
+          "scores": [
+            0.5,
+            1.0
+          ],
+          "count": 2
+        },
+        "overall": 0.9053571428571429
+      }
+    },
+    {
+      "chat_id": 20,
+      "scores": {
+        "abstention": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "contradiction_resolution": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "event_ordering": {
+          "average": 0.35,
+          "scores": [
+            0.5,
+            0.2
+          ],
+          "count": 2
+        },
+        "information_extraction": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "instruction_following": {
+          "average": 0.5,
+          "scores": [
+            0.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "knowledge_update": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "multi_session_reasoning": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "preference_following": {
+          "average": 0.5,
+          "scores": [
+            0.5,
+            0.5
+          ],
+          "count": 2
+        },
+        "summarization": {
+          "average": 1.0,
+          "scores": [
+            1.0,
+            1.0
+          ],
+          "count": 2
+        },
+        "temporal_reasoning": {
+          "average": 0.75,
+          "scores": [
+            1.0,
+            0.5
+          ],
+          "count": 2
+        },
+        "overall": 0.8099999999999999
+      }
+    }
+  ]
+}

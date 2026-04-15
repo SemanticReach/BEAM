@@ -1,0 +1,352 @@
+{
+    "abstention": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response directly addresses the question by stating that there is no information related to Jake\u2019s advice about documenting prototype tests beyond April 15. It is fully on-topic and confirms the absence of the specified information, thus satisfying the negative constraint of the rubric criterion. There are no prohibited elements present, and the response is clear and accurate."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response directly addresses the rubric criterion by stating that there is no information related to additional reasons for rejecting the $30,000 investment offer beyond the equity demand and terms mentioned. It is on-topic, responsive, and does not introduce any prohibited elements, fully satisfying the negative constraint of absence of additional reasons."
+                }
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly identifies and states the presence of contradictory information by pointing out the inconsistency between meeting Heather at a production meeting and never attending any production meetings. This directly satisfies the rubric criterion requiring the LLM to state that there is contradictory information."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly mentions that the user said they met Heather at a production meeting where she suggested patenting the invention, which directly satisfies the rubric criterion. The response is on-topic and addresses the question by highlighting the contradictory information, demonstrating full compliance."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly mentions that the user stated they have never attended any production meetings related to their invention, fulfilling the rubric's positive requirement. It also references the contradictory information about meeting Heather at a production meeting, showing awareness of the relevant context. Therefore, the response fully complies with the rubric criterion."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly asks the user to clarify which statement is correct, directly addressing the rubric criterion that the LLM response should mention which statement is correct. It identifies the contradictory statements and requests clarification, thereby fulfilling the requirement fully."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly identifies and states the presence of contradictory information by pointing out the conflicting statements about attending patent-related webinars. This directly satisfies the rubric criterion requiring the LLM to state that there is contradictory information. The response is on-topic and clearly addresses the issue, so it fully complies."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly mentions that the user said they have attended a patent-related webinar, fulfilling the positive requirement of the rubric criterion. The response is on-topic and directly addresses the user's contradictory statements about attending patent-related webinars. Therefore, it fully complies with the rubric."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly mentions that the user stated they have attended a patent-related webinar and also that they have never attended any patent-related webinars or workshops, directly addressing the rubric criterion. The response correctly identifies and references both statements, fulfilling the requirement to mention that the user has never attended any patent-related webinars or workshops. The response is on-topic and fully compliant."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly asks the user to clarify which statement is correct regarding their attendance at patent-related webinars, thereby directly addressing the rubric criterion that the LLM response should mention which statement is correct. The response is on-topic and fulfills the positive requirement fully."
+                }
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "precision": 1.0,
+            "recall": 0.16666666666666666,
+            "f1": 0.2857142857142857,
+            "tau_norm": 0.6732050807568877,
+            "final_score": 0.1923443087876822,
+            "llm_judge_score": 0.5,
+            "llm_judge_responses": [
+                {
+                    "score": 0.0,
+                    "reason": "The response does not provide any actual guidance on provisional patent filing. Instead, it lists topics or aspects mentioned in an unspecified order without offering concrete advice, instructions, or information related to filing a provisional patent. Therefore, it fails to address the rubric criterion of providing provisional patent filing guidance and is non-responsive to the question."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The response does not provide any actual information or advice about the non-provisional patent deadline or related guidance. Instead, it merely lists topics or questions mentioned without addressing the non-provisional patent deadline or offering advice on it. Therefore, it fails to comply with the rubric criterion requiring information and advice on the non-provisional patent deadline."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response clearly demonstrates understanding and decision-making regarding the PCT application. It outlines the decision to file a PCT application covering multiple markets and discusses the implications, which directly addresses the PCT application decision and understanding criterion. The response is on-topic, accurate, and shows comprehension of the relevant patent filing steps and strategic considerations, fulfilling the rubric requirements fully."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly addresses PCT benefits by discussing the decision to file a PCT application covering multiple markets and agreeing that filing the PCT is a good strategy. It also raises funding concerns by mentioning worries about covering extra costs and inquiring about the quickest funding options and the best crowdfunding platform. Thus, it fully complies with the rubric criterion requiring coverage of PCT benefits and funding concerns."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly includes a mention of 'the quickest funding options to secure additional funds,' which directly addresses the rubric criterion of 'Quick funding options.' The response is on-topic and attempts to answer the question by raising the issue of quick funding methods. There are no prohibited elements present, and the content is relevant and accurate with respect to the criterion."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The response does not address the rubric criterion of 'Crowdfunding platform choice' by providing any information, recommendation, or evaluation about which crowdfunding platform to choose. Instead, it only lists a sequence of topics mentioned, including a vague inquiry about the best crowdfunding platform, without actually answering or discussing the choice of platform. Therefore, it fails to comply with the requirement to address the crowdfunding platform choice."
+                }
+            ]
+        },
+        {
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.33333333333333337,
+            "tau_norm": 0.658113883008419,
+            "final_score": 0.2193712943361397,
+            "llm_judge_score": 0.2,
+            "llm_judge_responses": [
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion requires the response to demonstrate prior art search planning. The response merely lists stages including 'planning and concerns about completing the prior art search' but does not provide any actual planning details, strategies, or steps related to conducting a prior art search. It is therefore non-compliant with the requirement to show prior art search planning."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion requires completion and findings of the prior art search to be addressed. The response only lists stages including 'concerns about completing the prior art search' and 'discussing the completed prior art search and its findings' but does not provide any actual completion details or findings from the prior art search. Therefore, the required element of prior art search completion and findings is missing, resulting in no compliance."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The response does not address the rubric criterion of 'Provisional patent filing' specifically. While it mentions 'filing the provisional patent and related worries' as one stage among others, it does not provide any substantive information or explanation about provisional patent filing itself. The response is mostly a list of stages without elaboration or focus on the provisional patent filing process, which is required by the rubric. Therefore, it fails to comply with the criterion."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The response does not demonstrate compliance with the rubric criterion of non-provisional patent drafting and review. Instead, it outlines stages including prior art search and provisional patent filing, but does not provide any substantive content or detail specifically about drafting or reviewing a non-provisional patent application. The mention of 'starting the drafting' and 'reviewing the draft' is superficial and lacks the necessary detail or explanation expected for non-provisional patent drafting and review. Therefore, the response fails to meet the positive requirement of the rubric."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly identifies the review and revision phase as the fifth stage, focusing on ensuring clarity and consistency, which aligns directly with the rubric criterion. It is on-topic, addresses the review and revision phase clearly, and does not include any prohibited elements. Therefore, it fully complies with the requirement."
+                }
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states 'My son is 21 years old,' which directly satisfies the rubric criterion requiring the LLM to state the son's age as 21 years old. The additional information about his studies does not detract from compliance. Therefore, the response fully complies with the requirement."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that he is studying engineering at Montserrat Community College, fully satisfying the positive requirement of the rubric criterion. The response is on-topic and contains no prohibited elements."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the plan was to start by checking with the college for any resources or connections with patent attorneys, which directly satisfies the rubric criterion. The rest of the response expands on additional steps but does not detract from the required element. Therefore, the response fully complies with the criterion."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly includes the step to 'reach out to the local bar association for referrals,' which directly satisfies the rubric criterion requiring this element. The response is on-topic and provides this recommendation clearly, fulfilling the positive requirement fully."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly includes the use of online directories to find reliable attorneys, which directly satisfies the rubric criterion. It also mentions other relevant methods, but the presence of the required element 'use online directories to find reliable attorneys' is clear and accurate. The response is on-topic and fully compliant."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states recommended steps including contacting local associations (local bar association), using university resources (checking with the college), exploring online directories, and attending networking events. These elements align well with the rubric criterion, and the response is fully on-topic and complete."
+                }
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "llm_judge_score": 0.0,
+            "llm_judge_responses": [
+                {
+                    "score": 0.0,
+                    "reason": "The response does not include any detailed timeliness information such as specific timeframes, durations, or deadlines related to the patent approval process. It outlines steps and their relative ease or accuracy but fails to provide detailed timing or schedule details as required by the rubric criterion."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response directly provides an exact date, 'November 10, 2024,' fulfilling the rubric criterion that requires the LLM response to contain an exact date. The response is on-topic and clearly states the date as requested."
+                }
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states a budget of $4,000 for initial patent filing fees, which satisfies the rubric criterion requiring the LLM response to state '$4,000 for initial patent filing fees'. The response is on-topic and accurately includes the required element, fulfilling the positive requirement fully."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states '$5,500 for attorney fees,' which matches the rubric criterion exactly. The response is on-topic and includes the required element accurately and clearly, satisfying the positive requirement fully."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response directly states '$8,000', which exactly matches the rubric criterion requiring the LLM response to state '$8,000'. The response is on-topic and fully satisfies the positive requirement without any errors or omissions."
+                }
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states 'June 1, 2024 for the provisional patent,' which fully satisfies the rubric criterion requiring that date for the provisional patent. The additional information about the non-provisional patent date does not violate any constraints and the response is on-topic and responsive to the question."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states 'November 10, 2024' for the non-provisional patent as required by the rubric criterion. It also includes the date for the provisional patent, which does not conflict with the requirement. Therefore, the response fully complies with the rubric."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that a comprehensive prior art search was conducted covering multiple databases and classifications before the provisional filing, which directly satisfies the positive requirement of the rubric criterion. The response is on-topic and fully addresses the requirement without any prohibited elements."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that unique AI tagging features absent in similar patents were identified, fulfilling the positive requirement of the rubric criterion. The response is on-topic and directly addresses the question by mentioning the identification of unique AI tagging features compared to similar patents. There are no prohibited elements present, and the requirement is fully met."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the provisional was filed on time and includes detailed documentation plans, fulfilling both elements of the rubric criterion. The response is on-topic and fully addresses the requirement without any prohibited elements."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that a budget aligned with filing and attorney fees was maintained, which directly satisfies the rubric criterion. The response is on-topic and includes the required positive element without any inaccuracies or omissions."
+                }
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "llm_judge_score": 0.5,
+            "llm_judge_responses": [
+                {
+                    "score": 0.0,
+                    "reason": "The response does not mention any patent attorneys based in Montserrat specifically. It only provides general advice on how to find a patent attorney in Montserrat or nearby territories, without naming or referencing any actual patent attorneys located there. Therefore, it fails to meet the positive requirement of mentioning patent attorneys based in Montserrat."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response focuses primarily on finding local patent attorneys in Montserrat by suggesting searching for local law firms, seeking recommendations from local networks, and consulting with attorneys in Montserrat. Although it briefly mentions considering nearby territories if local options are limited, the main emphasis remains on local attorneys rather than remote services. Therefore, it fully complies with the rubric criterion."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 0.5,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly recommends including 'detailed drawings' under the section titled 'Drawings and Figures,' stating that these should be clear, labeled appropriately, and complement the written descriptions. This directly satisfies the rubric criterion requiring the recommendation of detailed drawings."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The response does not mention video demos or any similar multimedia content as required by the rubric criterion. It lists various types of content to include in a patent application, such as detailed descriptions, drawings, photographs, and test data, but there is no reference to video demonstrations or multimedia content. Therefore, it fails to meet the positive requirement."
+                }
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the user advanced their patent application by planning a prior art search, registering for a patent law webinar, and attending the webinar despite a scheduling conflict. All required elements from the rubric criterion are present and clearly described, fulfilling the positive requirements completely."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that $4,000 was budgeted for filing and $5,500 for attorney fees, and it mentions choosing to work with a Montserrat-based attorney for better communication. All required elements from the rubric criterion are present, accurate, and clearly expressed, fully satisfying the positive requirements."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that by April, the prior art search was completed, a meeting with attorney Ashlee occurred to confirm a provisional-first filing strategy, and technical specifications were finalized. All required elements from the rubric criterion are present and accurately reflected, demonstrating full compliance."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response fully satisfies the rubric criterion by explicitly stating that the user applied for a $10,000 innovation grant, compromised on including both drawings and video in the application, and scheduled a May 14 filing meeting. All required elements are present, accurate, and clearly articulated, demonstrating complete compliance."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the provisional patent was filed on May 15 and that by July, 10 prototype tests were completed with 96% accuracy, fully satisfying the positive requirements of the rubric criterion. The information is accurate, complete, and clearly presented, demonstrating full compliance."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the office action was addressed by amending claims with Ashlee and mentor Jake's guidance, and that Francis helped prepare a demo for investor Stephen, fully satisfying the rubric criterion. All required elements are present and accurately described, and the response is on-topic."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that by September, the user began drafting the non-provisional with Ashlee, approved a $12,000 budget for filing, and a PCT application covering multiple regions. All required elements from the rubric criterion are present, accurate, and clearly expressed, fulfilling the positive requirement completely."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that you negotiated investment terms with Stephen and rejected a competing offer, fulfilling the first part of the rubric. It also confirms that you verified compliance of your 45-page draft with USPTO standards, satisfying the second part. Both required elements are present and accurately addressed, and the response is on-topic and relevant to the question."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that prototype testing was scheduled to reach 98% accuracy by the end of September, which fully satisfies the rubric criterion. The information is accurate, clear, and directly addresses the requirement without any contradictions or omissions."
+                }
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that there were 35 days between the two specified dates, which directly satisfies the rubric criterion requiring the LLM response to state '35 days'. The response is on-topic and accurately conveys the required duration, fulfilling the positive requirement fully."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response clearly states the time period 'from April 10 till May 15' in a semantically equivalent manner by referencing the dates April 10, 2024, and May 15, 2024. This satisfies the rubric criterion fully, as the required date range is present and accurately conveyed."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 0.5,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states the number of days as '67 days,' which directly satisfies the rubric criterion requiring the LLM response to state '67 days.' The response is on-topic and accurately answers the question without any prohibited elements."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion requires the response to explicitly state 'from May 14 till July 20' (or a semantic equivalent indicating the date range). The response only provides the number of days between the two dates but does not explicitly state the date range 'from May 14 till July 20' or a paraphrase thereof. Therefore, the required element is missing, resulting in no compliance."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,120 @@
+{
+  "total_chats": 10,
+  "total_passed": 168,
+  "total_questions": 200,
+  "overall_accuracy": 0.84,
+  "category_breakdown": {
+    "abstention": {
+      "passed": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "contradiction_resolution": {
+      "passed": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "event_ordering": {
+      "passed": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "information_extraction": {
+      "passed": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "instruction_following": {
+      "passed": 3,
+      "total": 20,
+      "accuracy": 0.15
+    },
+    "knowledge_update": {
+      "passed": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "multi_session_reasoning": {
+      "passed": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "preference_following": {
+      "passed": 5,
+      "total": 20,
+      "accuracy": 0.25
+    },
+    "summarization": {
+      "passed": 20,
+      "total": 20,
+      "accuracy": 1.0
+    },
+    "temporal_reasoning": {
+      "passed": 20,
+      "total": 20,
+      "accuracy": 1.0
+    }
+  },
+  "per_chat_summary": [
+    {
+      "chat_id": "10M_10",
+      "passed": 18,
+      "total": 20,
+      "accuracy": 0.9
+    },
+    {
+      "chat_id": "10M_1",
+      "passed": 16,
+      "total": 20,
+      "accuracy": 0.8
+    },
+    {
+      "chat_id": "10M_2",
+      "passed": 16,
+      "total": 20,
+      "accuracy": 0.8
+    },
+    {
+      "chat_id": "10M_3",
+      "passed": 17,
+      "total": 20,
+      "accuracy": 0.85
+    },
+    {
+      "chat_id": "10M_4",
+      "passed": 17,
+      "total": 20,
+      "accuracy": 0.85
+    },
+    {
+      "chat_id": "10M_5",
+      "passed": 16,
+      "total": 20,
+      "accuracy": 0.8
+    },
+    {
+      "chat_id": "10M_6",
+      "passed": 17,
+      "total": 20,
+      "accuracy": 0.85
+    },
+    {
+      "chat_id": "10M_7",
+      "passed": 17,
+      "total": 20,
+      "accuracy": 0.85
+    },
+    {
+      "chat_id": "10M_8",
+      "passed": 18,
+      "total": 20,
+      "accuracy": 0.9
+    },
+    {
+      "chat_id": "10M_9",
+      "passed": 16,
+      "total": 20,
+      "accuracy": 0.8
+    }
+  ]
+}

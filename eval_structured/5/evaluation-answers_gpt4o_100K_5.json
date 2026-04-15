@@ -1,0 +1,22 @@
+{
+    "abstention": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response fully complies with the rubric criterion, which is a negative constraint. The response is on-topic with respect to the QUESTION and does not include any information related to the user's emotional reaction to confusing the concepts, thus satisfying the requirement for the prohibited element to be absent."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response fully complies with the rubric criterion, which specifies a negative constraint. The response correctly states that there is no information related to any feedback received after the quizzes, thus adhering to the requirement that such information should be absent. Additionally, the response is on-topic with respect to the QUESTION."
+                }
+            ]
+        }
+    ]
+}

@@ -56,13 +56,6 @@ src/llms_config.json
 Thumbs.db
 
 # Evaluation Results (large files)
-results/
-eval_structured/
-eval_input/
-results_for_beam_eval/
-beam_aggregated_results_*.json
-beam_results_*.json
-evaluation-*.json
 
 # Cache files
 *.cache
