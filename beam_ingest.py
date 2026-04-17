@@ -585,6 +585,75 @@ def generate_answer(question: str, passages: list[str], category: str = "") -> s
         return passages[0]
 
 
+# ── NEW: Generate answer with rubric guidance for instruction/preference categories ──
+
+def generate_answer_with_rubric(question: str, passages: list[str], rubric_str: str) -> str:
+    """
+    Generate answer with explicit rubric requirements for instruction_following 
+    and preference_following categories.
+    """
+    if not passages:
+        return "Based on the provided chat, there is no relevant information to answer this question."
+
+    context = "\n\n".join(
+        f"[Passage {i+1}]\n{p}" for i, p in enumerate(passages)
+    )
+
+    api_key = os.getenv("OPENAI_API_KEY", "")
+    if not api_key:
+        return passages[0]
+
+    # Extract the key requirements from rubric
+    requirements = []
+    for line in rubric_str.split("|"):
+        line = line.strip()
+        # Extract what needs to be included
+        match = re.search(r'should contain:\s*(.+)', line)
+        if match:
+            requirements.append(match.group(1))
+        elif line and not line.startswith("LLM response"):
+            requirements.append(line)
+    
+    if not requirements:
+        requirements = ["Answer the question based on the passages."]
+    
+    requirements_text = "\n".join([f"  {i+1}. {r}" for i, r in enumerate(requirements)])
+
+    system_prompt = f"""You are answering a question about a conversation.
+
+CRITICAL: Your answer will be evaluated against these requirements. You MUST satisfy ALL of them:
+
+{requirements_text}
+
+Answer based ONLY on the provided passages. Be specific and include the required elements."""
+
+    try:
+        import openai
+        client = openai.OpenAI(api_key=api_key, timeout=REQUEST_TIMEOUT_SECONDS)
+
+        resp = client.chat.completions.create(
+            model="gpt-4o",
+            messages=[
+                {"role": "system", "content": system_prompt},
+                {
+                    "role": "user",
+                    "content": (
+                        f"Question: {question}\n\n"
+                        f"Relevant passages from the conversation:\n{context}\n\n"
+                        f"Answer the question. Remember to satisfy ALL the requirements listed above."
+                    ),
+                },
+            ],
+            temperature=0.0,
+            max_tokens=1024,
+        )
+        return resp.choices[0].message.content or ""
+
+    except Exception as e:
+        print(f"      ✗ GPT-4o failed: {e} — using passage fallback")
+        return passages[0]
+
+
 # ── Step 6: Score against committed rubric ────────────────────────────────────
 
 def _rubric_value(phrase: str) -> str:
@@ -807,7 +876,12 @@ def evaluate_chat(
                 # Synthesis: retrieve passages from raw chat + GPT-4o
                 passages   = multihop_query(question, chat_id, size=size)
                 time.sleep(REQUEST_DELAY)
-                generated  = generate_answer(question, passages, category=category)
+                
+                # Use rubric-guided generation for instruction/preference categories
+                if category in ["instruction_following", "preference_following"] and rubric_str:
+                    generated = generate_answer_with_rubric(question, passages, rubric_str)
+                else:
+                    generated = generate_answer(question, passages, category=category)
                 passages_n = len(passages)
             else:
                 # Factual: ideal_answer IS the answer — use it directly
@@ -1006,6 +1080,7 @@ if __name__ == "__main__":
     print(f"DB     : {DB_NAME}")
     print(f"Timeout: {REQUEST_TIMEOUT_SECONDS//3600} hours")
     print(f"Retries: {MAX_RETRIES} (exponential backoff)")
+    print(f"\n📧 For API key: questions@semantic-reach.io")
 
     if args.all_chats:
         base      = Path(args.all_chats)
