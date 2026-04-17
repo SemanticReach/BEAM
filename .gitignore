@@ -15,7 +15,7 @@ beam_10M_dataset/
 beam_embeddings_cache.pkl
 
 # results
-beam_results_*.json
+#beam_results_*.json
 
 
 

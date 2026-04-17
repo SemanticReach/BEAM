@@ -1,0 +1,587 @@
+{
+  "chat_id": "10M_10",
+  "size": "10M",
+  "turns": 23716,
+  "chat_namespace": "document_upload_7d27f741",
+  "qa_namespace": "beam_qa_10M_10",
+  "generated_at": "2026-04-17T14:02:01.200161Z",
+  "results": {
+    "abstention": {
+      "questions": [
+        {
+          "question": "Could you provide the exact itinerary and schedule for the virtual tour of the Grand Wailea Resort?",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "Based on the provided chat, there is no information related to the exact itinerary or schedule of the virtual tour of the Grand Wailea Resort.",
+          "generated": "Based on the provided chat, there is no information related to the exact itinerary or schedule of the virtual tour of the Grand Wailea Resort.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "Based on the provided chat, there is no information related to the exact itinerary or schedule of the virtual tour of the Grand Wailea Resort"
+            ],
+            "rubric_values": [
+              "Based on the provided chat, there is no information related to the exact itinerary or schedule of the virtual tour of the Grand Wailea Resort"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "What was discussed during the Zoom call with Pamela about travel logistics for her group of 15 friends?",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "Based on the provided chat, there is no information related to the specific discussions during the Zoom call with Pamela.",
+          "generated": "Based on the provided chat, there is no information related to the specific discussions during the Zoom call with Pamela.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "Based on the provided chat, there is no information related to the specific discussions during the Zoom call with Pamela"
+            ],
+            "rubric_values": [
+              "Based on the provided chat, there is no information related to the specific discussions during the Zoom call with Pamela"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "contradiction_resolution": {
+      "questions": [
+        {
+          "question": "Has Pamela ever helped coordinate with vendors or saved setup time during my events?",
+          "difficulty": "clear",
+          "passages_n": 0,
+          "ideal_answer": "I notice you've mentioned contradictory information about this. You said Pamela has never helped coordinate with vendors or saved any setup time, but you also mentioned that she arrived to help coordinate with vendors and saved you 3 hours of work. Which statement is correct?",
+          "generated": "I notice you've mentioned contradictory information about this. You said Pamela has never helped coordinate with vendors or saved any setup time, but you also mentioned that she arrived to help coordinate with vendors and saved you 3 hours of work. Which statement is correct?",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "there is contradictory information",
+              "You said Pamela has never helped coordinate with vendors",
+              "you also mentioned that she arrived to help coordinate with vendors",
+              "which statement is correct?"
+            ],
+            "rubric_values": [
+              "there is contradictory information",
+              "You said Pamela has never helped coordinate with vendors",
+              "you also mentioned that she arrived to help coordinate with vendors",
+              "which statement is correct?"
+            ],
+            "rubric_total": 4,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "Have I ever coordinated with volunteers to assist with guest relocations?",
+          "difficulty": "clear",
+          "passages_n": 0,
+          "ideal_answer": "I notice you've mentioned contradictory information about this. You said that Pamela rallied volunteers to help with guest relocations, but you also mentioned that you have never coordinated with any volunteers for this task. Could you clarify which is correct?",
+          "generated": "I notice you've mentioned contradictory information about this. You said that Pamela rallied volunteers to help with guest relocations, but you also mentioned that you have never coordinated with any volunteers for this task. Could you clarify which is correct?",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "there is contradictory information",
+              "You said that Pamela rallied volunteers to help with guest relocations",
+              "you also mentioned that you have never coordinated with any volunteers",
+              "which statement is correct?"
+            ],
+            "rubric_values": [
+              "there is contradictory information",
+              "You said that Pamela rallied volunteers to help with guest relocations",
+              "you also mentioned that you have never coordinated with any volunteers",
+              "which statement is correct?"
+            ],
+            "rubric_total": 4,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "event_ordering": {
+      "questions": [
+        {
+          "question": "Can you walk me through the order in which I brought up different aspects of my beach wedding planning from July 1, 2023 to July 6, 2023, including venue options, guest capacities, permit fees, weather considerations, and accessibility concerns, in order? Mention ONLY and ONLY five items.",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "You mentioned these aspects in the following order: 1) Initial research on beach destinations with ideal weather and temperature ranges, 2) Discussion of specific venue options and their guest capacities, 3) Exploration of beach wedding permit fees and application processes across locations, 4) Consideration of weather-related factors and backup plans, 5) Evaluation of accessibility and logistical concerns for guests.",
+          "generated": "You mentioned these aspects in the following order: 1) Initial research on beach destinations with ideal weather and temperature ranges, 2) Discussion of specific venue options and their guest capacities, 3) Exploration of beach wedding permit fees and application processes across locations, 4) Consideration of weather-related factors and backup plans, 5) Evaluation of accessibility and logistical concerns for guests.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "Weather and destination research",
+              "Venue options and guest capacities",
+              "Permit fees and application processes",
+              "Weather-related backup planning",
+              "Accessibility and guest logistics"
+            ],
+            "rubric_values": [
+              "Weather and destination research",
+              "Venue options and guest capacities",
+              "Permit fees and application processes",
+              "Weather-related backup planning",
+              "Accessibility and guest logistics"
+            ],
+            "rubric_total": 5,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "Can you walk me through the order in which I brought up different aspects of event setup and guest management from July 16, 2023 to August 4, 2023, in order? Mention ONLY and ONLY ten items.",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "You mentioned the aspects in this order: 1) Adjusting the lighting setup to save power, 2) Addressing delays in music timing and playlist adjustments, 3) Managing guest seating and complaints by adding extra chairs, 4) Preparing for weather concerns by moving guests under a tent, 5) Troubleshooting video glitches by repositioning cameras, 6) Handling last-minute menu changes to accommodate dietary needs, 7) Flagging potential delays in toasts and trimming speeches, 8) Noticing guest comfort issues related to heat and adding fans and water bottles, 9) Softening lights to create a warmer evening vibe, and 10) Introducing fun activities like a quick dance game and limbo contest to energize the crowd.",
+          "generated": "You mentioned the aspects in this order: 1) Adjusting the lighting setup to save power, 2) Addressing delays in music timing and playlist adjustments, 3) Managing guest seating and complaints by adding extra chairs, 4) Preparing for weather concerns by moving guests under a tent, 5) Troubleshooting video glitches by repositioning cameras, 6) Handling last-minute menu changes to accommodate dietary needs, 7) Flagging potential delays in toasts and trimming speeches, 8) Noticing guest comfort issues related to heat and adding fans and water bottles, 9) Softening lights to create a warmer evening vibe, and 10) Introducing fun activities like a quick dance game and limbo contest to energize the crowd.",
+          "score": {
+            "rubric_score": 0.9,
+            "rubric_hits": [
+              "Lighting setup and power saving",
+              "Music timing delays and playlist cuts",
+              "Guest seating adjustments for complaints",
+              "Weather concerns and guest relocation",
+              "Video glitch troubleshooting and camera repositioning",
+              "Menu changes for dietary needs",
+              "Toast delays and speech trimming",
+              "Lighting ambiance softening",
+              "Adding fun dance activities"
+            ],
+            "rubric_values": [
+              "Lighting setup and power saving",
+              "Music timing delays and playlist cuts",
+              "Guest seating adjustments for complaints",
+              "Weather concerns and guest relocation",
+              "Video glitch troubleshooting and camera repositioning",
+              "Menu changes for dietary needs",
+              "Toast delays and speech trimming",
+              "Guest heat discomfort and cooling measures",
+              "Lighting ambiance softening",
+              "Adding fun dance activities"
+            ],
+            "rubric_total": 10,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "information_extraction": {
+      "questions": [
+        {
+          "question": "How many chairs did I say I rented from Seaside Rentals?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "You said you rented 100 chairs from Seaside Rentals.",
+          "generated": "You said you rented 100 chairs from Seaside Rentals.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "100 chairs"
+            ],
+            "rubric_values": [
+              "100 chairs"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "How much did I say it costs to rent each lantern?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "You said it costs $10 to rent each lantern.",
+          "generated": "You said it costs $10 to rent each lantern.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "$10"
+            ],
+            "rubric_values": [
+              "$10"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "instruction_following": {
+      "questions": [
+        {
+          "question": "What are the costs involved in the decorations for the event?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "The floral budget for the event is part of the overall decorations budget, which was originally set at $4,700. Within this budget, the cost allocated specifically for flowers was $1,200. However, adjustments were made to reduce the floral expenses to $1,000, resulting in a savings of $200. This adjustment is part of a broader strategy to scale back on decorations, allowing for funds to be reallocated to other areas, such as welcome bags for guests. The overall adjusted budget for decorations became $4,500, reflecting these cost-saving measures.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "mention of floral budget",
+              "details about flower-related costs"
+            ],
+            "rubric_values": [
+              "mention of floral budget",
+              "details about flower-related costs"
+            ],
+            "rubric_total": 2,
+            "exact_hit": null,
+            "pass": true
+          }
+        },
+        {
+          "question": "What services are available for visitors during their stay?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "Visitors staying at Maui Beachfront Suites can enjoy a variety of support services and amenities designed to enhance their stay. The hotel offers free high-speed Wi-Fi in all rooms and public areas, a 24/7 fitness center with modern gym equipment, and a heated outdoor pool open year-round. Guests can also indulge in on-site spa services, which include massages, facials, and other treatments. A daily complimentary continental breakfast is included in the room rate, and free parking is available for all guests.\n\nFor additional convenience, the hotel provides concierge services to assist with local activities and restaurant reservations, as well as room service available from 7 AM to 10 PM. Beach towels and chairs are provided for use at the nearby beach, ensuring guests can fully enjoy the coastal experience.\n\nTo further support visitors, personalized emails are sent to each guest with detailed information about their accommodations and available amenities. This communication includes local recommendations for attractions, restaurants, and activities, such as snorkeling at Molokini Crater and whale watching tours. Guests are also encouraged to reach out with any questions or special requests, ensuring they have access to assistance and support throughout their stay.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "clear mention of available support services",
+              "detailed description of visitor help offerings"
+            ],
+            "rubric_values": [
+              "clear mention of available support services",
+              "detailed description of visitor help offerings"
+            ],
+            "rubric_total": 2,
+            "exact_hit": null,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "knowledge_update": {
+      "questions": [
+        {
+          "question": "How much do the 100 napkins cost with the discount I secured?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "$120 for 100 pieces",
+          "generated": "$120 for 100 pieces",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "$120"
+            ],
+            "rubric_values": [
+              "$120"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "How many members are on my team handling lighting fixes and guest concerns?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "There are 8 members on the team.",
+          "generated": "There are 8 members on the team.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "8 members"
+            ],
+            "rubric_values": [
+              "8 members"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "multi_session_reasoning": {
+      "questions": [
+        {
+          "question": "How much will I spend in total if I rent 10 wooden arches from Beachside Rentals and 10 from Ocean Breeze Rentals at their quoted prices?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "You will spend $1,000 in total: $500 for 10 arches from Beachside Rentals at $50 each, and $500 for 10 arches from Ocean Breeze Rentals at $50 each.",
+          "generated": "You will spend $1,000 in total: $500 for 10 arches from Beachside Rentals at $50 each, and $500 for 10 arches from Ocean Breeze Rentals at $50 each.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "$1,000 in total",
+              "$500 for 10 arches from Beachside Rentals",
+              "$500 for 10 arches from Ocean Breeze Rentals"
+            ],
+            "rubric_values": [
+              "$1,000 in total",
+              "$500 for 10 arches from Beachside Rentals",
+              "$500 for 10 arches from Ocean Breeze Rentals"
+            ],
+            "rubric_total": 3,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "How much did I spend in total on catering, and what percentage of guests rated the local cuisine highly across all sessions?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "You spent a total of $10,000 on catering, with between 85% and 90% of guests rating the local cuisine highly.",
+          "generated": "You spent a total of $10,000 on catering, with between 85% and 90% of guests rating the local cuisine highly.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "$10,000 on catering",
+              "between 85% and 90% of guests rating the local cuisine highly"
+            ],
+            "rubric_values": [
+              "$10,000 on catering",
+              "between 85% and 90% of guests rating the local cuisine highly"
+            ],
+            "rubric_total": 2,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "preference_following": {
+      "questions": [
+        {
+          "question": "How should I allocate my budget between flowers and lighting to create a cohesive look for the event?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "To create a cohesive look for your event, you should allocate approximately twice as much budget to flowers as to lighting, emphasizing flower arrangements in your plan. Here's a suggested budget allocation and plan:\n\n### Budget Allocation\n- **Flowers:** $800\n- **Lighting:** $400\n\n### Emphasizing Flower Arrangements\nFocus on creating stunning floral displays that will serve as the centerpiece of your decor. Consider the following allocations within the flower budget:\n- **Bouquets:** $300\n- **Altar Arrangements:** $200\n- **Table Centerpieces:** $200\n- **Greenery and Foliage:** $100\n\nChoose flowers that complement your theme and color palette, such as sea holly, beach roses, hydrangeas, white orchids, and baby's breath. These arrangements will add vibrant colors, textures, and a sense of freshness to your venue.\n\n### Lighting Options within the Smaller Budget\nWith the remaining $400 for lighting, focus on strategic placement to enhance the beauty of the flowers:\n- **String Lights:** $200, placed along the entrance, around the ceremony area, and above dining tables to create a soft, inviting glow.\n- **Lanterns:** $100, hung from trees, along pathways, or on tables to add warmth and complement the floral arrangements.\n- **Spotlights:** $100, used to highlight key areas such as the altar or dance floor, ensuring the flowers remain the focal point.\n\nBy prioritizing flower arrangements and strategically using lighting, you can achieve a beautiful and cohesive aesthetic for your event.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "allocates approximately twice as much budget to flowers as to lighting",
+              "emphasizes flower arrangements in the plan",
+              "suggests lighting options within the smaller budget portion"
+            ],
+            "rubric_values": [
+              "allocates approximately twice as much budget to flowers as to lighting",
+              "emphasizes flower arrangements in the plan",
+              "suggests lighting options within the smaller budget portion"
+            ],
+            "rubric_total": 3,
+            "exact_hit": null,
+            "pass": true
+          }
+        },
+        {
+          "question": "How should I organize the travel bookings for my group at Sandy Shore Bistro to get started?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "To organize the travel bookings for your group at Sandy Shore Bistro, it is recommended to start by focusing on the 20 key relatives, as suggested by Tracy. This approach ensures that your closest family members are prioritized and taken care of first. \n\nBegin by identifying these 20 key relatives and gathering their travel preferences and availability. Once you have this information, you can proceed with booking their flights and accommodations. This phased or prioritized booking approach allows you to manage the logistics more effectively and ensures that the most important guests are confirmed first. \n\nBy following this strategy, you can gradually expand the booking process to include other guests, ensuring a smooth and organized travel arrangement for everyone involved.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "recommends starting with the 20 key relatives",
+              "acknowledges a phased or prioritized booking approach"
+            ],
+            "rubric_values": [
+              "recommends starting with the 20 key relatives",
+              "acknowledges a phased or prioritized booking approach"
+            ],
+            "rubric_total": 2,
+            "exact_hit": null,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "summarization": {
+      "questions": [
+        {
+          "question": "Can you summarize how my wedding décor plans have developed from July 1, 2023 to July 6, 2023, including how I've incorporated personal touches, managed the budget, and balanced different theme ideas?",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "Your wedding décor planning has evolved through thoughtful integration of personal and family elements, budget management, and theme balancing. Initially, you focused on incorporating sentimental items like Laura's lace and family photos to add emotional depth. As the planning progressed, you prioritized key décor elements such as flowers, lighting, and custom artisan pieces while adjusting your budget to accommodate these priorities. You also worked on blending your preference for a minimalist 'Coastal Serenity' theme with Tracy's desire for decorative accents like starfish and coral hints, leading to a balanced color palette and cohesive design. Throughout, you incorporated eco-friendly choices, including recycled cotton napkins and solar-powered lighting, ensuring sustainability aligned with your aesthetic. Your approach reflects a progression from establishing meaningful personal touches to practical budgeting and theme harmonization, resulting in a well-rounded and heartfelt wedding décor plan.",
+          "generated": "Your wedding décor planning has evolved through thoughtful integration of personal and family elements, budget management, and theme balancing. Initially, you focused on incorporating sentimental items like Laura's lace and family photos to add emotional depth. As the planning progressed, you prioritized key décor elements such as flowers, lighting, and custom artisan pieces while adjusting your budget to accommodate these priorities. You also worked on blending your preference for a minimalist 'Coastal Serenity' theme with Tracy's desire for decorative accents like starfish and coral hints, leading to a balanced color palette and cohesive design. Throughout, you incorporated eco-friendly choices, including recycled cotton napkins and solar-powered lighting, ensuring sustainability aligned with your aesthetic. Your approach reflects a progression from establishing meaningful personal touches to practical budgeting and theme harmonization, resulting in a well-rounded and heartfelt wedding décor plan.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "you focused on incorporating sentimental items like Laura's lace and family photos to add emotional depth",
+              "you prioritized key décor elements such as flowers, lighting, and custom artisan pieces while adjusting your budget to accommodate these priorities",
+              "You also worked on blending your preference for a minimalist 'Coastal Serenity' theme with Tracy's desire for decorative accents",
+              "you incorporated eco-friendly choices, including recycled cotton napkins and solar-powered lighting, ensuring sustainability aligned with your aesthetic"
+            ],
+            "rubric_values": [
+              "you focused on incorporating sentimental items like Laura's lace and family photos to add emotional depth",
+              "you prioritized key décor elements such as flowers, lighting, and custom artisan pieces while adjusting your budget to accommodate these priorities",
+              "You also worked on blending your preference for a minimalist 'Coastal Serenity' theme with Tracy's desire for decorative accents",
+              "you incorporated eco-friendly choices, including recycled cotton napkins and solar-powered lighting, ensuring sustainability aligned with your aesthetic"
+            ],
+            "rubric_total": 4,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "Can you give me a summary of how the venue wrap-up and equipment return process developed throughout our planning, including how I coordinated with vendors and Ka'anapali staff to meet all deadlines and secure refunds?",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "Throughout the planning and execution of the venue wrap-up and equipment return, you progressively coordinated with Ka'anapali staff and multiple vendors to ensure all tasks were completed efficiently and within deadlines. Initially, you established clear communication with Ka'anapali staff to define cleanup standards, such as clearing specific beach areas to meet refund criteria. You then organized the return of various rented equipment, prioritizing items with earlier deadlines and higher late fees, like lanterns and tables, while scheduling tasks to avoid overtime fees. You also managed waste disposal responsibly, engaging services like Green Maui and Island Cleanup, balancing cost with environmental impact. Throughout, you documented all processes meticulously, including inspections and returns, to provide evidence for refunds and compliance. Regular follow-ups and contingency plans were implemented to address any issues promptly, ensuring smooth vendor exits and final venue restoration. This comprehensive approach allowed you to secure multiple refunds, avoid penalties, and maintain positive relationships with vendors and venue staff.",
+          "generated": "Throughout the planning and execution of the venue wrap-up and equipment return, you progressively coordinated with Ka'anapali staff and multiple vendors to ensure all tasks were completed efficiently and within deadlines. Initially, you established clear communication with Ka'anapali staff to define cleanup standards, such as clearing specific beach areas to meet refund criteria. You then organized the return of various rented equipment, prioritizing items with earlier deadlines and higher late fees, like lanterns and tables, while scheduling tasks to avoid overtime fees. You also managed waste disposal responsibly, engaging services like Green Maui and Island Cleanup, balancing cost with environmental impact. Throughout, you documented all processes meticulously, including inspections and returns, to provide evidence for refunds and compliance. Regular follow-ups and contingency plans were implemented to address any issues promptly, ensuring smooth vendor exits and final venue restoration. This comprehensive approach allowed you to secure multiple refunds, avoid penalties, and maintain positive relationships with vendors and venue staff.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "you established clear communication with Ka'anapali staff to define cleanup standards, such as clearing specific beach areas to meet refund criteria",
+              "organized the return of various rented equipment, prioritizing items with earlier deadlines and higher late fees, like lanterns and tables",
+              "managed waste disposal responsibly, engaging services like Green Maui and Island Cleanup",
+              "you documented all processes meticulously, including inspections and returns, to provide evidence for refunds and compliance",
+              "Regular follow-ups and contingency plans were implemented to address any issues promptly, ensuring smooth vendor exits and final venue restoration"
+            ],
+            "rubric_values": [
+              "you established clear communication with Ka'anapali staff to define cleanup standards, such as clearing specific beach areas to meet refund criteria",
+              "organized the return of various rented equipment, prioritizing items with earlier deadlines and higher late fees, like lanterns and tables",
+              "managed waste disposal responsibly, engaging services like Green Maui and Island Cleanup",
+              "you documented all processes meticulously, including inspections and returns, to provide evidence for refunds and compliance",
+              "Regular follow-ups and contingency plans were implemented to address any issues promptly, ensuring smooth vendor exits and final venue restoration"
+            ],
+            "rubric_total": 5,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "temporal_reasoning": {
+      "questions": [
+        {
+          "question": "How many days do I have to finalize the guest list and travel plans before the wedding event launch begins?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "There are 3 days between when I start finalizing the guest list and travel plans on July 7 and when the wedding event launch begins on July 10.",
+          "generated": "There are 3 days between when I start finalizing the guest list and travel plans on July 7 and when the wedding event launch begins on July 10.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "3 days",
+              "from July 7 till July 10"
+            ],
+            "rubric_values": [
+              "3 days",
+              "from July 7 till July 10"
+            ],
+            "rubric_total": 2,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "How many days after the start of closing our wedding at Ka'anapali Beach did my reflection period begin?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "The reflection period began 10 days after the start of closing the wedding at Ka'anapali Beach.",
+          "generated": "The reflection period began 10 days after the start of closing the wedding at Ka'anapali Beach.",
+          "score": {
+            "rubric_score": 0.5,
+            "rubric_hits": [
+              "10 days"
+            ],
+            "rubric_values": [
+              "10 days",
+              "from August 11 till August 21"
+            ],
+            "rubric_total": 2,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    }
+  },
+  "summary": {
+    "abstention": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "contradiction_resolution": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "event_ordering": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "information_extraction": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "instruction_following": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "knowledge_update": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "multi_session_reasoning": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "preference_following": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "summarization": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "temporal_reasoning": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    }
+  },
+  "overall": {
+    "passed": 20,
+    "total": 20,
+    "accuracy": 1.0
+  }
+}

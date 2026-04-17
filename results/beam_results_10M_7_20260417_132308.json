@@ -1,0 +1,580 @@
+{
+  "chat_id": "10M_7",
+  "size": "10M",
+  "turns": 22652,
+  "chat_namespace": "document_upload_98d8ac85",
+  "qa_namespace": "beam_qa_10M_7",
+  "generated_at": "2026-04-17T13:23:08.597981Z",
+  "results": {
+    "abstention": {
+      "questions": [
+        {
+          "question": "Can you share the specific advice Samuel gave about savings strategies",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "Based on the provided chat, there is no information related to the specific advice Samuel gave about savings strategies.",
+          "generated": "Based on the provided chat, there is no information related to the specific advice Samuel gave about savings strategies.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "Based on the provided chat, there is no information related to the specific advice Samuel gave about savings strategies"
+            ],
+            "rubric_values": [
+              "Based on the provided chat, there is no information related to the specific advice Samuel gave about savings strategies"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "Could you share the key points from the free YouTube pottery tutorial I watched?",
+          "difficulty": "hard",
+          "passages_n": 0,
+          "ideal_answer": "Based on the provided chat, there is no information related to the key points of the YouTube pottery tutorial you watched.",
+          "generated": "Based on the provided chat, there is no information related to the key points of the YouTube pottery tutorial you watched.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "Based on the provided chat, there is no information related to the key points of the YouTube pottery tutorial you watched"
+            ],
+            "rubric_values": [
+              "Based on the provided chat, there is no information related to the key points of the YouTube pottery tutorial you watched"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "contradiction_resolution": {
+      "questions": [
+        {
+          "question": "Have I ever moved my old couch to storage?",
+          "difficulty": "clear",
+          "passages_n": 0,
+          "ideal_answer": "I notice you've mentioned contradictory information about this. You said you are considering moving your old couch to storage instead of selling it, but you also mentioned that you have never moved your old couch to storage. Which statement is correct?",
+          "generated": "I notice you've mentioned contradictory information about this. You said you are considering moving your old couch to storage instead of selling it, but you also mentioned that you have never moved your old couch to storage. Which statement is correct?",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "there is contradictory information",
+              "You said you moved your old couch to storage",
+              "you also mentioned that you have never moved your old couch to storage",
+              "which statement is correct?"
+            ],
+            "rubric_values": [
+              "there is contradictory information",
+              "You said you moved your old couch to storage",
+              "you also mentioned that you have never moved your old couch to storage",
+              "which statement is correct?"
+            ],
+            "rubric_total": 4,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "Have I ever signed up for any community volunteering events before?",
+          "difficulty": "clear",
+          "passages_n": 0,
+          "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never signed up for any community volunteering events, but you also referred to signing up online for a food drive. Could you clarify which is correct?",
+          "generated": "I notice you've mentioned contradictory information about this. You said you have never signed up for any community volunteering events, but you also referred to signing up online for a food drive. Could you clarify which is correct?",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "there is contradictory information",
+              "You said you have never signed up for any community volunteering events",
+              "you also referred to signing up online for a food drive",
+              "which statement is correct?"
+            ],
+            "rubric_values": [
+              "there is contradictory information",
+              "You said you have never signed up for any community volunteering events",
+              "you also referred to signing up online for a food drive",
+              "which statement is correct?"
+            ],
+            "rubric_total": 4,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "event_ordering": {
+      "questions": [
+        {
+          "question": "Can you walk me through the order in which I brought up different aspects of my relationship and shared activities with Jenna from May 1, 2022 to August 27, 2022, in order? Mention ONLY and ONLY eight items.",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "You mentioned aspects of your relationship and shared activities with Jenna in this order: 1) Discussing pottery classes and planning to join together, 2) Jenna offering to drive you to the pottery studio and her supportive role, 3) Jenna's encouragement and morale boosts during your pottery progress, 4) Jenna photographing your pottery work and the impact on your confidence, 5) Brainstorming and planning a coastal trip together, 6) Booking accommodations and shared travel preparations, 7) Experiencing and enjoying various moments during the trip including tours, walks, and shared memories, 8) Reviewing trip photos and reflecting on nostalgia and future plans.",
+          "generated": "You mentioned aspects of your relationship and shared activities with Jenna in this order: 1) Discussing pottery classes and planning to join together, 2) Jenna offering to drive you to the pottery studio and her supportive role, 3) Jenna's encouragement and morale boosts during your pottery progress, 4) Jenna photographing your pottery work and the impact on your confidence, 5) Brainstorming and planning a coastal trip together, 6) Booking accommodations and shared travel preparations, 7) Experiencing and enjoying various moments during the trip including tours, walks, and shared memories, 8) Reviewing trip photos and reflecting on nostalgia and future plans.",
+          "score": {
+            "rubric_score": 0.625,
+            "rubric_hits": [
+              "Encouragement during pottery progress",
+              "Photographing pottery and confidence boost",
+              "Coastal trip brainstorming",
+              "Travel bookings and preparations",
+              "Trip experiences and shared moments"
+            ],
+            "rubric_values": [
+              "Pottery class discussions",
+              "Jenna's driving offer and support",
+              "Encouragement during pottery progress",
+              "Photographing pottery and confidence boost",
+              "Coastal trip brainstorming",
+              "Travel bookings and preparations",
+              "Trip experiences and shared moments",
+              "Photo review and nostalgic reflections"
+            ],
+            "rubric_total": 8,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "Can you walk me through the order in which I brought up different aspects of my fitness and financial discussions with Jenna from May 3, 2021 to September 7, 2021, in order? Mention ONLY and ONLY ten items.",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "You mentioned these aspects in this order: 1) Jenna noticing my renewed focus and discussing workout ideas over coffee at home, 2) Going on a weekend walk together at Sunset Beach, 3) Planning and praising consistency over tea at home with upcoming hikes, 4) Hiking multiple distances at Reef Trail and bonding over fitness goals, 5) Running and planning runs at Coral Beach with increasing distances and goals, 6) Discussing budget and financial planning over coffee at Ocean View Lounge, 7) Supporting grocery budget caps and shopping together, 8) Celebrating savings and planning budget dates over tea and picnics, 9) Setting retirement goals and discussing investment plans over dinners and coffee, 10) Reviewing progress and insurance quotes while planning future financial steps.",
+          "generated": "You mentioned these aspects in this order: 1) Jenna noticing my renewed focus and discussing workout ideas over coffee at home, 2) Going on a weekend walk together at Sunset Beach, 3) Planning and praising consistency over tea at home with upcoming hikes, 4) Hiking multiple distances at Reef Trail and bonding over fitness goals, 5) Running and planning runs at Coral Beach with increasing distances and goals, 6) Discussing budget and financial planning over coffee at Ocean View Lounge, 7) Supporting grocery budget caps and shopping together, 8) Celebrating savings and planning budget dates over tea and picnics, 9) Setting retirement goals and discussing investment plans over dinners and coffee, 10) Reviewing progress and insurance quotes while planning future financial steps.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "Fitness focus and workout ideas over coffee",
+              "Weekend walk at Sunset Beach",
+              "Planning hikes and praising consistency over tea",
+              "Hiking at Reef Trail and bonding",
+              "Running at Coral Beach and setting goals",
+              "Budget discussion over coffee at Ocean View Lounge",
+              "Grocery budget cap and shopping support",
+              "Celebrating savings and budget dates",
+              "Retirement goals and investment discussions",
+              "Financial progress, insurance quotes, and planning next steps"
+            ],
+            "rubric_values": [
+              "Fitness focus and workout ideas over coffee",
+              "Weekend walk at Sunset Beach",
+              "Planning hikes and praising consistency over tea",
+              "Hiking at Reef Trail and bonding",
+              "Running at Coral Beach and setting goals",
+              "Budget discussion over coffee at Ocean View Lounge",
+              "Grocery budget cap and shopping support",
+              "Celebrating savings and budget dates",
+              "Retirement goals and investment discussions",
+              "Financial progress, insurance quotes, and planning next steps"
+            ],
+            "rubric_total": 10,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "information_extraction": {
+      "questions": [
+        {
+          "question": "What time did I say I searched for flights on Skyscanner?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "You said you searched for flights on Skyscanner at 8 PM.",
+          "generated": "You said you searched for flights on Skyscanner at 8 PM.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "8 PM"
+            ],
+            "rubric_values": [
+              "8 PM"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "How much did I say dinner cost at the place where Jenna seemed distant?",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "You said dinner cost $40 at Sea Breeze Cafe last night.",
+          "generated": "You said dinner cost $40 at Sea Breeze Cafe last night.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "$40"
+            ],
+            "rubric_values": [
+              "$40"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "instruction_following": {
+      "questions": [
+        {
+          "question": "What are some good options I can use to improve my health?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "To improve your health, you can consider using apps like Headspace or Calm for guided meditation sessions, which can help reduce stress and improve mental clarity. Additionally, a $50 health check at Island Clinic is a cost-effective option that can provide early detection of potential health issues and personalized advice on lifestyle modifications.",
+          "score": {
+            "rubric_score": 0.0,
+            "rubric_hits": [],
+            "rubric_values": [
+              "listing app names",
+              "providing cost information"
+            ],
+            "rubric_total": 2,
+            "exact_hit": null,
+            "pass": false
+          }
+        },
+        {
+          "question": "What are some healthy options I can consider for my meals?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "Here is a category-by-category breakdown of healthy meal options with their associated costs:\n\n1. **Vegetables and Greens**\n   - Spinach: $4 per pack\n   - Leafy Greens (spinach, kale, lettuce): $5 allocation\n   - Cruciferous Vegetables (broccoli, cauliflower, Brussels sprouts): $5 allocation\n   - Root Vegetables (carrots, potatoes, onions): $5 allocation\n   - Frozen Vegetables: $1-$2 per bag\n\n2. **Fruits**\n   - Berries (blueberries, strawberries, raspberries): $5 allocation\n   - Other Fruits (apples, bananas, oranges): $5 allocation\n\n3. **Healthy Fats**\n   - Avocado: $6 for three weekly meals\n\n4. **Proteins**\n   - Eggs: $0.25-$0.50 per egg\n   - Canned Tuna: $1-$2 per can\n   - Lentils: $1-$2 per pound\n   - Canned Beans: $1 per can\n\n5. **Grains and Legumes**\n   - Brown Rice: $1-$2 per pound\n   - Whole Grains (brown rice, quinoa): $2 allocation\n   - Legumes (lentils, chickpeas, black beans): $3 allocation\n\n6. **Miscellaneous**\n   - Oats: $1-$2 per pound\n   - Canned Tomatoes: $1 per can\n   - Whole-Grain Pasta: $1-$2 per box\n\nBy incorporating these items into your meal planning, you can maintain a balanced diet while staying within a budget.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "itemized list of costs",
+              "category-by-category breakdown"
+            ],
+            "rubric_values": [
+              "itemized list of costs",
+              "category-by-category breakdown"
+            ],
+            "rubric_total": 2,
+            "exact_hit": null,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 1,
+      "total": 2,
+      "accuracy": 0.5
+    },
+    "knowledge_update": {
+      "questions": [
+        {
+          "question": "What time do I set aside for my Saturday budget review sessions?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "5 PM",
+          "generated": "5 PM",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "5 PM"
+            ],
+            "rubric_values": [
+              "5 PM"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "When is the desk assembly scheduled to take place?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "The desk assembly is scheduled for the afternoon of November 7 to accommodate a delivery delay.",
+          "generated": "The desk assembly is scheduled for the afternoon of November 7 to accommodate a delivery delay.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "November 7"
+            ],
+            "rubric_values": [
+              "November 7"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "multi_session_reasoning": {
+      "questions": [
+        {
+          "question": "How much of my $50 date budget have I spent on the movie and picnic combined, and how much do I have left?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "You have spent $30 in total ($15 on the movie and $15 on the picnic), leaving you with $20 remaining.",
+          "generated": "You have spent $30 in total ($15 on the movie and $15 on the picnic), leaving you with $20 remaining.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "spent $30 in total",
+              "$20 remaining"
+            ],
+            "rubric_values": [
+              "spent $30 in total",
+              "$20 remaining"
+            ],
+            "rubric_total": 2,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "How many ideas have I shared at the philosophy club across meetings from May 1, 2022 to August 27, 2022?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "14 ideas",
+          "generated": "14 ideas",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "14 ideas"
+            ],
+            "rubric_values": [
+              "14 ideas"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "preference_following": {
+      "questions": [
+        {
+          "question": "What should I keep in mind when planning my workout schedule around different times of the day near Palm Street?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "When planning your workout schedule around different times of the day near Palm Street, consider taking advantage of the quieter conditions in the morning. Morning workouts can be particularly beneficial as the streets are likely to be less crowded, providing a peaceful environment for your exercise routine. This can enhance your experience and help you establish a consistent routine without the distractions or commitments that might arise later in the day.",
+          "score": {
+            "rubric_score": 0.0,
+            "rubric_hits": [],
+            "rubric_values": [
+              "mentions quieter conditions in the morning",
+              "avoids recommending evening workouts"
+            ],
+            "rubric_total": 2,
+            "exact_hit": null,
+            "pass": false
+          }
+        },
+        {
+          "question": "I'm planning to update the lighting in my living room. What kind of bulbs would you suggest I use?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "For updating the lighting in your living room, I suggest using warm white LED bulbs. These bulbs provide a soft and inviting light with a color temperature around 2700K to 3000K, which creates a cozy and relaxing atmosphere similar to traditional incandescent bulbs. This type of lighting is perfect for a living room where you might watch TV, read, or socialize. Additionally, consider using multiple light sources like ceiling lights, table lamps, and floor lamps to create layers of light and enhance the ambiance. Avoid using harsh fluorescent bulbs, as they can create a less inviting environment.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "mentions warm or soft lighting options",
+              "avoids recommending harsh fluorescent bulbs"
+            ],
+            "rubric_values": [
+              "mentions warm or soft lighting options",
+              "avoids recommending harsh fluorescent bulbs"
+            ],
+            "rubric_total": 2,
+            "exact_hit": null,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 1,
+      "total": 2,
+      "accuracy": 0.5
+    },
+    "summarization": {
+      "questions": [
+        {
+          "question": "Can you summarize how I've been managing my work-life balance and personal time from March 5, 2020 to March 30, 2021?",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "Over the course of our discussions, you've progressively worked towards achieving a healthier work-life balance by consistently maintaining a 43-44 hour workweek, which allowed you to free up time for personal activities. Initially, you focused on reducing work stress by using tools like the Calm app and implementing strategies such as setting boundaries and prioritizing tasks. You then incorporated regular personal and social activities, including art nights, workouts, trivia, hiking, and quality time with Jenna and family, to strengthen relationships and improve relaxation. Throughout, you emphasized planning and scheduling personal time as non-negotiable, using time-blocking and effective task management to protect this time. You also developed strategies to maintain this balance long-term, such as delegating tasks, reflecting regularly, and communicating openly with loved ones and colleagues. This ongoing effort reflects a clear progression from managing stress to actively cultivating meaningful personal time alongside professional responsibilities.",
+          "generated": "Over the course of our discussions, you've progressively worked towards achieving a healthier work-life balance by consistently maintaining a 43-44 hour workweek, which allowed you to free up time for personal activities. Initially, you focused on reducing work stress by using tools like the Calm app and implementing strategies such as setting boundaries and prioritizing tasks. You then incorporated regular personal and social activities, including art nights, workouts, trivia, hiking, and quality time with Jenna and family, to strengthen relationships and improve relaxation. Throughout, you emphasized planning and scheduling personal time as non-negotiable, using time-blocking and effective task management to protect this time. You also developed strategies to maintain this balance long-term, such as delegating tasks, reflecting regularly, and communicating openly with loved ones and colleagues. This ongoing effort reflects a clear progression from managing stress to actively cultivating meaningful personal time alongside professional responsibilities.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "you focused on reducing work stress by using tools like the Calm app and implementing strategies such as setting boundaries and prioritizing tasks",
+              "incorporated regular personal and social activities, including art nights, workouts, trivia, hiking, and quality time with Jenna and family",
+              "you emphasized planning and scheduling personal time as non-negotiable, using time-blocking and effective task management to protect this time",
+              "You also developed strategies to maintain this balance long-term, such as delegating tasks, reflecting regularly, and communicating openly with loved ones"
+            ],
+            "rubric_values": [
+              "you focused on reducing work stress by using tools like the Calm app and implementing strategies such as setting boundaries and prioritizing tasks",
+              "incorporated regular personal and social activities, including art nights, workouts, trivia, hiking, and quality time with Jenna and family",
+              "you emphasized planning and scheduling personal time as non-negotiable, using time-blocking and effective task management to protect this time",
+              "You also developed strategies to maintain this balance long-term, such as delegating tasks, reflecting regularly, and communicating openly with loved ones"
+            ],
+            "rubric_total": 4,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "Can you summarize how Jenna and I have developed our fitness and financial routines together from May 3, 2021 to September 7, 2021?",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "Over the course of your conversations, you and Jenna have progressively built a supportive and engaging partnership focused on both fitness and financial goals. Initially, you discussed workout ideas and established a regular schedule that included varied activities like jogging, hiking, yoga, and strength training, turning workouts into enjoyable date experiences. Jenna's encouragement and participation helped maintain motivation, and you both planned hikes and runs at local spots such as Reef Trail and Coral Beach, gradually increasing distance and intensity. On the financial side, you began with budget discussions over coffee, setting spending limits and celebrating savings milestones with budget-friendly outings like picnics. You established regular financial check-ins, shared budgeting responsibilities, and set joint goals including building an emergency fund and planning for retirement. Throughout, you maintained open communication, involved Jenna in decision-making, and balanced celebrating progress with maintaining discipline. This evolving collaboration strengthened your relationship and created a foundation for sustained health and financial well-being.",
+          "generated": "Over the course of your conversations, you and Jenna have progressively built a supportive and engaging partnership focused on both fitness and financial goals. Initially, you discussed workout ideas and established a regular schedule that included varied activities like jogging, hiking, yoga, and strength training, turning workouts into enjoyable date experiences. Jenna's encouragement and participation helped maintain motivation, and you both planned hikes and runs at local spots such as Reef Trail and Coral Beach, gradually increasing distance and intensity. On the financial side, you began with budget discussions over coffee, setting spending limits and celebrating savings milestones with budget-friendly outings like picnics. You established regular financial check-ins, shared budgeting responsibilities, and set joint goals including building an emergency fund and planning for retirement. Throughout, you maintained open communication, involved Jenna in decision-making, and balanced celebrating progress with maintaining discipline. This evolving collaboration strengthened your relationship and created a foundation for sustained health and financial well-being.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "you discussed workout ideas and established a regular schedule that included varied activities like jogging, hiking, yoga, and strength training",
+              "Jenna's encouragement and participation helped maintain motivation, and you both planned hikes and runs at local spots such as Reef Trail and Coral Beach, gradually increasing distance and intensity",
+              "you began with budget discussions over coffee, setting spending limits and celebrating savings milestones with budget-friendly outings like picnics",
+              "You established regular financial check-ins, shared budgeting responsibilities, and set joint goals including building an emergency fund and planning for retirement",
+              "you maintained open communication, involved Jenna in decision-making, and balanced celebrating progress with maintaining discipline"
+            ],
+            "rubric_values": [
+              "you discussed workout ideas and established a regular schedule that included varied activities like jogging, hiking, yoga, and strength training",
+              "Jenna's encouragement and participation helped maintain motivation, and you both planned hikes and runs at local spots such as Reef Trail and Coral Beach, gradually increasing distance and intensity",
+              "you began with budget discussions over coffee, setting spending limits and celebrating savings milestones with budget-friendly outings like picnics",
+              "You established regular financial check-ins, shared budgeting responsibilities, and set joint goals including building an emergency fund and planning for retirement",
+              "you maintained open communication, involved Jenna in decision-making, and balanced celebrating progress with maintaining discipline"
+            ],
+            "rubric_total": 5,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "temporal_reasoning": {
+      "questions": [
+        {
+          "question": "How many months passed between my teaching feedback review and when I started reflecting on my personal relationships?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "10 months passed between the teaching feedback review on April 1, 2020, and starting to reflect on personal relationships on February 1, 2021.",
+          "generated": "10 months passed between the teaching feedback review on April 1, 2020, and starting to reflect on personal relationships on February 1, 2021.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "10 months",
+              "from April 1, 2020 till February 1, 2021"
+            ],
+            "rubric_values": [
+              "10 months",
+              "from April 1, 2020 till February 1, 2021"
+            ],
+            "rubric_total": 2,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "How many days were there between when I started exploring new educational interests and when I began planning my travel for a mental recharge?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "There were 92 days between starting my journey to explore new educational interests on May 1, 2022, and beginning to plan my travel for mental recharge on August 1, 2022.",
+          "generated": "There were 92 days between starting my journey to explore new educational interests on May 1, 2022, and beginning to plan my travel for mental recharge on August 1, 2022.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "92 days",
+              "from May 1, 2022 till August 1, 2022"
+            ],
+            "rubric_values": [
+              "92 days",
+              "from May 1, 2022 till August 1, 2022"
+            ],
+            "rubric_total": 2,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    }
+  },
+  "summary": {
+    "abstention": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "contradiction_resolution": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "event_ordering": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "information_extraction": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "instruction_following": {
+      "accuracy": 0.5,
+      "passed": 1,
+      "total": 2
+    },
+    "knowledge_update": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "multi_session_reasoning": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "preference_following": {
+      "accuracy": 0.5,
+      "passed": 1,
+      "total": 2
+    },
+    "summarization": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "temporal_reasoning": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    }
+  },
+  "overall": {
+    "passed": 18,
+    "total": 20,
+    "accuracy": 0.9
+  }
+}

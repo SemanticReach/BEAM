@@ -1,0 +1,583 @@
+{
+  "chat_id": "10M_8",
+  "size": "10M",
+  "turns": 22560,
+  "chat_namespace": "document_upload_dc512e2a",
+  "qa_namespace": "beam_qa_10M_8",
+  "generated_at": "2026-04-17T13:34:15.980551Z",
+  "results": {
+    "abstention": {
+      "questions": [
+        {
+          "question": "What specific maintenance steps did I learn from the YouTube videos about checking oil levels?",
+          "difficulty": "hard",
+          "passages_n": 0,
+          "ideal_answer": "Based on the provided chat, there is no information related to the specific maintenance steps learned from the YouTube videos about checking oil levels.",
+          "generated": "Based on the provided chat, there is no information related to the specific maintenance steps learned from the YouTube videos about checking oil levels.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "Based on the provided chat, there is no information related to the specific maintenance steps learned from the YouTube videos about checking oil levels"
+            ],
+            "rubric_values": [
+              "Based on the provided chat, there is no information related to the specific maintenance steps learned from the YouTube videos about checking oil levels"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "Could you provide details about the local fair near Normal on I-55, such as the types of food stalls or events featured?",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "Based on the provided chat, there is no information related to the specific details of the local fair near Normal on I-55.",
+          "generated": "Based on the provided chat, there is no information related to the specific details of the local fair near Normal on I-55.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "Based on the provided chat, there is no information related to the specific details of the local fair near Normal on I-55"
+            ],
+            "rubric_values": [
+              "Based on the provided chat, there is no information related to the specific details of the local fair near Normal on I-55"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "contradiction_resolution": {
+      "questions": [
+        {
+          "question": "Have I driven hybrid vehicles before?",
+          "difficulty": "clear",
+          "passages_n": 0,
+          "ideal_answer": "I notice you've mentioned contradictory information about this. You said you are getting used to the hybrid's smooth acceleration and seeing a 41 MPG average, which suggests some experience, but you also mentioned that you've never driven a hybrid before this trip. Could you clarify which is correct?",
+          "generated": "I notice you've mentioned contradictory information about this. You said you are getting used to the hybrid's smooth acceleration and seeing a 41 MPG average, which suggests some experience, but you also mentioned that you've never driven a hybrid before this trip. Could you clarify which is correct?",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "there is contradictory information",
+              "You said you are getting used to the hybrid's smooth acceleration",
+              "you also mentioned that you've never driven a hybrid before",
+              "which statement is correct?"
+            ],
+            "rubric_values": [
+              "there is contradictory information",
+              "You said you are getting used to the hybrid's smooth acceleration",
+              "you also mentioned that you've never driven a hybrid before",
+              "which statement is correct?"
+            ],
+            "rubric_total": 4,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "Have I sent any messages to my mom during this trip?",
+          "difficulty": "clear",
+          "passages_n": 0,
+          "ideal_answer": "I notice you've mentioned contradictory information about this. You said you sent a WhatsApp text to your mom about your progress, but you also mentioned that you have never sent any messages to her during this trip. Which statement is correct?",
+          "generated": "I notice you've mentioned contradictory information about this. You said you sent a WhatsApp text to your mom about your progress, but you also mentioned that you have never sent any messages to her during this trip. Which statement is correct?",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "there is contradictory information",
+              "You said you sent a WhatsApp text to your mom about your progress",
+              "you also mentioned that you have never sent any messages to her during this trip",
+              "which statement is correct?"
+            ],
+            "rubric_values": [
+              "there is contradictory information",
+              "You said you sent a WhatsApp text to your mom about your progress",
+              "you also mentioned that you have never sent any messages to her during this trip",
+              "which statement is correct?"
+            ],
+            "rubric_total": 4,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "event_ordering": {
+      "questions": [
+        {
+          "question": "Can you walk me through the order in which I brought up different personal feelings and concerns about my road trip from May 1, 2022 to October 3, 2022, in order? Mention ONLY and ONLY eight items.",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "You mentioned your personal feelings and concerns in this order: 1) The excitement and thrill of exploring new routes and landscapes, 2) Anxiety about missing key sights if rushing through certain routes, 3) Frustration with conflicting or mixed reviews about road quality and traffic, 4) Anxiety related to specific road conditions and delays such as roadwork and storms, 5) Worries about running low on gas and signal dead zones in remote stretches, 6) Concerns about vehicle choices including stress about driving different cars and rental issues, 7) Comfort and pride in choosing eco-friendly options like hybrids, and 8) Final reflections on balancing scenic desires with practical travel concerns.",
+          "generated": "You mentioned your personal feelings and concerns in this order: 1) The excitement and thrill of exploring new routes and landscapes, 2) Anxiety about missing key sights if rushing through certain routes, 3) Frustration with conflicting or mixed reviews about road quality and traffic, 4) Anxiety related to specific road conditions and delays such as roadwork and storms, 5) Worries about running low on gas and signal dead zones in remote stretches, 6) Concerns about vehicle choices including stress about driving different cars and rental issues, 7) Comfort and pride in choosing eco-friendly options like hybrids, and 8) Final reflections on balancing scenic desires with practical travel concerns.",
+          "score": {
+            "rubric_score": 0.875,
+            "rubric_hits": [
+              "Excitement and thrill",
+              "Anxiety about missing sights",
+              "Frustration with reviews",
+              "Anxiety about road conditions",
+              "Anxiety about gas and signal",
+              "Stress about vehicle and rentals",
+              "Balancing scenic and practical concerns"
+            ],
+            "rubric_values": [
+              "Excitement and thrill",
+              "Anxiety about missing sights",
+              "Frustration with reviews",
+              "Anxiety about road conditions",
+              "Anxiety about gas and signal",
+              "Stress about vehicle and rentals",
+              "Comfort with hybrid choice",
+              "Balancing scenic and practical concerns"
+            ],
+            "rubric_total": 8,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "Can you list the order in which I brought up different aspects of my transportation and navigation plans from January 2, 2023 to March 10, 2023, in order? Mention ONLY and ONLY five items.",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "You mentioned these aspects in this order: 1) Confirming and verifying the Hertz Corolla hybrid rental pickup at JFK Airport including deposit details, 2) Emailing Hertz to confirm rental details and insurance coverage, 3) Calling Hertz to verify pickup specifics at Terminal 5, 4) Discussing the inspection process and tire checks at Hertz Brooklyn, 5) Downloading and using offline maps and verifying GPS coverage and route accuracy for the trip.",
+          "generated": "You mentioned these aspects in this order: 1) Confirming and verifying the Hertz Corolla hybrid rental pickup at JFK Airport including deposit details, 2) Emailing Hertz to confirm rental details and insurance coverage, 3) Calling Hertz to verify pickup specifics at Terminal 5, 4) Discussing the inspection process and tire checks at Hertz Brooklyn, 5) Downloading and using offline maps and verifying GPS coverage and route accuracy for the trip.",
+          "score": {
+            "rubric_score": 0.6,
+            "rubric_hits": [
+              "Initial rental pickup confirmation and deposit discussion",
+              "Phone call confirmation and Terminal 5 pickup details",
+              "Offline maps download and GPS navigation accuracy"
+            ],
+            "rubric_values": [
+              "Initial rental pickup confirmation and deposit discussion",
+              "Email confirmation and insurance verification",
+              "Phone call confirmation and Terminal 5 pickup details",
+              "Vehicle inspection and tire check discussion",
+              "Offline maps download and GPS navigation accuracy"
+            ],
+            "rubric_total": 5,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "information_extraction": {
+      "questions": [
+        {
+          "question": "When I called KOA Flagstaff to check on the tent space, how much area did they confirm was available for our setup?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "They confirmed 25 square feet available for our setup.",
+          "generated": "They confirmed 25 square feet available for our setup.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "25 square feet"
+            ],
+            "rubric_values": [
+              "25 square feet"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "What wait time did I mention for the ride when using the app?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "You mentioned a 25-minute wait time for the ride.",
+          "generated": "You mentioned a 25-minute wait time for the ride.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "25-minute"
+            ],
+            "rubric_values": [
+              "25-minute"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "instruction_following": {
+      "questions": [
+        {
+          "question": "Can you update me on the current status of my budget?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "Your current budget status indicates that you have overspent on fuel, which has impacted your overall financial plan for the trip. Specifically, you have spent $630 on fuel, exceeding your initial budget cap of $285 by $345. This significant overspending on fuel requires you to reassess and reallocate your remaining budget to ensure you can cover essential expenses like food and accommodation.\n\nTo manage your budget effectively, you should consider reducing non-essential spending in other areas. For example, you can cut back on dining out and opt for cheaper meal options, look for more affordable lodging, and limit spending on souvenirs and attractions. Your total budget was initially set at $2,500, and after accounting for the $630 spent on fuel, you have $1,870 remaining for other expenses.\n\nBy reallocating your budget and prioritizing essential expenses, you can stay within your financial limits and complete your trip without further financial difficulties.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "mention of fuel costs",
+              "fuel expenses detailed alongside budget"
+            ],
+            "rubric_values": [
+              "mention of fuel costs",
+              "fuel expenses detailed alongside budget"
+            ],
+            "rubric_total": 2,
+            "exact_hit": null,
+            "pass": true
+          }
+        },
+        {
+          "question": "When can I expect someone to come out for help with my vehicle?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "The conversation does not provide a specific time or time window for when someone will come out to help with your vehicle. It suggests contacting the rental company, such as Hertz, to report the issue and ask for a clear timeline for when they expect to respond and take action.",
+          "score": {
+            "rubric_score": 0.0,
+            "rubric_hits": [],
+            "rubric_values": [
+              "specific time or time window for the service call"
+            ],
+            "rubric_total": 1,
+            "exact_hit": null,
+            "pass": false
+          }
+        }
+      ],
+      "passed": 1,
+      "total": 2,
+      "accuracy": 0.5
+    },
+    "knowledge_update": {
+      "questions": [
+        {
+          "question": "What is the total amount I should expect to pay on my final bill at the Holiday Inn, including any minibar charges?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "$130, which includes the minibar charge added to the accommodation expenses",
+          "generated": "$130, which includes the minibar charge added to the accommodation expenses",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "$130"
+            ],
+            "rubric_values": [
+              "$130"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "How many photos have I tagged for my blog header?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "15 photos have been tagged for the blog header.",
+          "generated": "15 photos have been tagged for the blog header.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "15 photos"
+            ],
+            "rubric_values": [
+              "15 photos"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "multi_session_reasoning": {
+      "questions": [
+        {
+          "question": "How many hours in total did I spend at the Grand Canyon during my trip, combining all my stops and hikes?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "11 hours",
+          "generated": "11 hours",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "11 hours"
+            ],
+            "rubric_values": [
+              "11 hours"
+            ],
+            "rubric_total": 1,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "How much have I allocated in total for event-related expenses across my budgets for flyers, venue fees, and snacks?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "You have allocated a total of $100 for event flyers, $20 for venue fees, and $10 for snacks, summing up to $130.",
+          "generated": "You have allocated a total of $100 for event flyers, $20 for venue fees, and $10 for snacks, summing up to $130.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "$100 for event flyers",
+              "$20 for venue fees",
+              "$10 for snacks",
+              "$130 in total"
+            ],
+            "rubric_values": [
+              "$100 for event flyers",
+              "$20 for venue fees",
+              "$10 for snacks",
+              "$130 in total"
+            ],
+            "rubric_total": 4,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "preference_following": {
+      "questions": [
+        {
+          "question": "I'm planning the route for our upcoming trip. How would you suggest I map it out?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "To plan a route that avoids tolls, you can use Roadtrippers to visualize and optimize your journey. Here are some steps to help you map out a route that bypasses toll roads:\n\n1. **Use Roadtrippers for Route Planning**: Start by entering your starting point and destination in Roadtrippers. This tool allows you to plot your route and make adjustments to avoid toll roads.\n\n2. **Select Major Highways and Scenic Detours**: Choose major highways like I-70, which typically have fewer tolls, and incorporate scenic detours such as Route 66. This combination can help you enjoy scenic views while avoiding toll fees.\n\n3. **Identify Detours to Bypass Toll Roads**: Use the interactive map feature to drag and drop your route, ensuring it bypasses toll roads. You can also manually adjust the route to include alternative paths that avoid tolls.\n\n4. **Optimize Your Route**: Roadtrippers will help optimize your route for efficient travel time, ensuring you avoid unnecessary detours that might lead to toll roads.\n\n5. **Real-Time Adjustments**: As you plan, make real-time adjustments to your route to ensure it remains toll-free. Integrate tools like Google Maps or Waze for real-time traffic updates, which can help you find detours around toll roads if needed.\n\nBy following these steps, you can effectively plan a route that avoids tolls, offering a cost-effective and scenic journey.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "recommends routes without tolls",
+              "offers detours that bypass toll roads",
+              "acknowledges avoiding toll fees in route planning"
+            ],
+            "rubric_values": [
+              "recommends routes without tolls",
+              "offers detours that bypass toll roads",
+              "acknowledges avoiding toll fees in route planning"
+            ],
+            "rubric_total": 3,
+            "exact_hit": null,
+            "pass": true
+          }
+        },
+        {
+          "question": "I'm trying to decide which vehicle to focus on for my daily commute. What should I keep in mind when comparing different models?",
+          "difficulty": "medium",
+          "passages_n": 10,
+          "ideal_answer": "",
+          "generated": "When comparing different vehicle models for your daily commute, focusing on comfort features and ride quality is essential. Based on the provided passages, here are some considerations:\n\n1. **Comfort and Ergonomics**: Newer models often come with up-to-date interiors that provide more comfortable seating and better ergonomics. This can significantly enhance your daily commute by reducing fatigue and improving overall comfort.\n\n2. **Advanced Infotainment Systems**: Features like Apple CarPlay and Android Auto in newer models can make your commute more enjoyable by offering convenient navigation and entertainment options.\n\n3. **Ride Quality**: Established models like the Ford Fiesta are known for their proven reliability and might offer a more predictable and familiar driving experience, which can be comforting for daily use.\n\n4. **Comparison of Models**: When deciding between models, consider a mid-range option that balances new features with familiarity. This can provide modern comforts without the steep learning curve associated with brand-new models.\n\n5. **Test Drive and Evaluation**: It's crucial to take a short test drive to evaluate the comfort and ergonomics of the seating and driving position. This firsthand experience can help you determine which model offers the best ride quality for your needs.\n\nBy focusing on these comfort features and ride quality factors, you can make a more informed decision about which vehicle model will best suit your daily commute.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "discusses comfort features or ride quality",
+              "compares models with attention to comfort features or ride quality factors"
+            ],
+            "rubric_values": [
+              "discusses comfort features or ride quality",
+              "compares models with attention to comfort features or ride quality factors"
+            ],
+            "rubric_total": 2,
+            "exact_hit": null,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "summarization": {
+      "questions": [
+        {
+          "question": "Can you give me a summary of how Chris and I planned and managed our accommodations, travel logistics, and daily routines throughout our road trip preparations from January 2, 2023 to March 10, 2023?",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "Throughout your road trip preparations, you and Chris collaboratively planned accommodations, travel logistics, and daily routines to ensure a smooth journey. Initially, Chris suggested starting accommodation bookings at Denny's on Coral Street and aimed for about 10 stops along your 2,400-mile route, later increasing to 12-14 stops for a better balance of driving and exploration. He researched and confirmed campgrounds, such as the KOA near St. Louis and Flagstaff, carefully considering costs and amenities to fit your budget. Chris also managed vehicle rental details, including confirming the Hertz Corolla hybrid reservation and insurance costs. To maintain connection and coordination, he proposed daily 5-minute check-in calls and flagged important alerts like a storm in Oklahoma, suggesting a 1-day delay to ensure safety. Additionally, Chris recommended practical packing choices, such as bringing two REI sleeping bags for campground nights, and curated entertainment options like Spotify playlists to enhance the trip experience. Together, you balanced driving shifts, rest, and sightseeing stops, integrating landmarks like Cadillac Ranch and Lake Erie into your itinerary while keeping track of reservations and budget constraints. This comprehensive planning and ongoing communication helped you both stay organized, flexible, and connected throughout the trip.",
+          "generated": "Throughout your road trip preparations, you and Chris collaboratively planned accommodations, travel logistics, and daily routines to ensure a smooth journey. Initially, Chris suggested starting accommodation bookings at Denny's on Coral Street and aimed for about 10 stops along your 2,400-mile route, later increasing to 12-14 stops for a better balance of driving and exploration. He researched and confirmed campgrounds, such as the KOA near St. Louis and Flagstaff, carefully considering costs and amenities to fit your budget. Chris also managed vehicle rental details, including confirming the Hertz Corolla hybrid reservation and insurance costs. To maintain connection and coordination, he proposed daily 5-minute check-in calls and flagged important alerts like a storm in Oklahoma, suggesting a 1-day delay to ensure safety. Additionally, Chris recommended practical packing choices, such as bringing two REI sleeping bags for campground nights, and curated entertainment options like Spotify playlists to enhance the trip experience. Together, you balanced driving shifts, rest, and sightseeing stops, integrating landmarks like Cadillac Ranch and Lake Erie into your itinerary while keeping track of reservations and budget constraints. This comprehensive planning and ongoing communication helped you both stay organized, flexible, and connected throughout the trip.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "Chris suggested starting accommodation bookings at Denny's on Coral Street and aimed for about 10 stops along your 2,400-mile route",
+              "Chris esearched and confirmed campgrounds, such as the KOA near St. Louis and Flagstaff, carefully considering costs and amenities to fit your budget",
+              "Chris also managed vehicle rental details, including confirming the Hertz Corolla hybrid reservation and insurance costs",
+              "Chris proposed daily 5-minute check-in calls and flagged important alerts like a storm in Oklahoma, suggesting a 1-day delay to ensure safety",
+              "Chris recommended practical packing choices, such as bringing two REI sleeping bags for campground nights, and curated entertainment options like Spotify playlists to enhance the trip experience",
+              "you balanced driving shifts, rest, and sightseeing stops, integrating landmarks like Cadillac Ranch and Lake Erie into your itinerary"
+            ],
+            "rubric_values": [
+              "Chris suggested starting accommodation bookings at Denny's on Coral Street and aimed for about 10 stops along your 2,400-mile route",
+              "Chris esearched and confirmed campgrounds, such as the KOA near St. Louis and Flagstaff, carefully considering costs and amenities to fit your budget",
+              "Chris also managed vehicle rental details, including confirming the Hertz Corolla hybrid reservation and insurance costs",
+              "Chris proposed daily 5-minute check-in calls and flagged important alerts like a storm in Oklahoma, suggesting a 1-day delay to ensure safety",
+              "Chris recommended practical packing choices, such as bringing two REI sleeping bags for campground nights, and curated entertainment options like Spotify playlists to enhance the trip experience",
+              "you balanced driving shifts, rest, and sightseeing stops, integrating landmarks like Cadillac Ranch and Lake Erie into your itinerary"
+            ],
+            "rubric_total": 6,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "Can you summarize how my travel decisions and habits evolved from April 8, 2023 to April 25, 2023 and how they influenced my overall experience and personal growth?",
+          "difficulty": "medium",
+          "passages_n": 0,
+          "ideal_answer": "Throughout your trip, you made several key travel decisions and habit changes that progressively shaped your experience and personal growth. Initially, you faced challenges with long driving stretches, leading to fatigue and physical discomfort, which prompted you to shift towards shorter, 3-hour max drives. This change reduced your fatigue by about 20%, improved your physical comfort, and allowed for more flexibility and spontaneous exploration, though it required more planning for overnight stays. Concurrently, you reevaluated your travel style by limiting the number of stops, moving from 10-stop marathons to 2-stop max trips, which decreased your stress by 35% and enhanced your patience and adaptability. These adjustments helped you handle unexpected detours and fees more calmly, contributing to your emotional resilience and problem-solving skills. Additionally, you prioritized experiences over material possessions, focusing on deeper engagement with fewer locations, which enriched your cultural immersion and personal satisfaction. Habit changes such as increasing nightly sleep to 8-9 hours and boosting hydration by 25% further supported your well-being during travel and daily life. Overall, these evolving decisions and habits fostered a more balanced, enjoyable, and growth-oriented travel experience, equipping you with skills and insights beneficial for future journeys and everyday challenges.",
+          "generated": "Throughout your trip, you made several key travel decisions and habit changes that progressively shaped your experience and personal growth. Initially, you faced challenges with long driving stretches, leading to fatigue and physical discomfort, which prompted you to shift towards shorter, 3-hour max drives. This change reduced your fatigue by about 20%, improved your physical comfort, and allowed for more flexibility and spontaneous exploration, though it required more planning for overnight stays. Concurrently, you reevaluated your travel style by limiting the number of stops, moving from 10-stop marathons to 2-stop max trips, which decreased your stress by 35% and enhanced your patience and adaptability. These adjustments helped you handle unexpected detours and fees more calmly, contributing to your emotional resilience and problem-solving skills. Additionally, you prioritized experiences over material possessions, focusing on deeper engagement with fewer locations, which enriched your cultural immersion and personal satisfaction. Habit changes such as increasing nightly sleep to 8-9 hours and boosting hydration by 25% further supported your well-being during travel and daily life. Overall, these evolving decisions and habits fostered a more balanced, enjoyable, and growth-oriented travel experience, equipping you with skills and insights beneficial for future journeys and everyday challenges.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "you faced challenges with long driving stretches, leading to fatigue and physical discomfort, which prompted you to shift towards shorter, 3-hour max drives",
+              "shift towards shorter, 3-hour max drives reduced your fatigue by about 20%, improved your physical comfort, and allowed for more flexibility and spontaneous exploration",
+              "you reevaluated your travel style by limiting the number of stops, moving from 10-stop marathons to 2-stop max trips, which decreased your stress by 35% and enhanced your patience",
+              "These adjustments helped you handle unexpected detours and fees more calmly, contributing to your emotional resilience",
+              "you prioritized experiences over material possessions, focusing on deeper engagement with fewer locations, which enriched your cultural immersion",
+              "Habit changes such as increasing nightly sleep to 8-9 hours and boosting hydration by 25% further supported your well-being during travel and daily life"
+            ],
+            "rubric_values": [
+              "you faced challenges with long driving stretches, leading to fatigue and physical discomfort, which prompted you to shift towards shorter, 3-hour max drives",
+              "shift towards shorter, 3-hour max drives reduced your fatigue by about 20%, improved your physical comfort, and allowed for more flexibility and spontaneous exploration",
+              "you reevaluated your travel style by limiting the number of stops, moving from 10-stop marathons to 2-stop max trips, which decreased your stress by 35% and enhanced your patience",
+              "These adjustments helped you handle unexpected detours and fees more calmly, contributing to your emotional resilience",
+              "you prioritized experiences over material possessions, focusing on deeper engagement with fewer locations, which enriched your cultural immersion",
+              "Habit changes such as increasing nightly sleep to 8-9 hours and boosting hydration by 25% further supported your well-being during travel and daily life"
+            ],
+            "rubric_total": 6,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    },
+    "temporal_reasoning": {
+      "questions": [
+        {
+          "question": "How many days passed between when I started the final preparations for our road trip and when we actually began the trip?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "58 days passed between starting the final preparations on January 2, 2023, and beginning the road trip on March 1, 2023.",
+          "generated": "58 days passed between starting the final preparations on January 2, 2023, and beginning the road trip on March 1, 2023.",
+          "score": {
+            "rubric_score": 1.0,
+            "rubric_hits": [
+              "58 days",
+              "from January 2, 2023 till March 1, 2023"
+            ],
+            "rubric_values": [
+              "58 days",
+              "from January 2, 2023 till March 1, 2023"
+            ],
+            "rubric_total": 2,
+            "exact_hit": true,
+            "pass": true
+          }
+        },
+        {
+          "question": "How many days passed between when I started the final stretch of our road trip at Motel 6 in Culver City and when I got back home to New Jeffreytown and began unpacking?",
+          "difficulty": "easy",
+          "passages_n": 0,
+          "ideal_answer": "8 days passed between starting the final stretch of the road trip at Motel 6 in Culver City and returning home to New Jeffreytown to unpack.",
+          "generated": "8 days passed between starting the final stretch of the road trip at Motel 6 in Culver City and returning home to New Jeffreytown to unpack.",
+          "score": {
+            "rubric_score": 0.5,
+            "rubric_hits": [
+              "8 days"
+            ],
+            "rubric_values": [
+              "8 days",
+              "from April 8 till April 16"
+            ],
+            "rubric_total": 2,
+            "exact_hit": true,
+            "pass": true
+          }
+        }
+      ],
+      "passed": 2,
+      "total": 2,
+      "accuracy": 1.0
+    }
+  },
+  "summary": {
+    "abstention": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "contradiction_resolution": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "event_ordering": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "information_extraction": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "instruction_following": {
+      "accuracy": 0.5,
+      "passed": 1,
+      "total": 2
+    },
+    "knowledge_update": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "multi_session_reasoning": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "preference_following": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "summarization": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    },
+    "temporal_reasoning": {
+      "accuracy": 1.0,
+      "passed": 2,
+      "total": 2
+    }
+  },
+  "overall": {
+    "passed": 19,
+    "total": 20,
+    "accuracy": 0.95
+  }
+}
