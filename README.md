@@ -15,7 +15,7 @@ pip install -r requirements.txt
 # Set up environment variables in .env file:
 # HB_API_KEY=your_hyperbinder_api_key
 # OPENAI_API_KEY=your_openai_api_key
-# HB_SERVER_URL=http://your-hyperbinder-server:8000
+# HB_SERVER_URL=http://18.220.128.24:8000
 
 # Run full evaluation (ingests + evaluates)
 python beam_ingest.py --all-chats chats/10M --size 10M
