@@ -17,5 +17,5 @@ pip install -r requirements.txt
 # OPENAI_API_KEY=your_openai_api_key
 # HB_SERVER_URL=http://your-hyperbinder-server:8000
 
-# Run full evaluation (ingests + evaluates, no manual namespace needed)
+# Run full evaluation (ingests + evaluates)
 python beam_ingest.py --all-chats chats/10M --size 10M
