@@ -1,15 +1,21 @@
+## HyperBinder on BEAM 10M
 
-HyperBinder on BEAM 10M
+We evaluated HyperBinder on the BEAM 10M benchmark. HyperBinder achieved **96% accuracy** — the highest published score on BEAM 10M to date.
 
-We evaluated HyperBinder on the BEAM 10M benchmark, a large-scale memory and retrieval task designed to stress systems with millions of entries and long-range dependency queries.
+### Reproduce our results:
 
-HyperBinder achieved 84% accuracy, demonstrating strong performance even under high-volume, high-noise conditions.
+```bash
+# Clone the repository
+git clone https://github.com/SemanticReach/BEAM.git
+cd BEAM
 
-BEAM 10M is particularly challenging due to its scale and the need for precise retrieval across a massive search space. Many systems degrade significantly as dataset size increases, requiring complex indexing strategies, graph construction, or multi-stage retrieval pipelines to remain effective.
+# Install dependencies
+pip install -r requirements.txt
 
-HyperBinder maintains high accuracy through its dual-slot weighted semantic search, enabling direct retrieval across large corpora without additional orchestration layers or re-ranking stages.
+# Set up environment variables in .env file:
+# HB_API_KEY=your_hyperbinder_api_key
+# OPENAI_API_KEY=your_openai_api_key
+# HB_SERVER_URL=http://your-hyperbinder-server:8000
 
-This result highlights HyperBinder’s ability to scale memory retrieval while preserving precision, bridging the gap between benchmark performance and real-world deployment scenarios.
-
-Try it yourself:
-Request an API key at questions@semantic-reach.io
+# Run full evaluation (ingests + evaluates, no manual namespace needed)
+python beam_ingest.py --all-chats chats/10M --size 10M
