@@ -3,7 +3,6 @@ import json
 import os
 from dotenv import load_dotenv
 
-
 load_dotenv()
 
 
@@ -28,7 +27,6 @@ class BuildLLm:
             temperature=self.temperature,
             extra_body=self.extra_body
         )
-
         return self.llm
 
     def set_paramaters(self, model_url, model_name, api_key, temperature):
@@ -42,12 +40,12 @@ class BuildLLm:
 
 
 english_only_regex = (
-    r"^[\t\n\r -~"           # ASCII printable + whitespace
-    r"\u00A0-\u00FF"         # Latin-1 Supplement (× ÷ ± ° etc.)
-    r"\u0370-\u03FF"         # Greek letters
-    r"\u2070-\u209F"         # Superscripts/Subscripts
-    r"\u2190-\u21FF"         # Arrows
-    r"\u2200-\u22FF"         # Math operators & symbols
+    r"^[\t\n\r -~"           
+    r"\u00A0-\u00FF"         
+    r"\u0370-\u03FF"         
+    r"\u2070-\u209F"         
+    r"\u2190-\u21FF"         
+    r"\u2200-\u22FF"         
     r"]*$"
 )
 
@@ -55,20 +53,35 @@ CONFIG_PATH = os.path.join(os.path.dirname(__file__), "llms_config.json")
 with open(CONFIG_PATH) as f:
     cfg = json.load(f)
 
-openai_api_key = os.getenv("OPENAI_API_KEY", cfg["gpt"]["api_key"])
+# ✅ Get DeepSeek config from config file or environment
+deepseek_config = cfg.get("deepseek", {})
+deepseek_api_key = deepseek_config.get("api_key") or os.getenv("DEEPSEEK_API_KEY", "")
+deepseek_url = deepseek_config.get("model_url", "https://api.deepseek.com/v1")
+deepseek_model = deepseek_config.get("model_name", "deepseek-chat")
 
+print(f"🔑 DeepSeek API Key: {'✅ Set' if deepseek_api_key else '❌ Missing'}")
+print(f"🌐 DeepSeek URL: {deepseek_url}")
+print(f"🤖 DeepSeek Model: {deepseek_model}")
+
+# For llama (if needed)
 llama_llm_obj = BuildLLm(**cfg["llama"],
                          temperature=0)
 
+# For qwen (if needed)
 qwen_awq_32_llm_obj = BuildLLm(**cfg["qwen"],
                                temperature=0,
                                extra_body={"guided_regex": english_only_regex})
 
-gpt_llm_obj = BuildLLm(model_url=None,
-                       model_name="gpt-4o",  
-                       api_key=openai_api_key, 
-                       temperature=0)
+# ✅ Use DeepSeek as the judge (replaces GPT-4)
+gpt_llm_obj = BuildLLm(
+    model_url=deepseek_url,
+    model_name=deepseek_model,
+    api_key=deepseek_api_key,
+    temperature=0
+)
 
 llama_llm = llama_llm_obj.build_llm()
 qwen_llm = qwen_awq_32_llm_obj.build_llm()
 gpt_llm = gpt_llm_obj.build_llm()
+
+print(f"✅ Using LLM judge: {deepseek_model} (via {deepseek_url})")

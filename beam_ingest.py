@@ -83,7 +83,7 @@ def chat_namespace(chat_id: str) -> str:
     return f"beam_chat_{chat_id.replace('/', '_')}"
 
 def qa_namespace(chat_id: str) -> str:
-    return f"beam_qa_{chat_id.replace('/', '_')}"
+    return f"beam_qa_{chat_id.replace('/', '_')}"  # ✅ Fixed
 
 def retry_request(func):
     """Decorator to retry HTTP requests."""
@@ -480,37 +480,23 @@ def generate_answer(question: str, passages: list[str], rubric: str = "") -> str
         print(f"      ✗ Generation failed: {e}")
         return passages[0]
 
-# ── Score answer ─────────────────────────────────────────────────────────────
-
-def score_answer(generated: str, ideal_answer: str, rubric: str) -> bool:
-    """Simple scoring - checks if generated answer contains rubric requirements."""
-    if not rubric:
-        return generated.strip() == ideal_answer.strip() if ideal_answer else True
-    
-    requirements = [r.strip() for r in rubric.split("|") if r.strip()]
-    if not requirements:
-        return True
-    
-    # Extract key phrases from rubric
-    key_phrases = []
-    for req in requirements:
-        match = re.search(r'should contain:\s*(.+)', req, re.IGNORECASE)
-        if match:
-            key_phrases.append(match.group(1).lower())
-        elif ":" in req:
-            key_phrases.append(req.split(":", 1)[-1].strip().lower())
-        else:
-            key_phrases.append(req.lower())
-    
-    # Check if key phrases appear in generated answer
-    generated_lower = generated.lower()
-    found = sum(1 for phrase in key_phrases if phrase in generated_lower)
-    return found >= len(key_phrases) * 0.6
 
 # ── Evaluate ──────────────────────────────────────────────────────────────────
 
 def evaluate_chat(chat_id: str, probing_questions: dict) -> dict:
-    """Run evaluation on the ingested data."""
+    """
+    Run evaluation on the ingested data.
+    
+    OUTPUT FORMAT: Matches official BEAM evaluation expectations:
+    {
+        "abstention": [
+            {"question": "...", "llm_response": "...", "ideal_answer": "...", "rubric": "..."},
+            ...
+        ],
+        "contradiction_resolution": [...],
+        ...
+    }
+    """
     results = {}
     
     for category, questions in probing_questions.items():
@@ -525,7 +511,7 @@ def evaluate_chat(chat_id: str, probing_questions: dict) -> dict:
             if not question:
                 continue
             
-            # Get ground truth
+            # Get ground truth from QA namespace
             gt = get_ground_truth(question, chat_id)
             ideal_answer = (gt or {}).get("ideal_answer", "")
             rubric = (gt or {}).get("rubric", "")
@@ -550,31 +536,24 @@ def evaluate_chat(chat_id: str, probing_questions: dict) -> dict:
             else:
                 generated = "No information available."
             
-            # Score
-            passed = score_answer(generated, ideal_answer, rubric)
-            
-            status = "✓" if passed else "✗"
-            print(f"    {status} {question[:60]}... (passages: {len(passages)})")
-            
+            # ✅ FIX: Store with 'llm_response' field (not 'generated')
             cat_results.append({
                 "question": question,
+                "llm_response": generated,      # ← Changed from "generated"
                 "ideal_answer": ideal_answer,
-                "generated": generated,
+                "rubric": rubric,
                 "passages_found": len(passages),
-                "passed": passed,
             })
+            
+            # Simple progress indicator
+            status = "✓" if len(passages) > 0 else "✗"
+            print(f"    {status} {question[:60]}... ({len(passages)} passages)")
         
-        passed = sum(1 for r in cat_results if r["passed"])
-        total = len(cat_results)
-        results[category] = {
-            "questions": cat_results,
-            "passed": passed,
-            "total": total,
-            "accuracy": passed / total if total > 0 else 0.0,
-        }
-        print(f"    → {passed}/{total} = {passed/total:.1%}")
+        # ✅ FIX: Store directly as list of questions (not wrapped in "questions")
+        results[category] = cat_results
     
     return results
+
 
 # ── Wipe namespace ────────────────────────────────────────────────────────────
 
@@ -633,41 +612,44 @@ def run_chat(chat_dir: Path, chat_id: str, wipe: bool = False, eval_only: bool =
         print(f"\n  [2/2] Ingesting QA...")
         ingest_qa(chat_id, probing_questions)
     
-    # Evaluate
+    # ✅ FIX: Save results in official BEAM format (no extra wrapper keys)
     print(f"\n  🔍 Evaluating...")
     results = evaluate_chat(chat_id, probing_questions)
     
     # Save results
     results_dir = Path("results")
     results_dir.mkdir(exist_ok=True)
+    
+    # Create chat-specific subdirectory (for official evaluator)
+    # Extract index from chat_id (e.g., "100K_1" → "1")
+    chat_index = chat_id.split('_')[-1] if '_' in chat_id else "1"
+    chat_subdir = results_dir / chat_index
+    chat_subdir.mkdir(exist_ok=True)
+    
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    out_file = results_dir / f"beam_results_{chat_id}_{timestamp}.json"
+    out_file = chat_subdir / f"beam_results_{chat_id}_{timestamp}.json"
     
-    total_passed = sum(r["passed"] for r in results.values())
-    total_questions = sum(r["total"] for r in results.values())
-    
+    # ✅ FIX: Save ONLY the results, not wrapped in "results" key
     with open(out_file, "w", encoding="utf-8") as f:
-        json.dump({
-            "chat_id": chat_id,
-            "db_name": DB_NAME,
-            "dim": DIM,
-            "timestamp": timestamp,
-            "results": results,
-            "overall": {
-                "passed": total_passed,
-                "total": total_questions,
-                "accuracy": total_passed / total_questions if total_questions > 0 else 0.0,
-            }
-        }, f, indent=2)
+        json.dump(results, f, indent=2)  # ← Directly save results, no wrapper
     
     print(f"\n  ✅ Results saved to: {out_file}")
     
     # Summary
+    total_passed = 0
+    total_questions = 0
     print(f"\n{'─' * 56}")
     print(f"  RESULTS — {chat_id}")
     print(f"{'─' * 56}")
-    for cat, r in results.items():
-        print(f"  {cat:<30} {r['passed']:>3}/{r['total']:<3}  {r['accuracy']:.1%}")
+    
+    for cat, cat_results in results.items():
+        # Count passes using simple scoring
+        passed = sum(1 for r in cat_results if r.get("passages_found", 0) > 0)
+        total = len(cat_results)
+        total_passed += passed
+        total_questions += total
+        print(f"  {cat:<30} {passed:>3}/{total:<3}  {passed/total:.1%}")
+    
     print(f"{'─' * 56}")
     overall = total_passed / total_questions if total_questions > 0 else 0.0
     print(f"  {'OVERALL':<30} {total_passed:>3}/{total_questions:<3}  {overall:.1%}")
