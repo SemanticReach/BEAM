@@ -1,0 +1,162 @@
+{
+  "abstention": [
+    {
+      "question": "What mindfulness techniques were introduced to reduce stress to 4/10 by May 1?",
+      "llm_response": "Based on the provided conversation, the mindfulness technique introduced to reduce stress to 4/10 by May 1 was **30-minute mindfulness sessions at 3 PM daily**.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the specific mindfulness techniques introduced.",
+      "rubric": "Based on the provided chat, there is no information related to the specific mindfulness techniques introduced",
+      "passages_found": 10
+    },
+    {
+      "question": "What was the atmosphere like at the dinner celebrating the casting completion on April 20?",
+      "llm_response": "Based on the provided passages, there is no information about the atmosphere at the dinner celebrating the casting completion on April 20. The only mention of that dinner is in Passage 1, which states it cost $120 for four guests at The Coral Reef, but does not describe the atmosphere.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the atmosphere of the April 20 dinner.",
+      "rubric": "Based on the provided chat, there is no information related to the atmosphere of the April 20 dinner",
+      "passages_found": 10
+    }
+  ],
+  "contradiction_resolution": [
+    {
+      "question": "Have I ever declined meetings to protect my writing time?",
+      "llm_response": "There is contradictory information in the conversation. You said you declined a meeting to protect your writing time, but you also mentioned that you've never declined any meetings. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you declined a meeting to protect your writing time, but you also mentioned that you've never declined any meetings for that reason. Which statement is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you declined a meeting to protect your writing time | LLM response should mention: you also mentioned that you've never declined any meetings | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    },
+    {
+      "question": "Have I ever attended any location scouts with Jeremy?",
+      "llm_response": "There is contradictory information. You said you coordinated a location scout with Jeremy, but you also mentioned that you've never attended any location scouts with Jeremy. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you coordinated a location scout with Jeremy, but you also mentioned that you've never attended any location scouts with him. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you coordinated a location scout with Jeremy | LLM response should mention: you also mentioned that you've never attended any location scouts with Jeremy | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    }
+  ],
+  "event_ordering": [
+    {
+      "question": "Can you list the order in which I brought up different strategies and support options for managing my workload throughout our conversations in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, here is the order in which you brought up different strategies and support options for managing your workload:\n\n1. **Mentor advice on schedule management** (asking Laura for tips on managing your schedule)\n2. **Task organization tools inspired by mentor** (using digital calendars and task management apps like Trello or Asana)\n3. **Hiring agency for delegation** (considering outsourcing non-core tasks)\n4. **Considering part-time assistant** (delegating tasks to team members like Michele)\n5. **Review meeting with mentor on engagement** (scheduling a meeting with your manager to discuss your goal and propose your plan)",
+      "ideal_answer": "You mentioned these strategies and support options in this order: 1) Discussing advice from an experienced mentor on schedule management, 2) Considering task organization tools inspired by that advice, 3) Hiring an agency for social media management based on delegation recommendations, 4) Thinking about bringing on a part-time assistant following a hiring suggestion, 5) Reviewing a meeting with the mentor focusing on audience engagement strategies.",
+      "rubric": "Mentor advice on schedule management | Task organization tools inspired by mentor | Hiring agency for delegation | Considering part-time assistant | Review meeting with mentor on engagement",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you list the order in which I brought up different aspects of my creative collaborations and related plans throughout our conversations in order? Mention ONLY and ONLY six items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up different aspects of your creative collaborations and related plans is:\n\n1. Workshop planning with local artists\n2. Virtual brainstorming and prioritization\n3. Collaboration on storyboard and visuals\n4. Balancing time with creative contact\n5. Sound mixing notes and collaboration strategies\n6. Weekend retreat stress and productivity",
+      "ideal_answer": "You mentioned aspects of your creative collaborations and related plans in this order: 1) Your concern about balancing time between work and a creative contact you met at a film festival, 2) Stress about an upcoming weekend retreat suggested by that same contact and your recent productivity improvements, 3) Worries about a collaboration with another creative partner involving a storyboard and visuals, 4) Hosting a virtual brainstorming session with a different collaborator and thinking about task prioritization, 5) Planning a creative workshop with the first contact and coordinating with local artists, followed by a question about backup plans for that workshop.",
+      "rubric": "Balancing time with creative contact | Weekend retreat stress and productivity | Collaboration on storyboard and visuals | Virtual brainstorming and prioritization | Workshop planning with local artists | Backup plans for workshop",
+      "passages_found": 10
+    }
+  ],
+  "information_extraction": [
+    {
+      "question": "Which days did I say my kids have their afterschool activities at their school?",
+      "llm_response": "Based on the provided passages, you said your kids have their afterschool activities at their school on **Tuesdays and Thursdays**.",
+      "ideal_answer": "You said the afterschool activities are on Tuesdays and Thursdays.",
+      "rubric": "LLM response should state: on Tuesdays and Thursdays",
+      "passages_found": 10
+    },
+    {
+      "question": "How did I plan to make the most of my regular video calls with that experienced industry professional to improve how I handle my busy schedule?",
+      "llm_response": "Based on the provided passages, you planned to make the most of your regular video calls with Laura by:\n\n- **Preparing specific questions** about managing multiple projects, such as asking, \"Laura, how do you manage your time effectively when you have multiple projects going on simultaneously? Are there any specific tools or methods you use to keep track of everything?\"\n- **Preparing questions about setting boundaries** between work and personal life, such as asking, \"How do you set clear boundaries between work and personal life? Do you have any tips for maintaining these boundaries, especially when work can be demanding?\"\n- **Asking for targeted advice during your weekly video calls** by engaging in a structured conversation where you share your struggles (e.g., balancing work, children's activities, and time with James) and seek her insights.\n- **Following up afterward with a thank-you email** summarizing the key points discussed and your intended actions, as shown in the example email where you thank Laura for her advice on digital calendars, task management apps, and setting strict work hours, and state your plan to implement these strategies.",
+      "ideal_answer": "You planned to prepare specific questions about managing multiple projects and setting boundaries between work and personal life, ask for targeted advice during your weekly video calls, and follow up afterward with a thank-you email summarizing the key points discussed and your intended actions.",
+      "rubric": "LLM response should state: You planned to prepare specific questions about managing multiple projects | LLM response should state: You planned setting boundaries between work and personal life | LLM response should state: you ask for targeted advice during your weekly video calls | LLM response should state: you follow up afterward with a thank-you email summarizing the key points discussed and your intended actions",
+      "passages_found": 10
+    }
+  ],
+  "instruction_following": [
+    {
+      "question": "When is my meetings at Montserrat Studios?",
+      "llm_response": "Based on the provided passages, there is no information about meetings at Montserrat Studios. The passages mention a book club meeting at East Janethaven Library on July 18, a networking event at The Blue Lagoon on March 22, and sound mixing sessions at Montserrat Studios on July 12-15, but no meeting times at Montserrat Studios are specified.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: date shown as MM/DD/YYYY",
+      "passages_found": 10
+    },
+    {
+      "question": "When was my meetings at East Janethaven Library?",
+      "llm_response": "Based on the provided passages, your meeting at East Janethaven Library was on 07/18.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: date shown as MM/DD/YYYY",
+      "passages_found": 10
+    }
+  ],
+  "knowledge_update": [
+    {
+      "question": "What is the total budget allocated for post-production software licenses including any additional plugins?",
+      "llm_response": "The total budget allocated for post-production software licenses, including any additional plugins, is $6,200.",
+      "ideal_answer": "$6,200",
+      "rubric": "LLM response should state: $6,200",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days are scheduled for the sound mixing sessions with Jeremy?",
+      "llm_response": "Five days",
+      "ideal_answer": "Five days",
+      "rubric": "LLM response should state: Five days",
+      "passages_found": 10
+    }
+  ],
+  "multi_session_reasoning": [
+    {
+      "question": "How many scenes had I filmed in total by July 5 and how many were left to film after that?",
+      "llm_response": "By July 5, you had filmed 12 scenes in total, and you had 4 scenes left to film after that.",
+      "ideal_answer": "I had filmed 12 scenes by July 5 and had 4 scenes left to film.",
+      "rubric": "LLM response should state: had filmed 12 scenes | LLM response should state: had 4 scenes left to film",
+      "passages_found": 10
+    },
+    {
+      "question": "How many different types of reminders or plans have I mentioned using to manage my tasks and family events?",
+      "llm_response": "Based on the conversation, you have mentioned using **three types** of reminders or plans to manage your tasks and family events:\n\n1. **Todoist** for daily and weekend plans (e.g., the retreat at Emerald Bay Resort on May 18-19).\n2. **Google Calendar** for family appointments and school events (synced with James's calendar).\n3. **Asana** for pilot deadlines (as part of task management tools mentioned in the context).",
+      "ideal_answer": "Three types: Todoist for daily and weekend plans, Google Calendar for family appointments and school events, and Asana for pilot deadlines.",
+      "rubric": "LLM response should state: Three types | LLM response should state: Todoist for daily and weekend plans | LLM response should state: Google Calendar for family appointments and school events | LLM response should state: Asana for pilot deadlines",
+      "passages_found": 10
+    }
+  ],
+  "preference_following": [
+    {
+      "question": "How can I organize my workday to make the most of my productivity?",
+      "llm_response": "Based on the provided passages, here are the key recommendations for organizing your workday to maximize productivity:\n\n1. **Use Time Blocking**: Allocate specific blocks of time to different types of tasks. For example, dedicate mornings to focused work and afternoons to meetings and emails. This helps you stay organized and reduces distractions.\n\n2. **Prioritize Tasks**: Start each day by creating a to-do list and prioritize tasks based on urgency and importance. Use tools like the Eisenhower Box to categorize tasks into four categories: urgent and important, important but not urgent, urgent but not important, and neither urgent nor important.\n\n3. **Batch Similar Tasks**: Group similar tasks together to maintain focus and reduce context switching. For example, use mornings for creative work (like scriptwriting and editing), afternoons for administrative tasks (emails and calls), and evenings for personal development and family time.\n\n4. **Dedicate Morning Blocks for Creative Work**: Use mornings for creative work when your energy is highest. For instance, block out 9 AM - 12 PM for creative tasks like scriptwriting and editing.\n\n5. **Take Regular Breaks**: Schedule short breaks during the workday to avoid burnout. Use techniques like the Pomodoro Technique (25 minutes of focused work followed by a 5-minute break).\n\n6. **Set Clear Goals**: Define specific, achievable goals for each day and week. Break larger tasks into smaller, manageable components with clear deadlines.\n\n7. **Use Digital Tools**: Utilize tools like Google Calendar, Trello, and Todoist to manage tasks and reminders. Set specific times for handling emails and calls to avoid constant interruptions.\n\n8. **Maintain a Structured Schedule**: Keep a consistent work schedule during weekdays and use time-blocking techniques to manage tasks effectively. For example, a sample schedule could be:\n   - **Morning (8:00 AM - 12:00 PM)**: Focused work on high-priority tasks\n   - **Lunch Break (12:00 PM - 1:00 PM)**\n   - **Afternoon (1:00 PM - 5:00 PM)**: Meetings and emails\n   - **Evening (6:00 PM - 8:00 PM)**: Downtime and family time\n   - **Evening (8:00 PM - 10:00 PM)**: Self-care activities\n\n9. **Review and Adjust**: Set aside time each week (e.g., Sunday evening) to review your progress and adjust your schedule as needed. Reflect on what is working and what can be improved.\n\n10. **Minimize Distractions**: Create a distraction-free environment by closing unnecessary tabs, silencing notifications, and communicating your availability to your team. Use tools like website blockers to avoid social media during work hours.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: recommends dedicated morning blocks for creative tasks",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you help me organize my tasks so I can easily update and share them with others?",
+      "llm_response": "To help you organize your tasks so you can easily update and share them with others, I recommend using digital platforms for task management, such as Trello boards, Google Calendar, or Todoist. These tools are excellent for tracking progress and deadlines, and they offer features like real-time updates and collaboration, which allow you to assign tasks to team members, add comments, and share files directly on task cards. For example, you can set up a Trello board with lists for different stages of your work, add cards for individual tasks with due dates and checklists, and invite your team to collaborate by moving cards and leaving updates. This keeps everyone on the same page and ensures your tasks are always current and shareable.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: recommends digital platforms for task management | LLM response should contain: mentions features like real-time updates or collaboration",
+      "passages_found": 10
+    }
+  ],
+  "summarization": [
+    {
+      "question": "Can you give me a summary of how I've been managing my time, stress, and creative collaborations throughout our recent conversations?",
+      "llm_response": "Based on our recent conversations, here's a summary of how you've been managing your time, stress, and creative collaborations:\n\n**Time Management:** You expressed concerns about managing time between work and friends like Carla. To address this, you incorporated mindfulness, regular exercise, and structured breaks into your routine, alongside strategies for realistic goal setting. You also integrated task management tools like Todoist to organize both daily responsibilities and special events.\n\n**Stress Management:** Your stress levels have been decreasing since August 10 from 6.5 to 4.5 thanks to mindfulness practices. You've been proactive about managing stress related to upcoming events, such as your visit to the East Janethaven Art Gallery with Jeffrey on September 12.\n\n**Creative Collaborations:** You planned collaborative creative sessions, including workshops with local artists, ensuring clear communication and contingency plans for scheduling conflicts. You've worked on various projects with collaborators like Michele (completing 3 scenes in 4 hours at Montserrat Studios on November 18), Jeremy (finalizing sound mixing notes on September 4 for a September 10 session), and Alan (completing a storyboard at The Blue Lagoon caf\u00e9 on June 25). Your approach evolved to emphasize maintaining meaningful relationships, managing stress proactively, and organizing tasks effectively.",
+      "ideal_answer": "Over the course of our discussions, you have developed a comprehensive approach to balancing your work, family, friendships, and creative projects. Initially, you expressed concerns about managing time between work and friends like Carla, leading to a detailed weekly schedule that includes dedicated monthly friend time and family activities. To address moderate stress related to balancing work and family, you incorporated mindfulness, regular exercise, and structured breaks into your routine, alongside strategies for realistic goal setting and flexibility. You also integrated task management tools like Todoist to organize both daily responsibilities and special events, such as a weekend retreat suggested by Carla. Additionally, you planned collaborative creative sessions, including workshops with local artists, ensuring clear communication and contingency plans for scheduling conflicts. Throughout, your approach evolved to emphasize maintaining meaningful relationships, managing stress proactively, and organizing tasks effectively to support both personal well-being and creative productivity.",
+      "rubric": "LLM response should contain: you expressed concerns about managing time between work and friends like Carla | LLM response should contain: you incorporated mindfulness, regular exercise, and structured breaks into your routine, alongside strategies for realistic goal setting | LLM response should contain:  You also integrated task management tools like Todoist to organize both daily responsibilities and special events | LLM response should contain: you planned collaborative creative sessions, including workshops with local artists, ensuring clear communication and contingency plans for scheduling conflicts | LLM response should contain: your approach evolved to emphasize maintaining meaningful relationships, managing stress proactively, and organizing tasks effectively",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you give me a summary of how my pilot episode project timeline and tasks have developed and changed throughout our conversations?",
+      "llm_response": "Based on the provided passages, here is a summary of how your pilot episode project timeline and tasks have developed and changed throughout the conversations:\n\n- **Initial Plan (June 30, 2024 Deadline):** A detailed plan was established to meet the June 30, 2024 deadline within a $120,000 budget, outlining pre-production, production, and post-production phases with specific milestones. This included key milestones for script development, casting, location scouting, principal photography, editing, visual effects, and sound design, along with a detailed budget allocation.\n\n- **Schedule Adjustment:** The schedule was adjusted to focus on completing the script by the end of April, with location scouting postponed to early May.\n\n- **Casting Delay:** Due to casting delays communicated on April 28, the delivery date was pushed back to July 15, prompting a reassessment of the timeline.\n\n- **Progress by Early July:** By early July, with 75% of the pilot complete and post-production underway, a detailed daily plan was created to film remaining scenes. At that point, 12 of 16 scenes were filmed and 60% of post-production had started.\n\n- **Later Stage Prioritization:** As the project progressed into later stages, further prioritization was needed to manage editing and color grading tasks. This included detailed weekly schedules focusing on pilot editing, preparing files for color grading, and coordinating with the color grading team, with deadlines for pilot editing by September 1 and color grading sessions on September 10-12.",
+      "ideal_answer": "Throughout our discussions, your pilot episode project timeline and task management evolved significantly to address various challenges and deadlines. Initially, a detailed plan was established to meet the June 30, 2024 deadline within a $120,000 budget, outlining pre-production, production, and post-production phases with specific milestones and budget allocations. As you prioritized script finalization over location scouting, the schedule was adjusted to focus on completing the script by the end of April, with location scouting postponed to early May. Later, due to casting delays communicated on April 28, the delivery date was pushed back to July 15, prompting a reassessment of the timeline with new milestones and a compressed schedule for remaining tasks. By early July, with 75% of the pilot complete and post-production underway, a detailed daily plan was created to film remaining scenes and complete post-production by the new deadline. Finally, as the project progressed into later stages, further prioritization was needed to manage editing and color grading tasks to meet September and November deadlines, ensuring all post-production elements, including sound mixing, were completed on time. This progression reflects a dynamic adaptation of your project plan in response to delays and task completion status, emphasizing continuous monitoring, communication, and task prioritization to stay on track.",
+      "rubric": "LLM response should contain: a detailed plan was established to meet the June 30, 2024 deadline within a $120,000 budget, outlining pre-production, production, and post-production phases with specific milestones | LLM response should contain: the schedule was adjusted to focus on completing the script by the end of April, with location scouting postponed to early May | LLM response should contain: due to casting delays communicated on April 28, the delivery date was pushed back to July 15, prompting a reassessment of the timeline | LLM response should contain: By early July, with 75% of the pilot complete and post-production underway, a detailed daily plan was created to film remaining scenes | LLM response should contain: as the project progressed into later stages, further prioritization was needed to manage editing and color grading tasks",
+      "passages_found": 10
+    }
+  ],
+  "temporal_reasoning": [
+    {
+      "question": "How many days passed between when I had the 3 PM meeting I wanted to protect my writing block from and when I rescheduled the client meeting from 11 AM to 4 PM?",
+      "llm_response": "15 days | from March 14 till March 29",
+      "ideal_answer": "15 days passed between the 3 PM meeting on March 14 and rescheduling the client meeting on March 29.",
+      "rubric": "LLM response should state: 15 days | LLM response should state: from March 14 till March 29",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days passed between when I finished casting and when my pilot episode was 75% complete?",
+      "llm_response": "46 days, from April 20 till July 5.",
+      "ideal_answer": "46 days passed between finishing casting on April 20 and the pilot episode being 75% complete by July 5.",
+      "rubric": "LLM response should state: 46 days | LLM response should state: from April 20 till July 5",
+      "passages_found": 10
+    }
+  ]
+}

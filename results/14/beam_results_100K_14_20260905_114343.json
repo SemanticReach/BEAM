@@ -1,0 +1,162 @@
+{
+  "abstention": [
+    {
+      "question": "What was discussed during the 10 AM meeting at the Montserrat Film Office on March 20?",
+      "llm_response": "Based on the provided passages, there is no information about what was discussed during the 10 AM meeting at the Montserrat Film Office on March 20. The passages only mention that the meeting was scheduled to be attended at that time.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the specific details of the 10 AM meeting at the Montserrat Film Office on March 20.",
+      "rubric": "Based on the provided chat, there is no information related to the specific details of the 10 AM meeting at the Montserrat Film Office on March 20",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you share the recipe or ingredients for Emily\u2019s homemade popcorn seasoning mix?",
+      "llm_response": "Based on the provided passages, there is no information about the detailed recipe or ingredients for Emily\u2019s homemade popcorn seasoning mix. The passages only mention that Emily is bringing a homemade popcorn seasoning mix and that it was used for popcorn, but they do not provide the recipe or list of ingredients.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the detailed recipe or ingredients for Emily\u2019s homemade popcorn seasoning mix.",
+      "rubric": "Based on the provided chat, there is no information related to the detailed recipe or ingredients for Emily\u2019s homemade popcorn seasoning mix",
+      "passages_found": 10
+    }
+  ],
+  "contradiction_resolution": [
+    {
+      "question": "Have I ever made a watchlist for family movie marathons before?",
+      "llm_response": "There is contradictory information. You said you have never made a watchlist for family movie marathons, but you also have a goal to finalize a watchlist. Which statement is correct?",
+      "ideal_answer": "I noticed you've mentioned contradictory information about this. You said you have never made a watchlist for family movie marathons before, but you also have a goal to finalize a watchlist. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you have never made a watchlist for family movie marathons | LLM response should mention: you also have a goal to finalize a watchlist | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    },
+    {
+      "question": "Have I ever invited Mason or Michael to join any family movie events?",
+      "llm_response": "There is contradictory information in the provided passages. You said you have never invited Mason or Michael to any family movie events, but you also mentioned inviting Mason and Michael to a session where Mason confirmed and Michael declined. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have never invited Mason or Michael to any family movie events, but you also mentioned inviting Mason and Michael to a session where Mason confirmed and Michael declined. Which statement is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you have never invited Mason or Michael to any family movie events | LLM response should mention: you also mentioned inviting Mason and Michael to a session where Mason confirmed and Michael declined | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    }
+  ],
+  "event_ordering": [
+    {
+      "question": "Can you walk me through the order in which I brought up different planning details for my movie marathons across our conversations in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the conversation, here are the five planning details you brought up in order:\n\n1. Initial scheduling with breaks (the May 11 marathon starting at 2 PM and ending at 9 PM, with breaks included).\n2. Schedule adjustment for arrival (Amy requesting an earlier start at 2 PM due to an evening church service).\n3. Marathon planning with guests and timing (Michelle's friend Lily joining, and including a documentary like \"March of the Penguins\").\n4. Streaming quality and budget details (ensuring enough snacks with a budget of $85, including themed snacks inspired by \"Wish\").\n5. Final plan review and attendee logistics (18 attendees including neighbors for the outdoor screening on May 12).",
+      "ideal_answer": "You mentioned the planning details in this order: 1) Scheduling the movie marathon with snack and activity breaks for April 6-7, 2) Adjusting the schedule due to a family member's arrival on April 7 and shifting the start time, 3) Planning a movie marathon for May 11-12 including guest considerations and start time, 4) Discussing the streaming quality settings and snack budget for the May 11 event, 5) Reviewing the overall plan for the May 11-12 marathon including attendee count and outdoor screening logistics.",
+      "rubric": "Initial scheduling with breaks | Schedule adjustment for arrival | Marathon planning with guests and timing | Streaming quality and budget details | Final plan review and attendee logistics",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you walk me through the order in which I brought up different ideas and contributions related to my movie nights across our conversations, in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up different ideas and contributions related to your movie nights is:\n\n1. You mentioned needing to finalize the movie list by May 5 for your family weekend, considering Mason's suggestion to add a game night on May 11 and Emily's agreement to organize family-friendly board games.\n2. You asked how to ensure the movies are suitable for everyone, given Emily agreed to organize games and Mason suggested adding a game night, while keeping the May 5 deadline.\n3. You asked how to make future movie nights enjoyable for close friends, noting Mason brought board games and Michael sent a gift card.\n4. You asked for family-friendly movies with educational value and cultural significance.\n5. You asked for advice on making the most of family movie nights after reading a review of \"Wish\" on the Montserrat Film Forum.",
+      "ideal_answer": "You mentioned these ideas and contributions in this order: 1) Inviting close friends from college and considering their movie preferences, 2) Suggesting a specific movie choice that fits everyone's taste, 3) Mentioning a friend's suggestion for an animated movie and a snack contribution, 4) Discussing fun activities involving music and entertainment contributions from friends, 5) Highlighting the role of a playlist in enhancing a karaoke night and the close friendship dynamics involved, 6) Bringing up board games and a gift card as part of post-movie entertainment and appreciation.",
+      "rubric": "Inviting friends and preferences | Movie choice suggestion | Animated movie and snack | Music and entertainment activities | Playlist and friendship dynamics | Board games and gift card",
+      "passages_found": 10
+    }
+  ],
+  "information_extraction": [
+    {
+      "question": "How far away did I say my parents live from me, and in which town?",
+      "llm_response": "Based on the provided passages, your parents live 15 miles away in West Janethaven.",
+      "ideal_answer": "You said my parents live 15 miles away in West Janethaven.",
+      "rubric": "LLM response should state: 15 miles away in West Janethaven",
+      "passages_found": 10
+    },
+    {
+      "question": "How did the shared interests between me and my partner influence the movie options you recommended for our evening?",
+      "llm_response": "You and your partner share a love for classic movies, which led me to suggest timeless classic films that would evoke nostalgic memories of your meeting at the film festival in Miami.",
+      "ideal_answer": "You and your partner share a love for classic movies, which led me to suggest timeless classic films that would evoke nostalgic memories of your meeting at the film festival in Miami.",
+      "rubric": "LLM response should state: You and your partner share a love for classic movies, which led me to suggest timeless classic films that would evoke nostalgic memories of your meeting at the film festival in Miami",
+      "passages_found": 10
+    }
+  ],
+  "instruction_following": [
+    {
+      "question": "What movies would you recommend for me to watch?",
+      "llm_response": "Based on the conversation, I can recommend a few movies for you, but I need to clarify that the passages don't list specific movie titles beyond the ones you've already mentioned (like \"Song of the Sea,\" \"March of the Penguins,\" \"Coco,\" and \"Paddington 2\"). \n\nHowever, I can tell you that the recommendations in the conversation were focused on **streaming services** you already subscribe to, to avoid extra rental fees. The **platform names** mentioned in the passages include **Disney+** (as you asked about expanding beyond it) and other unspecified platforms you already have. \n\nTo get specific new titles, I'd suggest asking again with details about which **streaming services** you have (e.g., Netflix, Hulu, Amazon Prime Video, etc.), and I can then suggest family-friendly, non-violent, or educational movies available on those **platforms** that fit your budget and preferences.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mention of streaming services | LLM response should contain: platform names listed",
+      "passages_found": 10
+    },
+    {
+      "question": "What snacks do you recommend for me to try?",
+      "llm_response": "Before I recommend snacks, I need to ask about allergies. Please confirm if anyone has any allergy concerns, as I always confirm allergy information when asked about snack options.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: asking about allergies | LLM response should contain: checking for allergy concerns before recommending snacks",
+      "passages_found": 10
+    }
+  ],
+  "knowledge_update": [
+    {
+      "question": "What is my snack budget for ordering themed treats for the movie marathon?",
+      "llm_response": "Based on the provided passages, your snack budget for ordering themed treats for the movie marathon is $75.",
+      "ideal_answer": "$75",
+      "rubric": "LLM response should state: $75",
+      "passages_found": 10
+    },
+    {
+      "question": "How many cupcakes did I order for the event?",
+      "llm_response": "Based on the provided passages, you ordered 30 cupcakes for the event.",
+      "ideal_answer": "30 cupcakes",
+      "rubric": "LLM response should state: 30 cupcakes",
+      "passages_found": 10
+    }
+  ],
+  "multi_session_reasoning": [
+    {
+      "question": "How many unique movies have I planned to watch across all my family movie marathons, considering the titles I mentioned for April 6-7 and April 8?",
+      "llm_response": "Based on the provided passages, there are **13 unique movies** planned for the family movie marathons on April 6-7 and April 8.\n\nThe movies mentioned for April 6-7 are: \"The Incredibles,\" \"Finding Nemo,\" \"The Lion King,\" \"Coco,\" \"Paddington,\" \"Paddington 2,\" \"Moana,\" and \"Zootopia.\" For April 8, the titles mentioned are \"Soul,\" \"Paddington 2,\" \"The Mitchells vs. The Machines,\" \"Coco,\" and \"The Incredibles.\" \n\nCounting the unique titles across both dates: \"The Incredibles,\" \"Finding Nemo,\" \"The Lion King,\" \"Coco,\" \"Paddington,\" \"Paddington 2,\" \"Moana,\" \"Zootopia,\" \"Soul,\" \"The Mitchells vs. The Machines\" \u2014 that totals 10 unique movies. However, the passages also reference \"8 movies\" for April 6-7 and \"5 movies\" for April 8, but since some titles overlap (like \"Coco,\" \"Paddington 2,\" and \"The Incredibles\"), the total unique count is 13 when considering all distinct titles mentioned across the passages.",
+      "ideal_answer": "13 unique movies",
+      "rubric": "LLM response should state: 13 unique movies",
+      "passages_found": 10
+    },
+    {
+      "question": "Considering my current streaming subscriptions, snack budget for a family movie weekend, and past rental savings, how can I optimize my total monthly entertainment spending while maximizing simultaneous streaming and exclusive content access?",
+      "llm_response": "To optimize your total monthly entertainment spending while maximizing simultaneous streaming and exclusive content access, here is a clear strategy based on the provided information:\n\n1. **Maintain Netflix and Disney+ subscriptions** for simultaneous streaming and family-friendly content. These two platforms support streaming on multiple devices and offer a wide range of family-friendly movies, which is ideal for your family movie weekends.\n\n2. **Maintain HBO Max only if exclusive shows justify the extra cost.** HBO Max costs $14.99/month and adds exclusive content, but some of its offerings may overlap with Netflix and Disney+. Only keep it if you find the exclusives (like \"Peacemaker\" or \"The White Lotus\") worth the additional expense.\n\n3. **Use individual rentals like for \"Paddington 2\" to save money** instead of subscribing to additional monthly plans. For example, renting \"Paddington 2\" individually costs $2.99, while a monthly subscription like Amazon Prime Video costs $8.99. If you only watch one or two movies per month, individual rentals are significantly cheaper.\n\n4. **Allocate your snack budget within $65 for themed treats** without increasing overall costs. For instance, you can spend $30 on themed cupcakes from The Sweet Spot Bakery, $10 on popcorn with custom seasonings, and $15 on fruit platters, totaling $55\u2014which stays within your $65 budget.\n\nBy following these steps, you can keep your streaming costs down, maintain access to simultaneous streaming and exclusive content where it matters most, and manage your snack spending without exceeding your budget.",
+      "ideal_answer": "To optimize your monthly entertainment spending, maintain Netflix and Disney+ subscriptions for simultaneous streaming and family-friendly content, add HBO Max only if exclusive shows justify the extra cost, and use individual rentals like for \"Paddington 2\" to save money instead of subscribing to additional monthly plans. Allocate your snack budget within $65 for themed treats without increasing overall costs. This balances content variety, device access, and cost-efficiency.",
+      "rubric": "LLM response should state: maintain Netflix and Disney+ subscriptions for simultaneous streaming and family-friendly content | LLM response should state: maintain HBO Max only if exclusive shows justify the extra cost | LLM response should state: use individual rentals like for \"Paddington 2\" to save money instead of subscribing to additional monthly plans | LLM response should state: Allocate your snack budget within $65 for themed treats without increasing overall costs",
+      "passages_found": 10
+    }
+  ],
+  "preference_following": [
+    {
+      "question": "I'm planning a movie night for my family. Can you suggest some good options we might all enjoy?",
+      "llm_response": "Based on the provided passages, I can suggest several excellent family-friendly movies that you and your family will likely enjoy. The schedule in Passage 7 recommends **\"The Incredibles\" (PG)**, **\"Finding Nemo\" (G)**, **\"Coco\" (PG)**, **\"Paddington\" (PG)**, and **\"Trolls\" (PG)** as top picks for a family movie night. These are all well-loved, family-friendly options that cater to a wide range of ages.\n\nAdditionally, **\"Song of the Sea\"** is mentioned in Passage 2 as a great choice, having a 95% Rotten Tomatoes rating, and it was added to a watchlist for a family movie night. You might also look for movies similar to **\"Wish\"** (as mentioned in Passages 1, 4, and 8), which is a newer release that families have enjoyed.\n\nRegarding audience and family reviews, these selections are positively received\u2014for instance, \"Song of the Sea\" has a high critic score, and the schedule in Passage 7 was described as \"excellent choices for a family movie night,\" suggesting they are well-regarded for family viewing. The tips in that passage also emphasize creating a comfortable, engaging environment, which families have found helpful for making movie nights memorable. So, you can feel confident picking any of these titles for a fun evening with your loved ones.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mentions family-friendly movies | LLM response should contain: references audience or family reviews positively",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you suggest some movies that would be good for Michelle to watch?",
+      "llm_response": "Based on the provided passages, I can suggest some movies for Michelle that include language options and subtitles to support her bilingual learning in English and Spanish. The movies mentioned in the passages that are suitable for her include \"The Incredibles,\" \"Finding Nemo,\" \"Coco,\" \"Paddington,\" \"Trolls,\" \"March of the Penguins,\" \"Wish,\" and \"Soul.\" These films are noted as being appropriate for family viewing with kids like Michelle, and the availability of subtitles is highlighted as a key feature to support her bilingual learning.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mentions movies with language options | LLM response should contain: includes availability of subtitles",
+      "passages_found": 10
+    }
+  ],
+  "summarization": [
+    {
+      "question": "Can you give me a summary of how I planned and organized my family movie events and related activities over the past few months?",
+      "llm_response": "Based on the provided passages, here is a summary of how you planned and organized your family movie events and related activities over the past few months:\n\n- **Movie Recommendations for Young Children**: You sought movie recommendations suitable for young children with differing ages, focusing on adventure, comedy, and educational themes to engage both toddlers and older kids. This included selecting films like \"The Incredibles,\" \"Finding Nemo,\" \"Coco,\" \"Paddington,\" \"Trolls,\" and \"Moana,\" and incorporating educational content like the documentary \"March of the Penguins.\"\n\n- **Coordinating a Family Weekend in Early April**: You coordinated a family weekend in early April, adjusting movie choices to accommodate guests who preferred quieter films in the evening. You managed a schedule for April 6-7, 2024, with movies like \"The Lion King\" and \"Paddington 2,\" and dealt with delays, such as Francis's 2-hour nap delay on April 6 afternoon, while still completing all planned movies.\n\n- **Saving Money on Movie Rentals**: You explored ways to save money on movie rentals, comparing rental costs versus subscription fees. You also worked within entertainment budgets, such as a $100 budget for themed snacks and activities and an $85 budget for snacks for the May marathon.\n\n- **Organizing a Family-Friendly Movie Marathon in May**: You organized a family-friendly movie marathon in May (May 11-12), factoring in guests' schedules and dietary preferences. This included adjusting the start time to 2 PM because Amy had an evening church service, accommodating Michelle's friend Lily, and planning snacks within the budget, including themed snacks inspired by \"Wish.\"",
+      "ideal_answer": "Over the course of several conversations, you planned multiple family movie events with careful consideration of participants, timing, and preferences. Initially, you sought movie recommendations suitable for young children with differing ages, focusing on adventure, comedy, and educational themes to engage both toddlers and older kids. Later, you coordinated a family weekend in early April, adjusting movie choices to accommodate guests who preferred quieter films in the evening, and created a detailed viewing schedule balancing fun and relaxation. You also explored ways to save money on movie rentals, comparing rental costs versus subscription fees and identifying strategies like using discount codes and library resources. Finally, you organized a family-friendly movie marathon in May, factoring in guests' schedules and dietary preferences, planning themed snacks within a budget, and ensuring smooth streaming quality. Throughout, your planning evolved to balance entertainment, budget, and guest needs, resulting in well-structured, enjoyable movie experiences.",
+      "rubric": "LLM response should contain: you sought movie recommendations suitable for young children with differing ages, focusing on adventure, comedy, and educational themes to engage both toddlers and older kids | LLM response should contain: you coordinated a family weekend in early April, adjusting movie choices to accommodate guests who preferred quieter films in the evening | LLM response should contain: You also explored ways to save money on movie rentals, comparing rental costs versus subscription fees | LLM response should contain: you organized a family-friendly movie marathon in May, factoring in guests' schedules and dietary preferences",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you give me a summary of what happened with the project?",
+      "llm_response": "Based on the provided passages, the project started with initial planning and resource gathering, which was followed by the main development phase where key tasks were completed. Then, the project moved into testing and review to ensure everything met the requirements.",
+      "ideal_answer": "The project started with initial planning and resource gathering, followed by the main development phase where key tasks were completed. Finally, the project moved into testing and review to ensure everything met the requirements.",
+      "rubric": "LLM response should contain: The project started with initial planning and resource gathering | LLM response should contain: initial planning and resource gathering followed by the main development phase where key tasks were completed | LLM response should contain: the project moved into testing and review to ensure everything met the requirements",
+      "passages_found": 10
+    }
+  ],
+  "temporal_reasoning": [
+    {
+      "question": "How many days passed between my meeting at the Montserrat Film Office and when I finished watching all the movies despite the nap delay?",
+      "llm_response": "Based on the provided passages, 17 days passed between your meeting at the Montserrat Film Office and when you finished watching all the movies despite the nap delay. This period was from March 20 till April 6.",
+      "ideal_answer": "11 days passed between the meeting at Montserrat Film Office on March 20 and completing all the movies on April 6 despite the 2-hour nap delay.",
+      "rubric": "LLM response should state: 17 days | LLM response should state: from March 20 till April 6",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days are there between when I need to finalize my movie list for the family weekend and when Mason suggested adding the game night?",
+      "llm_response": "Based on the provided passages, the number of days between when you need to finalize your movie list (May 5) and when Mason suggested adding the game night (May 11) is 6 days, from May 5 till May 11.",
+      "ideal_answer": "There are 6 days between finalizing the movie list by May 5 and Mason's suggestion to add the game night on May 11.",
+      "rubric": "LLM response should state: 6 days | LLM response should state: from May 5 till May 11",
+      "passages_found": 10
+    }
+  ]
+}

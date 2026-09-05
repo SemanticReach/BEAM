@@ -1,0 +1,376 @@
+{
+    "abstention": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is a negative constraint: 'Based on the provided chat, there is no information related to the specific arguments made during the Trolley Problem debate.' The response explicitly states that there is no information about the specific arguments, only that the debate occurred at The Blue Lagoon restaurant on March 10 and involved the Trolley Problem and free will. This directly complies with the criterion by confirming the absence of such information. The response is responsive to the question, which asked to evaluate based on the provided chat, and it does not introduce any prohibited content. Therefore, full compliance is achieved."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is a negative constraint: 'there is no information related to the specific onboarding modules Crystal needs to complete.' The response explicitly states that there is no such information in the conversation, and only mentions the deadline of April 25. This directly complies with the criterion by confirming the absence of the prohibited information. The response is also responsive to the question, as it addresses the user's request for information about onboarding modules."
+                }
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "llm_judge_score": 0.75,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state that there is contradictory information. The response explicitly begins with 'There is contradictory information.' and then elaborates on the contradiction between the user's statements. This directly satisfies the positive requirement. The response is also responsive to the question by addressing the inconsistency."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to mention: 'You said you have never read any books by Daniel Dennett.' The response directly includes this exact phrase: 'You said you have never read any books by Daniel Dennett,' and it is used appropriately in the context of pointing out a contradiction. The response is responsive to the question, which appears to be about clarifying a contradiction, and it fully satisfies the positive requirement."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is a positive requirement: the LLM response should mention that the user also mentioned Shelly suggested reading Daniel Dennett's book 'Freedom Evolves.' The response explicitly includes this element: 'you also mentioned Shelly suggested you read his book \"Freedom Evolves.\"' This directly satisfies the requirement, and the response is responsive to the question by addressing the contradiction. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion requires the LLM response to mention which statement is correct. The response does not do so; instead, it points out a contradiction and asks a question, failing to identify the correct statement."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 0.75,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state that there is contradictory information. The response explicitly says 'There is contradictory information in the provided passages' and then identifies the contradiction between celebrating an anniversary with Stephen and never celebrating any anniversaries with him. This directly satisfies the positive requirement, and the response is responsive to the user's question about resolving the conflict."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to mention: 'You said you resolved a conflict by celebrating your anniversary with Stephe'. The response includes the exact phrase 'You said you resolved a conflict by celebrating your anniversary with Stephen' (with 'Stephen' instead of 'Stephe', which is a minor spelling variation and semantically equivalent). Therefore, the required element is present, and the response is responsive to the question by pointing out a contradiction. Full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires that the LLM response mention that the user also mentioned never celebrating any anniversaries with him. The response explicitly includes the phrase 'you also mentioned that you've never celebrated any anniversaries with him,' which directly satisfies the requirement. The response is responsive to the question, as it addresses the contradiction between the two statements. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion requires the LLM response to mention which statement is correct. The response does not do this; instead, it points out a contradiction and asks the user to clarify, without identifying which of the two statements is correct. Therefore, it fails to comply with the positive requirement."
+                }
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "precision": 0.4444444444444444,
+            "recall": 0.5714285714285714,
+            "f1": 0.5,
+            "tau_norm": 0.28955155321828946,
+            "final_score": 0.14477577660914473,
+            "llm_judge_score": 0.8571428571428571,
+            "llm_judge_responses": [
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'Meeting decline for personal offer', which appears to require the response to address declining a meeting for a personal offer. However, the response merely lists seven items from passages, with the first item labeled 'Meeting decline for personal offer' but provides no actual content or explanation about declining a meeting for a personal offer. It does not answer the question or demonstrate compliance with the criterion; it only references the topic without elaboration. Therefore, the response is non-responsive to the rubric requirement."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is 'Work call on personal date concern'. The response lists this as item 2, directly referencing the concern about a work call on a personal date, which is present in the provided passages. This demonstrates compliance with the criterion."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is 'Conflict resolution via anniversary celebration'. The response explicitly lists this as item 3, referencing Passage 2, which directly addresses the criterion. The response is responsive to the question (listing items in the order brought up) and includes the required element. No negative constraints are specified. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is 'Limiting work trips for relationship balance'. The response lists this as item 4, directly matching the criterion. The response is responsive to the question, which asked to list the seven items in the order they were brought up, and it correctly includes the specified item. Therefore, the required element is present and accurately executed."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is 'Anniversary milestone and belief discussions'. The response explicitly lists 'Anniversary milestone and belief discussions' as item 5, correctly identifying it as originating from Passage 1. This directly addresses the criterion by acknowledging the presence of this topic in the provided passages. The response is responsive to the question, which asked to list the seven items in the order brought up, and it accurately includes the required element. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is 'Weekly check-ins for conflict resolution'. The response explicitly lists 'Weekly check-ins for conflict resolution' as item 6, sourced from Passage 7, directly addressing the criterion. The response is responsive to the question, which asked to list the seven items in the order they were brought up, and it correctly includes the required element. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is 'Daily journaling on beliefs and motivation', which is a positive requirement. The response explicitly lists 'Daily journaling on beliefs and motivation' as item 7, sourced from Passage 1, directly addressing the criterion. The response is responsive to the question, which asked for the seven items in the order they were brought up, and it correctly includes the required element. No inaccuracies or omissions are present regarding this criterion."
+                }
+            ]
+        },
+        {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0,
+            "tau_norm": 0.15315601219035208,
+            "final_score": 0.0,
+            "llm_judge_score": 0.16666666666666666,
+            "llm_judge_responses": [
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'Book recommendation and past meeting'. The response does not include any book recommendation or reference to a past meeting. Instead, it lists items about planning a community talk, self-reflection, reading a book (but not recommending one), reflecting on a relationship, brain plasticity, and journaling. None of these satisfy the requirement to provide a book recommendation or mention a past meeting."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'Moral dilemma debate', which requires the response to engage in a debate or discussion of a moral dilemma. The response merely lists six items from the user's context (e.g., planning a talk, journaling, reading a book, reflecting on relationships, focusing on brain plasticity, and continuing to journal) without presenting or debating any moral dilemma. It does not address the question (which is not provided but implied to be about a moral dilemma debate) and fails to include any argument, counterargument, or ethical analysis. Therefore, it does not comply with the rubric criterion."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is 'Philosophical stance and journaling'. The response directly addresses this by listing six items that include philosophical reflections on free will and soft determinism, and explicitly mentions journaling (e.g., journaling on August 10, continuing to journal) as a practice. The response is on-topic with the question, which asked to list items in the order brought up, and it accurately enumerates the relevant items from the passages. There are no negative constraints specified, and the response fully complies with the positive requirement of demonstrating philosophical stance and journaling."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'Simulated happiness thought experiment', which requires the response to include a thought experiment about simulated happiness (e.g., imagining being in a simulation where one's happiness is artificially induced, and reflecting on whether that matters for free will or authenticity). The response instead lists six items from the user's personal context (community talk, journaling, reading, relationship, brain plasticity, and continued discussion) but does not mention or engage with any simulated happiness thought experiment. Therefore, the required element is entirely absent, and the response is not compliant with the rubric."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'Accountability and philosophical perspectives'. The response lists six items from the user's context, but it does not explicitly address accountability or philosophical perspectives in a way that demonstrates compliance. It merely summarizes the user's activities and thoughts without evaluating or engaging with the philosophical perspectives or accountability aspects. The response is not responsive to the question, which likely asked for an evaluation or discussion of these topics, not just a list."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'Identity paradox and personal reflection'. The response lists six items from the user's context, but it does not explicitly address or reflect on the identity paradox (e.g., the tension between free will and determinism and its implications for personal identity). It merely summarizes topics without engaging in personal reflection or analysis of the paradox. Therefore, the required element is missing."
+                }
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state '5 years'. The response explicitly states '5 years' in the context of the duration before dating, which directly satisfies the requirement. The response is responsive to the question and contains the exact required duration."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state: 'conduct thorough research on the new company\u2019s mission and financial health.' The response explicitly includes this exact phrase as the first bullet point: 'Conduct thorough research on the new company\u2019s mission and financial health' (Passage 9). This fully satisfies the positive requirement, and the response is on-topic with the question about preparing for a work environment change. Therefore, complete compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'talk to current employees to understand the culture.' The response explicitly includes the bullet point 'Talk to current employees to understand the company culture and work environment (Passage 9).' This directly satisfies the requirement, and the response is on-topic with the question about preparing for challenges of changing work environments. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'clarify workload and performance expectations.' The response explicitly includes the bullet point 'Clarify workload and performance expectations, including hours and metrics,' which directly satisfies the requirement. The response is on-topic with the question about preparing for work environment changes, and the required element is present accurately and completely."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'mentally prepare for increased pressure.' The response explicitly includes the bullet point 'Mentally prepare for increased pressure' and elaborates with 'and the fast-paced, demanding nature of a startup,' which directly satisfies the requirement. The response is on-topic, addressing the user's question about preparing for challenges and uncertainties of changing work environments. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'consult colleagues with startup experience.' The response explicitly includes the bullet point 'Consult colleagues with startup experience for insights and advice (Passage 9).' This directly satisfies the positive requirement, and the response is on-topic with the question about preparing for challenges of changing work environment. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'build a support network'. The response explicitly includes the bullet point 'Build a support network of friends, family, and mentors for emotional and professional support (Passage 9).' This directly satisfies the positive requirement. The response is also on-topic, addressing the user's question about preparing for challenges of changing work environments. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'review the full compensation package including equity.' The response includes the bullet point 'Review the full compensation package including equity or stock options (Passage 9).' This directly and accurately satisfies the requirement, using equivalent wording ('equity or stock options'). The response is also on-topic with the question about preparing for challenges of changing work environments. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'adjust your budget accordingly'. The response includes the exact phrase 'Adjust your budget accordingly' as one of the recommended steps. This fully satisfies the positive requirement, and the response is on-topic with the question about preparing for challenges and uncertainties of changing work environments."
+                }
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "llm_judge_score": 0.5,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to contain mention of cultural differences. The response explicitly mentions 'cultural differences' and elaborates on how cultural norms (e.g., in Montserrat vs. other regions) shape expectations in interactions, including initial meetings. This directly satisfies the positive requirement. The response is also on-topic with respect to the question about expectations when meeting someone for the first time, as it addresses how cultural differences influence those expectations."
+                },
+                {
+                    "score": 0.5,
+                    "reason": "The rubric criterion requires the response to contain examples from multiple regions or traditions. The response mentions Montserrat as one specific region/tradition, but it does not provide concrete examples from other regions or traditions. It only vaguely references 'other regions or traditions' without naming or detailing them. Therefore, the response partially complies by providing one clear example but fails to fully satisfy the requirement of multiple examples."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 0.5,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to contain a category-by-category breakdown. The response explicitly provides a bulleted list titled 'Here is a category-by-category breakdown of what the passages do cover,' with four distinct categories: Experience Machine Thought Experiment, Spiritual Growth and Decision-Making, Free Will Beliefs, and Community Talk Preparation. Each category is clearly labeled and described. This fully satisfies the positive requirement. The response is also responsive to the question, as it addresses the user's request for a summary of existentialism by explaining that the passages do not cover that topic and instead provides a breakdown of the actual content. Therefore, complete compliance is achieved."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion requires the LLM response to contain a detailed summary of philosophical concepts. The response explicitly states it cannot provide a detailed summary of existentialism because the passages do not mention it, and instead provides only a brief category-by-category breakdown of other topics. This does not fulfill the requirement for a detailed summary of philosophical concepts, as the response lacks substantive philosophical exposition and fails to address the requested concept."
+                }
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "llm_judge_score": 0.0,
+            "llm_judge_responses": [
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'April 22'. The response instead states 'April 25', which is a different date. Therefore, the required element is missing and incorrect, resulting in no compliance."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'March 30'. The response states 'March 30' exactly, satisfying the positive requirement. The response is responsive to the question about the final decision meeting date. Therefore, full compliance is achieved."
+                }
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is a positive requirement: the LLM response should state 'You declined a $10,000 raise.' The response explicitly includes this exact statement at the beginning: 'You declined a $10,000 raise, a $5,000 freelance project, and a $12,000 bonus...' Therefore, the required element is present and accurate. The response is also responsive to the question, as it directly addresses the user's financial decisions. No prohibited elements are present. Full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to state that the user declined a $5,000 freelance project. The response explicitly includes 'a $5,000 freelance project' among the declined opportunities, satisfying the requirement. The response is responsive to the question, and the statement is accurate and complete."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to state that the user declined a $12,000 bonus. The response explicitly includes 'a $12,000 bonus' in the list of declined financial opportunities, satisfying the requirement. The response is responsive to the question and contains the required element accurately."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state that the user declined a total of $27,000. The response explicitly states 'totaling $27,000 in declined financial opportunities,' which directly satisfies the requirement. The response is also responsive to the question, as it addresses the declined financial opportunities. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to state that the user prioritized ethical concerns and long-term career stability over immediate financial gain. The response explicitly states: 'This suggests you prioritized ethical concerns and long-term career stability over immediate financial gain.' This directly matches the required statement, with only minor wording differences ('This suggests' vs. 'you prioritized') that do not alter the meaning. The response is responsive to the question, as it addresses the user's financial decisions. Therefore, full compliance is achieved."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to state that the user celebrated their anniversary twice at two different restaurants. The response explicitly states: 'You celebrated your anniversary twice at two different restaurants.' This is a direct and accurate match, satisfying the positive requirement. The response is also on-topic with respect to the question, as it addresses the anniversary celebration. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the conversation focused on celebrating the milestone (anniversary) and then shifted to exploring how questioning free will might affect the relationship, which matches the rubric criterion exactly. It also includes relevant details about the celebration and the shift in topic, satisfying the requirement fully."
+                }
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to focus on logical steps or frameworks. The response provides a clear, structured, step-by-step framework for decision-making, including identifying the problem, generating alternatives, evaluating alternatives using ethical theories, applying a rational decision-making model, using practical tools, and integrating reflection. This fully satisfies the requirement of focusing on logical steps or frameworks."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is a negative constraint: the response should avoid suggesting emotionally driven approaches. The response consistently recommends structured, logical, and rational methods (e.g., ethical theories, decision-making models, pros/cons lists, seeking external perspectives) and explicitly frames reflection/journaling as a way to manage emotional aspects in a balanced manner, not as a primary decision driver. It does not suggest acting on emotions or impulses. The response is responsive to the question about handling a complex problem with practical and emotional aspects, providing a systematic framework. Therefore, it fully complies."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly recommends a daily plan with consistent timing. It states 'I recommend a daily plan with consistent timing' and provides specific examples such as starting the day at the same time each morning, scheduling tasks at specific times, setting a fixed time each evening for reflection, and doing journaling at the same time each day. This fully satisfies the rubric criterion."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires that the LLM response suggests routines that emphasize regularity and structure. The response explicitly states 'I also suggest routines that emphasize regularity and structure' and provides multiple examples such as starting the day at the same time, using a planner to block out specific times, scheduling urgent work first, including buffer time, setting a fixed evening reflection time, using the Eisenhower Box daily, taking regular breaks, maintaining a consistent journaling habit at the same time each day, and setting a regular weekly review session. These suggestions clearly emphasize regularity and structure, fully satisfying the criterion."
+                }
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is a positive requirement: the response should contain that you declined a meeting with Stephen to focus on a startup offer. The response explicitly states this in the first bullet point: 'Declined a meeting with Stephen to focus on a startup offer: You declined a meeting with Stephen to focus on a startup offer.' This directly satisfies the requirement, and the response is responsive to the question about managing relationship and work commitments with Stephen. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly includes the required element: 'Concerns arose about scheduling a work call on your anniversary, leading to strategies for transparent communication, apologizing, and planning special celebrations.' This directly matches the rubric criterion, which is a positive requirement. The response is on-topic and accurately reflects the provided passage. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires that the LLM response contain an agreement to limit work trips to three per quarter to respect relationship boundaries. The response explicitly states: 'You agreed to limit work trips to three per quarter to respect relationship boundaries.' This directly matches the requirement, including the number of trips (three) and the purpose (respect relationship boundaries). Therefore, the response fully complies with the rubric criterion."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires that the response contain the statement that the user explored how their belief in free will, supported by a University of Cambridge study, influences their motivation and decision-making. The response includes this exact element as the last bullet point: 'Explored philosophical beliefs: You also explored how your belief in free will, supported by a University of Cambridge study, influences your motivation and decision-making.' This fully satisfies the positive requirement, and the response is responsive to the question about managing relationship and work commitments. Therefore, complete compliance is achieved."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states: 'You reflected on aligning your work with your passions, particularly storytelling and mentoring emerging talent, and considered volunteering or consulting.' This directly matches the rubric criterion, which requires the response to contain that reflection and consideration. The wording is nearly identical, satisfying the positive requirement fully."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly contains the required element: it states that the user faced a significant career choice between staying in their current role or accepting a higher-paying offer at a streaming startup, and that they weighed factors like stability, growth, and workload. This directly matches the rubric criterion. The response is also responsive to the question, as it summarizes the user's career decision and related reflections. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to contain that the user experienced anxiety about the probation period and questioned past decisions, such as declining freelance projects to focus on onboarding. The response explicitly states: 'You experienced anxiety about the probation period and questioned past decisions, such as declining freelance projects to focus on onboarding.' This directly matches the required content, satisfying the positive requirement. The response is also on-topic with the question, as it summarizes the user's career decision and reflections. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires that the response contains evidence that the user grappled with philosophical questions about free will, especially after declining a substantial bonus on ethical grounds. The response explicitly states: 'You also grappled with philosophical questions about free will, especially after declining a substantial bonus on ethical grounds, reflecting on how your upbringing and environment influenced that choice while still feeling a sense of autonomy.' This directly satisfies the requirement, including the specific context of declining a bonus on ethical grounds and the philosophical reflection on free will. The response is also responsive to the broader context of the user's career decisions and reflections. Therefore, full compliance is achieved."
+                }
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state '18 days'. The response explicitly states '18 days passed between when you decided to reject the raise and when you rescheduled your final meeting', which directly satisfies the requirement. The response is on-topic and provides the exact number, so it fully complies."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric requires the response to state 'from March 12 till March 30'. The response explicitly states 'from March 12 ... till March 30', which exactly matches the required date range. The response is responsive to the question about the time between the decision and rescheduling. Therefore, full compliance is achieved."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to state '58 days'. The response states '58 days' exactly, and also provides additional context ('from April 5 till May 31') which does not contradict the required number. The response is responsive to the question and fully complies with the positive requirement."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to state 'from April 5 till May 31'. The response includes exactly that phrase, preceded by '58 days |', which is an additional correct calculation. The required element is present and accurate, so full compliance is achieved."
+                }
+            ]
+        }
+    ]
+}

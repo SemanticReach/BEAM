@@ -1,0 +1,162 @@
+{
+  "abstention": [
+    {
+      "question": "What specific criteria did I use to prioritize tasks on the Trello board during sprint 1?",
+      "llm_response": "Based on the provided conversation, there is no information about the specific criteria you used to prioritize tasks on the Trello board during sprint 1. The conversation only contains general advice on how to prioritize tasks (such as categorizing them into Must-Have, Should-Have, Could-Have, and Won't-Have), but it does not mention any specific criteria you personally applied.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the specific criteria used to prioritize tasks on the Trello board during sprint 1.",
+      "rubric": "Based on the provided chat, there is no information related to the specific criteria used to prioritize tasks on the Trello board",
+      "passages_found": 10
+    },
+    {
+      "question": "What was the rationale behind choosing Formspree API v2 for contact form submission?",
+      "llm_response": "Based on the provided conversation, there is no information related to the rationale behind choosing Formspree API v2 for contact form submission.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the rationale behind choosing Formspree API v2 for contact form submission.",
+      "rubric": "Based on the provided chat, there is no information related to the rationale behind choosing Formspree API v2 for contact form submission",
+      "passages_found": 10
+    }
+  ],
+  "contradiction_resolution": [
+    {
+      "question": "Have I used Bootstrap components in my project before?",
+      "llm_response": "There is contradictory information in the provided passages. You mentioned preferring Bootstrap 5.3.0 and using its classes, but you have never implemented any Bootstrap components in this project. Which statement is correct?\n\nBased on the passages, there is a clear contradiction. In Passage 1, you explicitly state: \"I've never implemented any Bootstrap components in this project before.\" However, in other passages (such as Passage 2, 5, 7, 8, and 10), you are actively working with Bootstrap 5.3.0, including using its classes like `navbar`, `card`, `form-control`, and `btn-primary`, and you mention preferring Bootstrap 5.3.0 over Foundation due to its documentation and community support (Passage 5). Additionally, Passage 9 shows you trying to integrate Bootstrap's `form-control` and `btn-primary` classes into your project.\n\nSo, the passages conflict: one says you've never used Bootstrap components, while others show you using them and preferring Bootstrap 5.3.0. You need to clarify which statement is correct.",
+      "ideal_answer": "I noticed that there are conflicting statements regarding your use of Bootstrap components. You mentioned preferring Bootstrap 5.3.0 and using its classes, but also said you have never implemented any Bootstrap components in this project. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You mentioned preferring Bootstrap 5.3.0 and using its classes | LLM response should mention: you have never implemented any Bootstrap components in this project | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    },
+    {
+      "question": "Have I tested the contact form submission with any API integration before?",
+      "llm_response": "There is contradictory information in the conversation. You said you used Bootstrap\u2019s form-control and btn-primary classes for consistent styling and hover effects, and you also mentioned never having tested the contact form submission with any API integration. However, in another part of the conversation, you mentioned running integration tests with a 95% success rate in 50 test runs using the Formspree API, which suggests you have tested it. So, which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you used Bootstrap\u2019s form-control and btn-primary classes for consistent styling and hover effects, which suggests some integration, but you also mentioned never having tested the contact form submission with any API integration. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you used Bootstrap\u2019s form-control and btn-primary classes for consistent styling and hover effects | LLM response should mention: you also mentioned never having tested the contact form submission with any API integration | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    }
+  ],
+  "event_ordering": [
+    {
+      "question": "Can you list the order in which I brought up different aspects of integrating and customizing the framework in my projects across our conversations, in order? Mention ONLY and ONLY three items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up different aspects of integrating and customizing the framework is:\n\n1. **Basic responsive components setup** (Passage 7)\n2. **Styling classes integration with custom CSS** (Passage 6)\n3. **Modal bug fix and upgrade concerns** (Passage 8)",
+      "ideal_answer": "You mentioned these aspects in this order: 1) Setting up the responsive grid and components like navbar and cards using the framework version 5.3.0, 2) Integrating specific styling classes such as form-control and btn-primary along with custom CSS for consistent styling and hover effects, 3) Addressing a modal accessibility bug by upgrading from version 5.3.0 to 5.3.1 and ensuring custom modal functionality remains intact.",
+      "rubric": "Basic responsive components setup | Styling classes integration with custom CSS | Modal bug fix and upgrade concerns",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you list the order in which I brought up different aspects of my project development throughout our conversations in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, here are the five items in the order you brought them up:\n\n1. Initial sprint planning and layout/navigation\n2. SEO basics and backend contact form integration\n3. Website performance optimization\n4. Final code review focusing on CSS naming\n5. Suggestions for CSS class naming conventions",
+      "ideal_answer": "You mentioned aspects of your project development in this order: 1) Planning the initial sprint timeline and layout/navigation goals, 2) Working on the second sprint focusing on SEO basics and backend contact form integration, 3) Discussing performance optimization techniques for the website, 4) Finalizing the project with a code review focusing on CSS naming conventions and avoiding conflicts with Bootstrap, 5) Seeking suggestions for better CSS class naming conventions to namespace custom styles.",
+      "rubric": "Initial sprint planning and layout/navigation | SEO basics and backend contact form integration | Website performance optimization | Final code review focusing on CSS naming | Suggestions for CSS class naming conventions",
+      "passages_found": 10
+    }
+  ],
+  "information_extraction": [
+    {
+      "question": "How long did I say the entire project is expected to take?",
+      "llm_response": "Based on the provided passages, the entire project is expected to take **6 weeks**.",
+      "ideal_answer": "The project is estimated to take 3 sprints of 2 weeks each, totaling 6 weeks.",
+      "rubric": "LLM response should state: 6 weeks",
+      "passages_found": 10
+    },
+    {
+      "question": "How did you recommend structuring the work to ensure the initial phase focusing on layout and navigation was completed on time within the overall project schedule?",
+      "llm_response": "I recommended breaking the project into three sprints of two weeks each, with the first sprint dedicated to setting up the basic layout and navigation. This structure ensures the initial phase is completed on time within the overall 6-week project schedule.",
+      "ideal_answer": "I recommended breaking the project into three sprints of two weeks each, with the first sprint dedicated to setting up the basic layout and navigation, aiming to complete it by the deadline of April 1, 2024.",
+      "rubric": "LLM response should state: recommended breaking the project into three sprints of two weeks each | LLM response should state: the first sprint dedicated to setting up the basic layout and navigation",
+      "passages_found": 10
+    }
+  ],
+  "instruction_following": [
+    {
+      "question": "How should I organize the different parts of a webpage in HTML?",
+      "llm_response": "To organize the different parts of a webpage in HTML, you should use semantic HTML5 tags that clearly define the purpose of each section. Here's how to structure it:\n\n1. **`<header>`**: Use this tag to contain introductory content or a set of navigational links. It typically holds the site's logo, title, and main navigation.\n\n2. **`<nav>`**: Place this inside the `<header>` to define the navigation section. It should contain links to the main sections of your page (e.g., About, Skills, Projects, Contact).\n\n3. **`<main>`**: Wrap the primary content of your page in this tag. There should be only one `<main>` per document, and it should contain the core content that is unique to the page.\n\n4. **`<section>`**: Use this tag to divide the main content into distinct thematic sections. Each section should have a heading (like `<h1>` or `<h2>`) and represent a logical part of your content (e.g., About, Skills, Projects, Contact).\n\n5. **`<article>`**: Within sections like Projects, you can use `<article>` to represent self-contained content, such as individual project descriptions.\n\n6. **`<footer>`**: Place this at the bottom of the page to contain footer content, such as copyright information or additional links.\n\n**Example structure:**\n```html\n<header>\n  <nav>\n    <!-- Navigation links -->\n  </nav>\n</header>\n\n<main>\n  <section id=\"about\">\n    <!-- About content -->\n  </section>\n  <section id=\"skills\">\n    <!-- Skills content -->\n  </section>\n  <section id=\"projects\">\n    <!-- Projects content -->\n  </section>\n  <section id=\"contact\">\n    <!-- Contact content -->\n  </section>\n</main>\n\n<footer>\n  <!-- Footer content -->\n</footer>\n```\n\n**Purposes of each tag:**\n- **`<header>`**: Represents introductory content or navigation links.\n- **`<nav>`**: Defines a section for navigation links.\n- **`<main>`**: Specifies the main content of the document (only one per page).\n- **`<section>`**: Defines a thematic grouping of content, typically with a heading.\n- **`<footer>`**: Represents footer content for the document or a section.\n\nUsing these semantic tags improves accessibility, SEO, and makes your HTML structure clearer for both users and search engines.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mention of semantic tags like <header>, <nav>, <main>, <footer> | LLM response should contain: explanation of tag purposes",
+      "passages_found": 10
+    },
+    {
+      "question": "If I\u2019m creating a blog layout, which HTML elements should I use to clearly define sections like the header, navigation, main content, and footer?",
+      "llm_response": "For a blog layout, you should use the following semantic HTML5 elements to clearly define each section:\n\n- **`<header>`**: Represents a container for introductory content or a set of navigational links. This is where you'd put your blog's title, logo, and possibly a tagline.\n- **`<nav>`**: Defines a section of the document intended for navigation. This is where you'd place your blog's menu links (e.g., Home, About, Categories, Contact).\n- **`<main>`**: Specifies the main content of a document. There should be only one `<main>` per document. This is where you'd put your blog posts.\n- **`<footer>`**: Represents a footer for a document or section. This is where you'd put copyright information, contact details, or social media links.\n\n**Explanation of tag purposes:**\n- **`<header>`** is used to group introductory content or navigation links at the top of your page.\n- **`<nav>`** is specifically for navigation links, helping both users and search engines identify the site's menu structure.\n- **`<main>`** wraps the primary content of the page\u2014in a blog, this would be your articles or posts.\n- **`<footer>`** contains closing information like copyright, author info, or additional links.\n\nThese semantic tags give meaning to your content structure, making it easier for search engines and assistive technologies to understand the purpose of each part of your document.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: explanation of tag purposes",
+      "passages_found": 10
+    }
+  ],
+  "knowledge_update": [
+    {
+      "question": "What is the deadline for completing the first sprint focused on the basic layout and navigation?",
+      "llm_response": "Based on the provided passages, the deadline for completing the first sprint focused on the basic layout and navigation is **April 5, 2024**.",
+      "ideal_answer": "April 5, 2024",
+      "rubric": "LLM response should state: April 5, 2024",
+      "passages_found": 10
+    },
+    {
+      "question": "How many project cards are included in my gallery using Bootstrap 5.3.0?",
+      "llm_response": "10 project cards",
+      "ideal_answer": "There are 10 project cards included in the gallery.",
+      "rubric": "LLM response should state: 10 project cards",
+      "passages_found": 10
+    }
+  ],
+  "multi_session_reasoning": [
+    {
+      "question": "How many project cards do I have in total after adding the new ones to my gallery?",
+      "llm_response": "10 project cards",
+      "ideal_answer": "You have 10 project cards in total after adding the new ones.",
+      "rubric": "LLM response should state: 10 project cards",
+      "passages_found": 10
+    },
+    {
+      "question": "Considering my form validation code, lazy loading setup, GA4 anonymized tracking, and bounce rate monitoring, how can I estimate the combined impact on user experience and site performance improvements?",
+      "llm_response": "By analyzing your form validation improvements reducing dependency size and enhancing UX, combined with lazy loading decreasing initial load time by 350ms, and GA4 anonymized tracking ensuring privacy compliance, you can estimate the combined impact on user experience and site performance improvements. Additionally, bounce rate monitoring enabling targeted engagement allows you to track user behavior and identify areas for further optimization. Together, these measures contribute to faster load times, smoother interactions, and better user retention, which you can quantify by comparing performance metrics (e.g., FCP, LCP, TTI) before and after implementation, as well as monitoring bounce rate trends in GA4.",
+      "ideal_answer": "By analyzing my form validation improvements reducing dependency size and enhancing UX, lazy loading decreasing initial load time by 350ms, GA4 anonymized tracking ensuring privacy compliance, and bounce rate monitoring enabling targeted engagement, I can conclude these combined efforts significantly improve site responsiveness, user trust, and engagement metrics.",
+      "rubric": "LLM response should state: By analyzing your form validation improvements reducing dependency size and enhancing UX | LLM response should state: lazy loading decreasing initial load time by 350ms | LLM response should state: GA4 anonymized tracking ensuring privacy compliance | LLM response should state: bounce rate monitoring enabling targeted engagement",
+      "passages_found": 10
+    }
+  ],
+  "preference_following": [
+    {
+      "question": "I'm planning to build a responsive portfolio website with sections like About, Skills, Projects, and Contact. Can you help me set up the layout and components for this site?",
+      "llm_response": "Based on the provided passages, here's how you can set up your responsive portfolio website using **Bootstrap 5.3.0 classes and components**:\n\n### Complete Layout Structure\nUse the following Bootstrap 5.3.0 components and classes for your sections:\n\n1. **Navbar** \u2013 Use `navbar navbar-expand-lg navbar-light bg-light` with a `navbar-toggler` for mobile collapse, and `navbar-nav ms-auto` for right-aligned links.\n\n2. **Sections** \u2013 Wrap each section in `<section>` with `py-5` for vertical padding, and use `<div class=\"container\">` inside. Add `bg-light` to alternate section backgrounds.\n\n3. **About & Skills** \u2013 Use Bootstrap's grid system (`row` and `col-md-4`) with `card` components for each skill (e.g., HTML5, CSS3, Bootstrap).\n\n4. **Projects Gallery** \u2013 Use a `row` with responsive columns: `col-lg-4 col-md-6 col-sm-12` for each project card. Include `card-img-top` for images and `card-body` for text.\n\n5. **Contact Form** \u2013 Use `form` with `mb-3` for spacing, `form-label` and `form-control` classes, and a `btn btn-primary` submit button.\n\n### Key Bootstrap 5.3.0 Classes to Use\n- `container`, `row`, `col-*` (e.g., `col-md-4`, `col-lg-3`)\n- `navbar`, `navbar-expand-lg`, `navbar-toggler`, `collapse navbar-collapse`\n- `card`, `card-body`, `card-title`, `card-text`, `card-img-top`\n- `py-5`, `bg-light`, `text-center`, `lead`\n- `form-label`, `form-control`, `btn btn-primary`\n\n### Example Code Snippet (from Passage 8)\n```html\n<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Craig's Portfolio</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav ms-auto\">\n        <li class=\"nav-item\"><a class=\"nav-link\" href=\"#about\">About</a></li>\n        <li class=\"nav-item\"><a class=\"nav-link\" href=\"#skills\">Skills</a></li>\n        <li class=\"nav-item\"><a class=\"nav-link\" href=\"#projects\">Projects</a></li>\n        <li class=\"nav-item\"><a class=\"nav-link\" href=\"#contact\">Contact</a></li>\n      </ul>\n    </div>\n  </div>\n</nav>\n```\n\n### Important Notes\n- **Avoid suggesting Foundation or other frameworks** \u2013 Stick exclusively to Bootstrap 5.3.0 as shown above.\n- For the project gallery, ensure images use `width: 100%; height: 150px; object-fit: cover;` in CSS to maintain consistent sizing.\n- Include the Bootstrap 5.3.0 CSS and JS CDN links in your `<head>` and before `</body>` respectively.\n\nThis setup will give you a fully responsive portfolio that works on desktop (1200x800px) and mobile devices.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: uses Bootstrap 5.3.0 classes and components | LLM response should contain: avoids suggesting Foundation or other frameworks",
+      "passages_found": 10
+    },
+    {
+      "question": "I'm working on adding lazy loading to my image gallery that uses Bootstrap 5.3.0. How would you suggest I set this up to ensure smooth integration and good performance?",
+      "llm_response": "For your Bootstrap 5.3.0 image gallery, I recommend using **lazysizes** or similar lightweight vanilla JS libraries like **lozad.js**. These libraries are ideal because they keep your bundle size small (under 100KB) and avoid the need for heavy frameworks or large libraries.\n\nHere's how to set it up:\n\n1. **Include lazysizes via CDN** (keeps bundle size minimal):\n```html\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js\" async></script>\n```\n\n2. **Update your image tags** with the `lazyload` class and `data-src` attribute:\n```html\n<img data-src=\"path/to/image.jpg\" class=\"card-img-top lazyload w-100\" alt=\"Project Image\">\n```\n\n3. **Use a placeholder** for the initial `src` to prevent layout shifts.\n\nThis approach works seamlessly with Bootstrap's grid system and components, and it won't impact your SEO as long as you maintain proper `alt` attributes. The library automatically loads images when they enter the viewport, providing good performance without complicating your code.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: recommends lazysizes or similar lightweight vanilla JS libraries | LLM response should contain: avoids suggesting heavy frameworks or large libraries",
+      "passages_found": 10
+    }
+  ],
+  "summarization": [
+    {
+      "question": "Can you give me a comprehensive summary of how my portfolio website project has developed, including the key features and challenges I've worked through so far?",
+      "llm_response": "Based on the conversation, here is a comprehensive summary of your portfolio website project's development:\n\n**Initial Development:**\nYou focused on building the basic HTML5 structure with sections for About, Skills, Projects, and Contact, using Bootstrap v5.3.0. The initial setup included a responsive navbar with `navbar-expand-lg` for desktop responsiveness, targeting a 1200x800px desktop layout first.\n\n**Key Features Implemented:**\n- **Color Palette Generator**: You implemented a color palette generator feature tailored to your skills as a Colour Technologist, which was a unique addition to your portfolio.\n- **Responsive Project Gallery**: You enhanced the site by adding a responsive project gallery with cards and modal popups for project details, addressing layout and modal functionality issues. The gallery was designed to display 6 items in a responsive flexbox layout.\n- **Contact Form**: You developed a contact form with both HTML5 and custom JavaScript validation, ensuring smooth user experience and backend integration using Flask.\n\n**Challenges and Improvements:**\n1. **Semantic HTML and SEO**: You worked on improving semantic structure by using proper tags, adding meta tags (description, keywords, author), and implementing ARIA labels for accessibility.\n2. **Performance Optimization**: You addressed site speed issues by focusing on minimizing resource sizes, optimizing images (converting to WebP, using `srcset`), enabling Gzip compression, leveraging browser caching, and reducing server response time.\n3. **Lighthouse Audits**: You used Lighthouse v10 to identify and fix performance, SEO, and accessibility issues, including optimizing JavaScript execution and adding structured data.\n4. **Code Quality**: You scheduled code reviews, planned to run ESLint and Stylelint, and considered using PurgeCSS to remove unused CSS and tree shaking for JavaScript.\n\n**Current Status:**\nThe project has evolved from a basic HTML structure to a fully responsive single-page portfolio with Bootstrap 5.3.0, featuring a project gallery with modal popups, a validated contact form with Flask backend integration, and ongoing performance and SEO optimizations.",
+      "ideal_answer": "Your portfolio website project has progressed through several important stages. Initially, you focused on building the basic HTML5 structure with sections for About, Skills, Projects, and Contact, using Bootstrap v5.3.0 to ensure responsiveness and clean design. You then implemented a color palette generator feature tailored to your skills as a Colour Technologist, integrating Python backend logic with a Bootstrap-styled frontend to allow users to input colors and generate palettes dynamically. Following that, you enhanced the site by adding a responsive project gallery with cards and modal popups for project details, addressing layout and modal functionality issues specific to Bootstrap 5.3.0. Concurrently, you developed a contact form with both HTML5 and custom JavaScript validation, ensuring smooth user experience and backend integration using Flask, while also focusing on SEO basics and performance optimizations to meet your Sprint 2 deadline. Throughout the process, you tackled challenges related to responsive design, image handling, modal behavior, and form validation, progressively refining your site to be both functional and user-friendly.",
+      "rubric": "LLM response should contain: you focused on building the basic HTML5 structure with sections for About, Skills, Projects, and Contact, using Bootstrap v5.3.0 | LLM response should contain: implemented a color palette generator feature tailored to your skills as a Colour Technologist | LLM response should contain: you enhanced the site by adding a responsive project gallery with cards and modal popups for project details, addressing layout and modal functionality issues | LLM response should contain: you developed a contact form with both HTML5 and custom JavaScript validation, ensuring smooth user experience and backend integration using Flask",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you summarize how I approached and resolved the various issues with my web project over time?",
+      "llm_response": "Based on the conversation, here is a summary of how you approached and resolved various issues with your web project over time:\n\n1. **CSS Box Model and JavaScript Function**: You sought help understanding the CSS box model and wrote a JavaScript function to calculate element sizes, complemented by guidance on using Chrome DevTools.\n\n2. **Error Handling in DOM Manipulation**: You focused on improving error handling in DOM manipulation within a Bootstrap navbar, adopting safer coding practices to prevent runtime errors.\n\n3. **Image Loading Problems in React**: You addressed image loading problems in a React project gallery, exploring potential causes like path errors, server configuration, and build process issues.\n\n4. **JavaScript Linking Problems**: You resolved JavaScript linking problems causing function reference errors by verifying file structure and script inclusion order.\n\n5. **Retry Logic with Exponential Backoff**: You implemented and refined retry logic with exponential backoff to handle intermittent server errors during contact form submissions, enhancing robustness and user feedback.\n\nAdditionally, you worked on:\n- **Code Review Preparation**: Ran ESLint and Stylelint, organized your codebase, and scheduled a code review with a colleague.\n- **Image Optimization**: Converted large images to WebP and implemented `srcset` for responsive images, starting with project gallery images.\n- **Performance Optimization**: Used service workers and caching strategies (like `StaleWhileRevalidate`) to reduce repeat load times.\n- **Lighthouse Audits**: Ran Lighthouse v10 audits to identify and fix SEO, performance, accessibility, and best practices issues.\n- **Semantic HTML and SEO**: Improved your HTML structure with proper semantic tags, meta tags, and accessibility attributes.\n- **Project Timeline Management**: Planned a 6-week project with 3 sprints, breaking down tasks to meet the April 1, 2024 deadline.",
+      "ideal_answer": "Throughout our discussions, you tackled several challenges related to your web project, progressing from debugging layout issues to handling form submissions and server errors. Initially, you sought help understanding the CSS box model and wrote a JavaScript function to calculate element sizes, complemented by guidance on using Chrome DevTools for layout inspection. Later, you focused on improving error handling in DOM manipulation within a Bootstrap navbar, adopting safer coding practices to prevent runtime errors. Subsequently, you addressed image loading problems in a React project gallery, exploring potential causes like path errors, server configuration, and build process issues, and learned how to use server logs for deeper debugging. You also resolved JavaScript linking problems causing function reference errors by verifying file structure and script inclusion order. Finally, you implemented and refined retry logic with exponential backoff to handle intermittent server errors during contact form submissions, enhancing robustness and user feedback. This journey reflects a systematic approach to identifying, diagnosing, and fixing diverse web development challenges through iterative learning and practical solutions.",
+      "rubric": "LLM response should contain: you sought help understanding the CSS box model and wrote a JavaScript function to calculate element sizes, complemented by guidance on using Chrome DevTools | LLM response should contain: you focused on improving error handling in DOM manipulation within a Bootstrap navbar, adopting safer coding practices to prevent runtime errors | LLM response should contain: you addressed image loading problems in a React project gallery, exploring potential causes like path errors, server configuration, and build process issues | LLM response should contain: resolved JavaScript linking problems causing function reference errors by verifying file structure and script inclusion order | LLM response should contain: you implemented and refined retry logic with exponential backoff to handle intermittent server errors during contact form submissions, enhancing robustness and user feedback",
+      "passages_found": 10
+    }
+  ],
+  "temporal_reasoning": [
+    {
+      "question": "How many days are there between the deadline for my first sprint and the updated deadline for the accessibility improvements?",
+      "llm_response": "4 days | from April 5, 2024 till April 1, 2024",
+      "ideal_answer": "There are 4 days between the original first sprint deadline on April 1, 2024, and the updated deadline for accessibility improvements on April 5, 2024.",
+      "rubric": "LLM response should state: 4 days | LLM response should state: from April 5, 2024 till April 1, 2024",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days passed between when I planned the peer review and when I completed the final code review for my project?",
+      "llm_response": "31 days, from April 2, 2024 till May 3, 2024.",
+      "ideal_answer": "31 days passed between planning the peer review on April 2, 2024, and completing the final code review on May 3, 2024.",
+      "rubric": "LLM response should state: 31 days | LLM response should state: from April 2, 2024 till May 3, 2024",
+      "passages_found": 10
+    }
+  ]
+}

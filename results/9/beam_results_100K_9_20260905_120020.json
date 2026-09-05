@@ -1,0 +1,162 @@
+{
+  "abstention": [
+    {
+      "question": "What specific storytelling techniques did Shawn recommend during my meeting at Montserrat Media Hub?",
+      "llm_response": "Based on the provided conversation, there is no information about specific storytelling techniques that Shawn recommended. The passages mention that Shawn shared \"insights on storytelling impact\" and emphasized \"the importance of authenticity in storytelling\" and \"the transformative power of digital storytelling,\" but they do not list any specific storytelling techniques he recommended.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the specific storytelling techniques Shawn recommended.",
+      "rubric": "Based on the provided chat, there is no information related to related the specific storytelling techniques Shawn recommended",
+      "passages_found": 10
+    },
+    {
+      "question": "What topics or skills are covered in the advanced storytelling workshop starting September 15?",
+      "llm_response": "Based on the provided passages, the advanced storytelling workshop starting September 15 does not have a listed curriculum of topics or skills. The passages only mention that the workshop is \"advanced\" and that the user is \"eager to further develop my skills in narrative techniques and storytelling.\" No specific topics or skills covered in the workshop are detailed.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the topics or skills covered in the advanced storytelling workshop starting September 15.",
+      "rubric": "Based on the provided chat, there is no information related to the topics or skills covered in the advanced storytelling workshop starting September 15",
+      "passages_found": 10
+    }
+  ],
+  "contradiction_resolution": [
+    {
+      "question": "Have I ever met Bryan and received storytelling advice from him?",
+      "llm_response": "There is contradictory information. You said you met Bryan and received storytelling advice from him, but you also said you have never met him or received advice. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you met Bryan and received storytelling advice from him, but you also said you have never met him or received advice. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you met Bryan and received storytelling advice from him | LLM response should mention: you also said you have never met him or received advice | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    },
+    {
+      "question": "Have I ever enrolled in an academic writing course or taken online classes through Coursera?",
+      "llm_response": "There is contradictory information. In one passage, you said you enrolled in a 4-week online course on academic writing starting April 10 via Coursera. However, in another passage, you mentioned never having taken any such courses or online classes through Coursera. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. In one instance, you said you enrolled in an academic writing course on Coursera, but in another, you mentioned never having taken any such courses or online classes through Coursera. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: you said you enrolled in an academic writing course on Coursera | LLM response should mention: you mentioned never having taken any such courses or online classes through Coursera | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    }
+  ],
+  "event_ordering": [
+    {
+      "question": "Can you list the order in which I brought up different aspects of refining my personal statement throughout our conversations in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up different aspects of refining your personal statement is:\n\n1. Adding a brief section on leadership experiences by June 10 as Danielle recommended.\n2. Adapting your personal statement for Canadian visa officers, focusing on community engagement and global perspectives.\n3. Not knowing how to structure your personal statement since you haven't taken academic writing courses or online classes.\n4. Balancing personal stories with professional achievements in your statement.\n5. Adapting your personal statement for different applications (academic, visa, grant) and keeping each version under 1,000 words.",
+      "ideal_answer": "You mentioned aspects of refining your personal statement in this order: 1) Incorporating advice on storytelling techniques from Bryan at the Montserrat Film Festival, 2) Integrating insights on storytelling impact shared by Shawn at Montserrat Media Hub, 3) Discussing Bryan's agreement to write a recommendation letter for your scholarship application, 4) Bringing up tips from Matthew at Montserrat Media Hub on adapting statements for grant applications, and 5) Requesting help to fine-tune the introduction and career gap sections with Matthew's input.",
+      "rubric": "Bryan's storytelling advice | Shawn's storytelling insights | Bryan's recommendation letter | Matthew's grant application tips | Fine-tuning drafts with Matthew's help",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you walk me through the order in which I brought up different ways my family has supported me in my personal statement across our conversations, in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the conversation, the order in which you brought up different ways your family has supported you in your personal statement is:\n\n1. Care package with spices and notes\n2. Rehearsal help and family support\n3. Handwritten letter on resilience\n4. Cultural roots advice\n5. Last letter on balancing work and self-care",
+      "ideal_answer": "You mentioned my family's support in this order: 1) My mom Wendy suggesting I highlight my cultural roots, 2) Tanya helping me rehearse my personal pitch and how to show family support, 3) Wendy's handwritten letter encouraging me to emphasize resilience, 4) Wendy mailing a care package with local spices and notes, 5) Wendy's last letter reminding me to balance work and self-care.",
+      "rubric": "Cultural roots advice | Rehearsal help and family support | Handwritten letter on resilience | Care package with spices and notes | Last letter on balancing work and self-care",
+      "passages_found": 10
+    }
+  ],
+  "information_extraction": [
+    {
+      "question": "What dates did I mention for the scholarship deadline, visa application, and university application?",
+      "llm_response": "Based on the provided passages, the dates you mentioned are:\n\n- **Scholarship deadline:** May 15, 2024\n- **Visa application:** June 1, 2024\n- **University application:** April 30, 2024",
+      "ideal_answer": "The scholarship deadline is May 15, 2024; the visa application is due June 1, 2024; and the university application is due April 30, 2024.",
+      "rubric": "LLM response should state: scholarship deadline is May 15, 2024 | LLM response should state: visa application is due June 1, 2024 | LLM response should state: university application is due April 30, 2024",
+      "passages_found": 10
+    },
+    {
+      "question": "How did you recommend organizing my writing and submission process to ensure everything was ready well before the final cutoff dates for each step?",
+      "llm_response": "Based on the provided passages, I recommended organizing your writing and submission process by suggesting a detailed timeline starting with an initial draft in mid-March. The plan included reviews and revisions through early to mid-April, leading up to submitting the first application around April 20, and ensuring the other submissions were completed by their respective deadlines in mid-May.",
+      "ideal_answer": "I suggested a detailed timeline starting with an initial draft in mid-March, followed by reviews and revisions through early to mid-April, leading up to submitting the first application around April 20, and then ensuring the other submissions were completed by their respective deadlines in mid-May and early June.",
+      "rubric": "LLM response should state: suggested a detailed timeline starting with an initial draft in mid-March | LLM response should state: reviews and revisions through early to mid-April, leading up to submitting the first application around April 20 | LLM response should state: ensuring the other submissions were completed by their respective deadlines in mid-May",
+      "passages_found": 10
+    }
+  ],
+  "instruction_following": [
+    {
+      "question": "What are some good options I can use to help me with writing?",
+      "llm_response": "Based on the provided passages, here are some good software options to help with writing:\n\n- **Grammarly Premium**: For real-time grammar and style suggestions.\n- **Hemingway Editor**: To improve readability and clarity.\n- **ProWritingAid**: Offers detailed feedback on grammar, style, and readability.\n- **Ginger Software**: Combines grammar checking with natural language processing.\n- **Microsoft Word**: For drafting and basic editing features, including built-in grammar checking.\n- **Acrolinx**: Advanced content analysis tool for consistency, clarity, and tone.\n- **Evernote**: For collecting and organizing research notes and ideas.\n- **Mendeley**: For managing references and citations if needed.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mention of specific software names",
+      "passages_found": 10
+    },
+    {
+      "question": "When is the final submission due?",
+      "llm_response": "Based on the provided passages, the final submission due date is May 15.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: date shown as month-day-year",
+      "passages_found": 10
+    }
+  ],
+  "knowledge_update": [
+    {
+      "question": "What time should I plan to join the Zoom meeting with Professor Danielle to review my draft?",
+      "llm_response": "4:30 PM",
+      "ideal_answer": "4:30 PM",
+      "rubric": "LLM response should state: 4:30 PM",
+      "passages_found": 10
+    },
+    {
+      "question": "When is my session with the immigration consultant scheduled?",
+      "llm_response": "May 22",
+      "ideal_answer": "The session with the immigration consultant is scheduled for May 22.",
+      "rubric": "LLM response should state: May 22",
+      "passages_found": 10
+    }
+  ],
+  "multi_session_reasoning": [
+    {
+      "question": "How many different application types am I planning to use my personal statement for, and which roles or plans did I mention that might affect my visa application choice?",
+      "llm_response": "Based on the provided passages, you are planning to use your personal statement for **three application types**: academic, visa, and grant applications.\n\nRegarding roles or plans that might affect your visa application choice, you mentioned **accepting a part-time role starting June 1**, which might affect your decision between applying for a Canadian or Jamaican study visa.",
+      "ideal_answer": "You are planning to use your personal statement for three application types: academic, visa, and grant. You mentioned accepting a part-time role starting June 1, which might affect your decision between applying for a Canadian or Jamaican study visa.",
+      "rubric": "LLM response should state: three application types | LLM response should state: planning to use your personal statement for academic application | LLM response should state: planning to use your personal statement for visa application | LLM response should state: planning to use your personal statement for grant application | LLM response should state: You mentioned accepting a part-time role starting June 1, which might affect your decision between applying for a Canadian or Jamaican study visa",
+      "passages_found": 10
+    },
+    {
+      "question": "How did my interactions with Kimberly and the feedback I received influence the evolution and final quality of my personal statement for the grant application?",
+      "llm_response": "Based on the provided passages, my interactions with Kimberly and the feedback I received significantly influenced the evolution and final quality of my personal statement for the grant application. My initial feedback from Kimberly helped identify key improvements which I selectively integrated to maintain my voice and enhance clarity. For example, she suggested adding a story about producing a local documentary that won 2nd place at the Janethaven Film Awards, and she reviewed my revised draft on April 3, highlighting weak transitions between academic and personal sections. After revising, Kimberly praised the improved flow, indicating significant quality enhancement. However, I remained uncertain about its sufficiency for the grant, reflecting ongoing self-evaluation and refinement influenced by her input.",
+      "ideal_answer": "My initial feedback from Kimberly helped identify key improvements, which I selectively integrated to maintain my voice and enhance clarity. After revising, Kimberly praised the improved flow, indicating significant quality enhancement. Despite this, I remained uncertain about its sufficiency for the grant, reflecting ongoing self-evaluation and refinement influenced by her input.",
+      "rubric": "LLM response should state: My initial feedback from Kimberly helped identify key improvements which I selectively integrated to maintain my voice and enhance clarity | LLM response should state: After revising, Kimberly praised the improved flow, indicating significant quality enhancement | LLM response should state: I remained uncertain about its sufficiency for the grant, reflecting ongoing self-evaluation and refinement influenced by her input",
+      "passages_found": 10
+    }
+  ],
+  "preference_following": [
+    {
+      "question": "Can you help me plan my writing sessions for the upcoming week?",
+      "llm_response": "Based on the provided passages, I can help you plan your writing sessions for the upcoming week. Here is a structured plan that schedules writing sessions between 7-9 AM and prioritizes morning hours for writing:\n\n**Daily Schedule (April 5-18):**\n- **Morning (7:00 AM - 10:00 AM):** Focus on the most critical sections of your personal statement using Microsoft Word. This prioritizes morning hours for writing, as you prefer writing between 7-9 AM when you're most focused.\n- **Break (10:00 AM - 10:15 AM):** Short break to refresh.\n- **Mid-Morning (10:15 AM - 12:00 PM):** Review and edit using Grammarly and Hemingway Editor.\n- **Afternoon (12:30 PM - 3:00 PM):** Research and planning using Evernote and Mendeley.\n- **Late Afternoon (3:15 PM - 5:00 PM):** Continue writing/revising using Microsoft Word.\n- **Evening (5:30 PM - 7:00 PM):** Optional editing work using Grammarly and Hemingway Editor.\n- **Night (8:00 PM - 10:00 PM):** Review and refine your draft.\n\n**Weekly Breakdown:**\n- **April 5-11 (Monday to Friday):** Morning sessions focus on critical sections (introduction, body). Saturday and Sunday: Half-day writing/revising and half-day reviewing/refining.\n- **April 12-18 (Monday to Friday):** Morning sessions focus on conclusion and final touches. Saturday and Sunday: Half-day writing/revising and half-day reviewing/refining.\n\n**Example Daily Routine (Day 1, April 5):**\n- **7:00 AM - 10:00 AM:** Focus on introduction and background sections using Microsoft Word.\n- **10:15 AM - 12:00 PM:** Review and edit using Grammarly and Hemingway Editor.\n- **12:30 PM - 3:00 PM:** Conduct research on emerging trends in digital media production.\n- **3:15 PM - 5:00 PM:** Continue working on personal growth and skills sections.\n- **5:30 PM - 7:00 PM:** Catch up on remaining editing tasks.\n- **8:00 PM - 10:00 PM:** Review and refine the draft.\n\nThis plan ensures your writing sessions are scheduled between 7-9 AM and prioritizes morning hours for writing, helping you make the most of your focused time.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: schedules writing sessions between 7-9 AM | LLM response should contain: prioritizes morning hours for writing",
+      "passages_found": 10
+    },
+    {
+      "question": "I'm planning where to spend my next few hours writing. What places would you suggest?",
+      "llm_response": "Based on the provided passages, here are some suggestions for places to write:\n\n- **Coffee Shop**: Many coffee shops offer a relaxed and inspiring atmosphere. The ambient noise can be motivating, and you can enjoy a cup of coffee while you work.\n- **Park**: Writing outside in a park can provide a peaceful and refreshing environment. The natural surroundings can help you relax and think more clearly.\n- **Home Office**: If you have a quiet space at home, consider setting up a dedicated workspace. This can be particularly useful if you need to work late or early in the morning.\n\nAdditionally, the passages mention that you've been writing at the **Montserrat Public Library**, and while it's a good option, a change of scenery might boost creativity and productivity if you've been there for a long time.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: recommends libraries or quiet locations",
+      "passages_found": 10
+    }
+  ],
+  "summarization": [
+    {
+      "question": "Can you give me a comprehensive summary of how my plans and preparations for studying abroad have developed over time?",
+      "llm_response": "Based on the provided passages, here is a comprehensive summary of how your plans and preparations for studying abroad have developed over time:\n\nYou focused on completing a personal statement by April 20, 2024, highlighting your career as a TV/film producer. You worked on incorporating Tanya's support into your statement in a way that balanced professionalism and personal motivation. You accepted a part-time role starting June 1 to gain experience while studying, which led you to weigh the pros and cons of applying for a Canadian study visa versus staying in Montserrat. You outlined specific steps including gathering documents, practicing answers, and understanding the institution. You managed concerns about budgeting for warm clothing in Toronto using a $2,000 emergency fund, and later integrated a freelance contract into your budget.",
+      "ideal_answer": "Your plans and preparations for studying abroad have evolved through several interconnected stages. Initially, you focused on completing a personal statement by April 20, 2024, highlighting your career as a TV/film producer, your professional growth influenced by insights from the Montserrat Film Festival, and the support of your partner Tanya. Subsequently, you worked on incorporating Tanya's support into your statement in a way that balanced professionalism and personal motivation, especially emphasizing how her help improved your interview confidence. Later, you accepted a part-time role starting June 1 to gain experience while studying, which led you to weigh the pros and cons of applying for a Canadian study visa versus staying in Montserrat, considering factors like funding, education quality, and cultural adjustment. To prepare for the Canadian visa interview, you outlined specific steps including gathering documents, practicing answers, and understanding the institution. Financially, you managed concerns about budgeting for warm clothing in Toronto using a $2,000 emergency fund, and later integrated a freelance contract into your budget, balancing income against expenses and savings to ensure financial stability during your initial months abroad. Throughout these stages, your approach shows a clear progression from application preparation to practical financial and logistical planning for your studies abroad.",
+      "rubric": "LLM response should contain: you focused on completing a personal statement by April 20, 2024, highlighting your career as a TV/film producer | LLM response should contain: you worked on incorporating Tanya's support into your statement in a way that balanced professionalism and personal motivation | LLM response should contain: you accepted a part-time role starting June 1 to gain experience while studying, which led you to weigh the pros and cons of applying for a Canadian study visa versus staying in Montserrat | LLM response should contain: you outlined specific steps including gathering documents, practicing answers, and understanding the institution | LLM response should contain: you managed concerns about budgeting for warm clothing in Toronto using a $2,000 emergency fund, and later integrated a freelance contract into your budget",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you summarize how my personal statement has developed through the advice and feedback I've received from different mentors and advisors over time?",
+      "llm_response": "Your personal statement has developed through a rich tapestry of advice from multiple mentors and advisors, each contributing unique perspectives that have shaped its evolution:\n\n**Bryan's storytelling insights** at the Montserrat Film Festival on January 12, 2023, emphasized storytelling techniques like narrative structure and character development. His advice profoundly influenced your approach to filmmaking, and you applied his technique of non-linear storytelling in your project \"The Journey,\" which enhanced the emotional depth of the narrative and resulted in a critically acclaimed film.\n\n**Shawn, a veteran producer you met through Bryan**, contributed perspectives on authenticity and the transformative power of storytelling. Meeting him at the Montserrat Media Hub on April 1 inspired you to see your journey as a process of weaving threads, combining personal experiences with academic pursuits to create a rich tapestry of storytelling.\n\n**Danielle, your academic advisor**, praised your voice consistency and offered detailed feedback to refine your draft, encouraging you to add specific examples and strengthen your conclusion. She also recommended adding a brief section on leadership experiences by June 10, which you incorporated to showcase your ability to inspire and guide teams.\n\n**Matthew provided practical tips** on tailoring your statement for global opportunities, helping you address challenging sections like your introduction. His guidance was particularly useful in making your statement adaptable for international applications.\n\nThroughout this process, you considered how Danielle's feedback on voice consistency could help you maintain a cohesive and authentic tone while customizing your statement for different applications. This was especially important when balancing feedback from others like Kimberly, who praised the improved flow of your 900-word statement after your meeting at Cafe Montserrat on May 7, and when deciding which suggestions to implement while preserving your unique voice.\n\nThe cumulative effect of these mentors' advice has helped you structure your statement effectively\u2014from crafting a compelling introduction to weaving together personal stories with professional achievements, highlighting leadership experiences, and connecting your growth to future goals in media production at the University of the West Indies.",
+      "ideal_answer": "Your personal statement evolved significantly through the guidance and insights provided by several key individuals. Initially, Bryan's advice at the Montserrat Film Festival emphasized storytelling techniques like narrative structure and character development, which you integrated to enhance the emotional depth and impact of your statement. Later, Shawn, a veteran producer you met through Bryan, contributed perspectives on authenticity and the transformative power of storytelling, influencing how you framed your academic goals and personal growth. Danielle, your academic advisor, praised your voice consistency and offered detailed feedback to refine your draft, encouraging you to add specific examples and strengthen your conclusion. Matthew provided practical tips on tailoring your statement for global opportunities, helping you address challenging sections like your introduction and career gap with a more engaging and positive tone. Finally, you considered how Danielle's feedback on voice consistency could help you maintain a cohesive and authentic tone while customizing your statement for different applications, such as workshops and academic programs. Throughout this process, your statement matured into a well-rounded narrative that reflects your professional achievements, personal development, and future aspirations, shaped by progressive mentorship and iterative refinement.",
+      "rubric": "LLM response should contain: Bryan's advice at the Montserrat Film Festival emphasized storytelling techniques like narrative structure and character development | LLM response should contain: Shawn, a veteran producer you met through Bryan, contributed perspectives on authenticity and the transformative power of storytelling | LLM response should contain: Danielle, your academic advisor, praised your voice consistency and offered detailed feedback to refine your draft, encouraging you to add specific examples and strengthen your conclusion | LLM response should contain: Matthew provided practical tips on tailoring your statement for global opportunities, helping you address challenging sections like your introduction | LLM response should contain: you considered how Danielle's feedback on voice consistency could help you maintain a cohesive and authentic tone while customizing your statement for different applications",
+      "passages_found": 10
+    }
+  ],
+  "temporal_reasoning": [
+    {
+      "question": "How many days do I have between finishing my personal statement and the scholarship deadline?",
+      "llm_response": "Based on the provided passages, you have **25 days** between finishing your personal statement and the scholarship deadline. This is calculated as the period **from April 20, 2024 till May 15, 2024**.",
+      "ideal_answer": "There are 25 days between finishing the personal statement by April 20, 2024, and the scholarship deadline on May 15, 2024.",
+      "rubric": "LLM response should state: 25 days | LLM response should state: from April 20, 2024 till May 15, 2024",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days are there between my meeting with Professor Danielle to review my draft and my mock interview with her?",
+      "llm_response": "27 days, from March 22 till April 18.",
+      "ideal_answer": "There are 27 days between the meeting to review the draft on March 22 and the mock interview on April 18.",
+      "rubric": "LLM response should state: 27 days | LLM response should state: from March 22 till April 18",
+      "passages_found": 10
+    }
+  ]
+}

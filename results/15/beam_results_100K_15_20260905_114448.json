@@ -1,0 +1,162 @@
+{
+  "abstention": [
+    {
+      "question": "What are the qualifications or expertise of the podiatrist whose article I read about Primeknit reducing blister risk?",
+      "llm_response": "Based on the provided chat, there is no information related to the podiatrist\u2019s qualifications or expertise.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the podiatrist\u2019s qualifications or expertise.",
+      "rubric": "Based on the provided chat, there is no information related to the podiatrist\u2019s qualifications or expertise",
+      "passages_found": 10
+    },
+    {
+      "question": "What was the atmosphere like during the sneaker art exhibit Lauren and I attended at the Montserrat Museum?",
+      "llm_response": "Based on the provided passages, there is no information about the atmosphere during the sneaker art exhibit at the Montserrat Museum.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the atmosphere of the sneaker art exhibit.",
+      "rubric": "Based on the provided chat, there is no information related to the atmosphere of the sneaker art exhibit",
+      "passages_found": 10
+    }
+  ],
+  "contradiction_resolution": [
+    {
+      "question": "Have I ever met Kyle or been to any sneaker expos?",
+      "llm_response": "There is contradictory information in the provided passages. You said you've known Kyle and met him at a sneaker expo, but you also said you've never met Kyle or attended any sneaker expos. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you've known Kyle and met him at a sneaker expo, but you also said you've never met Kyle or attended any sneaker expos. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you've known Kyle and met him at a sneaker expo | LLM response should mention: you also said you've never met Kyle or attended any sneaker expos | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    },
+    {
+      "question": "Have I ever placed an online order for sneakers before?",
+      "llm_response": "There is contradictory information. You said you placed an online order for sneakers, but you also mentioned that you've never placed any online sneaker orders. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you placed an online order for sneakers, but you also mentioned that you've never placed any online sneaker orders. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you placed an online order for sneakers | LLM response should mention: you also mentioned that you've never placed any online sneaker orders | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    }
+  ],
+  "event_ordering": [
+    {
+      "question": "Can you list the order in which I brought up different sneaker shopping experiences and related details throughout our conversations in order? Mention ONLY and ONLY four items.",
+      "llm_response": "1. Store visit planning  \n2. Online order with discount  \n3. Trying running shoe in store  \n4. Trying another shoe and sizing",
+      "ideal_answer": "You mentioned sneaker shopping experiences and related details in this order: 1) Planning a visit to a specific store on Main Street, 2) Placing an online order with a discount code, 3) Visiting the same store to try a particular running shoe, 4) Trying another shoe model at the same store and discussing sizing preferences.",
+      "rubric": "Store visit planning | Online order with discount | Trying running shoe in store | Trying another shoe and sizing",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you walk me through the order in which I brought up different safety and comfort features of my sneakers during our chats, in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up different safety and comfort features of your sneakers is not fully detailed. However, the five items mentioned in the passages are:\n\n1. Injury risk and grip soles\n2. Traction of Continental outsole\n3. Switching to Brooks Ghost for shin splints\n4. Reflective panels on New Balance 990v5\n5. Orthotic insoles and Zoom Air responsiveness",
+      "ideal_answer": "You mentioned the sneaker features in this order: 1) Concerns about injury risk on uneven terrain and need for good grip soles, 2) The traction benefits of the Continental rubber outsole on Ultraboosts, 3) Considering switching to Brooks Ghost to avoid shin splints after May 5, 4) The reflective panels on New Balance 990v5 improving night visibility, 5) Using Nike Dunk Low with orthotic insoles and how they work with the Zoom Air unit for responsiveness.",
+      "rubric": "Injury risk and grip soles | Traction of Continental outsole | Switching to Brooks Ghost for shin splints | Reflective panels on New Balance 990v5 | Orthotic insoles and Zoom Air responsiveness",
+      "passages_found": 10
+    }
+  ],
+  "information_extraction": [
+    {
+      "question": "When am I planning to visit the store on Main Street in East Janethaven?",
+      "llm_response": "Next Saturday at 3 PM.",
+      "ideal_answer": "Next Saturday at 3 PM",
+      "rubric": "LLM response should state: Next Saturday at 3 PM",
+      "passages_found": 10
+    },
+    {
+      "question": "Which option did I say I chose after trying both at the store?",
+      "llm_response": "Based on the provided passages, you said you chose the **Adidas Ultraboost** on March 30.",
+      "ideal_answer": "You said you chose the Adidas Ultraboost over the Nike React Infinity Run after trying both on March 30 at Foot Locker.",
+      "rubric": "LLM response should state: Adidas Ultraboost",
+      "passages_found": 10
+    }
+  ],
+  "instruction_following": [
+    {
+      "question": "What features I should pay attnetion to in sneakers?",
+      "llm_response": "Based on the provided passages, when choosing sneakers, you should pay attention to features that ensure **comfort related to physical well-being** and **injury prevention aspects**. Specifically, look for:\n\n- **Comfort**: Good cushioning to absorb impact, especially over longer distances, and a proper fit with enough room in the toe box and a snug fit around the heel and midfoot.\n- **Support**: Good arch support (especially if you have mild flat feet) to prevent fatigue and discomfort, and stability to prevent rolling or twisting on uneven terrain.\n- **Durability**: Durable materials and rubber outsoles for better traction and longevity.\n- **Breathability**: Breathable uppers (like mesh) to keep feet cool and dry, reducing the risk of blisters and discomfort.\n\nRecommended models that balance these features include the Adidas Ultraboost, New Balance Fresh Foam 1080v11, and Brooks Ghost 14.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: comfort related to physical well-being | LLM response should contain: injury prevention aspects",
+      "passages_found": 10
+    },
+    {
+      "question": "What materials are commonly used in making modern sneakers, and what should I know about their overall quality?",
+      "llm_response": "Based on the provided passages, modern sneakers commonly use a variety of materials, and their overall quality is often discussed in terms of comfort, support, durability, and breathability. Here\u2019s what you should know:\n\n**Common Materials and Their Quality:**\n\n- **Recycled Materials**: Many brands now use eco-friendly materials. For example, the **New Balance 990v5** uses 30% recycled materials, including recycled polyester in the upper. The **Adidas Ultraboost** has a Primeknit upper made from recycled materials, including Parley Ocean Plastic (recycled plastic waste from beaches). The **Nike Air Max 270 React You Can Fly** uses Flyleather, made from at least 50% leather fiber waste. The **Veja V-10** uses organic cotton, wild rubber, and recycled plastic bottles. The **Salomon X Ultra 3 GTX** also uses recycled materials in the upper and sole.\n\n- **Natural Materials**: **Allbirds Tree Dashers** are made from sustainable materials like Tencel (from eucalyptus trees) and merino wool, which offer excellent breathability and moisture management.\n\n- **Mesh and Synthetic Uppers**: Many sneakers (like the New Balance 990v5, Adidas Ultraboost, and Brooks Ghost 14) feature breathable mesh or engineered mesh uppers, which provide good airflow and moisture-wicking properties.\n\n- **Rubber Outsoles**: Rubber outsoles are generally more durable and provide better traction. However, some eco-friendly options, like Allbirds' recycled plastic outsoles, might not be as durable as traditional rubber.\n\n**Overall Quality Considerations:**\n\n- **Comfort and Cushioning**: Look for good cushioning (e.g., ENCAP midsole in New Balance, Boost midsole in Adidas, React foam in Nike) to absorb impact, especially for walking or long wear.\n\n- **Support**: Arch support and stability are important, especially if you have mild flat feet. Models like the New Balance 990v5 and Brooks Ghost 14 offer good arch support.\n\n- **Durability**: Durable construction and high-quality materials matter. Reinforced areas and rubber outsoles tend to last longer. Some eco-friendly materials (like recycled plastic outsoles) may be less durable than rubber.\n\n- **Breathability**: Breathable uppers (mesh, Primeknit, or natural materials) help keep feet cool and dry, reducing blisters and discomfort.\n\n**Environmental Impact**: Choosing sneakers with eco-friendly materials (recycled polyester, ocean plastic, leather fiber waste, organic cotton, wild rubber, Tencel, merino wool) helps reduce environmental impact compared to conventional materials. However, you should balance sustainability with durability\u2014some recycled or natural materials may not be as long-lasting as traditional rubber or synthetic options.\n\nIn summary, when evaluating sneaker quality, consider the balance between eco-friendly materials, comfort, support, durability, and breathability. Models like the New Balance 990v5, Adidas Ultraboost, and Allbirds Tree Dashers offer good sustainability features, but you may need to trade off some durability for environmental benefits.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mentions eco-friendly materials | LLM response should contain: discusses environmental impact of materials",
+      "passages_found": 10
+    }
+  ],
+  "knowledge_update": [
+    {
+      "question": "What time should I plan to visit Foot Locker next Saturday?",
+      "llm_response": "Based on the provided passages, you should plan to visit Foot Locker at **4 PM** next Saturday.",
+      "ideal_answer": "4 PM",
+      "rubric": "LLM response should state: 4 PM",
+      "passages_found": 10
+    },
+    {
+      "question": "What is my annual budget for buying sneakers?",
+      "llm_response": "Based on the provided passages, your annual budget for buying sneakers is **$650**.",
+      "ideal_answer": "$650",
+      "rubric": "LLM response should state: $650",
+      "passages_found": 10
+    }
+  ],
+  "multi_session_reasoning": [
+    {
+      "question": "How many different shoe sizes have I mentioned across my messages?",
+      "llm_response": "Based on the provided passages, you mentioned two different shoe sizes: **11** and **11.5**.",
+      "ideal_answer": "Two sizes: 11 and 11.5",
+      "rubric": "LLM response should state: Two sizes: 11 and 11.5",
+      "passages_found": 10
+    },
+    {
+      "question": "How does the price I paid for the Ultraboost compare to my original budget limit for sneakers?",
+      "llm_response": "The price you paid for the Ultraboost ($153) is below your original budget limit of $200 for sneakers.",
+      "ideal_answer": "The price you paid for the Ultraboost is below your original budget limit of $200.",
+      "rubric": "LLM response should state: price you paid for the Ultraboost is below your original budget limit of $200",
+      "passages_found": 10
+    }
+  ],
+  "preference_following": [
+    {
+      "question": "I'm looking to buy a new pair of sneakers soon. Can you suggest some options I might like?",
+      "llm_response": "Based on your preference for sneakers with a sleek, modern look in neutral colors like black or gray, I recommend options that match that aesthetic. Look for styles that are described as sleek or modern, and prioritize pairs available in neutral tones such as black or gray to fit your taste.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: recommends sneakers described as sleek or modern | LLM response should contain: includes options in neutral colors like black or gray",
+      "passages_found": 10
+    },
+    {
+      "question": "I'm looking to get a new pair of shoes soon. What options would you suggest for different occasions?",
+      "llm_response": "Based on the provided passages, here are some suggestions for different occasions, mentioning multiple brands:\n\n- **For daily wear and comfort:** The **New Balance 990v5** is highlighted as durable and comfortable, making it a great choice for daily wear. The **Adidas Yeezy Boost 350 V2** is also noted for its excellent comfort and energy return, suitable for daily activities.\n- **For special occasions or events (like a film festival):** The **Converse Chuck Taylor All Star Pro** is described as versatile and suitable for both casual wear and special occasions. The **Nike Air Force 1** is a timeless classic that can be worn for special events.\n- **For completing a collection:** The **Adidas Yeezy Boost 350 V2** is a popular and sought-after model that can add prestige, while the **Nike Air Force 1** offers classic style and collectible value in limited edition colorways.\n\nIn summary, for different occasions, you might consider **New Balance** for daily walking comfort, **Converse** or **Nike** for special events, and **Adidas** or **Nike** for adding a significant piece to your collection.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mentions multiple brands | LLM response should contain: suggests different shoes for different occasions or activities",
+      "passages_found": 10
+    }
+  ],
+  "summarization": [
+    {
+      "question": "Can you give me a summary of how my sneaker preferences and choices have developed over our conversations?",
+      "llm_response": "Based on our conversations, your sneaker preferences and choices have developed through several key stages. You sought comfortable daily wear options suitable for an active lifestyle, leading to recommendations like the Adidas Ultraboost. You then focused on specific details such as sizing and breaking in the Ultraboosts to maximize comfort. You considered Allbirds, influenced by your partner Lauren's preference, weighing their comfort, sustainability, and minimalist style against your existing Ultraboosts. This led to plans to try Allbirds to see how they compare. You evaluated loyalty between Brooks for running and Adidas for casual wear, reflecting on your 3-mile run experience and deciding to commit to Brooks Ghost 14 for running. Finally, you explored options for hiking shoes suitable for Montserrat's Oriole Trail, comparing New Balance 990v5 with hiking-specific models like Salomon X Ultra 3 GTX and Merrell Moab 2.",
+      "ideal_answer": "Over the course of our discussions, your sneaker preferences and choices evolved through several stages. Initially, you sought comfortable daily wear options suitable for an active lifestyle, leading to recommendations like the Adidas Ultraboost, Nike Air Zoom Pegasus 38, and others known for cushioning and support. You then focused on specific details such as sizing and breaking in the Ultraboosts to maximize comfort. Later, you considered Allbirds, influenced by your partner Lauren's preference, weighing their comfort, sustainability, and minimalist style against your existing Ultraboosts. This led to plans to try Allbirds to see how they compare. Subsequently, you evaluated loyalty between Brooks for running and Adidas for casual wear, reflecting on your 3-mile run experience and deciding to commit to Brooks Ghost 14 for running due to its cushioning and support, while continuing with Adidas Ultraboost for casual use. Finally, you explored options for hiking shoes suitable for Montserrat's Oriole Trail, comparing New Balance 990v5 with hiking-specific models like Salomon X Ultra 3 GTX and Merrell Moab 2, focusing on traction and moisture-wicking properties, with a recommendation toward specialized hiking footwear for better performance. Throughout, your choices show a progression from general comfort and style considerations to more activity-specific needs and environmental factors, culminating in a well-rounded sneaker collection tailored to various uses.",
+      "rubric": "LLM response should contain: you sought comfortable daily wear options suitable for an active lifestyle, leading to recommendations like the Adidas Ultraboost | LLM response should contain: You then focused on specific details such as sizing and breaking in the Ultraboosts to maximize comfort | LLM response should contain: you considered Allbirds, influenced by your partner Lauren's preference, weighing their comfort, sustainability, and minimalist style against your existing Ultraboosts | LLM response should contain: This led to plans to try Allbirds to see how they compare | LLM response should contain: you evaluated loyalty between Brooks for running and Adidas for casual wear, reflecting on your 3-mile run experience and deciding to commit to Brooks Ghost 14 for running | LLM response should contain: you explored options for hiking shoes suitable for Montserrat's Oriole Trail, comparing New Balance 990v5 with hiking-specific models like Salomon X Ultra 3 GTX and Merrell Moab 2",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you give me a quick summary of the sneaker options and advice we've talked about for my daily wear and activities?",
+      "llm_response": "You explored several comfortable sneaker options for daily wear, including Adidas Ultraboost, Nike Air Zoom Pegasus 38, New Balance 990v5, Saucony Ride ISO 4, Brooks Ghost 14, and Asics Gel-Kayano 28. You showed particular interest in the Adidas Ultraboost for its cushioning and energy return, and received sizing and break-in tips for them. You also considered Allbirds as a comfortable, sustainable alternative favored by your partner, with advice on their features and how they compare to Ultraboosts. Additionally, you evaluated Brooks Ghost 14 for running and Adidas Ultraboost for casual wear based on your recent experiences, deciding to commit to Brooks for running and Adidas for daily use. Finally, you were advised that specialized hiking shoes like Salomon X Ultra 3 GTX or Merrell Moab 2 would be better than New Balance 990v5 for hiking activities.",
+      "ideal_answer": "You explored several comfortable sneaker options for daily wear, including Adidas Ultraboost, Nike Air Zoom Pegasus 38, New Balance 990v5, Saucony Ride ISO 4, Brooks Ghost 14, and Asics Gel-Kayano 28. You showed particular interest in the Adidas Ultraboost for its cushioning and energy return, and received sizing and break-in tips for them. Later, you considered Allbirds as a comfortable, sustainable alternative favored by your partner, with advice on their features and how they compare to Ultraboosts. Additionally, you evaluated Brooks Ghost 14 for running and Adidas Ultraboost for casual wear based on your recent experiences, deciding to commit to Brooks for running and Adidas for daily use. Finally, for hiking on Montserrat's Oriole Trail, you were advised that specialized hiking shoes like Salomon X Ultra 3 GTX or Merrell Moab 2 would be better than New Balance 990v5 due to terrain and moisture-wicking needs.",
+      "rubric": "LLM response should contain: You explored several comfortable sneaker options for daily wear, including Adidas Ultraboost, Nike Air Zoom Pegasus 38, New Balance 990v5, Saucony Ride ISO 4, Brooks Ghost 14, and Asics Gel-Kayano 28 | LLM response should contain: You showed particular interest in the Adidas Ultraboost for its cushioning and energy return, and received sizing and break-in tips for them | LLM response should contain: you considered Allbirds as a comfortable, sustainable alternative favored by your partner, with advice on their features and how they compare to Ultraboosts | LLM response should contain: you evaluated Brooks Ghost 14 for running and Adidas Ultraboost for casual wear based on your recent experiences, deciding to commit to Brooks for running and Adidas for daily use | LLM response should contain: you were advised that specialized hiking shoes like Salomon X Ultra 3 GTX or Merrell Moab 2 would be better than New Balance 990v5",
+      "passages_found": 10
+    }
+  ],
+  "temporal_reasoning": [
+    {
+      "question": "How many days passed between when I got the size 11 Ultraboost and when I reordered the size 11.5?",
+      "llm_response": "1 day, from April 30 till May 1.",
+      "ideal_answer": "One day passed between when I got the size 11 Ultraboost on April 30 and when I reordered the size 11.5 on May 1.",
+      "rubric": "LLM response should state: 1 day | LLM response should state: from April 30 till May 1",
+      "passages_found": 10
+    },
+    {
+      "question": "How many months are there between when I planned to reach my daily walking goal and the festival I\u2019m preparing my sneaker outfit for?",
+      "llm_response": "Based on the provided passages, the time period is **4 months**, specifically **from April 15, 2024 till August 22, 2024**.",
+      "ideal_answer": "There are about 4 months between April 15, 2024, when I planned to reach my daily walking goal, and August 22, 2024, the date of the festival I\u2019m preparing my sneaker outfit for.",
+      "rubric": "LLM response should state: 4 months | LLM response should state: from April 15, 2024 till August 22, 2024",
+      "passages_found": 10
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "abstention": [
+    {
+      "question": "What specific advice did Jake give me about documenting prototype tests beyond the April 15 deadline?",
+      "llm_response": "Based on the provided conversation, there is no information about Jake giving advice on documenting prototype tests beyond the April 15 deadline. The passages only mention Jake advising to document every prototype test by April 15, but no specific advice is given about what to do after that date.",
+      "ideal_answer": "Based on the provided chat, there is no information related to Jake\u2019s advice about documenting prototype tests beyond April 15.",
+      "rubric": "Based on the provided chat, there is no information related to Jake\u2019s advice about documenting prototype tests beyond April 15",
+      "passages_found": 10
+    },
+    {
+      "question": "What were the reasons behind rejecting the $30,000 investment offer on September 14, 2024, beyond the equity demand and terms?",
+      "llm_response": "Based on the provided passages, there is no information about additional reasons for rejecting the $30,000 investment offer beyond the 35% equity demand and restrictive terms.",
+      "ideal_answer": "Based on the provided chat, there is no information related to additional reasons for rejecting the $30,000 investment offer beyond the equity demand and terms mentioned.",
+      "rubric": "Based on the provided chat, there is no information related to additional reasons for rejecting the $30,000 investment offer",
+      "passages_found": 10
+    }
+  ],
+  "contradiction_resolution": [
+    {
+      "question": "Have I ever attended production meetings related to my invention?",
+      "llm_response": "There is contradictory information. You said you met Heather at a production meeting where she suggested patenting your invention, but you also mentioned that you've never attended any production meetings related to your invention. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you met Heather at a production meeting where she suggested patenting your invention, but you also mentioned that you've never attended any production meetings related to your invention. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you met Heather at a production meeting where she suggested patenting your invention | LLM response should mention: you also mentioned that you've never attended any production meetings related to your invention | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    },
+    {
+      "question": "Have I ever attended any patent-related webinars or workshops?",
+      "llm_response": "There is contradictory information in the provided passages. You said you have attended a patent-related webinar, but you also mentioned that you have never attended any patent-related webinars or workshops. Which statement is correct?\n\nSpecifically, in one passage you stated, \"I've never attended any patent-related webinars or workshops,\" while in another passage you mentioned, \"I've registered for a patent law webinar on April 5, 2024,\" and later referred to \"the knowledge you gained from the April 5 webinar.\" Additionally, you asked about \"not attending any patent enforcement workshops or legal seminars.\"",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have attended a patent-related webinar, but you also mentioned that you have never attended any patent-related webinars or workshops. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you have attended a patent-related webinar | LLM response should mention: you also mentioned that you have never attended any patent-related webinars or workshops | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    }
+  ],
+  "event_ordering": [
+    {
+      "question": "Can you walk me through the order in which I brought up different aspects of my patent filing plans and related funding discussions across our conversations in order? Mention ONLY and ONLY six items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up different aspects of your patent filing plans and related funding discussions is:\n\n1. **Detailed timelines for patent application processes** (Passage 3)\n2. **Filing strategy meeting with patent attorney Ashlee** (Passage 5)\n3. **Invention logbook deadline organization** (Passage 7)\n4. **Budget plan for patent filing fees and attorney fees** (Passage 8)\n5. **Preparation for meeting with Ashlee** (Passage 9)\n6. **Prioritizing tasks for patent office actions** (Passage 10)",
+      "ideal_answer": "You mentioned these aspects in this order: 1) Filing a provisional patent and asking for guidance on next steps, 2) Discussing the deadline for filing a non-provisional patent and seeking advice on the process, 3) Deciding to file a PCT application covering multiple markets and wanting to understand the implications, 4) Agreeing that filing the PCT is a good strategy and raising concerns about covering extra costs, 5) Asking about the quickest funding options to secure additional funds, 6) Inquiring about the best crowdfunding platform for the invention.",
+      "rubric": "Provisional patent filing guidance | Non-provisional patent deadline and advice | PCT application decision and understanding | PCT benefits and funding concerns | Quick funding options | Crowdfunding platform choice",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you walk me through the order in which I brought up the different stages of my patent process throughout our conversations, in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up the stages of your patent process is:\n\n1. Provisional patent filing\n2. Prior art search planning\n3. Prior art search completion and findings\n4. Non-provisional patent drafting and review\n5. Review and revision phase",
+      "ideal_answer": "You mentioned the stages in this order: 1) Planning and concerns about completing the prior art search, 2) Discussing the completed prior art search and its findings, 3) Talking about filing the provisional patent and related worries, 4) Starting the drafting of the non-provisional patent application and reviewing the draft, 5) Focusing on the review and revision phase to ensure clarity and consistency.",
+      "rubric": "Prior art search planning | Prior art search completion and findings | Provisional patent filing | Non-provisional patent drafting and review | Review and revision phase",
+      "passages_found": 10
+    }
+  ],
+  "information_extraction": [
+    {
+      "question": "How old did I say my son is and where is he studying engineering?",
+      "llm_response": "Your son is 21 years old, and he is studying engineering at Montserrat Community College.",
+      "ideal_answer": "My son is 21 years old and he is studying engineering at Montserrat Community College.",
+      "rubric": "LLM response should state: Your son is 21 years old | LLM response should state: he is studying engineering at Montserrat Community College",
+      "passages_found": 10
+    },
+    {
+      "question": "How did I plan to support my son's progress in his studies by connecting with local and external resources, and what steps did you recommend I take to find professional guidance for his inventions?",
+      "llm_response": "Based on the conversation, you planned to support your son's progress by connecting with local and external resources. You planned to start by checking with the college for any resources or connections with patent attorneys. You also planned to reach out to the local bar association for referrals and use online directories to find reliable attorneys.\n\nI recommended steps including contacting local associations, using university resources, exploring online directories, and attending networking events. Specifically, I recommended checking with Montserrat Community College for resources or connections with patent attorneys, contacting the Montserrat Bar Association for referrals, using online directories like Martindale-Hubbell, Avvo, and FindLaw, and attending networking events related to intellectual property and engineering.",
+      "ideal_answer": "You planned to start by checking with the college for any resources or connections with patent attorneys, then reach out to the local bar association for referrals, and also use online directories to find reliable attorneys. I recommended steps including contacting local associations, using university resources, exploring online directories, attending networking events, interviewing potential attorneys, and making a decision based on fit and budget.",
+      "rubric": "LLM response should state: You planned to start by checking with the college for any resources or connections with patent attorneys | LLM response should state: reach out to the local bar association for referrals | LLM response should state: use online directories to find reliable attorneys | LLM response should state: I recommended steps including contacting local associations, using university resources, exploring online directories, attending networking events",
+      "passages_found": 10
+    }
+  ],
+  "instruction_following": [
+    {
+      "question": "What steps do I need to go through to get a patent approved?",
+      "llm_response": "Based on the provided passages, the steps to get a patent approved are detailed in the context of preparing and submitting a patent application, as well as responding to an examiner. Here is a breakdown of the steps mentioned:\n\n### Steps Before Filing the Application (from Passage 5)\n1. **Finalize the Detailed Description**: Ensure it is comprehensive and clearly explains the invention, including background information, the problem it solves, and how it works.\n2. **Prepare Drawings and Diagrams**: Create detailed, clearly labeled drawings that correspond to the descriptions.\n3. **Compile Supporting Documentation**: Gather test results, prototype data, relevant literature, and any endorsements from experts.\n4. **Review and Revise the Claims**: Ensure claims are clear, precise, and cover all aspects of the invention, consistent with descriptions and drawings.\n5. **Prepare the Cover Sheet**: Complete it with the title, inventor names, and correspondence address.\n6. **Check for Compliance**: Verify all parts meet USPTO requirements for provisional applications (title, description, drawings, claims).\n7. **Prepare for Payment**: Ensure funds are available for filing fees and check the current amount on the USPTO website.\n8. **Schedule a Final Review**: Have a final review session with Ashlee to ensure everything is in order.\n\n### Final Steps Before Submission (from Passages 2 and 3)\n1. **Conduct a Thorough Final Review**: Check claims, descriptions, and drawings for clarity, comprehensiveness, and accuracy.\n2. **Get Expert Feedback**: Have Ashlee and technical experts review the application one last time to catch minor issues.\n3. **Address Any Remaining Concerns**: Make necessary edits to ensure the application is polished and error-free.\n4. **Prepare for Submission**: Ensure all forms and documents comply with USPTO requirements and use a checklist to verify all components are included and properly formatted.\n\n### Steps After Filing (from Passage 8, if the examiner has concerns)\n1. **Review the Examiner's Response**: Understand the specific concerns raised.\n2. **Consult Your Attorney**: Discuss the response with Ashlee for expert opinion.\n3. **Provide Additional Evidence**: Gather and present technical drawings, test results, prior art searches, and expert opinions to support novelty and non-obviousness.\n4. **Engage in Dialogue**: Be prepared for further correspondence or a telephonic interview with the examiner.\n5. **Consider Telephonic Interview**: Request one to clarify misunderstandings in real-time.\n6. **Amend Claims if Necessary**: Make clear and precise amendments to address valid concerns without broadening the claim.\n7. **Prepare for Appeal**: If the examiner remains unconvinced, consider appealing to the Patent Trial and Appeal Board (PTAB) with attorney guidance.\n\n### Additional Steps for Finding a Professional Editor (from Passage 7, if needed)\n1. **Research and Selection**: Find an editor with experience in technical writing and patent documentation, checking references and reviews.\n2. **Define Scope of Work**: Clearly outline areas needing improvement (claims, descriptions, drawings) and objectives.\n3. **Set Realistic Timeline**: Establish deadlines and schedule regular check-ins.\n4. **Initial Consultation**: Discuss the project in detail and provide a sample of current documentation.\n5. **Contract and Terms**: Draft a formal agreement with payment terms, deadlines, and a confidentiality clause.\n\nThese steps cover the process from preparation through submission and handling examiner responses to get a patent approved.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: detailed timeliness",
+      "passages_found": 10
+    },
+    {
+      "question": "When is the non-provisional patent filing scheduled?",
+      "llm_response": "The non-provisional patent filing is scheduled for November 10, 2024.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: exact date given",
+      "passages_found": 10
+    }
+  ],
+  "knowledge_update": [
+    {
+      "question": "What budget have I set for the initial patent filing fees and attorney fees?",
+      "llm_response": "Based on the provided passages, you have set a budget of **$4,000 for initial patent filing fees** and **$5,500 for attorney fees** by July 2024.",
+      "ideal_answer": "You have set a budget of $4,000 for initial patent filing fees and $5,500 for attorney fees.",
+      "rubric": "LLM response should state: $4,000 for initial patent filing fees | LLM response should state: $5,500 for attorney fees",
+      "passages_found": 10
+    },
+    {
+      "question": "What is the budget allocated for prototype refinement and patent attorney fees through August?",
+      "llm_response": "Based on the provided passages, the budget allocated for prototype refinement and patent attorney fees through August is $8,000.",
+      "ideal_answer": "$8,000",
+      "rubric": "LLM response should state: $8,000",
+      "passages_found": 10
+    }
+  ],
+  "multi_session_reasoning": [
+    {
+      "question": "What are the two different patent filing deadlines I need to meet?",
+      "llm_response": "Based on the provided passages, the two different patent filing deadlines are:\n\n- **June 1, 2024** for the provisional patent\n- **November 10, 2024** for the non-provisional patent",
+      "ideal_answer": "June 1, 2024 for the provisional patent and November 10, 2024 for the non-provisional patent.",
+      "rubric": "LLM response should state: June 1, 2024 for the provisional patent | LLM response should state: November 10, 2024 for the non-provisional patent",
+      "passages_found": 10
+    },
+    {
+      "question": "Given my timeline and actions from starting the prior art search to filing the provisional patent, how well did I align my search thoroughness, patent features, and budget to maximize my chances for a successful non-provisional filing?",
+      "llm_response": "You conducted a comprehensive prior art search covering multiple databases and classifications before your provisional filing. You identified unique AI tagging features absent in similar patents. You filed the provisional on time with detailed documentation plans. You maintained a budget aligned with filing and attorney fees.",
+      "ideal_answer": "You conducted a comprehensive prior art search covering multiple databases and classifications before your provisional filing, identified unique AI tagging features absent in similar patents, filed the provisional on time with detailed documentation plans, and maintained a budget aligned with filing and attorney fees, positioning you well for a strong non-provisional application.",
+      "rubric": "LLM response should state: You conducted a comprehensive prior art search covering multiple databases and classifications before your provisional filing | LLM response should state: identified unique AI tagging features absent in similar patents | LLM response should state: filed the provisional on time with detailed documentation plans | LLM response should state: maintained a budget aligned with filing and attorney fees",
+      "passages_found": 10
+    }
+  ],
+  "preference_following": [
+    {
+      "question": "Can you help me find a patent attorney to assist with my new invention?",
+      "llm_response": "Based on the provided passages, I can help you find a patent attorney based in Montserrat. The conversation focuses on finding **local attorneys** rather than remote services, as you prefer working with a local patent attorney in Montserrat.\n\nHere are the recommended steps to find a local patent attorney in Montserrat:\n\n1. **Contact Local Business Associations**: Reach out to the Montserrat Chamber of Commerce for recommendations and resources.\n2. **Consult Economic Development Offices**: Check with the Montserrat Economic Development Office for support and potential referrals.\n3. **Local Bar Association**: Contact the Montserrat Bar Association for a list of attorneys specializing in intellectual property law.\n4. **Online Directories**: Use online directories such as Martindale-Hubbell, Avvo, and FindLaw to find and evaluate patent attorneys.\n5. **Initial Consultations**: Schedule initial consultations with a few potential attorneys to discuss their experience, specialization, communication style, fees, and availability.\n6. **Make a Decision**: Choose an attorney who best fits your needs and budget based on the information gathered during the interviews.\n\nAdditionally, you can check with Montserrat Community College for resources or connections with patent attorneys, and attend networking events related to intellectual property and engineering. When interviewing potential attorneys, be sure to ask about their experience, specialization, communication style, fees, and availability.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mentions patent attorneys based in Montserrat | LLM response should contain: focuses on local attorneys rather than remote services",
+      "passages_found": 10
+    },
+    {
+      "question": "I'm preparing materials to support my patent application. What types of content should I include to make it clear and comprehensive?",
+      "llm_response": "To make your patent application clear and comprehensive, you should include the following types of content:\n\n- **Detailed written description**: A thorough explanation of the invention, including its purpose, structure, operation, background information, the problem it solves, and how it works in detail. Include examples and embodiments to illustrate different scenarios.\n- **Robust claims**: Craft both broad claims (covering core aspects) and narrow claims (specific and defensible), plus dependent claims for variations and improvements. Ensure each claim is clear, unambiguous, and covers all aspects of the invention.\n- **Accurate and detailed drawings**: Create detailed drawings or diagrams that illustrate the components and structure of the invention. Clearly label all components and ensure they correspond to the written description and claims. The drawings should be detailed enough to support the claims.\n- **Supporting documentation**: Gather test results, prototype testing data, relevant literature, and any letters of recommendation or endorsements from industry experts.\n- **Technical specifications**: Include detailed technical details such as dimensions, materials, manufacturing processes, and functional descriptions of how the invention operates and interacts with other components.\n- **Prior art search and citations**: Update your prior art search and properly cite any relevant prior art to demonstrate novelty and non-obviousness.\n- **Cover sheet and compliance forms**: Complete the cover sheet with the title, inventor names, and correspondence address, and ensure all forms comply with USPTO requirements.\n- **Video demos or similar multimedia content**: While not explicitly mentioned in the passages, including video demonstrations or similar multimedia content can help illustrate the invention's operation and functionality, making the application clearer and more comprehensive. This aligns with the emphasis on providing examples and explanations to clarify complex concepts.\n\nAdditionally, ensure consistency in terminology, cross-reference all sections accurately, and conduct a thorough final review with expert feedback before submission.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: recommends detailed drawings | LLM response should contain: mentions video demos or similar multimedia content",
+      "passages_found": 10
+    }
+  ],
+  "summarization": [
+    {
+      "question": "Summarize my key actions and decisions between March and early May regarding my patent application progress.",
+      "llm_response": "Based on the provided passages, here is a summary of your key actions and decisions between March and early May regarding your patent application progress:\n\n- **Advanced your patent application** by planning a prior art search, registering for a patent law webinar, and attending despite a scheduling conflict.\n- **Budgeted $4,000 for filing and $5,500 for attorney fees**, choosing to work with a Montserrat-based attorney for better communication.\n- **By April, you completed the prior art search**, met with attorney Ashlee to confirm a provisional-first filing strategy, and finalized technical specifications.\n- **You applied for a $10,000 innovation grant**, compromised on including both drawings and video in the application, and scheduled a May 14 filing meeting.",
+      "ideal_answer": "Between March and early May 2024, you advanced your patent application by planning a prior art search, registering for a patent law webinar, and attending despite a scheduling conflict. You budgeted $4,000 for filing and $5,500 for attorney fees, choosing to work with a Montserrat-based attorney for better communication. By April, you completed the prior art search, met with attorney Ashlee to confirm a provisional-first filing strategy, and finalized technical specifications after five prototype tests at 92% accuracy. You applied for a $10,000 innovation grant, compromised on including both drawings and video in the application, and scheduled a May 14 filing meeting ahead of the May 15 deadline.",
+      "rubric": "LLM response should contain: you advanced your patent application by planning a prior art search, registering for a patent law webinar, and attending despite a scheduling conflict | LLM response should contain: You budgeted $4,000 for filing and $5,500 for attorney fees, choosing to work with a Montserrat-based attorney for better communication | LLM response should contain: By April, you completed the prior art search, met with attorney Ashlee to confirm a provisional-first filing strategy, and finalized technical specifications | LLM response should contain: You applied for a $10,000 innovation grant, compromised on including both drawings and video in the application, and scheduled a May 14 filing meeting",
+      "passages_found": 10
+    },
+    {
+      "question": "Summarize my major milestones and strategic choices from July through September 2024 as I prepared for the non-provisional filing.",
+      "llm_response": "Based on the provided passages, here is a summary of your major milestones and strategic choices from July through September 2024 as you prepared for the non-provisional filing:\n\n- **July 2024**: You filed your provisional patent on May 15 and by July completed 10 prototype tests with 96% accuracy. During this month, you focused on AI tagging accuracy and performance optimization (July 15-31) as part of your prototype enhancements timeline.\n\n- **August 2024**: You addressed an office action by amending claims with Ashlee and mentor Jake\u2019s guidance, while Francis helped prepare a demo for investor Stephen. You also completed bug fixes and testing (August 1-15) and implemented data encryption and secure authentication (August 16-31) during this period.\n\n- **September 2024**: By September, you began drafting the non-provisional with Ashlee, approving a $12,000 budget for filing and a PCT application covering multiple regions. You negotiated investment terms with Stephen, rejecting a competing offer, and verified compliance of your 45-page draft with USPTO standards. Prototype testing was scheduled to reach 98% accuracy by the end of September. Additionally, you worked on cross-platform compatibility and integration (September 1-15) and documentation and customer support (September 16-30) as part of your enhancement timeline.",
+      "ideal_answer": "From July through September 2024, you filed your provisional patent on May 15 and by July completed 10 prototype tests with 96% accuracy. You addressed an office action by amending claims with Ashlee and mentor Jake\u2019s guidance, while Francis helped prepare a demo for investor Stephen. By September, you began drafting the non-provisional with Ashlee, approving a $12,000 budget for filing and a PCT application covering multiple regions. You negotiated investment terms with Stephen, rejecting a competing offer, and verified compliance of your 45-page draft with USPTO standards. Prototype testing was scheduled to reach 98% accuracy by the end of September.",
+      "rubric": "LLM response should contain: you filed your provisional patent on May 15 and by July completed 10 prototype tests with 96% accuracy | LLM response should contain: You addressed an office action by amending claims with Ashlee and mentor Jake\u2019s guidance, while Francis helped prepare a demo for investor Stephen | LLM response should contain: By September, you began drafting the non-provisional with Ashlee, approving a $12,000 budget for filing and a PCT application covering multiple regions | LLM response should contain: You negotiated investment terms with Stephen, rejecting a competing offer, and verified compliance of your 45-page draft with USPTO standards | LLM response should contain: Prototype testing was scheduled to reach 98% accuracy by the end of September",
+      "passages_found": 10
+    }
+  ],
+  "temporal_reasoning": [
+    {
+      "question": "How many days were there between when I planned to complete my prior art search and when I aimed to file my provisional patent?",
+      "llm_response": "35 days, from April 10 till May 15.",
+      "ideal_answer": "There were 35 days between planning to complete the prior art search by April 10, 2024, and aiming to file the provisional patent by May 15, 2024.",
+      "rubric": "LLM response should state: 35 days | LLM response should state: from April 10 till May 15",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days do I have between my meeting with Ashlee and the patent response deadline?",
+      "llm_response": "Based on the provided passages, you have 67 days between your meeting with Ashlee and the patent response deadline. The meeting with Ashlee is on May 14, 2024, and the patent response is due July 20, 2024, so the period is from May 14 till July 20.",
+      "ideal_answer": "There are 67 days between the meeting with Ashlee on May 14, 2024, and the patent response deadline on July 20, 2024.",
+      "rubric": "LLM response should state: 67 days | LLM response should state: from May 14 till July 20",
+      "passages_found": 10
+    }
+  ]
+}

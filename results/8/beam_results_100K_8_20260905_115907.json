@@ -1,0 +1,162 @@
+{
+  "abstention": [
+    {
+      "question": "What specific topics or questions were covered during the June 14 call with HR to finalize onboarding and benefits?",
+      "llm_response": "Based on the provided conversation, there is no information about the specific topics or questions covered during the June 14 call with HR. The passages only mention that a call was scheduled for June 14 to discuss the benefits package and provide suggested key points to bring up, but they do not describe what was actually discussed during the call.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the specific topics or questions covered during the June 14 call with HR.",
+      "rubric": "Based on the provided chat, there is no information related to the specific topics or questions covered during the June 14 call with HR",
+      "passages_found": 10
+    },
+    {
+      "question": "What are the qualifications of the senior content strategist who joined the May 12 interview panel?",
+      "llm_response": "Based on the provided passages, there is no information related to the qualifications of the senior content strategist who joined the May 12 interview panel.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the qualifications and role of the senior content strategist who joined the May 12 interview panel.",
+      "rubric": "Based on the provided chat, there is no information related to the qualifications of the senior content strategistR",
+      "passages_found": 10
+    }
+  ],
+  "contradiction_resolution": [
+    {
+      "question": "Have I ever collaborated remotely with Michael on any projects?",
+      "llm_response": "There is contradictory information in the conversation. You said you collaborate remotely with Michael on projects, but you also mentioned that you've never collaborated remotely with him. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you collaborate remotely with Michael on projects, but you also mentioned that you've never collaborated remotely with him. Which statement is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you collaborate remotely with Michael on projects | LLM response should mention: you also mentioned that you've never collaborated remotely with him | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    },
+    {
+      "question": "Have I submitted my cover letter to Greg for review?",
+      "llm_response": "There is contradictory information in the conversation. You said you have submitted your cover letter to Greg for review, but you also mentioned that you have never submitted it. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have submitted your cover letter to Greg for review, but you also mentioned that you have never submitted it. Which statement is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you have submitted your cover letter to Greg for review | LLM response should mention: you also mentioned that you have never submitted it | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    }
+  ],
+  "event_ordering": [
+    {
+      "question": "Can you walk me through the order in which I brought up different aspects of my personal and professional progress throughout our conversations, in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, here are the five items in the order they were brought up:\n\n1. **Portfolio update concerns** (Passage 1: \"I have a feedback session with my supervisor planned for July 30 to discuss my first quarter goals and adjustments...\")\n2. **Cover letter submission plans** (Passage 2: \"Here's a structured plan to help you complete and refine your cover letter by the specified deadlines...\")\n3. **Gratitude and mindfulness advice** (Passage 4: \"...considering Greg's advice on stress management during busy project phases...\")\n4. **Celebration and decision reassurance** (Passage 6: \"Received positive feedback and expressed interest in moving forward.\")\n5. **Retreat reflection and appreciation** (Passage 8: \"Thanks for the detailed outline! I think this structure will make my presentation clear and engaging...\")",
+      "ideal_answer": "You mentioned aspects of your personal and professional progress in this order: 1) Concerns about updating your portfolio, 2) Plans to submit your cover letter with specific tone considerations, 3) Gratitude for a supportive gesture and interest in mindfulness advice, 4) Celebrating a decision with support and seeking reassurance, 5) Reflecting on a retreat experience and thinking about showing appreciation.",
+      "rubric": "Portfolio update concerns | Cover letter submission plans | Gratitude and mindfulness advice | Celebration and decision reassurance | Retreat reflection and appreciation",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you walk me through the order in which I brought up different aspects of my professional connections and preparation throughout our conversations, in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up different aspects of your professional connections and preparation is:\n\n1. **Networking dinner follow-up** (Passage 1)\n2. **STAR method interview preparation** (Passage 2)\n3. **Industry mixer attendance** (Passage 3)\n4. **Zoom call with creative director** (Passage 4)\n5. **Task prioritization and feedback** (Passage 5)",
+      "ideal_answer": "You mentioned these aspects in this order: 1) Reaching out to a long-time mentor for networking advice, 2) Concerns about feedback on my cover letter from a recent meeting, 3) Worries about preparing storytelling examples for an interview, 4) Reviewing the company's employee handbook after receiving it via email, 5) Excitement and preparation for an upcoming workshop presentation.",
+      "rubric": "Mentoring and networking advice | Cover letter feedback concerns | Interview storytelling preparation | Employee handbook review | Workshop presentation planning",
+      "passages_found": 10
+    }
+  ],
+  "information_extraction": [
+    {
+      "question": "Where did I say I met Laura?",
+      "llm_response": "Based on the provided passages, you said you met Laura on set at Blue Horizon Studios in 2019.",
+      "ideal_answer": "You met Laura on set at Blue Horizon Studios in 2019.",
+      "rubric": "LLM response should state: Blue Horizon Studios in 2019",
+      "passages_found": 10
+    },
+    {
+      "question": "How did I come to consider attending that networking event, and what prior connection influenced my decision?",
+      "llm_response": "Based on the provided passages, you considered attending the networking event because Laura recommended it. The prior connection that influenced your decision is that Laura met you on set at Blue Horizon Studios in 2019.",
+      "ideal_answer": "You considered attending the networking event because Laura, who you met on set at Blue Horizon Studios in 2019, recommended it to you.",
+      "rubric": "LLM response should state: considered attending the networking event because Laura",
+      "passages_found": 10
+    }
+  ],
+  "instruction_following": [
+    {
+      "question": "How can I organize multiple points in my CV?",
+      "llm_response": "- **Organize Links Logically**: Group your portfolio links by project type or category (e.g., documentary projects, sustainability campaigns, community engagement initiatives) so the reader understands what each link represents.\n- **Keep It Concise**: Select only the most relevant and impactful links to avoid overwhelming the reader\u2014quality over quantity.\n- **Clearly Label Each Link**: Add a brief description next to each link so the reader knows what to expect before clicking.\n- **Use a Two-Column Layout**: If your format supports it, place your main narrative text in one column and supplementary information (like portfolio links or additional achievements) in the other to improve visual appeal and readability.\n- **Balance Content**: Ensure both columns are equally filled to maintain visual balance and avoid a cluttered look.\n- **Use Clear Headings**: Separate sections with headings (e.g., \"Portfolio Links,\" \"Additional Achievements\") to guide the reader.\n- **Maintain Consistent Formatting**: Keep font sizes, styles, and spacing uniform for a professional appearance.\n- **Format Links Clearly**: Make links easily clickable and readable, especially if the document is viewed digitally.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: list items each starting with a bullet point | LLM response should contain: clear separation of points using bullets",
+      "passages_found": 10
+    },
+    {
+      "question": "What is the amount offered for the position we discussed?",
+      "llm_response": "Based on the provided passages, the salary offered for the position was $85,000.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: explicit salary number",
+      "passages_found": 10
+    }
+  ],
+  "knowledge_update": [
+    {
+      "question": "When is my Zoom call with the creative director scheduled?",
+      "llm_response": "Based on the provided passages, your Zoom call with the creative director is scheduled for **April 22 at 11 AM**.",
+      "ideal_answer": "The Zoom call with the creative director is scheduled for April 22 at 11 AM.",
+      "rubric": "LLM response should state: April 22 at 11 AM",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days a week am I scheduled to work remotely?",
+      "llm_response": "Three days a week.",
+      "ideal_answer": "Three days a week",
+      "rubric": "LLM response should state: Three days a week",
+      "passages_found": 10
+    }
+  ],
+  "multi_session_reasoning": [
+    {
+      "question": "How many times did I mention submitting or revising my cover letter before my interview preparation?",
+      "llm_response": "Three times",
+      "ideal_answer": "Three times",
+      "rubric": "LLM response should state: Three times",
+      "passages_found": 10
+    },
+    {
+      "question": "Considering my cover letter deadlines, the Zoom call with the creative director, and my interview clarity improvements, how should I prioritize my preparation efforts to maximize my chances for the senior producer role?",
+      "llm_response": "To maximize your chances for the senior producer role, you should prioritize your preparation efforts in this order:\n\n1. **Complete your cover letter draft and revisions to meet your application deadlines.** This is your first priority because it is time-sensitive and required for your application to be considered.\n\n2. **Prepare key discussion points and questions for the Zoom call.** This is your second priority, as the call is a direct opportunity to make a strong impression on the creative director.\n\n3. **Focus on refining your interview skills by applying the STAR method and practicing under pressure.** This is your third priority, as it will help you communicate clearly and confidently during the interview.",
+      "ideal_answer": "You should first complete your cover letter draft and revisions to meet your application deadlines, then focus on refining your interview skills by applying the STAR method and practicing under pressure, while simultaneously preparing key discussion points and questions for the Zoom call to demonstrate alignment with the company's values and role expectations.",
+      "rubric": "LLM response should state: complete your cover letter draft and revisions to meet your application deadlines | LLM response should state: focus on refining your interview skills by applying the STAR method and practicing under pressure | LLM response should state: prepare key discussion points and questions for the Zoom call",
+      "passages_found": 10
+    }
+  ],
+  "preference_following": [
+    {
+      "question": "How should I structure my cover letter to best showcase my achievements from previous projects?",
+      "llm_response": "To structure your cover letter to best showcase your achievements, you should use a clear, results-focused approach that emphasizes measurable outcomes. Here\u2019s how to do it:\n\n1. **Start with a strong opening**: Lead with your most significant quantified achievement to grab attention immediately. For example, \"In my first month, I reduced production delays by 12%, exceeding my target of 10%.\"\n\n2. **Use the STAR method**: Structure your narrative using Situation, Task, Action, and Result. This makes your achievements clear and easy to follow. For example:\n   - **Situation**: Describe the challenge you faced.\n   - **Task**: State your specific goal.\n   - **Action**: Explain the steps you took.\n   - **Result**: Highlight the measurable outcome, such as a percentage increase or time saved.\n\n3. **Quantify everything**: Use specific numbers, percentages, and timeframes. For instance, \"increased viewership by 35%\" or \"reduced turnaround time by 20%.\" This makes your impact tangible.\n\n4. **Use bullet points for key achievements**: Break down your accomplishments into concise, scannable points. For example:\n   - **Reduced Production Delays**: Implemented process improvements leading to a 12% reduction.\n   - **Increased Client Satisfaction**: Maintained a 95% satisfaction rate through proactive communication.\n\n5. **Focus on results, not just actions**: Emphasize the outcomes of your efforts, such as improved efficiency, higher client satisfaction, or cost savings.\n\n6. **Align with the employer\u2019s goals**: Connect your achievements to the company\u2019s values or objectives, showing how your results benefit them.\n\n7. **Keep it concise and direct**: Avoid flowery language. Use straightforward, action-oriented sentences.\n\n8. **Close with a call-to-action**: End by inviting the reader to contact you for an interview, and specify your availability.\n\nBy following this structure, you\u2019ll clearly demonstrate your measurable impact and make your cover letter stand out.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: uses straightforward language | LLM response should contain: emphasizes measurable outcomes",
+      "passages_found": 10
+    },
+    {
+      "question": "How should I include links to my portfolio in my cover letter to make them easy to access?",
+      "llm_response": "To make your portfolio links easy to access in your cover letter, the recommendation is to **place clickable links directly in the letter body**\u2014for example, by using hyperlinked text like \"View my portfolio\" or listing labeled links such as \"Documentary Projects: [Link].\" This approach **avoids suggesting attachments or separate documents**, keeping everything integrated and professional. You can also use a two-column layout with links in a supplementary column, but the key is to ensure the links are clearly formatted and clickable within the text itself.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: recommends placing clickable links directly in the letter body | LLM response should contain: avoids suggesting attachments or separate documents",
+      "passages_found": 10
+    }
+  ],
+  "summarization": [
+    {
+      "question": "Can you give me a comprehensive summary of how I\u2019ve been managing my professional development and project responsibilities over the past few months?",
+      "llm_response": "Based on the provided passages, here is a comprehensive summary of how you have been managing your professional development and project responsibilities over the past few months:\n\n- **Portfolio Enhancement**: You focused on updating your portfolio to make it stand out by curating your best work, organizing it logically, and incorporating client testimonials and interactive elements to engage viewers.\n- **Interview Preparation**: You prepared for a mock interview with Greg by practicing common questions, anticipating follow-ups, and using structured response techniques to build confidence.\n- **Strategic Planning**: You developed a detailed 90-day plan aimed at streamlining production processes, improving team collaboration, and increasing productivity.\n- **Deadline and Feedback Management**: You have been balancing multiple upcoming deadlines, such as a project due on July 22 and a workshop on July 25, while applying advice on stress management and integrating feedback on your communication skills.",
+      "ideal_answer": "Over the past few months, you have been actively working on enhancing your professional profile and managing key project responsibilities. Initially, you focused on updating your portfolio to make it stand out by curating your best work, organizing it logically, and incorporating client testimonials and interactive elements to engage viewers. As deadlines approached, you prepared for a mock interview with Greg by practicing common questions, anticipating follow-ups, and using structured response techniques to build confidence. Concurrently, you developed a detailed 90-day plan aimed at streamlining production processes, improving team collaboration, and increasing productivity, with clear objectives, success metrics, and actionable steps refined through feedback. More recently, you have been balancing multiple upcoming deadlines, such as a project due on July 22 and a workshop on July 25, while applying advice on stress management and integrating feedback on your communication skills to improve your overall effectiveness. Throughout this period, your approach has shown a clear progression from preparation and planning to execution and refinement, demonstrating a thoughtful and organized management of your career growth and project commitments.",
+      "rubric": "LLM response should contain: you focused on updating your portfolio to make it stand out by curating your best work, organizing it logically, and incorporating client testimonials and interactive elements to engage viewers | LLM response should contain: you prepared for a mock interview with Greg by practicing common questions, anticipating follow-ups, and using structured response techniques to build confidence | LLM response should contain: you developed a detailed 90-day plan aimed at streamlining production processes, improving team collaboration, and increasing productivity | LLM response should contain: you have been balancing multiple upcoming deadlines, such as a project due on July 22 and a workshop on July 25, while applying advice on stress management and integrating feedback on your communication skills",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you give me a complete summary of how my preparations and plans have developed around the upcoming opportunities and challenges I've been discussing?",
+      "llm_response": "Based on the conversation, here is a summary of how your preparations and plans have developed around the upcoming opportunities and challenges:\n\n- **Networking and Mentorship**: You considered reaching out to Leslie, a long-time mentor, for networking advice related to the Caribbean Creative Hub.\n- **Communication Refinement**: You refined your communication approach, adopting a single-column format with bold headers to improve clarity and mobile readability in your cover letter.\n- **Interview Preparation**: As your interview with Island Media Group approached, you brainstormed storytelling examples that emphasize cultural diversity, drawing on your extensive experience with community projects.\n- **Job Offer Considerations**: You addressed concerns about reviewing the employee handbook before accepting the job offer, taking steps to thoroughly understand company policies.\n- **Workshop Preparation**: You prepared for a workshop on storytelling and cultural competence, focusing on engaging presentation techniques, audience understanding, and interactive elements.",
+      "ideal_answer": "Over the course of our conversations, your preparations and plans have evolved significantly. Initially, you considered reaching out to Leslie, a long-time mentor, for networking advice related to the Caribbean Creative Hub, leveraging your 20-year relationship and her experience. You then refined your communication approach, adopting a single-column format with bold headers to improve clarity and mobile readability in your cover letter, aligning it with professional standards. As your interview with Island Media Group approached, you brainstormed storytelling examples that emphasize cultural diversity, drawing on your extensive experience with community projects and multimedia storytelling to align with the company's values. You also addressed concerns about reviewing the employee handbook before accepting the job offer, taking steps to thoroughly understand company policies and seek clarifications to make an informed decision. Finally, you prepared for a workshop on storytelling and cultural competence, focusing on engaging presentation techniques, audience understanding, and interactive elements to ensure your message resonates effectively. Throughout these stages, your approach shows a clear progression from seeking advice and refining materials to strategic preparation and thoughtful decision-making.",
+      "rubric": "LLM response should contain: you considered reaching out to Leslie, a long-time mentor, for networking advice related to the Caribbean Creative Hub | LLM response should contain: refined your communication approach, adopting a single-column format with bold headers to improve clarity and mobile readability in your cover letter | LLM response should contain: your interview with Island Media Group approached, you brainstormed storytelling examples that emphasize cultural diversity, drawing on your extensive experience with community projects | LLM response should contain: addressed concerns about reviewing the employee handbook before accepting the job offer, taking steps to thoroughly understand company policies | LLM response should contain: you prepared for a workshop on storytelling and cultural competence, focusing on engaging presentation techniques, audience understanding, and interactive elements",
+      "passages_found": 10
+    }
+  ],
+  "temporal_reasoning": [
+    {
+      "question": "How many days are there between when I planned to finish revising my cover letter and my Zoom call with the creative director?",
+      "llm_response": "Based on the provided passages, the number of days between when you planned to finish revising your cover letter and your Zoom call with the creative director is 16 days. The revision was planned for April 5, and the Zoom call is on April 21, so the period is from April 5 till April 21.",
+      "ideal_answer": "There are 16 days between April 5, when I planned to finish revising my cover letter, and April 21, when I have the Zoom call with the creative director.",
+      "rubric": "LLM response should state: 16 days | LLM response should state: from April 5 till April 21",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days after I submitted my cover letter did I have my follow-up with Greg to improve it?",
+      "llm_response": "15 days, from April 23 till May 8.",
+      "ideal_answer": "The follow-up with Greg on May 8 happened 15 days after the cover letter was submitted on April 23.",
+      "rubric": "LLM response should state: 15 days | LLM response should state: from April 23 till May 8",
+      "passages_found": 10
+    }
+  ]
+}

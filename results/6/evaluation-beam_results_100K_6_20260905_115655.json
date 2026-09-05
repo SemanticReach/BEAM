@@ -1,0 +1,380 @@
+{
+    "abstention": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is a negative constraint: 'Based on the provided chat, there is no information related to the specific advice Bryan gave about updating the LinkedIn profile.' The response states exactly that there is no such information in the conversation. This directly complies with the criterion by confirming the absence of the prohibited element. The response is responsive to the implicit question of whether such advice exists, and it does not introduce any unrelated content. Therefore, full compliance is achieved."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is a negative constraint: 'Based on the provided chat, there is no information related to the specific content of the LinkedIn Learning ATS optimization course.' The response explicitly states that there is no information about the specific modules of the course, and it does not introduce or claim any such content. It is responsive to the question by directly addressing the absence of that information. Therefore, the prohibited element (information about course content) is absent, and the response complies fully."
+                }
+            ]
+        }
+    ],
+    "contradiction_resolution": [
+        {
+            "llm_judge_score": 0.75,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state that there is contradictory information. The response explicitly begins with 'There is contradictory information in the provided passages.' and then elaborates on the contradiction between the user's statements about enrolling in an ATS optimization course versus never enrolling in such courses. This directly satisfies the positive requirement, and the response is responsive to the question by identifying the contradiction and asking for clarification."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to mention that the user said they enrolled in a LinkedIn Learning course on ATS optimization. The response explicitly states 'You said you enrolled in a LinkedIn Learning course on ATS optimization' and elaborates on it by referencing passages. This directly satisfies the positive requirement. The response is also responsive to the question, as it addresses the contradiction in the user's statements. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires that the LLM response mention that the user also stated they never enrolled in any ATS optimization courses. The response explicitly includes this: 'you also mentioned never enrolling in any ATS optimization courses, as stated in passages 1 and 2, where you explicitly say you've never attended workshops or enrolled in such courses.' This directly satisfies the positive requirement. The response is also responsive to the question, as it addresses the contradiction between the two statements and asks for clarification. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion requires the LLM response to mention which statement is correct. The response does not do so; instead, it only identifies the contradiction and asks the user to clarify. It fails to provide an answer or indicate which statement is correct, thus not complying with the requirement."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 0.75,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state that there is contradictory information. The response explicitly states 'There is contradictory information.' and then identifies the contradiction between the user's statements, asking for clarification. This fully complies with the positive requirement."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is a positive requirement: the LLM response should mention 'You said you attended a workshop on international resume standards.' The response explicitly includes this exact phrase, fulfilling the requirement. The response is also responsive to the question, as it addresses the contradiction between the user's statements. Therefore, it fully complies."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires that the LLM response mention that the user also mentioned never attending any workshops or training sessions. The response explicitly states, 'you also mentioned never attending any workshops or training sessions,' which directly satisfies this requirement. The response is responsive to the question, as it addresses the contradiction between the two statements. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion requires the LLM response to mention which statement is correct. The response does not do so; instead, it merely restates the contradiction and asks the user which statement is correct, failing to provide the required determination."
+                }
+            ]
+        }
+    ],
+    "event_ordering": [
+        {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0,
+            "tau_norm": 0.15315601219035208,
+            "final_score": 0.0,
+            "llm_judge_score": 0.0,
+            "llm_judge_responses": [
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'ATS concerns and partner's advice'. The response provided is a list of the order in which topics were brought up, but it does not address ATS concerns or provide any advice from a partner. It is not responsive to the question, which likely asked for advice on improving a professional profile/resume with attention to ATS and partner input. Therefore, the response fails to comply with the rubric."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'LinkedIn profile collaboration', which requires the response to address collaboration on a LinkedIn profile. The response merely lists the order of topics from provided passages about resume and professional profile improvements, and does not mention LinkedIn profile collaboration at all. Therefore, it is non-responsive to the rubric criterion."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'Transferable skills suggestion', which requires the response to suggest transferable skills. The response merely lists the order in which aspects of improving a professional profile and resume were brought up, without suggesting any transferable skills. It does not address the question of suggesting transferable skills, so it fails to comply."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'Raise addition and negotiation tips'. The response merely lists the order in which topics were brought up in the provided passages, but does not provide any actual tips for raising addition or negotiation. It is not responsive to the question, which presumably asked for such tips. Therefore, it fails to comply with the rubric."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'International resume adaptation and portfolio metrics'. The response merely lists the order in which various resume improvement topics were mentioned in the passages, but it does not address international resume adaptation (e.g., tailoring for different countries' norms, language, visa status, etc.) nor portfolio metrics (e.g., quantifying project impact, GitHub stars, etc.). Therefore, it fails to comply with the positive requirement."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'Sharing job descriptions and keyword refinement'. The response does not mention sharing job descriptions or refining keywords at all. Instead, it lists the order of topics from the passages, which are about resume and profile improvements. Therefore, the response fails to address the required element."
+                }
+            ]
+        },
+        {
+            "precision": 0.2857142857142857,
+            "recall": 0.4,
+            "f1": 0.3333333333333333,
+            "tau_norm": 0.31742581416494464,
+            "final_score": 0.10580860472164821,
+            "llm_judge_score": 0.6,
+            "llm_judge_responses": [
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'Subscription service concern', which appears to be a topic or item that the response should address. However, the response merely lists the order of topics discussed, including 'Subscription service concern' as the last item, but does not actually address or discuss any subscription service concern. It is not responsive to the question, which asked for an evaluation of the response's compliance with the rubric criterion, and the response fails to provide any substantive content about a subscription service concern. Therefore, it does not comply with the rubric."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is 'Resume keyword tool usage'. The response explicitly lists 'Resume keyword tool usage' as the first item in the order of aspects brought up, directly addressing the criterion. The response is responsive to the question about the order of topics, and the required element is present and accurately executed."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is 'Profile headline update', which is a positive requirement that the response should address updating the profile headline. The response explicitly lists 'Profile headline update' as the second item in the order of topics discussed, thereby demonstrating compliance. The response is responsive to the question about the order of topics, and the required element is present and accurately identified."
+                },
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion is 'Interview preparation'. The response does not address this criterion at all; it merely lists the order of topics discussed in the conversation, with 'Interview preparation' as one item. It provides no evidence or content related to interview preparation itself, such as questions asked, strategies discussed, or preparation steps. Therefore, it fails to comply with the positive requirement."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is 'Rental research for relocation'. The response explicitly lists 'Rental research for relocation' as item 4 in the order of aspects brought up, directly addressing the criterion. The response is responsive to the question about the order of career development and relocation plans, and it accurately includes the required element. No negative constraints apply."
+                }
+            ]
+        }
+    ],
+    "information_extraction": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state '$12.99 per month'. The response states 'your subscription costs $12.99 per month', which exactly matches the required price and frequency. The response is responsive to the question about subscription cost. Therefore, it fully complies."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state that it is recommended to integrate key terms naturally across multiple sections of the resume. The response explicitly states 'the recommended approach ... is to integrate them naturally across multiple sections' and lists specific sections (professional summary, work experience, skills, education, additional sections), which fully satisfies the requirement. The response is responsive to the question and contains no prohibited elements."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the recommended approach includes weaving important terms into the professional summary, work experience, skills section, education and certifications, and any additional sections like a portfolio. This directly matches the rubric criterion's positive requirement. The response is on-topic and fully compliant."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the recommended approach includes using action verbs, providing relevant context, repeating keywords appropriately without redundancy, and using synonyms to maintain a natural flow. This directly matches all elements of the rubric criterion. The response is on-topic and accurately reflects the advice from the passages."
+                }
+            ]
+        }
+    ],
+    "instruction_following": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response contains multiple bullet points, including nested bullet points, which satisfies the rubric criterion 'use of bullet points'. The response is on-topic, providing advice on organizing work experience for a resume, and the bullet points are used effectively to structure the information."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly includes specific numbers and metrics as required by the rubric criterion. It provides examples such as 'budgets totaling over $5 million', 'teams of up to 20 people', '25% increase in project completion rates', and 'increased viewership by 40%'. These are concrete, quantified achievements that satisfy the positive requirement for inclusion of specific numbers or metrics."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to contain 'use of simple layout'. The response explicitly advises to 'Use a Simple, Clean Format' and instructs to avoid complex layouts such as tables, columns, graphics, images, or background colors. It also recommends standard fonts and compatible formats, and provides a simple example structure. This fully complies with the positive requirement."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response contains clear and separate section titles throughout, such as '1. Use a Simple, Clean Format', '2. Structure Your Content Clearly', '3. Optimize for Keywords', '4. Include a Professional Summary', '5. Quantify Your Achievements', '6. Provide Complete Contact Information', '7. Test Your Resume', and 'Example Structure'. These headings are distinct and clearly delineate different sections of the content, fully satisfying the rubric criterion."
+                }
+            ]
+        }
+    ],
+    "knowledge_update": [
+        {
+            "llm_judge_score": 0.0,
+            "llm_judge_responses": [
+                {
+                    "score": 0.0,
+                    "reason": "The rubric criterion requires the LLM response to state '5 interviews'. The response states '3 interviews', which does not match the required number. Therefore, the response fails to comply with the positive requirement."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state '7 women'. The response is exactly '7 women', which fully complies with the requirement. The response is responsive to the question and contains the required element accurately."
+                }
+            ]
+        }
+    ],
+    "multi_session_reasoning": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'Four areas'. The response explicitly lists four areas: salary negotiation, portfolio project selection, resume international standards, and remote leadership skills. Each area is clearly numbered and described, fully complying with the requirement."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'salary negotiation'. The response explicitly includes 'Salary negotiation' as the first item in its list, and elaborates that the user included salary negotiation outcomes in their resume. This directly satisfies the positive requirement. The response is also responsive to the question, as it summarizes the user's actions based on provided passages. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'portfolio project selection'. The response explicitly includes 'Portfolio project selection' as one of the four areas, and elaborates that the user launched a new portfolio website featuring 20 projects with detailed metrics and client testimonials. This directly satisfies the positive requirement, and the response is responsive to the question about areas of focus. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'resume international standards'. The response explicitly includes the bullet point 'Resume international standards \u2013 You had a conversation with David about adapting resumes for European markets (Passage 10).' This directly addresses the requirement, using the exact phrase and providing context. The response is responsive to the question and fully complies with the positive requirement."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'remote leadership skills'. The response explicitly includes 'Remote leadership skills' as item 4, and elaborates that the user emphasized leadership in remote work settings as suggested by Nicole. This directly satisfies the positive requirement, and the response is on-topic with the question about areas of focus for resume/portfolio/salary negotiation improvements."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states 'Integrate key ATS optimization concepts from your course progress' as the first step, and elaborates on applying ATS strategies such as using relevant keywords, maintaining a clean format, and saving in compatible formats. This directly satisfies the rubric criterion, which is a positive requirement that the response should state this phrase or its semantic equivalent. The response is also on-topic with the question about updating a resume to maximize ATS compatibility."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state 'highlight your recent interview feedback and quantified achievements.' The response explicitly includes this phrase in step 2 and elaborates on it by advising to analyze feedback from recent interviews (e.g., securing 5 interviews) and to feature quantified achievements such as 'increased viewership by 40% within three months' or 'managed a team of producers and editors.' This fully satisfies the positive requirement, and the response is responsive to the question about resume updating sequence."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to state 'prominently featuring your completed digital media leadership courses with high scores.' The response includes step 3, which explicitly states 'Prominently feature your completed digital media leadership courses with high scores' and elaborates on showcasing completed courses and high scores in a dedicated section. This directly satisfies the positive requirement, and the response is on-topic with the user's question about resume updates. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state that each resume version should be tailored to specific job descriptions to maximize ATS compatibility and interview callbacks. The response explicitly includes this as step 4: 'Tailor each resume version to specific job descriptions to maximize ATS compatibility and interview callbacks', and elaborates on customizing for each application. This directly satisfies the positive requirement, and the response is on-topic with the question about resume update sequence. Therefore, full compliance is achieved."
+                }
+            ]
+        }
+    ],
+    "preference_following": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires that the LLM response suggests adding video samples. The response explicitly states 'I would suggest adding video samples to your portfolio' and elaborates on how to do so, fully satisfying the positive requirement."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to mention video as a key content type. The response explicitly states 'video is a key content type' and elaborates on adding video samples to the portfolio, which fully satisfies the positive requirement. The response is also responsive to the question about portfolio content suggestions."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires that the response prioritizes dynamic or multimedia content over static images. The response explicitly recommends adding video samples, states that video is a key content type, and directly states that this approach 'prioritizes dynamic or multimedia content over static images.' This fully complies with the positive requirement."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly addresses the rubric criterion by providing a section titled 'UK-Specific ATS Formatting Requirements' that includes multiple UK-specific ATS formatting details such as using 'Curriculum Vitae' instead of 'Resume', PDF or Word file formats, plain text formatting, standard fonts, British date format, simple headers, and keyword usage. This fully complies with the requirement to mention UK-specific ATS formatting."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is a negative constraint: the response should avoid suggesting a one-size-fits-all resume template. The response explicitly states 'you should **not** use a one-size-fits-all resume template' and instructs tailoring the CV for each job application, which directly complies with the requirement. The response is also responsive to the question about UK CV formatting, providing detailed guidance while emphasizing customization."
+                }
+            ]
+        }
+    ],
+    "summarization": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the user 'received advice on tailoring your resume to highlight relevant skills, achievements, and recent experience,' which directly matches the rubric criterion. It also provides supporting details about the advice, such as keyword integration, formatting, quantifying achievements, and including a professional summary, demonstrating full compliance."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the user 'considered involving your partner Joshua, who has expertise in project budgeting and networking, to help optimize your resume with keyword integration.' This directly matches the rubric criterion, which requires the response to contain this consideration. The phrasing is a near-verbatim match, and the response is on-topic as it summarizes the resume improvement process. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion is a positive requirement: the response should contain 'explored adding a section on your work with diverse Caribbean communities to showcase cultural competence.' The response explicitly includes the sentence 'You explored adding a section on your work with diverse Caribbean communities to showcase cultural competence.' This directly satisfies the requirement, and the response is responsive to the question about summarizing resume improvement efforts. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states 'You used tools like Jobscan to improve keyword matching and received guidance on formatting, quantifying achievements, and including a professional summary.' This directly matches the rubric criterion, which requires the response to contain that exact content. The response is also on-topic, summarizing the resume improvement process as requested."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states 'You planned to incorporate transferable skills such as remote team leadership, emphasizing adaptability and strategic planning,' which directly matches the rubric criterion. The required elements are present and accurately conveyed, with no missing or incorrect content. The response is responsive to the question about resume and job application strategy improvements."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the user 'worked on tailoring your resume specifically for the film, television, and digital media industries, starting with defining your goals and gathering relevant information.' This directly matches the rubric criterion, which is a positive requirement. The response is on-topic and accurately reflects the criterion, so full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the user 'focused on creating a professional summary and structuring your resume with clear sections, incorporating strong action verbs and integrating your portfolio,' which directly matches the rubric criterion. This element is present and accurately reflects the requirement, so full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states that the user 'adapted your resume design using Canva Pro, emphasizing simple templates, standard fonts, and avoiding graphics or tables.' This directly matches the rubric criterion, which is a positive requirement. The response is responsive to the question about resume development and job application strategy, and it accurately includes the required element without any omissions or inaccuracies."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to contain 'converted your resume to a text-based format and using ATS simulators for validation'. The response explicitly includes this in point 4: 'You converted your resume to a text-based format and used ATS simulators for validation, which helped improve your keyword match by 25% using tools like Jobscan.' This directly satisfies the positive requirement, and the response is on-topic with the question about resume development and job application strategy. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly includes the required element: 'You balanced your time between interview preparation and workshops by setting clear goals, creating structured daily schedules, and reducing social media usage.' This matches the rubric criterion exactly, and the response is on-topic as it summarizes the user's resume development and job application strategy. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states 'You leveraged feedback to further refine your resume by tailoring it to job descriptions, quantifying achievements, and highlighting transferable skills' under item 6, which directly matches the rubric criterion. The response is responsive to the question about resume development and job application strategy, and the required element is present and accurately executed."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly includes the required element: 'You sought to showcase your warm and charismatic nature effectively within your resume by using action verbs and providing specific examples of rapport-building.' This directly matches the rubric criterion, which is a positive requirement. The response is responsive to the question about resume development and job application strategy, and it accurately reflects the criterion without any inaccuracies or omissions."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The response explicitly states in point 8: 'You updated your resume to reflect your latest certification and promotion, emphasizing these achievements in your professional summary, work experience, skills, and certifications sections.' This directly matches the rubric criterion, which requires the resume update to include the latest certification and promotion and emphasize them in the specified sections. The response is responsive to the question about resume development and job application strategy, and it fully complies with the positive requirement."
+                }
+            ]
+        }
+    ],
+    "temporal_reasoning": [
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the LLM response to state '52 days'. The response explicitly states 'you have **52 days** between the deadline ... and the date ...', which directly satisfies the requirement. The number is present and accurate, and the response is responsive to the question about the time period. Therefore, full compliance is achieved."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to state 'from April 10, 2024 till June 1, 2024'. The response explicitly includes this exact phrase: 'from April 10, 2024 till June 1, 2024'. Therefore, the required element is present and accurate, fully complying with the criterion."
+                }
+            ]
+        },
+        {
+            "llm_judge_score": 1.0,
+            "llm_judge_responses": [
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to state '64 days'. The response states '64 days' exactly, and also provides the date range 'from July 10 till September 12' which is consistent with the duration. The response is responsive to the question and fully complies with the positive requirement."
+                },
+                {
+                    "score": 1.0,
+                    "reason": "The rubric criterion requires the response to state 'from July 10 till September 12'. The response includes exactly that phrase, satisfying the positive requirement. The additional '64 days' does not conflict with the criterion. Therefore, full compliance is achieved."
+                }
+            ]
+        }
+    ]
+}

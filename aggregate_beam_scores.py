@@ -1,26 +1,31 @@
 import json
 from pathlib import Path
 from collections import defaultdict
+import glob
 
-def aggregate_beam_results(base_directory="eval_structured", chat_size="100K", num_chats=20):
+def aggregate_beam_results(base_directory="results", chat_size="100K"):
     """
     Aggregate BEAM evaluation results from all chat directories.
-    
-    Args:
-        base_directory: Directory containing numbered subfolders (1/, 2/, etc.)
-        chat_size: Size of chats (100K, 500K, etc.)
-        num_chats: Number of chats to process (default 20 for 100K)
     """
     
     all_scores = defaultdict(list)
-    detailed_results = []
+    chat_scores_list = []
     
-    for i in range(1, num_chats + 1):
-        eval_file = Path(base_directory) / str(i) / f"evaluation-answers_gpt4o_{chat_size}_{i}.json"
-        
-        if not eval_file.exists():
-            print(f"Warning: {eval_file} not found")
-            continue
+    # Find all evaluation files
+    eval_files = list(Path(base_directory).glob("*/evaluation-*.json"))
+    
+    if not eval_files:
+        print(f"❌ No evaluation files found in {base_directory}/")
+        print("Make sure evaluations have completed.")
+        return
+    
+    print(f"📊 Found {len(eval_files)} evaluation files\n")
+    
+    # Sort by chat number
+    eval_files = sorted(eval_files, key=lambda x: int(x.parent.name))
+    
+    for eval_file in eval_files:
+        chat_id = eval_file.parent.name
         
         with open(eval_file, 'r') as f:
             data = json.load(f)
@@ -30,9 +35,10 @@ def aggregate_beam_results(base_directory="eval_structured", chat_size="100K", n
         for category, items in data.items():
             category_scores = []
             for item in items:
-                if "llm_judge_score" in item:
-                    score = item["llm_judge_score"]
-                    category_scores.append(score)
+                # Handle different possible score field names
+                score = item.get("llm_judge_score") or item.get("score") or item.get("llm_score")
+                if score is not None:
+                    category_scores.append(float(score))
             
             if category_scores:
                 avg_score = sum(category_scores) / len(category_scores)
@@ -48,18 +54,20 @@ def aggregate_beam_results(base_directory="eval_structured", chat_size="100K", n
             overall = sum(s["average"] for s in chat_scores.values()) / len(chat_scores)
             chat_scores["overall"] = overall
         
-        detailed_results.append({
-            "chat_id": i,
+        chat_scores_list.append({
+            "chat_id": chat_id,
             "scores": chat_scores
         })
     
     # Print results
-    print("\n" + "="*70)
-    print(f"BEAM BENCHMARK RESULTS - {chat_size} CHATS ({len(detailed_results)} chats)")
     print("="*70)
+    print(f"  📊 BEAM BENCHMARK RESULTS - {chat_size} CHATS")
+    print("="*70)
+    print(f"  Chats processed: {len(chat_scores_list)}")
+    print()
     
     # Category averages
-    print("\n📊 PER-CATEGORY RESULTS:")
+    print("  📈 PER-CATEGORY RESULTS:")
     print("-"*70)
     
     category_order = [
@@ -72,7 +80,8 @@ def aggregate_beam_results(base_directory="eval_structured", chat_size="100K", n
         if category in all_scores:
             scores = all_scores[category]
             avg = sum(scores) / len(scores)
-            print(f"  {category:<30} {avg:.3f} ({len(scores)} questions)")
+            passed = sum(1 for s in scores if s >= 0.7)
+            print(f"  {category:<30} {avg:.3f} (avg)  {passed}/{len(scores)} passed ({passed/len(scores)*100:.1f}%)")
     
     # Overall average across all categories
     all_category_scores = []
@@ -81,17 +90,19 @@ def aggregate_beam_results(base_directory="eval_structured", chat_size="100K", n
             all_category_scores.extend(all_scores[category])
     
     overall_avg = sum(all_category_scores) / len(all_category_scores) if all_category_scores else 0
+    total_passed = sum(1 for s in all_category_scores if s >= 0.7)
+    
     print("-"*70)
-    print(f"  {'OVERALL AVERAGE':<30} {overall_avg:.3f} ({len(all_category_scores)} questions)")
+    print(f"  {'OVERALL':<30} {overall_avg:.3f} (avg)  {total_passed}/{len(all_category_scores)} passed ({total_passed/len(all_category_scores)*100:.1f}%)")
     print("="*70)
     
     # Per-chat breakdown
-    print("\n📋 PER-CHAT RESULTS:")
+    print("\n  📋 PER-CHAT BREAKDOWN:")
     print("-"*70)
-    print(f"  {'Chat':<10} {'Overall':<10} {'Best Category':<20} {'Worst Category':<20}")
+    print(f"  {'Chat':<10} {'Overall':<10} {'Best':<25} {'Worst':<25}")
     print("-"*70)
     
-    for chat in detailed_results:
+    for chat in chat_scores_list:
         chat_id = chat["chat_id"]
         scores = chat["scores"]
         
@@ -103,40 +114,47 @@ def aggregate_beam_results(base_directory="eval_structured", chat_size="100K", n
             if cat_scores:
                 best_cat = max(cat_scores, key=cat_scores.get)
                 worst_cat = min(cat_scores, key=cat_scores.get)
-                print(f"  Chat {chat_id:<5} {overall:.3f}        {best_cat:<20} {worst_cat:<20}")
+                print(f"  Chat {chat_id:<5} {overall:.3f}        {best_cat:<25} {worst_cat:<25}")
     
     print("="*70)
     
-    # Save detailed results to file
-    output_file = f"beam_aggregated_results_{chat_size}.json"
+    # Save detailed results
+    output_file = f"results/beam_aggregated_results_{chat_size}.json"
     with open(output_file, 'w') as f:
         json.dump({
             "chat_size": chat_size,
-            "num_chats": len(detailed_results),
-            "category_averages": {cat: sum(scores)/len(scores) for cat, scores in all_scores.items()},
+            "num_chats": len(chat_scores_list),
+            "category_averages": {cat: sum(scores)/len(scores) for cat, scores in all_scores.items() if scores},
             "overall_average": overall_avg,
-            "per_chat_results": detailed_results
+            "total_passed": total_passed,
+            "total_questions": len(all_category_scores),
+            "overall_accuracy": total_passed / len(all_category_scores) if all_category_scores else 0,
+            "per_chat_results": chat_scores_list,
+            "all_scores": dict(all_scores)
         }, f, indent=2)
     
     print(f"\n💾 Detailed results saved to: {output_file}")
     
-    return detailed_results, all_scores
+    # Also save a simple CSV
+    import csv
+    csv_file = f"results/beam_aggregated_results_{chat_size}.csv"
+    with open(csv_file, 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(["Category", "Average Score", "Passed", "Total", "Accuracy"])
+        
+        for category in category_order:
+            if category in all_scores:
+                scores = all_scores[category]
+                avg = sum(scores) / len(scores)
+                passed = sum(1 for s in scores if s >= 0.7)
+                total = len(scores)
+                writer.writerow([category, f"{avg:.3f}", passed, total, f"{passed/total*100:.1f}%"])
+        
+        writer.writerow(["OVERALL", f"{overall_avg:.3f}", total_passed, len(all_category_scores), f"{total_passed/len(all_category_scores)*100:.1f}%"])
+    
+    print(f"💾 CSV saved to: {csv_file}")
+    
+    return chat_scores_list, all_scores
 
 if __name__ == "__main__":
-    import argparse
-    
-    parser = argparse.ArgumentParser(description="Aggregate BEAM evaluation results")
-    parser.add_argument("--input_dir", type=str, default="eval_structured", 
-                        help="Directory containing numbered subfolders with results")
-    parser.add_argument("--chat_size", type=str, default="100K",
-                        help="Chat size (100K, 500K, 1M, 10M)")
-    parser.add_argument("--num_chats", type=int, default=20,
-                        help="Number of chats to process")
-    
-    args = parser.parse_args()
-    
-    aggregate_beam_results(
-        base_directory=args.input_dir,
-        chat_size=args.chat_size,
-        num_chats=args.num_chats
-    )
+    aggregate_beam_results()

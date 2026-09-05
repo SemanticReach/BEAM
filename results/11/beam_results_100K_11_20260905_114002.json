@@ -1,0 +1,162 @@
+{
+  "abstention": [
+    {
+      "question": "What specific steps were taken during the bias audit initiated on April 30?",
+      "llm_response": "Based on the provided passages, there is no information about the specific steps taken during the bias audit initiated on April 30. The passages only mention that the audit was initiated on that date but do not describe the steps taken during it.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the specific steps taken during the bias audit initiated on April 30.",
+      "rubric": "Based on the provided chat, there is no information related to the specific steps taken during the bias audit initiated on April 30",
+      "passages_found": 10
+    },
+    {
+      "question": "What specific feedback did the two managers provide on April 28 that influenced continuing the AI pilot?",
+      "llm_response": "Based on the provided passages, there is no specific information about the feedback the two managers provided on April 28. The passages only mention that the feedback was \"positive\" and that it influenced the decision to continue the AI pilot, but they do not detail what the managers actually said.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the specific feedback from the two managers on April 28.",
+      "rubric": "Based on the provided chat, there is no information related to the specific feedback from the two managers on April 28",
+      "passages_found": 10
+    }
+  ],
+  "contradiction_resolution": [
+    {
+      "question": "Have I worked with Michael on editing timelines before?",
+      "llm_response": "There is contradictory information. You said you have met Michael and collaborate with him weekly on editing timelines, but you also mentioned that you have never met or worked with him. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have met Michael and collaborate with him weekly on editing timelines, but you also mentioned that you have never met or worked with him. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you have met Michael and collaborate with him weekly on editing timelines | LLM response should mention: you also mentioned that you have never met or worked with him | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    },
+    {
+      "question": "Have I ever implemented two-factor authentication for platform access?",
+      "llm_response": "There is contradictory information in the provided passages. You said that two-factor authentication was implemented for platform access, for example, on April 20, and you also mentioned that you have never implemented two-factor authentication for any platform. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said that two-factor authentication was implemented for platform access, but you also mentioned that you have never implemented two-factor authentication for any platform. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said that two-factor authentication was implemented for platform access | LLM response should mention: you also mentioned that you have never implemented two-factor authentication for any platform | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    }
+  ],
+  "event_ordering": [
+    {
+      "question": "Can you walk me through the order in which I brought up different aspects of using AI in our hiring process across our conversations, in order? Mention ONLY and ONLY six items.",
+      "llm_response": "Based on the provided passages, here are the six items in the order you brought them up:\n\n1. **Collaboration and AI replacement concerns** (Passage 1)\n2. **Ensuring AI recognizes soft skills** (Passage 2)\n3. **Psychometric test integration** (Passage 3)\n4. **AI fairness metrics development** (Passage 4)\n5. **Pymetrics suggestion and results** (Passage 5)\n6. **Pilot program and bias considerations** (Passage 6)",
+      "ideal_answer": "You mentioned aspects of using AI in hiring in this order: 1) My collaboration with Michael and concerns about AI replacing human input in editing workflows, 2) Questions about ensuring AI recognizes candidates' soft skills, 3) Interest in psychometric tests to integrate with AI, 4) Michael revealing he is developing AI fairness metrics, 5) Michael suggesting Pymetrics for soft skills assessment and its impact on candidate fit, 6) Agreement to pilot Pymetrics while monitoring bias and transparency.",
+      "rubric": "Collaboration and AI replacement concerns | Ensuring AI recognizes soft skills | Psychometric test integration | AI fairness metrics development | Pymetrics suggestion and results | Pilot program and bias considerations",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you walk me through the order in which I brought up different cost-saving and involvement topics related to hiring automation across our conversations in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up the topics is:\n\n1. **Cost comparisons** (Passage 1 discusses cost savings and exceeding initial projections by 18%)\n2. **Pilot results** (Passage 9 mentions discussing an AI hiring tool pilot for the next 3 hires)\n3. **Longer-term savings** (Passage 1 also discusses maximizing cost savings further and setting future targets)\n4. **Jessica's involvement** (Passage 5 discusses sharing examples of AI usage during a meeting with Jessica)\n5. **Linda's involvement** (No passage mentions Linda's involvement)",
+      "ideal_answer": "You mentioned these topics in this order: 1) Cost comparisons between AI hiring tools and manual hiring expenses, 2) Initial pilot results showing recruiter hour savings and pilot costs, 3) Longer-term recruitment cost savings exceeding projections, 4) Whether Jessica needs to be involved in AI tool training sessions, 5) Whether Linda should be involved in all stages of automation expansion.",
+      "rubric": "Cost comparisons | Pilot results | Longer-term savings | Jessica's involvement | Linda's involvement",
+      "passages_found": 10
+    }
+  ],
+  "information_extraction": [
+    {
+      "question": "When and where did I say I met my partner?",
+      "llm_response": "Based on the provided passages, there is no information about when or where you said you met your partner. The passages do not contain any details about meeting a partner.",
+      "ideal_answer": "You said you met your partner at ArtSpace Gallery on June 12, 2020.",
+      "rubric": "LLM response should state: ArtSpace Gallery | LLM response should state: June 12, 2020",
+      "passages_found": 10
+    },
+    {
+      "question": "What approach did you recommend to balance speeding up the hiring process with ensuring fairness throughout the candidate evaluation?",
+      "llm_response": "I recommended starting with a pilot program to test the AI tool\u2019s effectiveness, maintaining human oversight especially in final decisions, configuring anonymization to remove personal identifiers, auditing algorithms for bias including third-party audits, regularly monitoring diversity metrics and feedback, and integrating structured interviews to assess soft skills alongside AI screening.",
+      "ideal_answer": "I recommended starting with a pilot program to test the AI tool\u2019s effectiveness, maintaining human oversight especially in final decisions, configuring anonymization to remove personal identifiers, auditing algorithms for bias including third-party audits, regularly monitoring diversity metrics and feedback, and integrating structured interviews to assess soft skills alongside AI screening.",
+      "rubric": "LLM response should state: I recommended starting with a pilot program to test the AI tool\u2019s effectiveness | LLM response should state: maintaining human oversight especially in final decisions | LLM response should state: configuring anonymization to remove personal identifiers | LLM response should state: auditing algorithms for bias including third-party audits | LLM response should state: regularly monitoring diversity metrics and feedback | LLM response should state: integrating structured interviews to assess soft skills alongside AI screening",
+      "passages_found": 10
+    }
+  ],
+  "instruction_following": [
+    {
+      "question": "What should I know about keeping my information safe when using online services?",
+      "llm_response": "When using online services, keeping your information safe involves several key practices, especially regarding encryption and data security. Here\u2019s what you should know:\n\n**Encryption Methods**  \n- **Data Encryption**: Ensure that all your data is encrypted both **in transit** (while being sent over the internet) and **at rest** (when stored on servers).  \n- **Strong Standards**: Use robust encryption standards such as **AES-256** to protect sensitive information.  \n- **Secure Connections**: Always use **HTTPS** for data transfers to ensure the connection is encrypted.  \n\n**How Data is Secured Through Encryption**  \n- **In Transit**: Encryption scrambles your data as it travels between your device and the service\u2019s servers, so even if intercepted, it cannot be read without the decryption key.  \n- **At Rest**: When data is stored, encryption converts it into an unreadable format, so unauthorized users cannot access it even if they gain physical or remote access to the storage system.  \n- **Access Controls**: Encryption works alongside strict access controls (like role-based access and the least privilege principle) to ensure only authorized personnel can decrypt and view your data.  \n- **Regular Audits**: Services should regularly audit their encryption settings and perform penetration testing to verify that encryption is correctly implemented and up to date.  \n\nAdditionally, always look for services that offer **two-factor authentication (2FA)** and clear **data retention and deletion policies**\u2014these complement encryption by adding extra layers of security and ensuring your data isn\u2019t kept longer than necessary.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: explanation of encryption methods | LLM response should contain: details on how data is secured through encryption",
+      "passages_found": 10
+    },
+    {
+      "question": "When I\u2019m signing up for a new online account, what security measures should I look for to ensure my data stays private?",
+      "llm_response": "When signing up for a new online account, you should look for several key security measures to ensure your data stays private. Here\u2019s what to check for:\n\n**1. Encryption Methods**\n- **Data Encryption**: Ensure the service encrypts your data both **in transit** (while being sent over the internet) and **at rest** (when stored on their servers). Look for strong encryption standards like **AES-256**.\n- **Secure Connections**: Verify that the website uses **HTTPS** for all data transfers, which indicates a secure, encrypted connection.\n\n**2. How Data is Secured Through Encryption**\n- **In Transit**: Encryption scrambles your data as it travels between your device and the service\u2019s servers, so even if intercepted, it cannot be read without the decryption key.\n- **At Rest**: Encryption also protects your stored data on the service\u2019s servers, ensuring that even if a breach occurs, the data remains unreadable without proper authorization.\n- **Verification**: The service should regularly verify that encryption is properly configured and functioning to maintain protection.\n\n**Additional Security Measures to Look For**\n- **Two-Factor Authentication (2FA) or Multi-Factor Authentication (MFA)**: This adds an extra layer of security beyond just a password, requiring a second form of verification (e.g., a code sent to your phone or a biometric factor like a fingerprint).\n- **Access Controls**: The service should implement role-based access control (RBAC) and follow the least privilege principle, ensuring only authorized personnel can access sensitive data.\n- **Data Retention and Deletion Policies**: Look for clear policies that state how long your data will be kept (e.g., a maximum of 6 months) and that it will be securely deleted when no longer needed.\n- **Regular Security Audits**: The service should conduct regular audits and penetration testing to identify and mitigate vulnerabilities.\n- **Incident Response Plan**: A robust plan should be in place to address any data breaches quickly and communicate with affected users.\n\nBy checking for these encryption methods and security practices, you can better ensure your data remains private and protected.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: explanation of encryption methods | LLM response should contain: details on how data is secured through encryption",
+      "passages_found": 10
+    }
+  ],
+  "knowledge_update": [
+    {
+      "question": "When is the webinar on AI ethics in hiring scheduled to take place?",
+      "llm_response": "Based on the provided passages, the webinar on AI ethics in hiring was originally scheduled for March 20, but it has been rescheduled. The passages do not provide the new rescheduled date.",
+      "ideal_answer": "The webinar is scheduled for March 27 to accommodate additional guest speakers.",
+      "rubric": "LLM response should state: March 27",
+      "passages_found": 10
+    },
+    {
+      "question": "What accuracy rate does the AI screening tool achieve in its evaluations?",
+      "llm_response": "Based on the provided passages, the AI screening tool achieves a 90% accuracy rate in its evaluations.",
+      "ideal_answer": "90%",
+      "rubric": "LLM response should state: 90%",
+      "passages_found": 10
+    }
+  ],
+  "multi_session_reasoning": [
+    {
+      "question": "How many different AI vendors or tools have I mentioned using or customizing for hiring automation?",
+      "llm_response": "Based on the provided passages, you mentioned using or customizing **two** AI vendors for hiring automation: **HireVue** and **Pymetrics**.",
+      "ideal_answer": "Two vendors or tools: HireVue and Pymetrics.",
+      "rubric": "LLM response should state: Two vendors | LLM response should state: HireVue and Pymetrics",
+      "passages_found": 10
+    },
+    {
+      "question": "Given my current diversity stats, recent improvements, involvement plans for Wyatt, and Natalie's interest in AI hiring, how should I prioritize actions to sustain diversity gains while fostering future talent?",
+      "llm_response": "Based on the provided passages, you should prioritize actions in the following way:\n\n1.  **Prioritize maintaining and monitoring diversity improvements by involving Wyatt early in training and pilot programs.** This is the most direct action to sustain your current diversity gains (45% female and 20% minority ethnic hires). The passages emphasize starting with a pilot program, training your team (including Wyatt) on the AI tool, and continuously monitoring diversity metrics to ensure the AI maintains or improves these stats.\n\n2.  **Encourage Natalie's foundational learning in AI and recruitment technology to build future talent.** This is a secondary but important action to foster future talent. The passages suggest providing training and education for Natalie on the ethical use of AI in recruitment, which will help build her skills and prepare her for a larger role in the process.",
+      "ideal_answer": "You should prioritize maintaining and monitoring diversity improvements by involving Wyatt early in training and pilot programs to secure buy-in and oversight, while simultaneously encouraging Natalie's foundational learning in AI and recruitment technology to build future talent, balancing immediate operational success with long-term development.",
+      "rubric": "LLM response should state: prioritize maintaining and monitoring diversity improvements by involving Wyatt early in training and pilot programs | LLM response should state: encouraging Natalie's foundational learning in AI and recruitment technology to build future talent",
+      "passages_found": 10
+    }
+  ],
+  "preference_following": [
+    {
+      "question": "I'm thinking about how to handle the hiring process with some help from technology. How would you suggest setting that up?",
+      "llm_response": "Based on the provided passages, here is a suggested approach for setting up a hiring process with technology:\n\n**Combine AI with human review and personalized interactions.** This is a core recommendation across multiple passages. Specifically, you should:\n\n1.  **Maintain Human Oversight:** Ensure that hiring managers make the final decisions and schedule human-led follow-up interviews to assess soft skills and cultural fit. This is mentioned in Passages 1, 2, and 6.\n2.  **Use AI for Initial Screenings:** Use AI to filter candidates efficiently based on clear, predefined criteria. This is suggested in Passages 2 and 6.\n3.  **Set Up Feedback Channels:** Create mechanisms for candidates to share their experiences, such as surveys and contact forms, and use this feedback to improve the process. This is mentioned in Passages 1, 2, and 6.\n4.  **Ensure Transparency:** Clearly communicate to candidates how AI is being used in the process, what data is collected, and how decisions are made. This is detailed in Passage 4.\n5.  **Conduct Regular Audits:** Regularly audit AI algorithms for bias and ensure compliance with data protection laws. This is mentioned in Passages 6 and 10.\n\nIn essence, the recommended approach is to use AI for efficiency in the early stages while ensuring human checks and personalized interactions are built into the process at key points, such as final decisions and follow-up interviews.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mentions combining AI with human review | LLM response should contain: suggests human checks alongside automated steps",
+      "passages_found": 10
+    },
+    {
+      "question": "How should I structure the final stages of the interview process to ensure a smooth experience for both candidates and my team?",
+      "llm_response": "Based on the provided passages, to structure the final stages of the interview process for a smooth experience for both candidates and your team, you should **recommend human involvement in final interviews** and **suggest maintaining or emphasizing human interaction in later stages**. \n\nSpecifically, the passages recommend a hybrid approach where AI is used for initial screening, but the final round is conducted by human interviewers. This ensures a personal touch, helps build rapport, and allows for a holistic evaluation of soft skills and cultural fit. To ensure a smooth experience, you should:\n\n- **Provide clear pre-interview communication**: Send candidates detailed instructions, including the interview location, duration, and names of interviewers, so they are well-prepared.\n- **Offer post-interview feedback**: Provide constructive feedback to candidates after the final interview, regardless of the outcome.\n- **Train interviewers**: Ensure human interviewers are trained on best practices for conducting fair and unbiased interviews, including recognizing and mitigating bias.\n- **Maintain human oversight**: Clearly define that hiring managers will make the final decisions and ensure candidates receive initial outreach from a human recruiter.\n- **Set up feedback channels**: Implement candidate experience surveys and contact forms to gather feedback after each stage, and schedule regular reviews to analyze this feedback and make continuous improvements.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: recommends human involvement in final interviews | LLM response should contain: suggests maintaining or emphasizing human interaction in later stages",
+      "passages_found": 10
+    }
+  ],
+  "summarization": [
+    {
+      "question": "Can you give me a comprehensive summary of how we've approached integrating AI into our hiring process, including the key steps, challenges, and decisions we've discussed so far?",
+      "llm_response": "Based on our discussions, here is a comprehensive summary of how we've approached integrating AI into our hiring process:\n\n**Key Steps and Decisions:**\n- We recognized the value of AI in improving efficiency, such as reducing resume screening time and enhancing candidate diversity. The pilot showed a 35% reduction in hiring time and an 18% increase in candidate satisfaction.\n- We outlined specific steps for a pilot program, including selecting positions, configuring AI tools, training the team, and monitoring outcomes. We also planned to inform candidates about AI use in recruitment emails starting May 1, with clear consent and opt-out options.\n- We incorporated multi-stage evaluations with human-led interviews and psychometric assessments like MBTI and DISC. Final hiring decisions remain with human managers, and we scheduled human-led follow-up interviews and feedback channels for candidates.\n\n**Challenges and Concerns:**\n- Addressing concerns about fairness and bias, especially raised by team members like Wyatt, led us to plan a team meeting to discuss mitigation strategies, transparency, and human oversight. We also prepared for Michael's presentation on AI fairness at the Montserrat Tech Summit on August 22.\n- We considered leveraging Michael's expertise in AI fairness metrics and explored integrating tools like Pymetrics to improve candidate fit. We also reviewed legal and ethical considerations, including compliance with privacy laws and anti-discrimination statutes, especially given the data privacy breach attempt on September 25 and the upcoming report for the Montserrat Data Protection Authority due October 15.\n\n**Broader Impact:**\n- We discussed potential role transitions within the team, such as Michael moving to HR tech support, reflecting the broader impact of AI adoption on team dynamics. We also planned regular bias audits, transparency reports, and continuous training on ethical AI use to maintain fairness and trust.",
+      "ideal_answer": "Our approach to integrating AI into the hiring process has evolved through several stages. Initially, we recognized the value of AI in improving efficiency, such as reducing resume screening time and enhancing candidate diversity, while emphasizing the importance of preserving the human touch, especially in assessing soft skills and cultural fit. We then outlined specific steps for a pilot program, including selecting positions, configuring AI tools, training the team, and monitoring outcomes. To ensure soft skills are not overlooked, we incorporated multi-stage evaluations with human-led interviews and psychometric assessments like MBTI and DISC. Addressing concerns about fairness and bias, especially raised by team members like Wyatt, led us to plan a team meeting to discuss mitigation strategies, transparency, and human oversight. Additionally, we considered leveraging Michael's expertise in AI fairness metrics and explored integrating tools like Pymetrics to improve candidate fit. Finally, we discussed potential role transitions within the team, such as Michael moving to HR tech support, reflecting the broader impact of AI adoption on team dynamics and workflows. Throughout, the process has balanced efficiency gains with ethical considerations and team collaboration.",
+      "rubric": "LLM response should contain: we recognized the value of AI in improving efficiency, such as reducing resume screening time and enhancing candidate diversity | LLM response should contain: outlined specific steps for a pilot program, including selecting positions, configuring AI tools, training the team, and monitoring outcomes | LLM response should contain: incorporated multi-stage evaluations with human-led interviews and psychometric assessments like MBTI and DISC | LLM response should contain: Addressing concerns about fairness and bias, especially raised by team members like Wyatt, led us to plan a team meeting to discuss mitigation strategies, transparency, and human oversight | LLM response should contain: we considered leveraging Michael's expertise in AI fairness metrics and explored integrating tools like Pymetrics to improve candidate fit | LLM response should contain: we discussed potential role transitions within the team, such as Michael moving to HR tech support, reflecting the broader impact of AI adoption on team dynamics",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you give me a complete summary of how I can ensure my AI hiring process complies with all relevant legal and policy requirements we've discussed?",
+      "llm_response": "To ensure your AI hiring process complies with all relevant legal and policy requirements, you need a comprehensive approach covering legal compliance, policy updates, and ongoing monitoring. Here\u2019s a complete summary:\n\n**1. Legal Compliance with Montserrat\u2019s Employment Act and Data Protection Act**\n- **Review the legislation:** Obtain a copy of the Employment Act amendments effective June 2024 and identify key provisions related to AI, such as data protection, non-discrimination, and transparency.\n- **Consult legal experts:** Engage a legal expert or law firm specializing in employment law to review the amendments and request a compliance checklist to ensure all legal requirements are met.\n- **Audit your AI tools:** Conduct regular bias audits to ensure your AI tools do not discriminate against protected classes, and ensure the tools are transparent and explainable.\n- **Understand data protection obligations:** Understanding and adhering to Montserrat's Data Protection Act and upcoming GDPR-like standards is essential. This includes handling candidate data properly, obtaining explicit consent, using encryption (e.g., AES-256), and adhering to data retention and deletion protocols.\n\n**2. Update Your Hiring Policy with AI Transparency Requirements**\n- **Explicitly cover AI transparency:** Your hiring policy must explicitly cover AI transparency, including clear communication about AI usage, fairness audits, candidate notifications, and human oversight in final decisions.\n- **Include key elements:** The policy should state how AI is used (e.g., resume screening, video interviews), outline measures to ensure algorithmic fairness, specify how candidates are notified about AI usage and data collection, and confirm that final hiring decisions involve human oversight.\n- **Address data privacy:** Confirm that all candidate data is encrypted and stored securely, and ensure candidates provide explicit consent with a clear opt-out mechanism.\n\n**3. Prepare for Legal Consultations and Compliance Audits**\n- **Gather documentation:** Preparing for legal consultations involves gathering detailed examples of your current AI usage, including tools like HireVue and Pymetrics. Document how these tools are used in screening, interviewing, and decision-making, and describe data handling practices.\n- **Highlight compliance efforts:** Mention any regular bias audits, transparency efforts, and how you communicate AI usage to candidates.\n\n**4. Maintain Ongoing Compliance and Continuous Improvement**\n- **Train your team:** Provide training for your HR team on the new regulations and how to use AI tools ethically and legally.\n- **Monitor and review regularly:** Schedule regular reviews to ensure ongoing compliance with the Employment Act amendments and update policies, procedures, and AI tools as needed based on feedback and regulatory changes.\n- **Implement feedback mechanisms:** Gather insights from candidates and team members to continuously improve the hiring process.\n\nBy following these steps, you can ensure that your AI hiring process remains compliant with all legal and policy requirements while maintaining fairness, transparency, and candidate privacy.",
+      "ideal_answer": "To ensure compliance with legal and policy requirements when using AI in hiring, you need to address several interconnected areas. First, understanding and adhering to Montserrat's Data Protection Act and upcoming GDPR-like standards is essential, focusing on lawful data processing, consent, transparency, data minimization, and security. Next, your hiring policy must explicitly cover AI transparency, including clear communication about AI usage, fairness audits, candidate notifications, and human oversight in final decisions. Additionally, compliance with Montserrat's Employment Act amendments requires reviewing the legislation, consulting legal experts to obtain a compliance checklist, and auditing AI tools for bias and transparency. Preparing for legal consultations involves gathering detailed examples of your current AI usage, including tools like HireVue and Pymetrics, data handling practices, and existing compliance measures such as bias audits and encryption. Finally, ongoing efforts like regular policy updates, employee training, and scheduled reviews ensure that your AI hiring process remains compliant and ethically sound over time.",
+      "rubric": "LLM response should contain: understanding and adhering to Montserrat's Data Protection Act and upcoming GDPR-like standards is essential | LLM response should contain: your hiring policy must explicitly cover AI transparency, including clear communication about AI usage, fairness audits, candidate notifications, and human oversight in final decisions | LLM response should contain: compliance with Montserrat's Employment Act amendments requires reviewing the legislation, consulting legal experts to obtain a compliance checklist, and auditing AI tools for bias | LLM response should contain: Preparing for legal consultations involves gathering detailed examples of your current AI usage, including tools like HireVue and Pymetrics | LLM response should contain: ongoing efforts like regular policy updates, employee training, and scheduled reviews ensure that your AI hiring process remains compliant",
+      "passages_found": 10
+    }
+  ],
+  "temporal_reasoning": [
+    {
+      "question": "How many days are there between when my friend Carla suggested using AI for hiring over lunch and my upcoming webinar on AI ethics in hiring?",
+      "llm_response": "Based on the provided passages, the number of days between when Carla suggested using AI for hiring over lunch and the upcoming webinar on AI ethics in hiring is **19 days**, spanning **from March 1 till March 20**.",
+      "ideal_answer": "There are 19 days between Carla's suggestion over lunch on March 1 and the webinar on AI ethics in hiring on March 20.",
+      "rubric": "LLM response should state: 19 days | LLM response should state: from March 1 till March 20",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days passed between my meeting with Wyatt expressing skepticism and the positive feedback I received from the managers?",
+      "llm_response": "49 days | from March 10 till April 28",
+      "ideal_answer": "49 days passed between the meeting with Wyatt on March 10 and the positive feedback from the managers on April 28.",
+      "rubric": "LLM response should state: 49 days | LLM response should state: from March 10 till April 28",
+      "passages_found": 10
+    }
+  ]
+}

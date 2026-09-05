@@ -1,0 +1,12 @@
+Category,Average Score,Passed,Total,Accuracy
+abstention,1.000,39,39,100.0%
+contradiction_resolution,0.794,39,40,97.5%
+event_ordering,0.548,8,27,29.6%
+information_extraction,1.000,39,39,100.0%
+instruction_following,0.971,32,34,94.1%
+knowledge_update,1.000,36,36,100.0%
+multi_session_reasoning,0.978,36,38,94.7%
+preference_following,1.000,39,39,100.0%
+summarization,1.000,40,40,100.0%
+temporal_reasoning,1.000,39,39,100.0%
+OVERALL,0.940,347,371,93.5%

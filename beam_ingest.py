@@ -6,9 +6,15 @@ Uses /build_ingest_data/ for ingestion, /multihop/ for chat retrieval,
 and /compose/search_slots/ for QA ground truth.
 
 Run:
+    # Single chat
     python beam_ingest.py --chat-dir test_chats/100K/1 --chat-id 100K_1
     python beam_ingest.py --chat-dir test_chats/100K/1 --chat-id 100K_1 --wipe
     python beam_ingest.py --chat-dir test_chats/100K/1 --chat-id 100K_1 --eval-only
+    
+    # All chats in a directory
+    python beam_ingest.py --all-chats test_chats/100K --size 100K
+    python beam_ingest.py --all-chats test_chats/100K --size 100K --wipe
+    python beam_ingest.py --all-chats test_chats/100K --size 100K --eval-only
 """
 
 from __future__ import annotations
@@ -83,7 +89,7 @@ def chat_namespace(chat_id: str) -> str:
     return f"beam_chat_{chat_id.replace('/', '_')}"
 
 def qa_namespace(chat_id: str) -> str:
-    return f"beam_qa_{chat_id.replace('/', '_')}"  # ✅ Fixed
+    return f"beam_qa_{chat_id.replace('/', '_')}"
 
 def retry_request(func):
     """Decorator to retry HTTP requests."""
@@ -191,7 +197,6 @@ def ingest_chat(chat_id: str, turns: list[dict]) -> Dict[str, Any]:
         rows_added = result.get('rows_added', 0)
         print(f"  ✅ Chat ingested: {rows_added} rows → {namespace}")
         
-        # Verify the upload
         if rows_added > 0:
             verify_resp = requests.get(
                 f"{SERVER_URL}/namespace/{DB_NAME}/{namespace}/count",
@@ -287,7 +292,6 @@ def ingest_qa(chat_id: str, probing_questions: dict) -> Dict[str, Any]:
         rows_added = result.get('rows_added', 0)
         print(f"  ✅ QA ingested: {rows_added} rows → {namespace}")
         
-        # Verify
         if rows_added > 0:
             verify_resp = requests.get(
                 f"{SERVER_URL}/namespace/{DB_NAME}/{namespace}/count",
@@ -310,25 +314,17 @@ def ingest_qa(chat_id: str, probing_questions: dict) -> Dict[str, Any]:
 # ── Search chat using /multihop/ (REST) ──────────────────────────────────────
 
 def search_chat_multihop(question: str, chat_id: str, top_k: int = 10) -> List[str]:
-    """
-    Search chat using the REST /multihop/ endpoint.
-    
-    The REST /multihop/ endpoint expects:
-        - query: dict with field → value mapping (simple)
-        - path: list of (field, value) tuples for expansion
-    """
     namespace = chat_namespace(chat_id)
     url = f"{SERVER_URL}/multihop/"
     headers = {"X-API-Key": API_KEY} if API_KEY else {}
     
     try:
-        # ✅ CORRECT FORMAT for REST /multihop/
         response = requests.post(
             url,
             headers=headers,
             json={
-                "query": {"content": question},  # ← Simple dict, not nested!
-                "path": [],  # Empty path for simple search
+                "query": {"content": question},
+                "path": [],
                 "db_name": DB_NAME,
                 "namespace": namespace,
                 "top_k": top_k,
@@ -340,11 +336,9 @@ def search_chat_multihop(question: str, chat_id: str, top_k: int = 10) -> List[s
         data = response.json()
         results = data.get("results", [])
         
-        # Extract passages from results
         passages = []
         for r in results:
             if isinstance(r, dict):
-                # Try different possible field names
                 text = r.get("content") or r.get("text") or r.get("value") or r.get("data", {}).get("content", "")
                 if text:
                     passages.append(text)
@@ -359,9 +353,6 @@ def search_chat_multihop(question: str, chat_id: str, top_k: int = 10) -> List[s
 
 
 def search_chat_direct(question: str, chat_id: str, top_k: int = 10) -> List[str]:
-    """
-    Fallback: Direct slot search using /compose/search_slots/
-    """
     namespace = chat_namespace(chat_id)
     url = f"{SERVER_URL}/compose/search_slots/{DB_NAME}/{namespace}"
     headers = {"X-API-Key": API_KEY} if API_KEY else {}
@@ -393,24 +384,16 @@ def search_chat_direct(question: str, chat_id: str, top_k: int = 10) -> List[str
 # ── Search chat (main entry point) ──────────────────────────────────────────
 
 def search_chat(question: str, chat_id: str, top_k: int = 10) -> List[str]:
-    """
-    Main search function. Tries multihop first, falls back to direct search.
-    """
-    # Only use multihop for questions without ground truth
-    # But first, let's check if this question has a stored ideal_answer
     gt = get_ground_truth(question, chat_id)
     if gt and gt.get("ideal_answer"):
-        # Question has ground truth, use direct search
         return search_chat_direct(question, chat_id, top_k)
     else:
-        # No ground truth, use multihop
         return search_chat_multihop(question, chat_id, top_k)
 
 
 # ── Search QA ground truth ────────────────────────────────────────────────────
 
 def get_ground_truth(question: str, chat_id: str) -> Optional[dict]:
-    """Get ideal_answer and rubric from QA namespace."""
     namespace = qa_namespace(chat_id)
     url = f"{SERVER_URL}/compose/search_slots/{DB_NAME}/{namespace}"
     headers = {"X-API-Key": API_KEY} if API_KEY else {}
@@ -445,7 +428,6 @@ def get_ground_truth(question: str, chat_id: str) -> Optional[dict]:
 # ── Generate answer with DeepSeek ────────────────────────────────────────────
 
 def generate_answer(question: str, passages: list[str], rubric: str = "") -> str:
-    """Generate answer using DeepSeek."""
     if not passages:
         return "Based on the provided chat, there is no relevant information to answer this question."
     
@@ -484,19 +466,6 @@ def generate_answer(question: str, passages: list[str], rubric: str = "") -> str
 # ── Evaluate ──────────────────────────────────────────────────────────────────
 
 def evaluate_chat(chat_id: str, probing_questions: dict) -> dict:
-    """
-    Run evaluation on the ingested data.
-    
-    OUTPUT FORMAT: Matches official BEAM evaluation expectations:
-    {
-        "abstention": [
-            {"question": "...", "llm_response": "...", "ideal_answer": "...", "rubric": "..."},
-            ...
-        ],
-        "contradiction_resolution": [...],
-        ...
-    }
-    """
     results = {}
     
     for category, questions in probing_questions.items():
@@ -511,24 +480,19 @@ def evaluate_chat(chat_id: str, probing_questions: dict) -> dict:
             if not question:
                 continue
             
-            # Get ground truth from QA namespace
             gt = get_ground_truth(question, chat_id)
             ideal_answer = (gt or {}).get("ideal_answer", "")
             rubric = (gt or {}).get("rubric", "")
             
-            # Search chat using the appropriate method
             if ideal_answer:
-                # Has ground truth - use direct search
                 passages = search_chat_direct(question, chat_id, top_k=10)
                 print(f"      🔍 Direct search for: {question[:40]}...")
             else:
-                # No ground truth - use multihop
                 passages = search_chat_multihop(question, chat_id, top_k=10)
                 print(f"      🔍 Multihop for: {question[:40]}...")
             
             time.sleep(REQUEST_DELAY)
             
-            # Generate answer
             if passages:
                 generated = generate_answer(question, passages, rubric)
             elif ideal_answer:
@@ -536,20 +500,17 @@ def evaluate_chat(chat_id: str, probing_questions: dict) -> dict:
             else:
                 generated = "No information available."
             
-            # ✅ FIX: Store with 'llm_response' field (not 'generated')
             cat_results.append({
                 "question": question,
-                "llm_response": generated,      # ← Changed from "generated"
+                "llm_response": generated,
                 "ideal_answer": ideal_answer,
                 "rubric": rubric,
                 "passages_found": len(passages),
             })
             
-            # Simple progress indicator
             status = "✓" if len(passages) > 0 else "✗"
             print(f"    {status} {question[:60]}... ({len(passages)} passages)")
         
-        # ✅ FIX: Store directly as list of questions (not wrapped in "questions")
         results[category] = cat_results
     
     return results
@@ -558,7 +519,6 @@ def evaluate_chat(chat_id: str, probing_questions: dict) -> dict:
 # ── Wipe namespace ────────────────────────────────────────────────────────────
 
 def wipe_namespace(chat_id: str):
-    """Delete existing namespaces."""
     for ns in [chat_namespace(chat_id), qa_namespace(chat_id)]:
         try:
             response = requests.delete(
@@ -591,7 +551,6 @@ def run_chat(chat_dir: Path, chat_id: str, wipe: bool = False, eval_only: bool =
         print(f"  ❌ probing_questions.json not found")
         return
     
-    # Load data
     turns = load_turns(chat_file)
     with open(pq_file, encoding="utf-8") as f:
         probing_questions = json.load(f)
@@ -599,12 +558,10 @@ def run_chat(chat_dir: Path, chat_id: str, wipe: bool = False, eval_only: bool =
     total_q = sum(len(v) for v in probing_questions.values() if isinstance(v, list))
     print(f"  Questions: {total_q} across {len(probing_questions)} categories")
     
-    # Wipe if requested
     if wipe:
         print(f"\n  🗑️ Wiping namespaces...")
         wipe_namespace(chat_id)
     
-    # Ingest if not eval-only
     if not eval_only:
         print(f"\n  [1/2] Ingesting chat...")
         ingest_chat(chat_id, turns)
@@ -612,16 +569,12 @@ def run_chat(chat_dir: Path, chat_id: str, wipe: bool = False, eval_only: bool =
         print(f"\n  [2/2] Ingesting QA...")
         ingest_qa(chat_id, probing_questions)
     
-    # ✅ FIX: Save results in official BEAM format (no extra wrapper keys)
     print(f"\n  🔍 Evaluating...")
     results = evaluate_chat(chat_id, probing_questions)
     
-    # Save results
     results_dir = Path("results")
     results_dir.mkdir(exist_ok=True)
     
-    # Create chat-specific subdirectory (for official evaluator)
-    # Extract index from chat_id (e.g., "100K_1" → "1")
     chat_index = chat_id.split('_')[-1] if '_' in chat_id else "1"
     chat_subdir = results_dir / chat_index
     chat_subdir.mkdir(exist_ok=True)
@@ -629,13 +582,11 @@ def run_chat(chat_dir: Path, chat_id: str, wipe: bool = False, eval_only: bool =
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     out_file = chat_subdir / f"beam_results_{chat_id}_{timestamp}.json"
     
-    # ✅ FIX: Save ONLY the results, not wrapped in "results" key
     with open(out_file, "w", encoding="utf-8") as f:
-        json.dump(results, f, indent=2)  # ← Directly save results, no wrapper
+        json.dump(results, f, indent=2)
     
     print(f"\n  ✅ Results saved to: {out_file}")
     
-    # Summary
     total_passed = 0
     total_questions = 0
     print(f"\n{'─' * 56}")
@@ -643,7 +594,6 @@ def run_chat(chat_dir: Path, chat_id: str, wipe: bool = False, eval_only: bool =
     print(f"{'─' * 56}")
     
     for cat, cat_results in results.items():
-        # Count passes using simple scoring
         passed = sum(1 for r in cat_results if r.get("passages_found", 0) > 0)
         total = len(cat_results)
         total_passed += passed
@@ -655,23 +605,65 @@ def run_chat(chat_dir: Path, chat_id: str, wipe: bool = False, eval_only: bool =
     print(f"  {'OVERALL':<30} {total_passed:>3}/{total_questions:<3}  {overall:.1%}")
     print(f"{'─' * 56}\n")
 
+
+def run_all_chats(base_dir: Path, size: str, wipe: bool = False, eval_only: bool = False):
+    """Run all chats in a directory."""
+    chat_dirs = sorted([d for d in base_dir.iterdir() if d.is_dir()])
+    print(f"\n📂 Found {len(chat_dirs)} chats in {base_dir}\n")
+    
+    for chat_dir in chat_dirs:
+        chat_id = f"{size}_{chat_dir.name}"
+        print(f"\n{'='*60}")
+        print(f"  Processing: {chat_id}")
+        print(f"{'='*60}")
+        
+        run_chat(
+            chat_dir=chat_dir,
+            chat_id=chat_id,
+            wipe=wipe,
+            eval_only=eval_only
+        )
+
+
 # ── Entry point ──────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="BEAM Benchmark Ingest + Evaluation")
-    parser.add_argument("--chat-dir", type=str, required=True)
-    parser.add_argument("--chat-id", type=str, required=True)
+    
+    # Single chat options
+    parser.add_argument("--chat-dir", type=str, default=None, help="Directory containing chat.json")
+    parser.add_argument("--chat-id", type=str, default=None, help="Chat ID (e.g., 100K_1)")
+    
+    # All chats options
+    parser.add_argument("--all-chats", type=str, default=None, help="Directory containing all chat subdirectories")
+    parser.add_argument("--size", type=str, default="100K", help="Chat size for naming (e.g., 100K)")
+    
+    # Common options
     parser.add_argument("--wipe", action="store_true", help="Delete existing namespaces")
     parser.add_argument("--eval-only", action="store_true", help="Skip ingestion, only evaluate")
+    
     args = parser.parse_args()
     
     print(f"\nServer: {SERVER_URL}")
     print(f"API Key: {'✅ Set' if API_KEY else '❌ Missing'}")
     print(f"DB: {DB_NAME}")
     
-    run_chat(
-        Path(args.chat_dir),
-        args.chat_id,
-        wipe=args.wipe,
-        eval_only=args.eval_only,
-    )
+    if args.all_chats:
+        # Run all chats in directory
+        base_dir = Path(args.all_chats)
+        if not base_dir.exists():
+            print(f"❌ Directory not found: {base_dir}")
+            exit(1)
+        run_all_chats(base_dir, args.size, args.wipe, args.eval_only)
+        
+    elif args.chat_dir and args.chat_id:
+        # Run single chat
+        run_chat(
+            Path(args.chat_dir),
+            args.chat_id,
+            wipe=args.wipe,
+            eval_only=args.eval_only,
+        )
+        
+    else:
+        parser.print_help()

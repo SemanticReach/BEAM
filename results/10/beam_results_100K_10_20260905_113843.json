@@ -1,0 +1,162 @@
+{
+  "abstention": [
+    {
+      "question": "What was the agenda for the Montserrat Writers\u2019 Festival where Crystal met Michael?",
+      "llm_response": "Based on the provided passages, there is no information about the agenda for the Montserrat Writers\u2019 Festival where Crystal met Michael.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the agenda of the Montserrat Writers\u2019 Festival.",
+      "rubric": "Based on the provided chat, there is no information related to related to the agenda of the Montserrat Writers\u2019 Festival",
+      "passages_found": 10
+    },
+    {
+      "question": "Could you share the key points Carla covered in her editing checklist revealed during the April 7 call?",
+      "llm_response": "Based on the provided passages, there is no information related to the key points in Carla\u2019s editing checklist revealed during the April 7 call.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the key points in Carla\u2019s editing checklist.",
+      "rubric": "Based on the provided chat, there is no information related to related to the key points in Carla\u2019s editing checklist",
+      "passages_found": 10
+    }
+  ],
+  "contradiction_resolution": [
+    {
+      "question": "Do I usually feel anxious about my grammar accuracy after receiving feedback?",
+      "llm_response": "There is contradictory information. You said you have felt anxious about your grammar accuracy after feedback, but you also mentioned that you've never felt anxious about it. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have felt anxious about your grammar accuracy after feedback, but you also mentioned that you've never felt anxious about it. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you have felt anxious about your grammar accuracy after feedback | LLM response should mention: you also mentioned that you've never felt anxious about it | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    },
+    {
+      "question": "Have I ever completed a first draft of a screenplay?",
+      "llm_response": "There is contradictory information. You said you completed your first draft of a screenplay, but you also mentioned that you've never completed a first draft of any screenplay. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you completed your first draft of a screenplay, but you also mentioned that you've never completed a first draft of any screenplay. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you completed your first draft of a screenplay | LLM response should mention: you also mentioned that you've never completed a first draft of any screenplay | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    }
+  ],
+  "event_ordering": [
+    {
+      "question": "Can you walk me through the order in which I brought up different aspects of my writing journey throughout our conversations, in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, here are the five items in the order you brought them up:\n\n1. **Creating outlines and scene cards** (Passage 1)\n2. **Using AI tools for editing** (Passage 1)\n3. **Shifting from formal to conversational tone in dialogue** (Passage 7)\n4. **Mixing up writing locations and using writing prompts** (Passage 8)\n5. **Testing clarity and concision in dialogue scenes** (Passage 5)",
+      "ideal_answer": "You mentioned aspects of your writing journey in this order: 1) Meeting and sharing script editing tips, 2) Completing your first draft and feeling a confidence boost, 3) Preparing for and managing nerves about a writing workshop you co-hosted, 4) Reflecting on the positive feedback and satisfaction rating from that workshop, 5) Planning your revision process focusing on dialogue clarity, passive voice, character development, plot structure, and peer review.",
+      "rubric": "Meeting and script tips | First draft and confidence | Workshop nerves | Workshop feedback | Revision planning",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you walk me through the order in which I brought up different aspects of my collaboration with Carla throughout our conversations in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, here are the five items in the order you brought them up regarding your collaboration with Carla:\n\n1. **Passive voice reduction** (Passage 10, April 7)\n2. **Tone adjustments** (Passage 6, May 28)\n3. **Editing checklist completion** (Passage 3, October 10)\n4. **Review timing concern** (Passage 4, March 20)\n5. **Webinar planning** (Passage 9, September 10)",
+      "ideal_answer": "You mentioned aspects of your collaboration with Carla in this order: 1) Concern about Carla reviewing your first 10 pages by a certain date, 2) Your passive voice reduction after Carla shared her editing checklist, 3) Worries about tone adjustments prioritized with Carla for key scenes and feedback, 4) Planning the joint editing webinar with Carla and strategies to promote it, 5) Discussing engagement steps with the guild leadership and incentives for the webinar.",
+      "rubric": "Review timing concern | Passive voice reduction and checklist | Tone adjustments and feedback | Webinar planning and promotion | Engagement and incentives discussion",
+      "passages_found": 10
+    }
+  ],
+  "information_extraction": [
+    {
+      "question": "When did I say I met Michael at the festival?",
+      "llm_response": "Based on the provided passages, you said you met Michael at the Montserrat Writers\u2019 Festival on **January 15, 2024**.",
+      "ideal_answer": "You said you met Michael at the Montserrat Writers\u2019 Festival on January 15, 2024.",
+      "rubric": "LLM response should state: January 15, 2024",
+      "passages_found": 10
+    },
+    {
+      "question": "How did you recommend structuring my writing process to maintain steady progress and stay motivated throughout the weeks leading up to my deadline?",
+      "llm_response": "Based on the provided passages, here is how I recommended structuring your writing process to maintain steady progress and stay motivated:\n\n- **Break down the overall target into daily and weekly word count goals**: Calculate the number of words you need to write each day to meet your deadline. For example, for a 5,000-word screenplay by April 15, you would write approximately 167 words per day (or aim for 200-250 words per day to build momentum). Set weekly milestones, such as completing 1,000 words by the end of the first week, 2,000 by the second week, and so on. You can also break down a weekly goal of 1,500 words into daily targets of 300 words if writing 5 days a week, or 375 words if writing 4 days a week.\n\n- **Set fixed or flexible writing times**: Dedicate specific times each day for writing and treat them as non-negotiable appointments with yourself. For example, you might write from 7:00 AM to 8:00 AM or after dinner. Allow for flexibility in case of unexpected events; if you miss a session, make up for it by extending the next session or adding an extra one later in the week.\n\n- **Create an outline and scene breakdown for organization**: Create a detailed outline of your screenplay before you start writing, breaking down the story into acts, scenes, and key plot points. Use this outline as a roadmap. Additionally, break down your screenplay into individual scenes and estimate the word count for each scene to manage your writing more effectively.\n\n- **Use motivational techniques like visualizing success and rewarding milestones**: Visualize completing your screenplay and the sense of accomplishment you will feel. Set up small rewards for reaching milestones, such as treating yourself to a favorite meal or activity after completing a certain number of words.\n\n- **Involve an accountability partner**: Share your goal with a friend, colleague, or mentor who can provide encouragement and hold you accountable. Regular check-ins can help keep you on track.\n\n- **Incorporate stress management practices to help maintain focus and confidence**: Incorporate mindfulness practices such as meditation, deep breathing, or yoga into your daily routine to manage stress. Take short breaks during writing sessions to stretch or walk around. Use positive affirmations to boost your confidence and counteract negative self-talk.",
+      "ideal_answer": "I suggested breaking down the overall target into daily and weekly word count goals, setting fixed or flexible writing times, creating an outline and scene breakdown for organization, using motivational techniques like visualizing success and rewarding milestones, involving an accountability partner, and incorporating stress management practices to help maintain focus and confidence.",
+      "rubric": "LLM response should state: breaking down the overall target into daily and weekly word count goals | LLM response should state: setting fixed or flexible writing times | LLM response should state: creating an outline and scene breakdown for organization | LLM response should state: using motivational techniques like visualizing success and rewarding milestones | LLM response should state: involving an accountability partner | LLM response should state: incorporating stress management practices to help maintain focus and confidence",
+      "passages_found": 10
+    }
+  ],
+  "instruction_following": [
+    {
+      "question": "When was the Montserrat Writers\u2019 Festival?",
+      "llm_response": "Based on the provided passages, the Montserrat Writers\u2019 Festival was held on January 15, 2024.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: Month Day, Year format",
+      "passages_found": 10
+    },
+    {
+      "question": "How much progress have we made on the edits so far?",
+      "llm_response": "Based on the provided passages, you have completed **95%** of your editing checklist using Carla's template.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: percentage values showing progress",
+      "passages_found": 10
+    }
+  ],
+  "knowledge_update": [
+    {
+      "question": "What is my weekly word count target for my writing goals?",
+      "llm_response": "Based on the provided passages, your weekly word count target for your writing goals is **1,350 words**.\n\nThis is confirmed in multiple passages. For example, Passage 3 states: \"Adjusting your weekly word count target to 1,350 words is a good step towards increasing your productivity.\" Passage 5 also confirms: \"Let's apply this to your current plan to increase your weekly word count to 1,350 words.\"",
+      "ideal_answer": "1,350 words per week",
+      "rubric": "LLM response should state: 1,350 words",
+      "passages_found": 10
+    },
+    {
+      "question": "What deadline should I aim for to submit my peer-reviewed draft to the local writing group?",
+      "llm_response": "Based on the provided passages, you should aim to submit your peer-reviewed draft by **April 25**.",
+      "ideal_answer": "April 25",
+      "rubric": "LLM response should state: April 25",
+      "passages_found": 10
+    }
+  ],
+  "multi_session_reasoning": [
+    {
+      "question": "How much did I increase my weekly word count goal from the start until April 9?",
+      "llm_response": "Based on the provided passages, you increased your weekly word count goal from 1,200 to 1,500 words by April 9. This represents an increase of 300 words.",
+      "ideal_answer": "I increased my weekly word count goal by 300 words, from 1,200 to 1,500 words.",
+      "rubric": "LLM response should state: costs 300 words | LLM response should state: from 1,200 to 1,500 words",
+      "passages_found": 10
+    },
+    {
+      "question": "Considering the improvements I reported from Joseph's peer reviews, Amy's Zoom sessions, and the detailed critiques from beta readers, how should I prioritize balancing external feedback with my own vision to maximize overall writing progress?",
+      "llm_response": "Based on the provided passages, to maximize overall writing progress while balancing external feedback with your own vision, you should:\n\n1. **Categorize and prioritize major recurring issues from all feedback sources**: Categorize feedback from Joseph's peer reviews, Amy's Zoom sessions, and beta readers into types (e.g., tone, pacing, character development, plot points) to see patterns. Prioritize major issues that multiple readers mentioned, as these will have the most significant impact on readability and engagement (e.g., tone inconsistencies).\n\n2. **Implement tentative changes in a separate draft**: Make the most impactful suggestions tentatively in a separate draft so you can easily revert if needed. This lets you see how adjustments affect the overall flow and tone without losing your unique voice.\n\n3. **Seek additional trusted opinions**: After making initial adjustments, share the revised scenes with one or two trusted peers or mentors (like Carla) for a second opinion to gauge whether changes improve the scenes without losing your unique voice.\n\n4. **Iteratively refine while tracking progress**: Reflect on the feedback and your reactions to the changes\u2014does the scene still feel authentic to your vision? Use this reflection to make further refinements. Keep a record of changes and why you made them for future reference, and track your progress to identify areas of improvement.",
+      "ideal_answer": "You should first categorize and prioritize major recurring issues from all feedback sources, focusing on those that align with your core vision. Implement tentative changes in a separate draft, seek additional trusted opinions, and iteratively refine while tracking progress to maintain your unique voice and maximize improvement.",
+      "rubric": "LLM response should state: categorize and prioritize major recurring issues from all feedback sources | LLM response should state: Implement tentative changes in a separate draft | seek additional trusted opinions | LLM response should state: iteratively refine while tracking progress to maintain your unique voice",
+      "passages_found": 10
+    }
+  ],
+  "preference_following": [
+    {
+      "question": "I'm planning my editing schedule for the week. How would you suggest breaking up my work sessions?",
+      "llm_response": "Based on the provided passages, I would suggest breaking up your work sessions into short, focused bursts. The advice recommends using **30-minute or similarly short sessions** to maintain focus and avoid burnout. This approach **avoids proposing long, uninterrupted editing periods** and instead suggests structuring your time with methods like the Pomodoro Technique, where you work for a set period (such as 25-30 minutes) followed by a short break. For example, you could schedule multiple 30-minute editing blocks throughout the day, with breaks in between to rest and recharge.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: suggests 30-minute or similarly short sessions | LLM response should contain: avoids proposing long, uninterrupted editing periods",
+      "passages_found": 10
+    },
+    {
+      "question": "I'm about to start editing a draft and want to make the process efficient. How would you suggest I approach the editing steps?",
+      "llm_response": "Based on the provided passages, I recommend starting with AI-assisted tools for your initial edits. Specifically, you should use tools like Grammarly to catch basic grammar and spelling errors, Hemingway Editor to improve clarity and readability by identifying complex sentences and passive voice, and ProWritingAid to analyze tone, style, and consistency. After running these initial edits, you can move to an intermediate review where you read through the document to ensure the AI edits make sense in context and share it with peers for feedback. Finally, you would do manual revisions for the final touches, paying special attention to tone consistency, transitions, and overall flow. Additionally, the passages mention using AI tools to handle tone calibration, as ProWritingAid can help analyze tone and style during the editing process.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: recommends starting with AI-assisted toolss | LLM response should contain: mentions using AI tools to handle tone calibration",
+      "passages_found": 10
+    }
+  ],
+  "summarization": [
+    {
+      "question": "Can you summarize how my writing skills and confidence have developed through my learning and interactions over time?",
+      "llm_response": "Your journey began with a focus on foundational self-editing techniques, emphasizing reading widely, writing regularly, and learning grammar basics. Over time, you leveraged your weekly script editing sessions with Michael by adopting structured feedback, which helped you refine your work systematically. To specifically improve dialogue, you used targeted writing exercises and analyzing published works, which sharpened your ability to craft realistic and engaging conversations. Your confidence received a significant boost after co-hosting a writing workshop, which you managed by thorough preparation and engagement strategies, leading to a 9/10 confidence level and later reaching 10/10 after completing your final draft. To sustain this growth, you set clear goals, continued learning through courses and reading, practiced regularly, sought constructive feedback, tracked your progress, and expanded your network\u2014all of which have solidified your skills and maintained your high confidence.",
+      "ideal_answer": "Your journey to improve your writing skills began with a focus on foundational self-editing techniques, emphasizing reading widely, writing regularly, and learning grammar basics. You then honed in on grammar and sentence clarity, incorporating tools like Grammarly and practicing active voice and conciseness. Building on this, you leveraged your weekly script editing sessions with Michael by adopting structured feedback, targeted writing exercises, and analyzing published works to specifically improve dialogue. Later, your confidence received a significant boost after co-hosting a writing workshop, which you managed by thorough preparation and engagement strategies. To maintain momentum, you set clear goals, continued learning through courses and reading, practiced regularly, sought constructive feedback, tracked your progress, and expanded your network, all while nurturing a positive mindset. This progression reflects a comprehensive and evolving approach to developing your writing skills and confidence over time.",
+      "rubric": "LLM response should contain: Your journey began with a focus on foundational self-editing techniques, emphasizing reading widely, writing regularly, and learning grammar basics | LLM response should contain: you leveraged your weekly script editing sessions with Michael by adopting structured feedback | LLM response should contain: targeted writing exercises, and analyzing published works to specifically improve dialogue | LLM response should contain: your confidence received a significant boost after co-hosting a writing workshop, which you managed by thorough preparation and engagement strategies | LLM response should contain: you set clear goals, continued learning through courses and reading, practiced regularly, sought constructive feedback, tracked your progress, and expanded your network",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you summarize how my writing has progressed and the strategies I've used to improve it over time?",
+      "llm_response": "Based on our conversation, your writing has progressed significantly through a combination of feedback, targeted editing, and the use of various tools. Here\u2019s a summary of your progress and the strategies you\u2019ve used:\n\n- **Peer Reviews and Dialogue Clarity**: Peer reviews, especially with Amy, led to a 25% improvement in dialogue clarity, motivating you to maintain momentum by setting specific goals.\n- **Passive Voice Reduction**: You addressed passive voice reduction, decreasing it from 18% to 10% by applying Carla's editing checklist and actively rewriting sentences in active voice.\n- **AI Tools**: You leveraged Jasper AI for a 22% improvement and explored additional AI tools such as ProWritingAid and Grammarly Premium.\n- **Further Refinement**: Integrating ProWritingAid further improved your grammar accuracy by 10%, prompting consideration of supplementary resources like workshops, books, and peer reviews to continue advancing your writing skills.",
+      "ideal_answer": "Your writing progress has shown notable development through several focused efforts and feedback cycles. Initially, peer reviews, especially with Amy, led to a 25% improvement in dialogue clarity, motivating you to maintain momentum by setting specific goals, using tools like Grammarly and Hemingway, and tracking progress with Google Docs and Scrivener. You then addressed passive voice reduction, decreasing it from 18% to 10% by applying Carla's editing checklist and actively rewriting sentences in active voice, supported by consistent peer feedback and writing tools. To enhance tone consistency, you leveraged Jasper AI for a 22% improvement and explored additional AI tools such as ProWritingAid and Grammarly Premium, combined with techniques like defining tone and iterative editing. Most recently, integrating ProWritingAid further improved your grammar accuracy by 10%, prompting consideration of supplementary resources like workshops, books, and peer reviews to continue advancing your writing skills. Throughout this journey, you have progressively refined your writing through a combination of feedback, targeted practice, tool usage, and strategic planning.",
+      "rubric": "LLM response should contain: peer reviews, especially with Amy, led to a 25% improvement in dialogue clarity, motivating you to maintain momentum by setting specific goals | LLM response should contain: addressed passive voice reduction, decreasing it from 18% to 10% by applying Carla's editing checklist and actively rewriting sentences in active voice | LLM response should contain: you leveraged Jasper AI for a 22% improvement and explored additional AI tools such as ProWritingAid and Grammarly Premium | LLM response should contain: integrating ProWritingAid further improved your grammar accuracy by 10%, prompting consideration of supplementary resources like workshops, books, and peer reviews to continue advancing your writing skills",
+      "passages_found": 10
+    }
+  ],
+  "temporal_reasoning": [
+    {
+      "question": "How many days are there between when I logged 3,600 words and my deadline to complete the full screenplay draft?",
+      "llm_response": "43 days | from March 3 till April 15",
+      "ideal_answer": "There are 43 days between when I logged 3,600 words on March 3 and my deadline to complete the screenplay draft on April 15.",
+      "rubric": "LLM response should state: 43 days | LLM response should state: from March 3 till April 15",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days passed between when I started my 30-day editing challenge and when I completed the 15-day clarity editing challenge?",
+      "llm_response": "38 days | from April 2 till May 10",
+      "ideal_answer": "The 30-day editing challenge started on April 2, and the 15-day clarity editing challenge ran from May 10 to May 25, so 38 days passed between the start of the first challenge and the start of the second.",
+      "rubric": "LLM response should state: 38 days | LLM response should state: from April 2 till May 10",
+      "passages_found": 10
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "abstention": [
+    {
+      "question": "What specific advice did Bryan give about updating the LinkedIn profile in April 2024?",
+      "llm_response": "Based on the provided conversation, there is no information about specific advice Bryan gave regarding updating a LinkedIn profile in April 2024.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the specific advice Bryan gave about updating the LinkedIn profile.",
+      "rubric": "Based on the provided chat, there is no information related to the specific advice Bryan gave about updating the LinkedIn profile",
+      "passages_found": 10
+    },
+    {
+      "question": "What specific modules are included in the LinkedIn Learning ATS optimization course?",
+      "llm_response": "Based on the provided passages, there is no information about the specific modules included in the LinkedIn Learning ATS optimization course. The passages only mention that individuals have completed a certain percentage of the course (75% and 40%) and discuss general ATS resume optimization tips, but they do not list the course's specific modules.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the specific content or modules of the LinkedIn Learning ATS optimization course.",
+      "rubric": "Based on the provided chat, there is no information related to the specific content of the LinkedIn Learning ATS optimization course",
+      "passages_found": 10
+    }
+  ],
+  "contradiction_resolution": [
+    {
+      "question": "Have I ever enrolled in any courses or training programs on ATS optimization?",
+      "llm_response": "There is contradictory information in the provided passages. You said you enrolled in a LinkedIn Learning course on ATS optimization, as mentioned in passages 3, 5, 6, 8, and 9, where you reference completing various percentages of that course. However, you also mentioned never enrolling in any ATS optimization courses, as stated in passages 1 and 2, where you explicitly say you've never attended workshops or enrolled in such courses. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you enrolled in a LinkedIn Learning course on ATS optimization and completed part of it, but you also mentioned never enrolling in any ATS optimization courses or training programs. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you enrolled in a LinkedIn Learning course on ATS optimization | LLM response should mention: you also mentioned never enrolling in any ATS optimization courses | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    },
+    {
+      "question": "Have I ever attended any workshops or training sessions related to resume standards or ATS optimization?",
+      "llm_response": "There is contradictory information. You said you attended a workshop on international resume standards, but you also mentioned never attending any workshops or training sessions. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you attended a workshop on international resume standards, but you also mentioned never attending any workshops or training sessions related to resume standards or ATS optimization. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you attended a workshop on international resume standards | LLM response should mention: you also mentioned never attending any workshops or training sessions | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    }
+  ],
+  "event_ordering": [
+    {
+      "question": "Can you list the order in which I brought up different aspects of improving my professional profile and resume throughout our conversations in order? Mention ONLY and ONLY six items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up different aspects of improving your professional profile and resume is:\n\n1. Highlighting leadership skills in remote work settings (Passage 5)\n2. Highlighting the expansion of mentoring activities to 7 mentees (Passage 8)\n3. Using structured bullet points with quantified achievements (Passage 9)\n4. Highlighting interpersonal skills and charisma for ATS and human readers (Passage 3)\n5. Maintaining a minimalist resume style with clear headings (Passage 4)\n6. Highlighting recent online courses and achievements (Passage 7)",
+      "ideal_answer": "You mentioned aspects of improving your professional profile and resume in this order: 1) Concerns about passing applicant tracking systems and seeking help from a close partner on budgeting and networking strategies, 2) Collaboration with a colleague on updating a LinkedIn profile and increasing visibility, 3) Considering adding transferable skills based on advice from another contact, 4) Including a recent raise recommended by the partner and asking about salary negotiation tips, 5) Discussing insights from a conversation about adapting resumes for international markets and portfolio performance metrics, 6) Planning to share job descriptions and feedback with the partner to refine keywords and highlight diverse community experience.",
+      "rubric": "ATS concerns and partner's advice | LinkedIn profile collaboration | Transferable skills suggestion | Raise addition and negotiation tips | International resume adaptation and portfolio metrics | Sharing job descriptions and keyword refinement",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you walk me through the order in which I brought up different aspects of my career development and relocation plans in our conversations, in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up different aspects of your career development and relocation plans is:\n\n1. Resume keyword tool usage\n2. Profile headline update\n3. Interview preparation\n4. Rental research for relocation\n5. Subscription service concern",
+      "ideal_answer": "You mentioned these aspects in this order: 1) Concerns about my subscription service for resume compatibility, 2) Using a tool to improve my resume keyword match, 3) Updating my professional profile headline, 4) Preparing for an upcoming panel interview, 5) Researching and deciding on a short-term rental for relocation.",
+      "rubric": "Subscription service concern | Resume keyword tool usage | Profile headline update | Interview preparation | Rental research for relocation",
+      "passages_found": 10
+    }
+  ],
+  "information_extraction": [
+    {
+      "question": "How much does my subscription to the service I\u2019m using for my resume cost each month?",
+      "llm_response": "Based on the provided passages, your subscription costs $12.99 per month.",
+      "ideal_answer": "$12.99 per month",
+      "rubric": "LLM response should state: $12.99 per month",
+      "passages_found": 10
+    },
+    {
+      "question": "What approach did you recommend for weaving certain important terms into different sections of my resume to make it more effective?",
+      "llm_response": "Based on the provided passages, the recommended approach for weaving important terms into different sections of your resume is to integrate them naturally across multiple sections. Specifically, it was recommended to include them in the **professional summary, work experience, skills section, education and certifications, and any additional sections like a portfolio**. The advice also suggested using **action verbs**, providing **relevant context**, repeating keywords appropriately **without redundancy**, and using **synonyms** to maintain a natural flow.",
+      "ideal_answer": "I recommended integrating the key terms naturally across multiple sections of your resume, including the professional summary, work experience, skills section, education and certifications, and any additional sections like a portfolio. I also suggested using action verbs, providing relevant context, repeating keywords appropriately without redundancy, and using synonyms to maintain a natural flow.",
+      "rubric": "LLM response should state: recommended integrating the key terms naturally across multiple sections of your resume | LLM response should state: recommended including the professional summary, work experience, skills section, education and certifications, and any additional sections like a portfolio | LLM response should state: suggested using action verbs, providing relevant context, repeating keywords appropriately without redundancy, and using synonyms to maintain a natural flow",
+      "passages_found": 10
+    }
+  ],
+  "instruction_following": [
+    {
+      "question": "How should I organize the information about my past jobs?",
+      "llm_response": "Based on the provided passages, here is how you should organize the information about your past jobs to create an effective, ATS-friendly resume:\n\n- **List Work Experience in Reverse Chronological Order**: Start with your most recent position and work backward. This is the standard format recommended across multiple passages (Passages 5, 6, and 8).\n\n- **Include Essential Job Details**: For each position, clearly list the following:\n  - **Job Title** (e.g., \"Television/Film Producer\")\n  - **Company Name**\n  - **Location** (City, Country)\n  - **Dates of Employment** (Month Year - Month Year)\n\n- **Use Clear Headings and Bullet Points**: Structure your experience section with clear headings (e.g., \"Work Experience\") and format your responsibilities and achievements using bullet points for clarity and ATS readability (Passages 3 and 5).\n\n- **Focus on the Last 10-15 Years**: Avoid listing every job you've ever had. Instead, focus on the last 10-15 years of your career history, especially roles most relevant to the job you're applying for now (Passage 1).\n\n- **Start Each Bullet with Strong Action Verbs**: Begin each point with action verbs like \"led,\" \"managed,\" \"increased,\" \"implemented,\" or \"optimized\" (Passage 2).\n\n- **Quantify Your Achievements with Specific Numbers**: Use metrics and percentages to highlight your accomplishments. For example:\n  - \"Managed budgets totaling over **$5 million**\"\n  - \"Led cross-functional teams of up to **20 people**, resulting in a **25% increase** in project completion rates\"\n  - \"Increased viewership by **40%**\" (Passages 2 and 3)\n\n- **Tailor Content to Each Job**: Customize your resume for each application, highlighting the aspects of your experience that align most closely with the job requirements (Passages 1, 2, and 3).\n\n- **Ensure Accuracy and Consistency**: Double-check dates, company names, and job titles for accuracy, and maintain consistent formatting throughout (Passages 3 and 8).",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: use of bullet points | LLM response should contain: inclusion of specific numbers or metrics",
+      "passages_found": 10
+    },
+    {
+      "question": "How should I desing my resume?",
+      "llm_response": "# How to Design Your Resume\n\nBased on the provided information, here are the key guidelines for designing an effective, ATS-friendly resume:\n\n## 1. Use a Simple, Clean Format\n- **Avoid complex layouts**: Do not use tables, columns, graphics, images, or background colors\n- **Use standard fonts**: Stick to Arial, Calibri, Times New Roman, or Helvetica\n- **Save in compatible formats**: Use .doc, .docx, or plain text (.txt) formats. PDFs are acceptable if they are searchable\n\n## 2. Structure Your Content Clearly\n- **Use clear headings**: Label sections like \"Contact Information,\" \"Professional Summary,\" \"Work Experience,\" \"Education,\" and \"Skills\"\n- **Use bullet points**: Format achievements and responsibilities as bullet points for easy parsing\n- **Keep it concise**: Aim for one to two pages maximum\n\n## 3. Optimize for Keywords\n- **Research keywords**: Identify industry-specific terms from job descriptions\n- **Incorporate naturally**: Use keywords like \"project management,\" \"budget oversight,\" \"team leadership,\" and other relevant terms without overstuffing\n\n## 4. Include a Professional Summary\n- Place a brief summary at the top highlighting your key qualifications\n- Tailor this section for each job application\n\n## 5. Quantify Your Achievements\n- Use specific numbers and percentages (e.g., \"increased viewership by 40%,\" \"managed budgets over $5 million\")\n- Start bullet points with strong action verbs like \"led,\" \"managed,\" \"implemented,\" or \"developed\"\n\n## 6. Provide Complete Contact Information\n- Include your full name, phone number, email address, and LinkedIn profile URL\n- Use a professional email address\n\n## 7. Test Your Resume\n- Use ATS simulation tools like Jobscan, Resumonk, or TopResume\n- Upload and check how your resume is parsed\n- Make adjustments based on feedback and re-test\n\n## Example Structure\n\n```\n[Your Name]\n[Location] | Phone: (XXX) XXX-XXXX | Email: [email] | LinkedIn: [URL]\n\nProfessional Summary:\n[Brief summary highlighting key experience and skills]\n\nWork Experience:\n[Job Title]\n[Company Name], [Location]\n[Dates]\n- [Achievement with metrics]\n- [Responsibility with action verb]\n\nEducation:\n[Degree], [Institution], [Year]\n\nSkills:\n- [Skill 1]\n- [Skill 2]\n```\n\nBy following these guidelines, you can create a resume that is both professional-looking and highly compatible with ATS systems.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: use of simple layout | LLM response should contain: clear and separate section titles",
+      "passages_found": 10
+    }
+  ],
+  "knowledge_update": [
+    {
+      "question": "How many interviews have I secured for executive producer roles during the recent period?",
+      "llm_response": "Based on the provided passages, you secured **3 interviews** for executive producer roles between April 25 and May 1, 2024.",
+      "ideal_answer": "You secured 5 interviews for executive producer roles during that period.",
+      "rubric": "LLM response should state: 5 interviews",
+      "passages_found": 10
+    },
+    {
+      "question": "How many women have I highlighted as mentees in my portfolio to showcase my mentoring efforts in Caribbean media?",
+      "llm_response": "7 women",
+      "ideal_answer": "7 women",
+      "rubric": "LLM response should state: 7 women",
+      "passages_found": 10
+    }
+  ],
+  "multi_session_reasoning": [
+    {
+      "question": "How many different areas have I focused on updating or improving based on my messages about my resume, portfolio, and salary negotiation?",
+      "llm_response": "Based on the provided passages, you have focused on updating or improving your resume, portfolio, and salary negotiation in **four areas**:\n\n1. **Salary negotiation** \u2013 You included salary negotiation outcomes in your resume as suggested by Joshua (Passage 3).\n2. **Portfolio project selection** \u2013 You launched a new portfolio website featuring 20 projects with detailed metrics and client testimonials (Passage 3).\n3. **Resume international standards** \u2013 You had a conversation with David about adapting resumes for European markets (Passage 10).\n4. **Remote leadership skills** \u2013 You emphasized leadership in remote work settings as suggested by Nicole (Passage 3).",
+      "ideal_answer": "Four areas: salary negotiation, portfolio project selection, resume international standards, and remote leadership skills.",
+      "rubric": "LLM response should state: Four areas | LLM response should state: salary negotiation | LLM response should state: portfolio project selection | LLM response should state: resume international standards | LLM response should state: remote leadership skills",
+      "passages_found": 10
+    },
+    {
+      "question": "Considering my progress, achievements, and interview successes, how can I best sequence my resume updates to maximize ATS compatibility and increase interview callbacks?",
+      "llm_response": "Based on your progress, achievements, and interview successes, here is the best sequence to update your resume to maximize ATS compatibility and increase interview callbacks:\n\n1. **Integrate key ATS optimization concepts from your course progress**: Apply the ATS optimization strategies you've learned, such as using relevant keywords from job descriptions, maintaining a clean and simple format, and ensuring your resume is saved in a universally compatible format like PDF or DOCX.\n\n2. **Highlight your recent interview feedback and quantified achievements**: Analyze feedback from your recent interviews (e.g., securing 5 interviews) to identify strengths and areas for improvement. Then, update your resume to prominently feature quantified achievements, such as \"increased viewership by 40% within three months\" or \"managed a team of producers and editors,\" to make your impact concrete and compelling.\n\n3. **Prominently feature your completed digital media leadership courses with high scores**: Showcase your completed courses, such as the \"Advanced Digital Media Production Certification,\" and any other leadership courses where you scored highly. Include these in a dedicated certifications or education section to demonstrate your commitment to professional development.\n\n4. **Tailor each resume version to specific job descriptions to maximize ATS compatibility and interview callbacks**: Customize your resume for every application by aligning your experience, skills, and keywords with the specific job posting. This ensures your resume passes ATS filters and resonates with hiring managers, increasing your chances of callbacks.\n\nBy following this sequence\u2014starting with ATS optimization fundamentals, then incorporating feedback and metrics, highlighting your educational achievements, and finally tailoring each version\u2014you'll create a resume that is both ATS-friendly and compelling to recruiters, maximizing your interview callback rate.",
+      "ideal_answer": "You should first integrate key ATS optimization concepts from your course progress, then highlight your recent interview feedback and quantified achievements, followed by prominently featuring your completed digital media leadership courses with high scores, and finally tailor each resume version to specific job descriptions to maximize ATS compatibility and interview callbacks.",
+      "rubric": "LLM response should state: integrate key ATS optimization concepts from your course progres | LLM response should state: highlight your recent interview feedback and quantified achievements | LLM response should state: prominently featuring your completed digital media leadership courses with high scores | LLM response should state: tailor each resume version to specific job descriptions to maximize ATS compatibility and interview callbacks",
+      "passages_found": 10
+    }
+  ],
+  "preference_following": [
+    {
+      "question": "I'm updating my portfolio and want to include some samples. What types of content would you suggest I add?",
+      "llm_response": "Based on the provided passages, I would suggest adding **video samples** to your portfolio, as **video is a key content type** for showcasing your production skills. The guidance emphasizes that integrating video samples is a great way to demonstrate your abilities effectively. When adding them, you should select a diverse range of impactful videos, provide context for each (including your role and key achievements), and embed them strategically using platforms like YouTube or Vimeo. This approach **prioritizes dynamic or multimedia content over static images** to create a more engaging and compelling showcase of your work.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: suggests adding video samples | LLM response should contain: mentions video as a key content type | LLM response should contain: prioritizes dynamic or multimedia content over static images",
+      "passages_found": 10
+    },
+    {
+      "question": "I'm applying for a job in the UK. How should I format it?",
+      "llm_response": "Based on the provided passages, here is how you should format your resume (CV) for a UK job application, with specific attention to UK ATS (Applicant Tracking Systems) formatting:\n\n**UK-Specific ATS Formatting Requirements:**\n- **Title**: Use \"Curriculum Vitae\" (CV) instead of \"Resume.\"\n- **File Format**: Submit your CV in PDF or Word format (`.doc` or `.docx`). PDF is generally preferred as it preserves formatting.\n- **Plain Text**: Use plain text formatting to ensure your CV is easily readable by ATS systems. Avoid tables, columns, complex layouts, images, logos, or background colors that may not be parsed correctly.\n- **Standard Fonts**: Use standard fonts like Arial, Calibri, or Times New Roman, with a font size of 10-12 points.\n- **Date Format**: Use the British date format (day/month/year) consistently throughout your CV.\n- **Simple Headers**: Use simple headers and subheaders without special characters or symbols.\n- **Keywords**: Extract and use relevant keywords from the job description, including industry-specific terms and acronyms.\n- **Action Verbs**: Use strong action verbs like \"led,\" \"managed,\" \"implemented,\" \"optimized,\" and \"increased.\"\n\n**Important Note**: The passages emphasize that you should **not** use a one-size-fits-all resume template. Instead, you must **tailor your CV for each job application** by highlighting the most relevant experience and skills, and customizing content to match the specific job description and UK ATS standards.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mentions UK-specific ATS formatting | LLM response should contain: avoids suggesting a one-size-fits-all resume template",
+      "passages_found": 10
+    }
+  ],
+  "summarization": [
+    {
+      "question": "Can you give me a summary of how I worked on improving my resume and job application strategy over time?",
+      "llm_response": "Based on the conversation, here is a summary of how you worked on improving your resume and job application strategy over time:\n\nYou received advice on tailoring your resume to highlight relevant skills, achievements, and recent experience. You considered involving your partner Joshua, who has expertise in project budgeting and networking, to help optimize your resume with keyword integration. You explored adding a section on your work with diverse Caribbean communities to showcase cultural competence. You used tools like Jobscan to improve keyword matching and received guidance on formatting, quantifying achievements, and including a professional summary. You planned to incorporate transferable skills such as remote team leadership, emphasizing adaptability and strategic planning.",
+      "ideal_answer": "Over the course of our conversations, you expressed concerns about age discrimination and the effectiveness of your resume in passing applicant tracking systems. Initially, you received advice on tailoring your resume to highlight relevant skills, achievements, and recent experience while using modern language and formats to downplay age-related biases. You then considered involving your partner Joshua, who has expertise in project budgeting and networking, to help optimize your resume with keyword integration and clearer articulation of your budget management experience. You also explored adding a section on your work with diverse Caribbean communities to showcase cultural competence. Subsequently, you used tools like Jobscan to improve keyword matching and received guidance on formatting, quantifying achievements, and including a professional summary to enhance ATS compatibility. Finally, you planned to incorporate transferable skills such as remote team leadership, emphasizing adaptability and strategic planning, to further strengthen your resume. Throughout this process, your approach evolved from general concerns to targeted, data-driven resume optimization strategies, integrating both personal support and technological tools to increase your chances of success in the job market.",
+      "rubric": "LLM response should contain: you received advice on tailoring your resume to highlight relevant skills, achievements, and recent experience | LLM response should contain: considered involving your partner Joshua, who has expertise in project budgeting and networking, to help optimize your resume with keyword integration | LLM response should contain: explored adding a section on your work with diverse Caribbean communities to showcase cultural competence | LLM response should contain: you used tools like Jobscan to improve keyword matching and received guidance on formatting, quantifying achievements, and including a professional summary | LLM response should contain: you planned to incorporate transferable skills such as remote team leadership, emphasizing adaptability and strategic planning",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you summarize how my resume development and job application strategy progressed over the past few months?",
+      "llm_response": "Based on the conversation, your resume development and job application strategy progressed through several key phases:\n\n1. **Initial Resume Tailoring**: You worked on tailoring your resume specifically for the film, television, and digital media industries, starting with defining your goals and gathering relevant information.\n\n2. **Structuring and Content Development**: You focused on creating a professional summary and structuring your resume with clear sections, incorporating strong action verbs and integrating your portfolio.\n\n3. **Design and Formatting**: You adapted your resume design using Canva Pro, emphasizing simple templates, standard fonts, and avoiding graphics or tables.\n\n4. **ATS Optimization**: You converted your resume to a text-based format and used ATS simulators for validation, which helped improve your keyword match by 25% using tools like Jobscan.\n\n5. **Time Management**: You balanced your time between interview preparation and workshops by setting clear goals, creating structured daily schedules, and reducing social media usage.\n\n6. **Feedback Integration**: You leveraged feedback to further refine your resume by tailoring it to job descriptions, quantifying achievements, and highlighting transferable skills.\n\n7. **Showcasing Personal Strengths**: You sought to showcase your warm and charismatic nature effectively within your resume by using action verbs and providing specific examples of rapport-building.\n\n8. **Updating with Latest Achievements**: You updated your resume to reflect your latest certification and promotion, emphasizing these achievements in your professional summary, work experience, skills, and certifications sections.\n\nThis progression ultimately led to securing 5 interviews in a short period, indicating your resume became effective, with continued refinements planned to increase callbacks further.",
+      "ideal_answer": "Over the course of several months, you worked on tailoring your resume specifically for the film, television, and digital media industries, starting with defining your goals and gathering relevant information. You focused on creating a professional summary and structuring your resume with clear sections, incorporating strong action verbs and integrating your portfolio. To ensure ATS compatibility, you adapted your resume design using Canva Pro, emphasizing simple templates, standard fonts, and avoiding graphics or tables, while also converting your resume to a text-based format and using ATS simulators for validation. Concurrently, you balanced your time between interview preparation and workshops by setting clear goals, creating structured daily schedules, and reducing social media usage to free up time. After securing multiple interviews, you leveraged feedback to further refine your resume by tailoring it to job descriptions, quantifying achievements, highlighting transferable skills, and including community engagement. Additionally, you sought to showcase your warm and charismatic nature effectively within your resume by using action verbs, providing specific examples of rapport-building, and ensuring ATS-friendly formatting. Finally, you updated your resume to reflect your latest certification and promotion, emphasizing these achievements in your professional summary, work experience, skills, and certifications sections, all while maintaining ATS optimization and preparing a complementary cover letter to highlight your enthusiasm and networking success.",
+      "rubric": "LLM response should contain: you worked on tailoring your resume specifically for the film, television, and digital media industries, starting with defining your goals and gathering relevant information | LLM response should contain: You focused on creating a professional summary and structuring your resume with clear sections, incorporating strong action verbs and integrating your portfolio | LLM response should contain: you adapted your resume design using Canva Pro, emphasizing simple templates, standard fonts, and avoiding graphics or tables | LLM response should contain: converted your resume to a text-based format and using ATS simulators for validation | LLM response should contain: you balanced your time between interview preparation and workshops by setting clear goals, creating structured daily schedules, and reducing social media usage | LLM response should contain: you leveraged feedback to further refine your resume by tailoring it to job descriptions, quantifying achievements and highlighting transferable skills | LLM response should contain: you sought to showcase your warm and charismatic nature effectively within your resume by using action verbs, providing specific examples of rapport-building | LLM response should contain: you updated your resume to reflect your latest certification and promotion, emphasizing these achievements in your professional summary, work experience, skills, and certifications sections",
+      "passages_found": 10
+    }
+  ],
+  "temporal_reasoning": [
+    {
+      "question": "How many days do I have between the deadline to tailor my resume for film, television, and digital media and the date I want to be ready to apply confidently for executive producer roles?",
+      "llm_response": "Based on the provided passages, you have **52 days** between the deadline to tailor your resume for film, television, and digital media (April 10, 2024) and the date you want to be ready to apply confidently for executive producer roles (June 1, 2024). This period spans **from April 10, 2024 till June 1, 2024**.",
+      "ideal_answer": "There are 52 days between the April 10, 2024 deadline to tailor your resume for film, television, and digital media and the June 1, 2024 target date to be ready to apply confidently for executive producer roles.",
+      "rubric": "LLM response should state: 52 days | LLM response should state: from April 10, 2024 till June 1, 2024",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days were there between when I postponed my family reunion and when I planned to celebrate my promotion with Linda?",
+      "llm_response": "64 days | from July 10 till September 12",
+      "ideal_answer": "There were 64 days between postponing the family reunion on July 10 and celebrating the promotion with Linda on September 12.",
+      "rubric": "LLM response should state: 64 days | LLM response should state: from July 10 till September 12",
+      "passages_found": 10
+    }
+  ]
+}

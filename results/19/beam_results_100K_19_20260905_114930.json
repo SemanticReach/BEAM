@@ -1,0 +1,162 @@
+{
+  "abstention": [
+    {
+      "question": "What are the terms and conditions of the $10,000 trust Douglas wants to include for the kids?",
+      "llm_response": "Based on the provided conversation, there is no information about the specific terms and conditions of the $10,000 trust Douglas wants to include for the kids. The passages only mention that Crystal (not Douglas) wants to include a $10,000 trust for her children in her will, but no detailed terms or conditions are provided.",
+      "ideal_answer": "Based on the provided chat, there is no information related to the specific terms and conditions of the $10,000 trust.",
+      "rubric": "Based on the provided chat, there is no information related to the specific terms and conditions of the $10,000 trust",
+      "passages_found": 10
+    },
+    {
+      "question": "How did Kimberly and Bradley react emotionally to the suggestion of including a $7,000 fund for their care?",
+      "llm_response": "Based on the provided passages, there is no information related to Kimberly and Bradley\u2019s emotional reactions to the suggestion of including a $7,000 fund for their care.",
+      "ideal_answer": "Based on the provided chat, there is no information related to Kimberly and Bradley\u2019s emotional reactions to the $7,000 fund suggestion.",
+      "rubric": "Based on the provided chat, there is no information related to Kimberly and Bradley\u2019s emotional reactions to the $7,000 fund suggestion",
+      "passages_found": 10
+    }
+  ],
+  "contradiction_resolution": [
+    {
+      "question": "Have I met attorney Stephanie to discuss my will?",
+      "llm_response": "There is contradictory information in the conversation. You said you have a meeting planned with attorney Stephanie, but you also mentioned that you've never met her. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you have a meeting planned with attorney Stephanie, but you also mentioned that you've never met her. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you have a meeting planned with attorney Stephanie | LLM response should mention: you also mentioned that you've never met her | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    },
+    {
+      "question": "Have I ever used WillMaker Pro or any digital software to draft my will?",
+      "llm_response": "There is contradictory information in the provided passages. You said you drafted your will including guardianship details, and also mentioned never using WillMaker Pro or any digital software to draft it. However, other passages state you used WillMaker Pro, which saved you 8 hours drafting. Which statement is correct?",
+      "ideal_answer": "I notice you've mentioned contradictory information about this. You said you drafted your will including guardianship details, but also mentioned never using WillMaker Pro or any digital software to draft it. Could you clarify which is correct?",
+      "rubric": "LLM response should state: there is contradictory information | LLM response should mention: You said you drafted your will including guardianship details | LLM response should mention: also mentioned never using WillMaker Pro or any digital software to draft it | LLM response should mention: which statement is correct?",
+      "passages_found": 10
+    }
+  ],
+  "event_ordering": [
+    {
+      "question": "Can you list the order in which I brought up different aspects of my plans involving Douglas throughout our conversations in order? Mention ONLY and ONLY five items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up different aspects of your plans involving Douglas is:\n\n1. Estate plan inclusion\n2. Gift and beneficiary\n3. Family meeting and executor role\n4. Emergency fund discussion\n5. Planning further discussion",
+      "ideal_answer": "You mentioned aspects involving Douglas in this order: 1) How to include him in your estate plan, 2) The gift he gave you and whether to include him as a beneficiary, 3) His participation in the family meeting and his role as executor and guardian supporter, 4) Discussing the emergency fund for guardianship expenses with him, 5) Planning to talk to him about potential expenses and possibly increasing the fund.",
+      "rubric": "Estate plan inclusion | Gift and beneficiary | Family meeting and executor role | Emergency fund discussion | Planning further discussion",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you walk me through the order in which I brought up different concerns and plans related to my family\u2019s care and financial arrangements throughout our conversations, in order? Mention ONLY and ONLY seven items.",
+      "llm_response": "Based on the provided passages, the order in which you brought up different concerns and plans is:\n\n1. **Parents and will concern** (Passage 7)\n2. **Asset allocation and power of attorney** (Passage 7)\n3. **Care fund clause and trustee** (Passage 7)\n4. **Kids\u2019 guardianship emergency fund** (Passage 9)\n5. **Care fund amount update** (Passage 7)\n6. **Separate trust consideration** (Passage 1)\n7. **Tax implications discussion** (Passage 6)",
+      "ideal_answer": "You mentioned these concerns and plans in this order: 1) Worrying about my parents and wanting to include them in my will, 2) Planning asset allocation and considering a power of attorney, 3) Adding a clause and fund for ongoing care with a trustee appointed, 4) Discussing an emergency fund for my kids\u2019 guardianship expenses, 5) Updating my will with a specific care fund amount for my parents, 6) Considering setting up a separate trust if the care fund is insufficient, 7) Asking about tax implications related to funding the trust.",
+      "rubric": "Parents and will concern | Asset allocation and power of attorney | Care fund clause and trustee | Kids\u2019 guardianship emergency fund | Care fund amount update | Separate trust consideration | Tax implications discussion",
+      "passages_found": 10
+    }
+  ],
+  "information_extraction": [
+    {
+      "question": "How far away did I say my parents live from me?",
+      "llm_response": "Based on the provided passages, you said your parents live 12 miles away from you in Old Town Montserrat.",
+      "ideal_answer": "You said they live 12 miles away.",
+      "rubric": "LLM response should state: 12 miles away",
+      "passages_found": 10
+    },
+    {
+      "question": "How long have I been with Douglas?",
+      "llm_response": "Based on the provided passages, you have been with Douglas for 3 years.",
+      "ideal_answer": "You have been with Douglas for 3 years.",
+      "rubric": "LLM response should state: 3 years",
+      "passages_found": 10
+    }
+  ],
+  "instruction_following": [
+    {
+      "question": "What do I need to include to make sure my wishes are legally valid?",
+      "llm_response": "Based on the provided passages, to make sure your wishes are legally valid in your will, you need to include the following key elements:\n\n1. **Two-Witness Rule**: Your will must be signed in the presence of two witnesses who are not beneficiaries of the will. The witnesses must be competent adults and not related to the beneficiaries in a way that could create a conflict of interest. They should sign the will attesting that they saw you sign it, and provide their contact information.\n\n2. **Executor**: Designate a person (like Douglas) to be responsible for carrying out the terms of your will.\n\n3. **Guardians**: If you have minor children, designate guardians to care for them.\n\n4. **Clear Distribution of Assets**: Clearly state who gets what and under what conditions, including specific percentages or amounts for each beneficiary.\n\n5. **Compliance with Local Law**: Ensure the will complies with all legal requirements in your jurisdiction (e.g., Montserrat law), which may include specific nuances or additional requirements.\n\n6. **Notarization (Optional but Recommended)**: Consider having the will notarized for added security, and discuss the process with your attorney.\n\n7. **Legal Review**: Have the will reviewed by an attorney specializing in estate planning to ensure it is legally sound and tailored to your needs.\n\n8. **Secure Storage**: Store the signed and witnessed will in a secure location, and inform your executor and relevant parties where it is stored.\n\n9. **Regular Updates**: Review and update your will periodically or after significant life events (marriage, divorce, birth of a child, etc.).\n\n10. **Digital Assets**: Include provisions for digital assets like social media accounts, online bank accounts, and cryptocurrency if applicable.\n\n**Detailed Explanation of Legal Terms**:\n- **Executor**: The person named in your will who is responsible for managing your estate, paying debts, and distributing assets to beneficiaries according to your wishes.\n- **Guardian**: An individual designated to care for your minor children if you pass away before they reach adulthood.\n- **Beneficiary**: A person or organization entitled to receive assets or benefits from your estate under the will.\n- **Two-Witness Rule**: A legal requirement that a will must be signed in the presence of at least two witnesses who are not beneficiaries, to attest to the validity of your signature and your mental capacity.\n- **Notarization**: The process of having a notary public certify the authenticity of signatures on legal documents, adding an extra layer of verification.\n- **Power of Attorney**: A legal document that grants someone authority to make decisions on your behalf if you become incapacitated.\n- **Healthcare Directive**: A document (like a living will) that specifies your medical treatment preferences if you cannot communicate them yourself.\n- **Trust**: A legal arrangement where a trustee holds and manages assets for beneficiaries according to your instructions.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: rovide detailed explanations of legal terms",
+      "passages_found": 10
+    },
+    {
+      "question": "What are some popular tools I can use to organize and manage my digital files?",
+      "llm_response": "Based on the provided passages, here are some popular tools you can use to organize and manage your digital files:\n\n- **1Password**: A password manager to store login credentials and access information securely.\n- **LastPass**: A password manager that can store login credentials and other sensitive information.\n- **My Legacy**: A service that helps you organize and manage your digital assets.\n- **SecureSafe**: A digital safety deposit box that stores and manages digital assets.\n- **WillMaker Pro**: A digital tool for organizing and storing documents.\n- **Google Drive**: A cloud storage solution for accessibility and backup.\n- **Dropbox**: A cloud storage solution for accessibility and backup.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: software version numbers mentioned",
+      "passages_found": 10
+    }
+  ],
+  "knowledge_update": [
+    {
+      "question": "How long does the probate process usually take in Montserrat?",
+      "llm_response": "Based on the provided passages, the probate process in Montserrat usually takes 5-7 months.",
+      "ideal_answer": "5-7 months",
+      "rubric": "LLM response should state: 5-7 months",
+      "passages_found": 10
+    },
+    {
+      "question": "What is the estimated estate tax rate applied to assets above $200,000?",
+      "llm_response": "Based on the provided passages, the estimated estate tax rate applied to assets above $200,000 is **12%**.",
+      "ideal_answer": "12%",
+      "rubric": "LLM response should state: 12%",
+      "passages_found": 10
+    }
+  ],
+  "multi_session_reasoning": [
+    {
+      "question": "How many children did I mention receiving annual gifts from me?",
+      "llm_response": "Three children.",
+      "ideal_answer": "Three children",
+      "rubric": "LLM response should state: Three children",
+      "passages_found": 10
+    },
+    {
+      "question": "How many specific assets or items have I mentioned across my conversations that are part of my estate planning?",
+      "llm_response": "Based on the provided passages, you have mentioned **six specific assets** as part of your estate planning:\n\n1.  Your **home** on 45 Coral Bay Rd (valued at $350,000)\n2.  Your **vacation home**\n3.  Your **2018 Toyota RAV4** (valued at $18,000)\n4.  Your **film equipment** (valued at $15,000)\n5.  Your **Adobe Creative Cloud subscription** (valued at $2,000)\n6.  Your **original will** (which you have updated to include Erica and is stored in a **fireproof safe**)",
+      "ideal_answer": "Six specific assets or items: my home, vacation home, 2018 Toyota RAV4, film equipment, fireproof safe, and original will.",
+      "rubric": "LLM response should state: Six specific assets | LLM response should state: home | LLM response should state: vacation home | LLM response should state: 2018 Toyota RAV4 | LLM response should state: film equipment | LLM response should state: fireproof safe | LLM response should state: original will",
+      "passages_found": 10
+    }
+  ],
+  "preference_following": [
+    {
+      "question": "I'm planning to make some updates to my will in the future. How would you suggest I keep my documents so that making changes later is straightforward?",
+      "llm_response": "Based on the provided passages, using digital tools like WillMaker Pro can make updating your will more straightforward. Here are the key suggestions for keeping your documents to facilitate future changes:\n\n1. **Use WillMaker Pro for digital updates**: The software provides a user-friendly interface and step-by-step guidance, allowing you to make changes easily and save them digitally. It offers flexibility for regular updates and immediate changes without needing to consult a lawyer for every small edit.\n\n2. **Securely store your documents**: After finalizing updates, securely store your will. Consider keeping a copy with your attorney and another in a safe place at home (such as a fireproof safe with biometric access). Ensure your executor knows where to find the document.\n\n3. **Maintain digital backups**: Many digital tools offer secure backup options to ensure your documents are safe and recoverable. Use strong passwords and enable two-factor authentication where possible.\n\n4. **Properly execute updated versions**: Even with digital updates, ensure any updated will is properly signed, witnessed, and notarized if necessary to be legally valid.\n\n5. **Schedule periodic reviews**: Plan to regularly review and update your will as needed. You've already scheduled your next review for October 15, which is good practice to keep your estate plan current.\n\n6. **Consult your attorney periodically**: While you can make small changes yourself, it's advisable to have your attorney, Stephanie, review the document periodically to ensure it remains legally sound and compliant with local laws in Montserrat.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mentions digital will updating tools",
+      "passages_found": 10
+    },
+    {
+      "question": "If I want to appoint someone to manage the responsibilities after I\u2019m gone, what should I consider when choosing between different candidates?",
+      "llm_response": "When choosing between candidates to manage your estate after you\u2019re gone, you should consider several key factors. **Organizational skills are important** because managing an estate is complex and time-consuming, and an executor with strong organizational abilities will be better equipped to handle the responsibilities. Other factors include responsibility and trustworthiness, legal and financial knowledge (or willingness to work with professionals), availability and proximity, emotional stability, and your personal trust and confidence in the candidate. You should also consider naming an alternate executor in case your primary choice is unable or unwilling to serve.\n\nBased on the discussion, **I recommend Douglas** for the role because he is known for his strong organizational abilities, which are essential for managing the various tasks involved in settling an estate. He also has a close relationship with you and can provide better emotional support to your family during a difficult time. If you are concerned about legal complexities, you could consider naming Kevin as a co-executor or alternate to leverage his legal background, but Douglas\u2019s organizational skills make him the stronger primary choice.",
+      "ideal_answer": "",
+      "rubric": "LLM response should contain: mentions organizational skills as important | LLM response should contain: recommends Douglas based on organizational abilities",
+      "passages_found": 10
+    }
+  ],
+  "summarization": [
+    {
+      "question": "Can you give me a complete summary of how my estate planning process has developed, including the key decisions and discussions I've had about executors, guardianship, and asset management?",
+      "llm_response": "Based on the provided passages, here is a complete summary of how your estate planning process has developed, including the key decisions and discussions about executors, guardianship, and asset management:\n\n**Initial Steps and Asset Management:** You began by focusing on drafting your will and choosing an executor. You sought guidance on including Douglas in your estate plan, detailing how to list assets, specify provisions for him, and structure the will effectively. You also worked on organizing your financial statements and insurance policies into a binder to create a detailed inventory of your assets, which helps ensure your will is comprehensive and makes the executor's job easier.\n\n**Executor Decision:** You faced a decision between naming Douglas or Kevin as executor, weighing factors like responsibility, legal knowledge, and family opinions. Ultimately, you decided to name Douglas as the executor due to his organizational skills, even though he lacks a legal background. You also planned to name Kevin as the alternate executor.\n\n**Family Discussion:** You organized a family meeting to discuss executor roles openly, explore co-executor options, and reach consensus. This was part of ensuring everyone was on board with the decisions.\n\n**Preparing Douglas:** You worked on ensuring Douglas fully understands his executor duties and can handle conflicts by defining roles clearly, providing resources, and establishing conflict resolution mechanisms. This included creating a detailed role definition, providing educational materials, recommending professional guidance, and setting up regular communication.\n\n**Guardianship and Emergency Fund:** You also planned a conversation with Douglas about a $5,000 emergency fund for guardianship expenses, preparing to discuss potential costs and management strategies. Your will includes clauses for guardianship of your minor children, with Stephanie named as the guardian.\n\n**Legal Review:** You prepared for Kevin, a paralegal friend, to review your will draft by organizing documents, summarizing your wishes, and identifying specific areas of concern. You also scheduled meetings with attorneys Stephanie and later Diana to review and finalize the will, discuss estate taxes, and ensure all legal requirements are met.\n\n**Finalization:** You set deadlines to finalize your estate plan, with a comprehensive checklist covering the will, digital assets, financial documents, real estate, personal property, healthcare directives, tax considerations, guardianship provisions, charitable donations, and miscellaneous items like funeral arrangements. You planned to store the signed documents securely and inform Douglas of their location.",
+      "ideal_answer": "Your estate planning process has unfolded through several important stages and discussions. Initially, you sought guidance on including Douglas in your estate plan, detailing how to list assets, specify provisions for him, update beneficiary designations, and formalize these in your will. Later, you faced a decision between naming Douglas or Kevin as executor, weighing factors like responsibility, legal knowledge, and family opinions, especially considering your parents' concerns and the importance of clear communication. To address these concerns, you organized a family meeting to discuss executor roles openly, explore co-executor options, and reach consensus. Subsequently, you worked on ensuring Douglas fully understands his executor duties and can handle conflicts by defining roles clearly, providing resources, and establishing conflict resolution mechanisms. You also planned a conversation with Douglas about a $5,000 emergency fund for guardianship expenses, preparing to discuss potential costs and management strategies. Finally, you prepared for Kevin, a paralegal friend, to review your will draft by organizing documents, summarizing your wishes, and identifying specific areas of concern such as guardianship provisions and digital assets, aiming to incorporate his legal insights and consult your attorney for final approval. Throughout this process, your estate planning has evolved with thoughtful decision-making, family involvement, and professional input to create a comprehensive and well-structured plan.",
+      "rubric": "LLM response should contain: you sought guidance on including Douglas in your estate plan, detailing how to list assets, specify provisions for him | LLM response should contain: you faced a decision between naming Douglas or Kevin as executor, weighing factors like responsibility, legal knowledge, and family opinions | LLM response should contain: you organized a family meeting to discuss executor roles openly, explore co-executor options, and reach consensus | LLM response should contain: you worked on ensuring Douglas fully understands his executor duties and can handle conflicts by defining roles clearly, providing resources, and establishing conflict resolution mechanisms | LLM response should contain: You also planned a conversation with Douglas about a $5,000 emergency fund for guardianship expenses, preparing to discuss potential costs and management strategies | LLM response should contain: you prepared for Kevin, a paralegal friend, to review your will draft by organizing documents, summarizing your wishes, and identifying specific areas of concern",
+      "passages_found": 10
+    },
+    {
+      "question": "Can you summarize what I need to know about preparing and finalizing my will and related documents?",
+      "llm_response": "Based on the provided passages, here is a summary of what you need to know about preparing and finalizing your will and related documents:\n\nYou planned meetings with attorney Stephanie to finalize your will, ensuring it meets Montserrat's legal requirements. Stephanie guided you through drafting, reviewing, selecting witnesses, signing, and optional notarization. You also learned how to prepare notarized affidavits for guardianship to help speed up probate. Later, you confirmed with attorney Diana that Montserrat now accepts electronic will signatures, which offers more convenience.\n\nTo ensure your will is complete, you should follow a comprehensive checklist that includes: having a current will with witnesses and an executor (like Douglas), a complete digital asset inventory with access information, all financial documents (bank accounts, investments, insurance policies, retirement accounts), real estate documents (home deed, property insurance, mortgage), a list of personal property with valuations, healthcare directives (living will and power of attorney), tax considerations, guardianship provisions (including an emergency fund), charitable bequests, and funeral arrangements. After drafting, you should have a final review with your attorney (Diana), sign and witness the documents, store them securely (like in a fireproof safe), and keep backup copies. Regular reviews and updates are also recommended to account for life changes.",
+      "ideal_answer": "You planned meetings with attorney Stephanie to finalize your will, ensuring it meets Montserrat's legal requirements, including the two-witness rule. Stephanie guided you through drafting, reviewing, selecting witnesses, signing, and optional notarization. You also learned how to prepare notarized affidavits for guardianship to help speed up probate, and later confirmed with attorney Diana that Montserrat now accepts electronic will signatures, which offers more convenience while maintaining legal validity and witness requirements.",
+      "rubric": "LLM response should contain: You planned meetings with attorney Stephanie to finalize your will, ensuring it meets Montserrat's legal requirements | LLM response should contain: Stephanie guided you through drafting, reviewing, selecting witnesses, signing, and optional notarization | LLM response should contain: learned how to prepare notarized affidavits for guardianship to help speed up probate | LLM response should contain: later confirmed with attorney Diana that Montserrat now accepts electronic will signatures, which offers more convenience",
+      "passages_found": 10
+    }
+  ],
+  "temporal_reasoning": [
+    {
+      "question": "How many days passed between the family meeting at my home and when Douglas accepted the executor role?",
+      "llm_response": "21 days, from March 25 till April 15.",
+      "ideal_answer": "21 days passed between the family meeting at my home on March 25 and Douglas accepting the executor role on April 15.",
+      "rubric": "LLM response should state: 21 days | LLM response should state: from March 25 till April 15",
+      "passages_found": 10
+    },
+    {
+      "question": "How many days passed between my meeting with attorney Stephanie to finalize my will and her review confirming the two-witness requirement was met?",
+      "llm_response": "40 days, from March 22 till May 1.",
+      "ideal_answer": "40 days passed between the meeting with attorney Stephanie on March 22 to finalize the will and her review on May 1 confirming the two-witness requirement was met.",
+      "rubric": "LLM response should state: 40 days | LLM response should state: from March 22 till May 1",
+      "passages_found": 10
+    }
+  ]
+}
